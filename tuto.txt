@@ -1,0 +1,3 @@
+instalar git
+registrar no github
+add chave publica
