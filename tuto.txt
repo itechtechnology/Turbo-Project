@@ -1,3 +1,27 @@
 instalar git
 registrar no github
 add chave publica
+
+abra o git gui
+
+clone existing repository
+em source git@github.com:itechtechnology/Turbo-Project.git
+
+target coloque a pasta local
+
+clone
+
+vai abrir a tela de gerenciamento
+
+importante!! antes de enviar qualquer arquivo va em remote fecth
+
+para enviar:
+
+click rescan
+
+selecione os arquivos que deseja enviar na area unststaged depois CTRL + T 
+digite uma mensagem na area commit message
+
+click commit
+
+depois push
