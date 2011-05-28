@@ -1,0 +1,43 @@
+div#busca{
+	width:718px;
+	height:47px;
+	background:#C3D4DD;
+	margin-top:80px;
+	margin-left:10px;
+}
+
+div#busca h3{
+	float:left;
+	font-size:16px;
+	margin:-4px 5px 0px 5px;
+	color:#023e88;
+}
+
+div#busca form{
+	float:left;
+}
+
+div#busca form div#campo{
+	float:left;
+	width:453px;
+	height:39px;
+	border:0px;
+	background:url(../../common/images/bg_text.jpg) no-repeat;
+	margin-top:-13px;
+}
+
+div#busca form div#campo input{
+	width:445px;
+	height:33px;
+	border:0px;
+	margin:5px 3px;
+	font-size:17px;
+}
+
+div#busca form input#botao_pesquisa{
+	float:left;
+	width:57px;
+	height:39px;
+	border:0px;
+	margin-top:-13px;
+}

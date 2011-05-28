@@ -1,0 +1,89 @@
+/* 
+ * TABELA DE LISTAGEM
+ */
+
+div#box_conteudo table{
+	width:718px;
+	margin-top:10px;
+	margin-left:10px;
+}
+
+div#box_conteudo table thead td a{
+        padding-top: 10px;
+        height: 28px;
+        display:block;
+	background: #EDEDEF;
+        color: #2C5EA2;
+        text-align: center;
+        font-size:13px;
+        font-weight: bold;
+}
+
+div#box_conteudo table thead td.acao{        
+        width: 40px;
+}
+
+div#box_conteudo table tr{       
+        text-align: center;
+}
+
+div#box_conteudo table tr td{        
+        font-size:13px;
+}
+div#box_conteudo .odd{
+        background-color: #FAFAD7;
+}
+
+/*
+ * PAGINAÇÃO
+ */
+
+div#box_conteudo div#paginacao{
+	width:718px;
+	height:28px;	
+	margin-top:20px;
+	margin-left:10px;
+        text-align:right;        
+}
+
+div#box_conteudo div#paginacao a{
+	width:20px;
+	height:24px;
+	background:#fff;
+	border:1px solid #f2f2f2;
+	color:#808285;	
+	font-size:13px;
+	padding:5px 7px;        
+	text-decoration:none;
+}
+
+div#box_conteudo div#paginacao a:hover{
+	background:#374b8c;
+	border:1px solid #455eb0;
+	color:#fff;
+}
+
+/*
+ * BARRA DE RESULTADO DA LISTAGEM
+ */
+
+div#box_conteudo div#total_registros{
+	width:718px;
+	height:45px;
+	margin-top:7px;
+	margin-left:10px;
+	text-align:left;
+	background:#e7e8e9;
+	padding-top:3px;
+}
+
+div#total_registros p{
+	color:#606060;
+	font-size:14px;
+	margin-top:2px;
+	margin-left:3px;
+}
+
+div#total_registros p span{
+	font-weight:bold;
+}
