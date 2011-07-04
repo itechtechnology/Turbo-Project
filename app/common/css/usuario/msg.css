@@ -1,0 +1,210 @@
+<style type="text/css">
+* {
+padding: 0;
+margin: 0;
+}
+#principal {
+	
+	height: auto;
+	width: auto;
+	float: left;
+	background-color: #099;
+}
+
+#titulo {
+	background-color: #066;
+	text-align: center;
+	color: #FFF;
+	font-weight: bold;
+	height: 30px;	
+}
+
+#list {
+	margin-top: 5px;
+	background-color: #FFF;
+	color: #FFF;
+	height: 30px;	
+}
+
+#msg_del {
+	height: 30px;
+	width: 30px;
+	float: left;
+	margin-left: 3px;
+}
+
+#msg {
+	margin-left: 5px;	
+	height: 30px;
+	width: 30px;
+	float: left;
+}
+
+#data {
+	margin-left: 5px;	
+	height: 30px;
+	width: 55px;
+	float: left;
+	background-color: #E9E9E9;
+	font-size: 12px;
+	color: #000;
+	text-align: center;
+}
+
+#titulo_3 {
+	margin-left: 5px;	
+	height: 30px;
+	width: 162px;
+	float: left;
+	background-color: #E9E9E9;
+	font-size: 12px;
+	color: #000;
+	text-align: center;
+}
+
+#remetente {
+	margin-left: 5px;	
+	height: 30px;
+	width: 100px;
+	float: left;
+	background-color: #E9E9E9;
+	font-size: 12px;
+	color: #000;
+	text-align: center;
+}
+
+#fim{
+	
+	height: 25px;
+	width: 100%;
+	margin-top: 10px;
+	color:#FFF;
+	margin-left: 3px;	
+}
+
+#escrever{
+	height: 25px;	
+	float:right;
+	margin-right: 15px;	
+}
+a.escrever:link, a.escrever:visited {
+	text-decoration: underline overline
+}
+a.escrever:hover {
+	text-decoration: underline;
+	color: #FF0;
+}
+a.escrever:active {
+	text-decoration: underline overline;
+	font-weight: bold;
+	font-style: italic;
+}
+
+#form{
+	width: 280px;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:10px;
+	float: left;
+}
+
+#destinatario_t{
+	color: #FFF;
+	height: auto;
+	width: 80px;
+	float: left;
+	
+}
+
+#destinatario{
+	height: auto;
+	width: auto;
+	float: left;
+}
+
+#titulo_tm{
+	color: #FFF;
+	height: auto;
+	width: 80px;
+	margin-top:10px;
+	float: left;
+	
+}
+
+#titulo_m{
+	height: auto;
+	width: auto;
+	float: left;
+	margin-top:10px;
+}
+
+#caixa{
+	height: auto;
+	width: auto;
+	float: left;
+	margin-top:10px;
+}
+
+#enviar{
+	color: #FFF;
+	height: auto;
+	width: 80px;
+	margin-top:10px;
+	float: left;
+}
+#limpar{
+	color: #FFF;
+	height: auto;
+	width: 80px;
+	margin-top:10px;
+	float: left;
+	
+}
+
+#erro_destinatario{
+	
+	height: 25px;
+	width: 200px;
+	margin-top: 10px;
+	color:#FFF;
+	margin-left: 3px;	
+}
+
+#habilidade{
+	
+	height: 25px;
+	width: 300px;
+	margin-top: 10px;
+	color:#FFF;
+	margin-left: 3px;	
+}
+
+#msg_ok{
+	
+	height: 25px;
+	width: 200px;
+	margin-top: 10px;
+	color:#FFF;
+	margin-left: 3px;	
+}
+
+#ler_msg{
+	
+	height: auto;
+	width: 300px;
+	margin-top: 10px;
+	color:#FFF;	
+}
+
+#au{
+	height: 25px;
+	margin-top:40px;
+	width: auto;
+	float:none
+	color:#FFF;
+	background: #80BFFF;	
+}
+
+
+
+</style>

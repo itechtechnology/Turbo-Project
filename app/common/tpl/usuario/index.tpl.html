@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>iTech</title>
+<link href="http://www.itech10.com/app/common/css/usuario/index.css" type="text/css" rel="stylesheet"> 
+</head>
+
+<body>
+
+<div id="apDiv2">
+	<img src="http://www.itech10.com/app/common/imagens/logo.jpg" width="919" height="144" />
+</div>
+
+<!-- BEGIN BLOCK_OFF --> 
+	<div id="apDiv1">
+  		<form action="../login.php" method="POST">
+			Login: <br> <input name="login" type="text" size="30"><br>
+			Senha: <br> <input name="senha" type="password" size="30"> <br>
+	  		<input name="Enviar" type="submit" id="enviar" value="Enviar"> 
+    	</form>
+		<p><a href="../app/views/usuario/recuperar_senha.php">Esqueci a senha</a></p>
+		<p><a href="../app/views/usuario/cadastro.php">Se cadastar</a></p>
+	</div>
+<!-- END BLOCK_OFF -->
+
+<!-- BEGIN BLOCK_ON -->
+	<div id="apDiv4">
+  		<p>Olá {NOME}, seja bem vindo. </p>
+  		<p><a href="../app/views/usuario/pg_usuario.php">Página da usuário</a></p>
+	</div>
+<!-- END BLOCK_ON -->
+
+<!-- BEGIN BLOCK_LOGIN_OK -->
+	<div id="apDiv4">
+  		Login efetuado com sucesso, seja bem vindo {NOME}.
+        <p><a href="../app/views/usuario/pg_usuario.php">Página da usuário</a></p>
+	</div>
+<!-- END BLOCK_LOGIN_OK -->
+
+<!-- BEGIN BLOCK_LOGIN_ERRO -->
+	<div id="apDiv4">
+  		<p>Erro ao efetuar o login, login ou senha incorreta! </p>
+  		<p><a href="../index.php">Voltar</a></p>
+	</div>
+<!-- END BLOCK_LOGIN_ERRO -->
+
+<!-- BEGIN BLOCK_LOGIN_ANTERIOR -->
+	<div id="apDiv4">
+  		<p>Você já está logado como: {NOME} </p>
+  		<p><a href="../app/views/usuario/pg_usuario.php">Página da usuário</a></p>
+  		<p><a href="../app/controllers/usuario/deslogar.php">Sair</a></p>
+	</div>
+<!-- END BLOCK_LOGIN_ANTERIOR -->
+
+
+<div id="apDiv3">Desenvolvido por: iTech Technology Innovation</div>
+
+
+</body>
+</html>

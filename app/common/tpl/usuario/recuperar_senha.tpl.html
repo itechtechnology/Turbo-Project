@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{TITULO_1}</title>
+<style type="text/css">
+
+
+#principal {
+	height: auto;
+	width: 400px;
+	background-color: #099;   
+}
+
+#titulo_2 {
+	height: auto;
+	width: 400px;
+	text-align: center;
+	background-color: #066;
+	color: #FFF;
+}
+
+#botoes {
+	margin-top: 40px;
+}
+
+#bot {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+#txt {
+	margin-top: 10px;
+	color:#FFF;
+	width: 380px;
+	margin-left: 10px;
+	margin-right: 10px;	
+}
+
+
+a.bot:link, a.bot:visited {
+	text-decoration: underline overline
+}
+a.bot:hover {
+	text-decoration: underline;
+	color: #FF0; 
+}
+a.bot:active {
+	text-decoration: underline overline;
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+
+</style>
+</head>
+<body>
+
+
+
+
+<!-- BEGIN BLOCK_ID1 --> <!--- Editar senha --->
+	<div id="principal">
+			<div id="titulo_2">
+        		{TITULO_2} <!--- Título do menu --->
+			</div>
+            <div id="bot">
+          		<form method="post" action="{ACTION}"> <!--- {ACTION} = Página de envio --->
+                	<div id="bot">
+            			<label for="Senha">CPF:</label>
+                    </div>
+                    <div id="bot">
+                        <input type="text" name="cpf" maxlength="11"/>
+                    </div>
+            		<div id="bot">
+                    	<label for="Senha">Data de nascimento:</label>
+                    </div>
+                    <div id="bot">
+            			<input type="text" name="dt_nascimento" maxlength="10"/>
+                    </div>
+                    <div id="bot">
+                    	<label for="Senha">Login:</label>
+                    </div>
+                    <div id="bot">
+            			<input type="text" name="login" maxlength="15"/>
+                    </div>
+                    <div id="txt">
+                    	<select type="text" name="pergunta" id="pergunta">
+            				<!-- BEGIN BLOCK_REP --> <!--- Irá repetir esse bloco para mostrar todas as opções de perguntas --->
+								<option value="{V_REP}" selected="selected">{N_REP}</option>
+                			<!-- END BLOCK_REP -->
+           				</select>
+                    </div>
+                    <div id="bot">
+                    	<label for="Senha">Resposta:</label>
+                    </div>
+                    <div id="bot">
+                    	<input type="text" name="resposta" maxlength="50"/>
+                    </div>
+                    <div id="bot">
+                    	<input type="submit" name="Enviar"  title="Enviar"/> 	
+                    </div>
+			  </form>        	
+		</div> 
+	</div> 
+                    	
+		
+<!-- END BLOCK_ID1 -->
+
+
+
+
+
+<!-- BEGIN BLOCK_OP --> <!--- Bloco genérico de erros e operações bem sucedidas --->
+	<div id="principal">
+			<div id="titulo_2">
+        		{TITULO_2} <!--- Título do menu --->
+			</div>
+            <div id="txt">
+          		{TXT} <!--- Mensagem do erro --->	    	
+			</div> 
+                    	
+			<div id="botoes">
+  				<a href="{LINK_1}" class="bot">{BOT_1}</a> ||  <a href="{LINK_2}" class="bot">{BOT_2}</a> </div>        
+			</div>
+<!-- END BLOCK_OP -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+

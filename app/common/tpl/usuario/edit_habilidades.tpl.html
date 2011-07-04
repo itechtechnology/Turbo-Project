@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{TITULO_1}</title>
+<style type="text/css">
+
+
+#principal {
+	height: auto;
+	width: 400px;
+	background-color: #099;   
+}
+
+#titulo_2 {
+	height: auto;
+	width: 400px;
+	text-align: center;
+	background-color: #066;
+	color: #FFF;
+}
+
+#botoes {
+	margin-top: 40px;
+}
+
+#bot {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+#txt {
+	margin-top: 10px;
+	color:#FFF;
+	width: 380px;
+	margin-left: 10px;
+	margin-right: 10px;	
+}
+
+#bord {
+	height: 3px;
+	width: 400px;
+	margin-top: 10px;
+	background-color:#033;
+
+}
+
+
+a.bot:link, a.bot:visited {
+	text-decoration: underline overline
+}
+a.bot:hover {
+	text-decoration: underline;
+	color: #FF0; 
+}
+a.bot:active {
+	text-decoration: underline overline;
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+
+</style>
+</head>
+<body>
+
+
+<!-- BEGIN BLOCK_ID1 --> <!--- Mosta menu principal da edição --->
+	<div id="principal">
+			<div id="titulo_2">
+        		{TITULO_2} <!--- Título do menu --->
+			</div>
+        	<!-- BEGIN BLOCK_BOT -->
+        		<div id="bot">
+          			<form method="post" action="{ACTION}"> <!--- {ACTION} = Página de envio --->
+            			<input type="hidden" name="{NOME_BOT}" value="{VALUE}">
+                        <input type="submit" value="{VALUE}" title="{T_BOT}"/>                         
+					</form>        	
+				</div> 
+			<!-- END BLOCK_BOT -->
+			<div id="botoes">
+  				<a href="{LINK_1}" class="bot">{BOT_1}</a> ||  <a href="{LINK_2}" class="bot">{BOT_2}</a> </div>        
+			</div>
+<!-- END BLOCK_ID1 -->
+
+
+
+
+<!-- BEGIN BLOCK_HABI --> <!--- Tela de escolha de uma habilidade --->
+	<div id="principal">
+			<div id="titulo_2">
+        		{TITULO_2} <!--- Título do menu --->
+			</div>
+            <div id="bot">
+				<form method="post" action="{ACTION}"> <!--- {ACTION} = Página de envio --->
+                	<div id="bot">
+            			{TXT} <!--- {TXT} = texto da alteração --->
+                    </div>
+           
+                    <div id="bot">	
+                    	<label>{NOME_L}:</label> <!--- {NOME_L} = Nome do label --->		
+                    	<label for="select">  	    				
+            			<select type="text" name="habilidade" id="habilidade">
+                        <!-- BEGIN BLOCK_REP --> <!--- Irá repetir esse bloco para mostrar todas as habilidades cadastradas --->
+							<option value="{V_REP}" selected="selected">{N_REP}</option>
+                        <!-- END BLOCK_REP -->
+						</select>
+                        </label> 
+                    </div>
+                    <div id="bot">
+                    	<input type="submit" name="{NOME_BOT}" value="{VALUE}" title="{T_BOT}"/> 	
+                    </div>
+				</form>        	
+			</div>                    	
+			<div id="botoes">
+  				<a href="{LINK_1}" class="bot">{BOT_1}</a> ||  <a href="{LINK_2}" class="bot">{BOT_2}</a> </div>        
+			</div>
+<!-- END BLOCK_HABI -->
+
+
+
+
+<!-- BEGIN BLOCK_OP --> <!--- Bloco genérico de erros e operações bem sucedidas --->
+	<div id="principal">
+			<div id="titulo_2">
+        		{TITULO_2} <!--- Título do menu --->
+			</div>
+            <div id="txt">
+          		{TXT} <!--- Mensagem do erro --->	    	
+			</div> 
+                    	
+			<div id="botoes">
+  				<a href="{LINK_1}" class="bot">{BOT_1}</a> ||  <a href="{LINK_2}" class="bot">{BOT_2}</a> </div>        
+			</div>
+<!-- END BLOCK_OP -->
+
+
+
+
+<!-- BEGIN BLOCK_LISTA --> <!--- Listas as habilidades --->
+	<div id="principal">
+			<div id="titulo_2">
+        		{TITULO_2} <!--- Título do menu --->
+			</div>
+            <div id="txt">
+          		{TXT}    	
+			</div> 
+            
+            <!-- BEGIN BLOCK_LIST -->
+            	<div id="bord">
+                </div> 
+            	<div id="bot">                
+          			{LI_NOME} <!--- nome da habilidade --->	    	
+				</div>
+                <div id="txt">
+          			{LI_DESC} <!--- descrição da habilidade --->	    	
+				</div>
+                <div id="bord">
+                </div>   
+            <!-- END BLOCK_LIST -->
+            
+                    	
+			<div id="botoes">
+  				<a href="{LINK_1}" class="bot">{BOT_1}</a> ||  <a href="{LINK_2}" class="bot">{BOT_2}</a> </div>        
+			</div>
+<!-- END BLOCK_LISTA -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

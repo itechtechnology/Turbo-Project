@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{TITULO_1}</title> <!--- Título da página HTML --->
+<link href="http://www.itech10.com/app/common/css/usuario/msg.css" type="text/css" rel="stylesheet"> 
+</head>
+<body>
+<!--- 
+/*
+Nome: Template Mensagens
+Autor: Marcos Rosa
+Criado em: 12/05/11
+Modificado por: Marcos Rosa - Data 04/05/11
+Descrição: Exibe a lista de mensagens de um usuáio, formulário de envio e deiversos blocos de erros e sucessos.
+*/
+--->
+
+
+<!-- BEGIN BLOCK_ESCREVE --> <!--- Formulário de escrita da uma mensagem pg: escrever_msg.php --->
+<div id="principal">
+		<div id="titulo"> {TITULO_2} </div> <!--- Título do formulário --->
+		<div id="form">
+			<form action="cadastro_habilidade.php" method="post"> 
+        		<div  id="titulo_tm">
+                	Título:
+                </div>
+        		<div id="titulo_m">
+               		<input type="text" name="titulo" maxlength="50" size="25">
+                </div>
+        		<div id="caixa">
+                	<textarea name="descricao" cols="31" rows="10" maxlength="300"></textarea>
+                </div>        
+ 				<div id="enviar"> 
+                	<input type="submit" value="Enviar"/>  
+                </div>
+	  			<div id="limpar"> 
+                	<input type="reset" value="Limpar"/> 
+                </div>
+			</form>
+		</div>
+	</div>
+<!-- END BLOCK_ESCREVE-->
+
+
+
+
+<!-- BEGIN BLOCK_ERRO_TITULO --> <!--- Erro quando o usuário não preenche o campo título ou a descrição da habilidade --->
+	<div id="principal">
+		<div id="titulo"> {TITULO_2} </div> <!--- Título do erro --->
+		<div id="erro_destinatario"> 
+        	<p>Erro ao cadastrar habilidade.</p>
+        	<p>&nbsp;</p>
+        	<div id="escrever"> 
+                <a href="cadastro_habilidade.php" class="escrever">VOLTAR</a>
+            </div>
+		</div>
+	</div>
+<!-- END BLOCK_ERRO_TITULO-->
+
+
+
+<!-- BEGIN BLOCK_HABILIDADE_OK --> <!--- Quando a habilidade é enviada com sucesso---> 
+	<div id="principal">
+		<div id="titulo"> {TITULO_2} </div> <!--- Título do envio --->
+        <div id="habilidade"> 
+        	<p>A habilidade: {NOME} foi cadastada com sucesso</p> <!--- Título da habilidade --->
+        	<p>&nbsp;</p>
+        	<div id="escrever"> 
+            	<a href="pg_usuario.php" class="escrever">Página do Usuário</a>
+                <a href="cadastro_habilidade.php" class="escrever">Nova Habilidade</a>  
+            </div>
+		</div>
+	</div>
+<!-- END BLOCK_HABILIDADE_OK-->   
+
+</body>
+</html>

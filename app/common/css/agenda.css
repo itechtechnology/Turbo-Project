@@ -1,0 +1,8 @@
+/* REGRAS PARA A PÁGINA DE AGENDA */
+
+div#box_agenda{
+	width:718px;
+	height:400px;
+	background:none;
+	margin-left:10px;
+}

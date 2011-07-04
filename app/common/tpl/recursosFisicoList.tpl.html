@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+        <link href="{CSSDIR}/main.css" rel="stylesheet" type="text/css" />
+        <link href="{CSSDIR}/lista.css" rel="stylesheet" type="text/css" />
+        <link href="{CSSDIR}/busca.css" rel="stylesheet" type="text/css" />
+        <link href="{CSSDIR}/tooltip.css" rel="stylesheet" type="text/css" />
+
+        <script type="text/javascript" src="{JSDIR}/jquery-1.6.1.min.js"></script>
+        <script type="text/javascript" src="{JSDIR}/jquery.tools.min.js?select=full&debug=true"></script>
+        <script type="text/javascript" src="{JSDIR}/fonte.js" ></script> 
+
+        <link rel="shortcut icon" type="image/x-icon" href="{IMAGEDIR}/{FAVICON}" />
+        <link rel="icon" type="image/x-icon" href="{IMAGEDIR}/{ANIMATEDFAVICON}" />
+        <title>{SITETITLE}</title>
+    </head>
+    <body>
+        {TOPO}
+        <div>
+            {USUARIO}
+            <div id="conteudo">
+                {MENULATERAL}
+                <div id="box_conteudo">
+                    <a href="#" id="box_tooltip">
+                        <img src="{IMAGEDIR}/dicas.jpg" id="dicas" alt="" title="<p>
+                             {DICA}
+                             </p>" />
+                    </a>
+                    <div id="tituloGeral">
+                        <h2>{TITULOLISTAGEM}</h2>
+                    </div>
+                    <div id="busca">
+                        <h3>{TITULOPROCURAR}</h3>
+                        <form name="procura" method="get" action="{CONTROLLER}">
+                            <div id="campo"><input type="text" name="pesquisa" id="pesquisa" /></div>
+                            <input type="image" src="{IMAGEDIR}/botao_pesquisa.jpg" name="botao_pesquisa" id="botao_pesquisa" />
+                        </form>
+                    </div>
+                    <table>           
+                        <thead>
+                            <tr>
+                                <td>
+                                    <a href="?orderBy=cd_recurso&sort={SORT}">
+                                        &nbsp;ID&nbsp; {IMGORDEM1}
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="?orderBy=nome_recurso&sort={SORT}">
+                                        Nome {IMGORDEM2}
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="?orderBy=ds_recurso&sort={SORT}">
+                                        Descricao {IMGORDEM3}
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="?orderBy=custo&sort={SORT}">
+                                        Custo {IMGORDEM4}
+                                    </a>
+                                </td>
+                                <td class="acao">
+                                    <a href="#">
+                                        Editar
+                                    </a>
+                                </td>
+                            </tr>
+                        </thead>
+                        <!-- BEGIN BLOCK_LISTAGEM -->
+                        <tr {CLASS} >
+                            <td>{CD_RECURSO}</td>
+                            <td>{NOME_RECURSO}</td>
+                            <td>{DS_RECURSO}</td>
+                            <td>{CUSTO}</td>
+                            <td>
+                                <a href="{EDITAR}">
+                                    <img src="{IMAGEDIR}/ic_editar.png" alt="Editar" />
+                                </a>
+                            </td>
+                        </tr>
+                        <!-- END BLOCK_LISTAGEM -->
+                    </table>
+                    <div id="paginacao">
+
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+
+                    </div>
+
+                    <div id="total_registros">
+
+                        <p><span>{TOTAL}</span>{LEGENDA}</p>
+                        <p>Mostrando resultados de <span>1 a 4</span></p>
+
+                    </div>
+
+                    <script type="text/javascript" src="{JSDIR}/configuracoesJS.js"></script>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

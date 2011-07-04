@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{TITULO_1}</title> <!--- Título da página HTML --->
+<link href="http://www.itech10.com/app/common/css/usuario/msg.css" type="text/css" rel="stylesheet"> 
+</head>
+<body>
+<!--- 
+/*
+Nome: Template Mensagens
+Autor: Marcos Rosa
+Criado em: 12/05/11
+Modificado por: Marcos Rosa - Data 04/05/11
+Descrição: Exibe a lista de mensagens de um usuáio, formulário de envio e deiversos blocos de erros e sucessos.
+*/
+--->
+
+
+<!-- BEGIN BLOCK_LISTA --> <!--- Tamplate responsável por toda a página lista_msg.php --->
+	<div id="principal">
+   		<div id="titulo"> {TITULO_2} </div> <!--- Título da lista de mensagens --->     
+		<!-- BEGIN BLOCK_LIST --> <!---  Bloco responsável para repetição das mensagens --->
+			<div id="list">            
+        		<div id="msg_del"> <!--- Exibe uma imagem botão e guarda em ID_MSG o id da mensagem --->
+            		<form action="../../controllers/usuario/deletar_msg.php" method="post">				
+						<input type=image src="../../common/images/usuario/msg_del.jpg" width="30" height="30" title="Deletatar Mensagem" alt="Deletatar Mensagem">
+                        <input type="hidden" name="MSG" value="{ID_MSG}">
+					</form>
+            	</div>            
+            	<div id="msg">
+            		<form action="../../views/usuario/ler_msg.php" method="post">				
+						<input type=image src="../../common/images/usuario/{STATUS}.jpg" width="30" height="30" title="Ler Mensagem" alt="Ler Mensagem">
+                        <input type="hidden" name="MSG" value="{ID_MSG}">
+					</form>
+            	</div>                
+            	<div id="data"> 
+            		{DATA} <!--- Data do envio da mensagem --->         
+            	</div>            
+				<div id="titulo_3"> 
+            		{TITULO_3} <!--- Título da mensagem --->       
+            	</div>            
+      			<div id="remetente"> 
+            		De: {REMETENTE} <!--- usuário que enviou a mensagem --->     
+      			</div>                
+			</div>            
+		<!-- END BLOCK_LIST -->        
+		<div id="fim"> 
+      		Mensagens não lidas: {N_LIDAS}/{TOTAL} <!--- mensagem não lidas / total de mensagens de um usuário --->                       
+        	<div id="escrever"> 
+        		<a href="escrever_msg.php" class="escrever">NOVA MENSAGEM</a> 
+			</div>
+		</div> 
+	</div>
+<!-- END BLOCK_LISTA -->
+
+
+
+
+<!-- BEGIN BLOCK_LER --> <!--- Template da página ler_msg.php --->
+	<div id="principal">
+   		<div id="titulo"> {TITULO_2} </div> <!--- Título da mensagem --->
+      	<div id="ler_msg">
+      		{MSG_TXT} <!--- Conteúdo da mensagem --->
+      	</div> 
+		<div id="au"> 
+      		<a href="pg_usuario.php" class="escrever">Página do Usuário</a> || <a href="lista_msg.php" class="escrever">Voltar</a>
+		</div>
+	</div> 
+<!-- END BLOCK_LER-->
+
+
+
+
+<!-- BEGIN BLOCK_ESCREVE --> <!--- Formulário de escrita da uma mensagem pg: escrever_msg.php --->
+<div id="principal">
+		<div id="titulo"> {TITULO_2} </div> <!--- Título do formulário --->
+		<div id="form">
+			<form action="escrever_msg.php" method="post"> 
+        		<div id="destinatario_t">
+                	Destinatario:
+                </div> 
+        		<div id="destinatario">
+                	<input type="text" name="destinatario" maxlength="15" size="25">
+                </div>
+        		<div  id="titulo_tm">
+                	Título:
+                </div>
+        		<div id="titulo_m">
+               		<input type="text" name="titulo" maxlength="50" size="25">
+                </div>
+        		<div id="caixa">
+                	<textarea name="msg" cols="31" rows="10" maxlength="300"></textarea>
+                </div>        
+ 				<div id="enviar"> 
+                	<input type="submit" value="Enviar"/>  
+                </div>
+	  			<div id="limpar"> 
+                	<input type="reset" value="Limpar"/> 
+                </div>
+			</form>
+		</div>
+	</div>
+<!-- END BLOCK_ESCREVE-->
+
+
+
+
+<!-- BEGIN BLOCK_ERRO_TITULO --> <!--- Erro quando o usuário não preenche o campo título ou o conteúdo da mensagem --->
+	<div id="principal">
+		<div id="titulo"> {TITULO_2} </div> <!--- Título do erro --->
+		<div id="erro_destinatario"> 
+        	<p>Erro! Todos os campos devem ser preenchidos.</p>
+        	<p>&nbsp;</p>
+        	<div id="escrever"> 
+                <a href="escrever_msg.php" class="escrever">VOLTAR</a>
+            </div>
+		</div>
+	</div>
+<!-- END BLOCK_ERRO_TITULO-->
+
+
+
+
+<!-- BEGIN BLOCK_ERRO_LOGIN --> <!--- Erro quando o destinatario não existe --->
+	<div id="principal">
+		<div id="titulo"> {TITULO_2} </div> <!--- Título do erro --->
+		<div id="erro_destinatario"> 
+        	<p>O destinatário: {DESTINATARIO} não existe! </p> <!--- Nome do destinatário escrito pelo usuáio --->
+        	<p>&nbsp;</p>
+        	<div id="escrever"> 
+            	<a href="escrever_msg.php" class="escrever">VOLTAR</a> 
+            </div>
+		</div>
+	</div>
+<!-- END BLOCK_ERRO_LOGIN-->
+
+
+
+
+<!-- BEGIN BLOCK_MSG_OK --> <!--- Quando a mensagem é enviada com sucesso---> 
+	<div id="principal">
+		<div id="titulo"> {TITULO_2} </div> <!--- Título do envio --->
+        <div id="erro_destinatario"> 
+        	<p>Sua mensagem foi enviada com sucesso para: {NOME}</p> <!--- Nome do destinatário --->
+        	<p>&nbsp;</p>
+        	<div id="escrever"> 
+            	<a href="pg_usuario.php" class="escrever">Página do Usuário</a> 
+            </div>
+		</div>
+	</div>
+<!-- END BLOCK_MSG_OK-->       
+
+</body>
+</html>

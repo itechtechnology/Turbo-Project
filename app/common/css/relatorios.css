@@ -1,0 +1,16 @@
+div#envolve_relatorios{
+	width:718px;
+	height:100%;
+	overflow:auto;
+	margin-left:10px;
+}
+
+div#envolve_relatorios div.box_relatorios{
+	width:222px;
+	height:310px;
+	background:#f2f2f3;
+	float:left;
+	margin-right:7px;
+	margin-bottom:18px;
+	padding:15px 5px;
+}

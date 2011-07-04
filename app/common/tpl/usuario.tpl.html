@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{TITULO_1}</title>
+	<link href="{CSSDIR}/main.css" rel="stylesheet" type="text/css" />
+    <link href="{CSSDIR}/cadastro.css" rel="stylesheet" type="text/css" /> 
+    <link href="{CSSDIR}/dateinput.css" rel="stylesheet" type="text/css" />
+    <link href="{CSSDIR}/tooltip.css" rel="stylesheet" type="text/css" /> 
+    <script type="text/javascript" src="{JSDIR}/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="{JSDIR}/jquery.tools.min.js?select=full&amp;debug=true"></script>
+<style type="text/css">
+#apDiv1 {	
+	width:400px;
+	height: auto;
+	color: #900;
+	margin-top:50px;
+	margin-left: 30px;
+	font-size: 14px;
+}
+
+
+</style>
+</head>
+
+
+
+<body>
+
+{TOPO} <!--- Add o tpl topo --->
+
+<div id="conteudo">
+    		<div id="box_conteudo">
+        		<div id="tituloGeral">
+            		<h2>{TITULO_2}</h2> <!--- Título do bloco atual --->
+        		</div>
+                
+				<!-- BEGIN BLOCK_ADD1 --> <!--- Primeira etapa do formulário de cadastro --->
+				<div id="envolve_formularios">
+			  		<form name="form1" class="form" method="post" enctype="multipart/form-data" action="../controllers/usuario.php?acao=add1" >
+						<div class="panes">
+                			<div class="subpanes">
+								<fieldset>
+									<label> 
+										Login * 								  		
+                                        <input type="text" name="login" maxlength="15" size="25" value="{LOGIN}">	
+						        </label>
+                                    <label> 
+										E-mail * 						
+								  		<input type="text" name="email" maxlength="50" size="50" value="{EMAIL}">                                      
+								    </label>
+                                    <label> 
+										Senha * 						
+								  		<input type="password" name="senha1" maxlength="32" size="25">                                      
+								    </label>
+                                    <label> 
+										Confirmar senha * 						
+								  		<input type="password" name="senha2" maxlength="32" size="25">                                      
+								    </label>
+                                           
+						    </fieldset>
+                    			<div class="barraForm">
+                    				<button type="reset" class="button negative">
+                       				<img src="{IMAGEDIR}/icons/cross.png" alt=""/> Limpar
+                        			</button>
+                        			<button type="submit" class="button positive">
+                        				<img src="{IMAGEDIR}/icons/tick.png" alt=""/> Salvar
+                        			</button>
+                              <div id="apDiv1">
+                                    	{ERROS} <!--- Apresenta os erros no cadastro --->
+                                    </div>
+                                    
+							  </div>
+							</div>
+						</div>			
+					</form>
+                    <!-- END BLOCK_ADD1--> 
+
+<!--- ................................................................................................................... --->
+
+					<!-- BEGIN BLOCK_ADD2 --> <!--- Segunda etapa do formulário de cadastro --->
+					<div id="envolve_formularios">
+			  			<form name="form1" class="form" method="post" enctype="multipart/form-data" action="../controllers/usuario.php?acao=add2" >
+							<div class="panes">
+                				<div class="subpanes">
+									<fieldset>
+										<label> 
+											Nome completo * 								  		
+                                        	<input type="text" name="nome" maxlength="45" size="50" value="{NOME}">	
+						        	</label>
+                                    	<label> 
+											CPF * 						
+								  			<input type="text" name="cpf" maxlength="11" size="25" value="{CPF}">
+								    	</label>
+                                    	<label> 
+											Data de nascimento * 						
+								  			<input type="date" name="data_nascimento" maxlength="10" size="25" value="{DATA_NASCIMENTO}">
+								    	</label>                                    									    
+                                        <label> 
+											Telefone fixo  						
+								  			<input type="text" name="telefone_fixo" maxlength="16" size="25" value="{TELEFONE_FIXO}">
+								    	</label>
+                                        <label> 
+											Telefone celular  						
+								  			<input type="text" name="telefone_celular" maxlength="16" size="25" value="{TELEFONE_CELULAR}">
+								    	</label>
+                                        <label> Sexo*
+                                    		<select name="sexo" required="required"  >
+												<option value="M" {SEL_M}>Masculino</option>
+												<option value="F" {SEL_F}>Feminino</option>
+											</select>
+                                		</label>                                           
+						    	</fieldset>
+                    				<div class="barraForm">
+                    					<button type="reset" class="button negative">
+                       						<img src="{IMAGEDIR}/icons/cross.png" alt=""/> Limpar
+                        				</button>
+                        				<button type="submit" class="button positive">
+                        					<img src="{IMAGEDIR}/icons/tick.png" alt=""/> Salvar
+                        				</button>
+                              	<div id="apDiv1">
+                                    	{ERROS} <!--- Apresenta os erros no cadastro --->
+                                    </div>
+							  </div>
+							</div>
+						</div>			
+					</form>
+                    <!-- END BLOCK_ADD2--> 
+                    
+
+<!--- ................................................................................................................... --->
+
+					<!-- BEGIN BLOCK_ADD3 --> <!--- Terceira etapa do formulário de cadastro --->
+					<div id="envolve_formularios">
+			  			<form name="form1" class="form" method="post" enctype="multipart/form-data" action="../controllers/usuario.php?acao=add3" >
+							<div class="panes">
+                				<div class="subpanes">
+									<fieldset>
+										<label> 
+											Endereço* 								  		
+                                        	<input type="text" name="rua" maxlength="50" size="50" value="{RUA}">
+						        		</label>
+                                        <label> 
+											Número* 								  		
+                                        	<input type="text" name="numero" maxlength="5" size="5" value="{NUMERO}">
+						        		</label>
+                                        <label> 
+											Complemento 								  		
+                                        	<input type="text" name="complemento" maxlength="50" size="50" value="{COMPLEMENTO}">
+						        		</label>
+                                        <label> 
+											Bairro* 								  		
+                                        	<input type="text" name="bairro" maxlength="30" size="50" value="{BAIRRO}">
+						        		</label>  
+                                        <label> 
+											Cidade* 								  		
+                                        	<input type="text" name="cidade" maxlength="50" size="25" value="{CIDADE}">
+						        		</label>
+                                        <label> 
+											CEP* 								  		
+                                        	<input type="text" name="cep" maxlength="10" size="25" value="{CEP}">
+						        		</label>
+                                        <label> 
+                                        	Estado*
+                                    		<select type="text" name="estado" id="estado">
+												<option value="Acre" selected="selected">Acre</option>
+												<option value="Alagoas">Alagoas</option>
+												<option value="Amapá">Amapá</option>
+												<option value="Amazonas">Amazonas</option>
+												<option value="Bahia">Bahia</option>
+												<option value="Ceará">Ceará</option>
+												<option value="Distrito Federal">Distrito Federal</option>
+												<option value="Espírito Santo">Espírito Santo</option>
+												<option value="Goiás">Goiás</option>
+												<option value="Maranhão">Maranhão</option>
+												<option value="Mato Grosso">Mato Grosso</option>
+												<option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+												<option value="Minas Gerais">Minas Gerais</option>
+												<option value="Pará">Pará</option>
+												<option value="Paraíba">Paraíba</option>
+												<option value="Paraná">Paraná</option>
+												<option value="Pernambuco">Pernambuco</option>
+												<option value="Piauí">Piauí</option>
+												<option value="Rio de Janeiro">Rio de Janeiro</option>
+												<option value="Rio Grande do Norte">Rio Grande do Norte</option>
+												<option value="Rio Grande do Sul">Rio Grande do Sul</option>
+												<option value="Rondônia">Rondônia</option>
+												<option value="Roraima">Roraima</option>
+												<option value="Santa Catarina">Santa Catarina</option>
+												<option value="São Paulo">São Paulo</option>
+												<option value="Sergipe">Sergipe</option>		
+												<option value="Tocantins">Tocantins</option>
+											</select>
+                                		</label>
+                                        <label> 
+											País* 								  		
+                                        	<input type="text" name="pais" maxlength="35" size="25" value="{PAIS}">
+						        		</label>                                          
+						    	</fieldset>
+                    				<div class="barraForm">
+                    					<button type="reset" class="button negative">
+                       						<img src="{IMAGEDIR}/icons/cross.png" alt=""/> Limpar
+                        				</button>
+                        				<button type="submit" class="button positive">
+                        					<img src="{IMAGEDIR}/icons/tick.png" alt=""/> Salvar
+                        				</button>
+                              	<div id="apDiv1">
+                                    	{ERROS} <!--- Apresenta os erros no cadastro --->
+                                    </div>
+							  </div>
+							</div>
+						</div>			
+					</form>
+                    <!-- END BLOCK_ADD3--> 
+
+<!--- ................................................................................................................... --->
+
+					<!-- BEGIN BLOCK_ADD4 --> <!--- Quarta etapa do formulário de cadastro --->
+					<div id="envolve_formularios">
+			  			<form name="form1" class="form" method="post" enctype="multipart/form-data" action="../controllers/usuario.php?acao=add4" >
+							<div class="panes">
+                				<div class="subpanes">
+									<fieldset>
+										<label> 
+                                        	Pergunta secreta*
+											<select type="text" name="pergunta" id="pergunta">
+            									<!-- BEGIN BLOCK_REP --> <!--- Irá repetir esse bloco para mostrar todas as opções de perguntas --->
+													<option value="{V_REP}" selected="selected">{N_REP}</option>
+                								<!-- END BLOCK_REP -->
+           									</select>
+						        		</label>
+                                        <label> 
+											Resposta* 								  		
+                                        	<input type="text" name="resposta" maxlength="50" size="50" value="{RESPOSTA}">
+						        		</label> 
+
+						    		</fieldset>
+                    				<div class="barraForm">
+                    					<button type="reset" class="button negative">
+                       						<img src="{IMAGEDIR}/icons/cross.png" alt=""/> Limpar
+                        				</button>
+                        				<button type="submit" class="button positive">
+                        					<img src="{IMAGEDIR}/icons/tick.png" alt=""/> Salvar
+                        				</button>
+                              	<div id="apDiv1">
+                                    	{ERROS} <!--- Apresenta os erros no cadastro --->
+                                    </div>
+							  </div>
+							</div>
+						</div>			
+					</form>
+                    <!-- END BLOCK_ADD4-->                    
+                    <script type="text/javascript" src="{JSDIR}/configuracoesJS.js"></script>                    
+				</div>
+			</div>    
+	</div>       
+
+{RODAPE} <!--- Add o tpl rodapé --->
+</body>
+</html>

@@ -1,0 +1,132 @@
+<script language="Javascript">
+function DataBarra(c){//Autocompletar data com as barras
+  if((c.value.length ==2)||(c.value.length ==5)){
+    c.value += '/';
+  }
+}
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cadastro Usuário</title>
+<link href="http://www.itech10.com/app/common/css/usuario/cadastra_usuario.css" type="text/css" rel="stylesheet"> 
+</head>
+
+<body>
+
+<div id="todo">
+	<div id="nome_form">
+  		<div align="center" class="style1"><span class="style6"></span>Formul&aacute;rio de Cadastro </div>
+	</div>
+	
+	<form action="../../controllers/usuario/valida_cadastro.php" method="post">
+	
+		<div class="style2" id="t_nome">Nome completo:</div>
+		<div id="nome"><input type="text" name="nome" maxlength="45" size="50"></div>
+		
+		<div class="style2" id="t_email">E-mail:</div> 
+		<div id="email"><input type="text" name="email" maxlength="50" size="50"></div>
+		
+		<div class="style2" id="t_login">Login:</div> 
+		<div id="login"><input type="text" name="login" maxlength="15" size="25"></div>
+		
+		<div class="style2" id="t_senha1">Senha:</div> 
+		<div id="senha1"><input type="password" name="senha1" maxlength="32" size="25"></div>
+		
+		<div class="style2" id="t_senha2">Confirmar senha:</div> 
+		<div id="senha2"><input type="password" name="senha2" maxlength="32" size="25"></div>
+		
+		<div class="style2" id="t_sexo">Sexo:</div>
+	  <div id="masculino"><input type="radio" name="sexo" value="M" checked="checked"> 
+	    <span class="style4">Masculino</span> </div>
+		<div id="feminino"><input type="radio" name="sexo" value="F"> 
+	    <span class="style4">Feminino </span></div>
+		
+		<div class="style2" id="t_data">Data de nascimento:</div> 
+	  <div id="data"><input type="text" name="data_nascimento" maxlength="10" size="25" onKeyUp="DataBarra(this);"> 
+      <span class="style4">Ex: DD/MM/AAAA</span></div>
+		
+		<div class="style2" id="t_estado">Estado:</div>
+		<div id="estado"><select type="text" name="estado" id="estado">
+		<option value="Acre" selected="selected">Acre</option>
+		<option value="Alagoas">Alagoas</option>
+		<option value="Amapá">Amapá</option>
+		<option value="Amazonas">Amazonas</option>
+		<option value="Bahia">Bahia</option>
+		<option value="Ceará">Ceará</option>
+		<option value="Distrito Federal">Distrito Federal</option>
+		<option value="Espírito Santo">Espírito Santo</option>
+		<option value="Goiás">Goiás</option>
+		<option value="Maranhão">Maranhão</option>
+		<option value="Mato Grosso">Mato Grosso</option>
+		<option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+		<option value="Minas Gerais">Minas Gerais</option>
+		<option value="Pará">Pará</option>
+		<option value="Paraíba">Paraíba</option>
+		<option value="Paraná">Paraná</option>
+		<option value="Pernambuco">Pernambuco</option>
+		<option value="Piauí">Piauí</option>
+		<option value="Rio de Janeiro">Rio de Janeiro</option>
+		<option value="Rio Grande do Norte">Rio Grande do Norte</option>
+		<option value="Rio Grande do Sul">Rio Grande do Sul</option>
+		<option value="Rondônia">Rondônia</option>
+		<option value="Roraima">Roraima</option>
+		<option value="Santa Catarina">Santa Catarina</option>
+		<option value="São Paulo">São Paulo</option>
+		<option value="Sergipe">Sergipe</option>		
+		<option value="Tocantins">Tocantins</option>
+		</select>
+		</div>
+		<div id="aux"></div>
+		
+        <div class="style2" id="t_rua">Rua:</div> 
+		<div id="rua"><input type="text" name="rua" maxlength="50" size="50"></div>
+        
+        <div class="style2" id="t_numero">Número:</div> 
+		<div id="numero"><input type="text" name="numero" maxlength="5" size="5"></div>
+        
+        <div class="style2" id="t_bairro">Bairro:</div> 
+		<div id="bairro"><input type="text" name="bairro" maxlength="30" size="50"></div> 
+        
+        <div class="style2" id="t_complemento">Complemento:</div> 
+		<div id="complemento"><input type="text" name="complemento" maxlength="50" size="50"></div>       
+        
+		<div class="style2" id="t_cidade">Cidade:</div> 
+		<div id="cidade"><input type="text" name="cidade" maxlength="50" size="25"></div>
+        
+        <div class="style2" id="t_pais">País:</div> 
+		<div id="pais"><input type="text" name="pais" maxlength="35" size="25"></div>
+        
+        <div class="style2" id="t_cep">CEP:</div> 
+		<div id="cep"><input type="text" name="cep" maxlength="10" size="25"></div>
+        
+        <div class="style2" id="t_cpf">CPF:</div> 
+		<div id="cpf"><input type="text" name="cpf" maxlength="11" size="25"></div>
+        
+        <div class="style2" id="t_telefone_fixo">Telefone fixo:</div> 
+		<div id="telefone_fixo"><input type="text" name="telefone_fixo" maxlength="16" size="25"></div>
+        
+        <div class="style2" id="t_telefone_celular">Telefone celular:</div> 
+		<div id="telefone_celular"><input type="text" name="telefone_celular" maxlength="16" size="25"></div>
+        
+        <div class="style2" id="t_telefone_celular">Pergunta secreta:</div> 
+		<div id="telefone_celular">
+        	<select type="text" name="pergunta" id="pergunta">
+            	<!-- BEGIN BLOCK_REP --> <!--- Irá repetir esse bloco para mostrar todas as opções de perguntas --->
+					<option value="{V_REP}" selected="selected">{N_REP}</option>
+                <!-- END BLOCK_REP -->
+           	</select>        
+        </div>
+        <div class="style2" id="t_telefone_celular">Resposta da pergunta:</div> 
+		<div id="telefone_celular"><input type="text" name="resposta" maxlength="50" size="50"></div>
+		
+		<div id="enviar"><input type="submit" value="Enviar"/></div>
+		<div id="limpar"><input type="reset" value="Limpar"/></div>
+		
+		
+	</form>
+</div>
+
+</body>
+</html>
