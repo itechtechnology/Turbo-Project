@@ -70,7 +70,7 @@
     /*
      * TÍTULO DO SITE
      */
-    define('SITETITLE', 'itech! Gestão Inteligente de projetos');
+    define('SITETITLE', 'itech! Gest�o Inteligente de projetos');
 
 
 /*

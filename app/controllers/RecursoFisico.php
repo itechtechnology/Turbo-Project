@@ -9,10 +9,10 @@ $acao = $_GET['acao'];
 
 switch ($acao) {
     case "salvar": {
-            $dados['nome_recurso'] = $_POST['nome'];
+            $dados['nome_recurso'] = $_POST['nome_recurso'];
             $dados['custo'] = $_POST['custo'];
-            $dados['ds_recurso'] = $_POST['descricao'];
-            header("Location: ../views/recursoSalvar.php");
+            $dados['ds_recurso'] = $_POST['ds_recurso'];
+            header("Location: ../views/recursoAdd.php");
 
             if ($recurso->cadastrarRecurso($dados)) {
 //                $data['fk_cd_usuario'] = $_SESSION['login'];
