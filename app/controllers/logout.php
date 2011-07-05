@@ -17,7 +17,7 @@ require '../../conf/lock.php';
 	if($usuario->verificaLogin()){//Se a sessão existir
 		 
 		$usuario->logout($login, md5($senha));//Passo o login e a senha criptografada
-		Header("Location: http://www.itech10.com"); //Redireciona para index 
+		Header("Location: ../../web/"); //Redireciona para index 
 		exit;
 	
 	}
