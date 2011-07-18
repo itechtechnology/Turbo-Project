@@ -4,12 +4,93 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>iTech</title>
 <link href="http://www.itech10.com/app/common/css/usuario/index.css" type="text/css" rel="stylesheet"> 
+<script src="http://www.itech10.com/app/common/tpl/Jquery/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://www.itech10.com/app/common/tpl/Jquery/nivo-slider.css" type="text/css" media="screen" />
+<script src="http://www.itech10.com/app/common/tpl/Jquery/jquery.min.js" type="text/javascript"></script>
+
+<!-- Script responsável por aumentar/diminuir fonte -->	
+		<script language=Javascript>
+			var tam=12;
+			var tamFontMenu=100;
+			var ctr=0;
+			function fonte(x) {
+				tam+=x;
+				tamFontMenu+=x;
+				if(tam>18){ tam=18; ctr=1;}
+				if(tam<9) tam=9;
+				if(tamFontMenu>180) tamFontMenu=180;
+				if(tamFontMenu<90) tamFontMenu=90;
+				document.getElementById("geral").style.fontSize = tam+'px';
+				for(var i=1;i<=3;i++){
+					var submenu=$('#submenu'+i).css('width');
+					submenu=submenu.split("%")
+					submenu=submenu[0];
+					submenu=Number(submenu)+Number(5);
+					document.getElementById("submenu"+i).style.fontSize = tamFontMenu+'%';
+					if(ctr==0) document.getElementById("submenu"+i).style.width = submenu+'%';
+				}
+			}
+		</script>
+		<!-- Script responsável pelo efeito de contraste -->	
+		<script language=Javascript>
+			$(document).ready(function() {
+				var flag=0; //essa variável indica o estado do efeito, se está ativado (1) ou não (0).  
+				$('#navegacaoContraste').click(function () {
+					if(flag==0){
+						$('html').css({"background-color":"#000"});
+						$('a').css({"color":"white","font-weight": "bold","background-color":"#3D6272"});
+						$('#apDiv1').css({"color":"white"});
+						$('#geral').css({"border-color":"#000","background":"#000"});
+						$('MENU').css({"border-color":"#000","background":"#1C5072"});
+						flag=1;
+					}
+					else{
+						$('html').css({"background-color":"#3D6272"});
+						$('a').css({"color":"white","font-weight": "bold","background-color":"#3D6272","text-decoration": "underline"});
+						$('#geral').css({"border-color":"white","background":"#3D6272"});
+						$('#apDiv1').css({"color":"black"});
+						$('MENU').css({"border-color":"white","background":"white"});
+						flag=0;
+					}
+				});
+				//Um tratamento diferenciado para os links substituindo a pseudoclasse :hover
+				$('a').mouseover(function () {
+					if(flag==1){
+						$(this).css({"color":"black","font-weight":"bold","background-color":"white"});
+					}else{ $(this).css({"font-weight":"bold","color":"black","background-color":"white"}); }
+				});
+				$('a').mouseout(function () {
+					if(flag==1){
+						$(this).css({"text-decoration":"underline","background-color":"#3D6272","font-weight":"bold","color":"white"});
+					}else{ $(this).css({"text-decoration":"none","color":"white","background-color":"#3D6272","font-weight":"bold"}); }
+				});
+			});
+		</script>
 </head>
 
 <body>
 
-<div id="apDiv2">
-	<img src="http://www.itech10.com/app/common/imagens/logo.jpg" width="919" height="144" />
+<!--<div id="apDiv2">
+	<img src="http://www.itech10.com/app/common/images/logo.jpg" width="919" height="144" />
+</div>--!>
+
+<!-- INÍCIO DO BLOCO DE ACESSIBILIDADE-->
+
+<div id="geral">
+	<div style="float:left; height:40px; width:900px;"></div>      
+	<div width="150" style="float:right;height:19px;margin-right:31px;"></div>
+	<div id="navegacao">
+		<ul>
+		    <li><a id="navegacaoHome" href="http://www.itech10.com" title="Ir para o site principal da ITECH">HOME</a></li>
+			<li><a id="navegacaoAumentaFonte" value="+" onclick="fonte(1)" title="Aumentar fonte">Aumentar fonte</a></li>
+			<li><a id="navegacaoDiminuiFonte" value="-" onclick="fonte(-1)" title="Diminuir fonte">Diminuir fonte</a></li>
+			<li><a id="navegacaoContraste" title="Alto contraste">Alto contraste</a></li>
+		</ul>
+	</div>
+	<div id="information">
+		<br><br><a href="form.html">Inscreva-se!</a></br></br>
+		<br><a href="MAILTO: itech@gmail.com">Contate-nos!</a>
+	</div>
 </div>
 
 <!-- BEGIN BLOCK_OFF --> 

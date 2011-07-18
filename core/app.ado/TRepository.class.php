@@ -1,16 +1,16 @@
 <?php
 /*
  * classe TRepository
- *  Esta classe provÍ os mÈtodos
- *  necess·rios para manipular coleÁıes de objetos.
+ *  Esta classe prov√™ os m√©todos
+ *  necess√°rios para manipular cole√ß√µes de objetos.
  */
 final class TRepository
 {
-    private $class; // nome da classe manipulada pelo repositÛrio
+    private $class; // nome da classe manipulada pelo reposit√≥rio
     protected $data;
     
-    /* mÈtodo __construct()
-     *  instancia um RepositÛrio de objetos
+    /* m√©todo __construct()
+     *  instancia um Reposit√≥rio de objetos
      *  @param $class = Classe dos Objetos
      */
     function __construct($class)
@@ -18,7 +18,7 @@ final class TRepository
         $this->class = $class;
     }
     
-    private function __get($propriedade)
+    public function __get($propriedade)
     {
          if(method_exists($this, 'get_'.$propriedade))
          {
@@ -30,7 +30,7 @@ final class TRepository
          }
     }
 
-      private function __set($propriedade,$value)
+      public function __set($propriedade,$value)
       {
          if(method_exists($this, 'set_'.$propriedade))
          {
@@ -43,20 +43,20 @@ final class TRepository
       }
       
     /*
-     * mÈtodo load()
+     * m√©todo load()
      *  Recuperar um conjunto de objetos (collection) da base de dados
-     *  atravÈs de um critÈrio  de seleÁ„o, e instanci·-los em memÛria
+     *  atrav√©s de um crit√©rio  de sele√ß√£o, e instanci√°-los em mem√≥ria
      *  @param $criteria = objeto do tipo TCriteria
      */
     function load(TCriteria $criteria)
     {
-        // instancia a instruÁ„o de SELECT
+        // instancia a instru√ß√£o de SELECT
         $sql = new TSqlSelect;
         $sql->addColumn('*');
         $sql->setEntity($this->class);
         $sql->setCriteria($criteria);
         
-        // inicia transaÁ„o
+        // inicia transa√ß√£o
         TTransaction::open();
 
         $conn = TTransaction::get();
@@ -84,30 +84,30 @@ final class TRepository
         }
         else
         {
-            // se n„o tiver transaÁ„o, retorna uma exceÁ„o
-            throw new Exception('N„o h· transaÁ„o ativa !!');
+            // se n√£o tiver transa√ß√£o, retorna uma exce√ß√£o
+            throw new Exception('N√£o h√° transa√ß√£o ativa !!');
         }   
     }
     
     /*
-     * mÈtodo delete()
+     * m√©todo delete()
      *  Excluir um conjunto de objetos (collection) da base de dados
-     *  atravÈs de um critÈrio de seleÁ„o.
+     *  atrav√©s de um crit√©rio de sele√ß√£o.
      *  @param $criteria = objeto do tipo TCriteria
      */
     function delete(TCriteria $criteria)
     {
-        // instancia instruÁ„o de DELETE
+        // instancia instru√ß√£o de DELETE
         $sql = new TSqlDelete;
         $sql->setEntity($this->class);
         $sql->setCriteria($criteria);
         
-        // inicia transaÁ„o
+        // inicia transa√ß√£o
         $conn = TTransaction::get();
         
         if ($conn)
         {
-            // executa instruÁ„o de DELETE
+            // executa instru√ß√£o de DELETE
             $result = $conn->Execute($sql->getInstruction());
 
             return $result;
@@ -115,31 +115,31 @@ final class TRepository
         }
         else
         {
-            // se n„o tiver transaÁ„o, retorna uma exceÁ„o
-            throw new Exception('N„o h· transaÁ„o ativa !!');
+            // se n√£o tiver transa√ß√£o, retorna uma exce√ß√£o
+            throw new Exception('N√£o h√° transa√ß√£o ativa !!');
         }
     }
     
     /*
-     * mÈtodo count()
+     * m√©todo count()
      *  Retorna a quantidade de objetos da base de dados
-     *  que satisfazem um determinado critÈrio de seleÁ„o.
+     *  que satisfazem um determinado crit√©rio de sele√ß√£o.
      *  @param $criteria = objeto do tipo TCriteria
      */
     function count(TCriteria $criteria)
     {
-        // instancia instruÁ„o de SELECT
+        // instancia instru√ß√£o de SELECT
         $sql = new TSqlSelect;
         $sql->addColumn('count(*)');
         $sql->setEntity($this->class);
         $sql->setCriteria($criteria);
         
-        // inicia transaÁ„o
+        // inicia transa√ß√£o
         $conn = TTransaction::get();
         
         if ($conn)
         {
-            // executa instruÁ„o de SELECT
+            // executa instru√ß√£o de SELECT
             $result= $conn->Execute($sql->getInstruction());
 
             if ($result)
@@ -152,29 +152,29 @@ final class TRepository
         }
         else
         {
-            // se n„o tiver transaÁ„o, retorna uma exceÁ„o
-            throw new Exception('N„o h· transaÁ„o ativa !!');
+            // se n√£o tiver transa√ß√£o, retorna uma exce√ß√£o
+            throw new Exception('N√£o h√° transa√ß√£o ativa !!');
         }
     }
     
     function sum(TCriteria $criteria,$coluna)
     {
-        // inicia transaÁ„o
+        // inicia transa√ß√£o
         TTransaction::open();
 
-        // instancia instruÁ„o de SELECT
+        // instancia instru√ß√£o de SELECT
         $col = 'SUM('.$coluna.')';
         $sql = new TSqlSelect;
         $sql->addColumn($col);
         $sql->setEntity($this->class);
         $sql->setCriteria($criteria);
 
-        // inicia transaÁ„o
+        // inicia transa√ß√£o
         $conn = TTransaction::get();
         
         if ($conn)
         {
-            // executa instruÁ„o de SELECT
+            // executa instru√ß√£o de SELECT
             $result= $conn->Execute($sql->getInstruction());
  
             if ($result)
@@ -187,8 +187,8 @@ final class TRepository
         }
         else
         {
-            // se n„o tiver transaÁ„o, retorna uma exceÁ„o
-            throw new Exception('N„o h· transaÁ„o ativa !!');
+            // se n√£o tiver transa√ß√£o, retorna uma exce√ß√£o
+            throw new Exception('N√£o h√° transa√ß√£o ativa !!');
         }
         
         TTransaction::close();
@@ -216,21 +216,21 @@ final class TRepository
             $result = $conn->Execute($sql->getInstruction());
             
          } else {
-            throw new Exception('N„o h· transaÁ„o ativa !!');
+            throw new Exception('N√£o h√° transa√ß√£o ativa !!');
          }
       }
       
-      // Metodo para selecionar intens sem repetiÁ„o
+      // Metodo para selecionar intens sem repeti√ß√£o
 
       function loadDistinct(TCriteria $criteria,$campo)
       {
-          // instancia a instruÁ„o de SELECT
+          // instancia a instru√ß√£o de SELECT
           $sql = new TSqlSelect;
           $sql->addColumn('DISTINCT('.$campo.')');
           $sql->setEntity($this->class);
           $sql->setCriteria($criteria);
         
-          // inicia transaÁ„o
+          // inicia transa√ß√£o
           TTransaction::open();
         
           $conn = TTransaction::get();
@@ -255,8 +255,8 @@ final class TRepository
         }
         else
         {
-            // se n„o tiver transaÁ„o, retorna uma exceÁ„o
-            throw new Exception('N„o h· transaÁ„o ativa !!');
+            // se n√£o tiver transa√ß√£o, retorna uma exce√ß√£o
+            throw new Exception('N√£o h√° transa√ß√£o ativa !!');
         }
         
         TTransaction::close();   

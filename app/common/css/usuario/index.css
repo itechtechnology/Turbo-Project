@@ -55,3 +55,94 @@ body{
 	background-color: #3D6272;
 	color: #FFF;
 }
+
+//CONFIGURAÇÕES DAS DIV´S RESPONSÁVEIS PELA ACESSIBILIDADE
+#geral{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	height: 600px;
+	background-color: #3D6272;
+}
+#navegacao{
+	display: block;
+	float: left;
+	width: 100px;
+	height: 22px;
+	margin-top:160px;
+	position:absolute;
+	background: #1C5072;
+	border-bottom: 2px solid white;
+}
+#navegacao ul {
+	margin: 0px;
+	padding: 0px;
+}
+#navegacao li {
+	display: inline;
+	list-style-type: none;
+}
+
+#navegacaoHome, #navegacaoAumentaFonte, #navegacaoDiminuiFonte, #navegacaoContraste{
+	text-indent: -999px;
+	height: 16px;
+	width: 16px;
+	display: block;
+	float: left;
+	margin-right: 4px;
+	margin-left: 4px;
+	margin-top: 2px;
+}
+#navegacaoHome{
+	background-image: url(http://www.itech10.com/app/common/css/usuario/Images/home.png);
+}
+
+#navegacaoAumentaFonte{
+	background-image:url(http://www.itech10.com/app/common/css/usuario/Images/zoom_in.png);
+	cursor:pointer;
+	cursor:hand;
+}
+#navegacaoDiminuiFonte{
+	background-image:url(http://www.itech10.com/app/common/css/usuario/Images/zoom_out.png);
+	cursor:pointer;
+	cursor:hand;
+}
+#navegacaoContraste{
+	background-image:url(http://www.itech10.com/app/common/css/usuario/Images/monitor.png);
+	cursor:pointer;
+	cursor:hand;
+}
+a{
+	color: white;
+	background-color:#3D6272;
+	font-weight: bold;
+	text-decoration: underline;
+}
+ul li{
+	position: relative;
+	left: 40px;
+}
+li ul {
+	display: none;
+	left: -70px;
+	position: absolute;
+	top: 18px;
+	color: #3D6272;
+}
+
+li:hover ul { 
+	display: block;
+}
+#information{
+	position: absolute;
+	left: 30px;
+	top: 50px;
+	width: 241px;
+	height: 123px;
+	z-index: 10;
+	margin-top: 180px;
+	color: black;
+}

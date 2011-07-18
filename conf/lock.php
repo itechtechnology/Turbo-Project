@@ -1,4 +1,9 @@
 <?php
+/* ARQUIVO DE CONFIGURAÇÕES 
+Autor: Anderson Rodrigues
+Data de modificação: 07-07-2011
+
+*/
 session_start();
 
 /* seto a codificação como utf-8*/

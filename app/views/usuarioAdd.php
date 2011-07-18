@@ -1,12 +1,11 @@
 <?php
 
     require '../../conf/lock.php';
+
 	
 	$usuario = new UsuarioRecord();
-;
+	$habilidade = new HabilidadeRecord();
 
-
-    //$projeto = new ProjetosRecord();
 
     //$status = new StatusProjeto();
 
@@ -123,6 +122,9 @@
 		break;
 		
 		case 4:
+		
+			
+			
 			$tpl->TITULO_1 = "Cadastro Usuario - Passo IV";
 			$tpl->TITULO_2 = "Cadastro de Usuario - Passo 4/4";
 			
@@ -135,6 +137,17 @@
 				$tpl->V_REP = $result['CD_PERGUNTAS'][$i]; //id da habilidade 
 				$tpl->N_REP = $result['PERGUNTA'][$i]; //nome da habilidadae
 				$tpl->block("BLOCK_REP");
+				$i++;					
+			}
+			
+			$result = $habilidade->listaHabilidades();
+			
+			$i = 1;
+			while($result['CD_HABILIDADE'][$i]){
+					
+				$tpl->V_REP2 = $result['CD_HABILIDADE'][$i]; //id da habilidade 
+				$tpl->N_REP2 = $result['NOME'][$i]; //nome da habilidadae
+				$tpl->block("BLOCK_REP2");
 				$i++;					
 			}
 			

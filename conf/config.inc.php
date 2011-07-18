@@ -20,10 +20,6 @@
 
     /*
      * MODO DE AUTENTICAÇÃO
-     * Atenção: Os tipos de autenticaçãoo 'LDAP' e 'BOTH' podem ser utilizados somente se o servidor de dominio estiver na mesma rede.
-     * Caso o m�todo de autentica��o utilizado seja 'LDAP' ou 'BOTH', as constantes 'LDAPSERVER' e 'LDAPDOMAIN' devem estar devidamente configuradas.
-     * Em casos em que o servidor de dominio n�o existe ou n�o est� na mesma rede utiliza-se somente o m�todo de autentica��o 'SYSTEM'.
-     * Caso os usu�rios sejam autenticados diretamente via banco de dados a op��o ativa deve ser 'DATABASE'.
     */
     #define('AUTHTYPE', 'BOTH');
     #define('AUTHTYPE', 'LDAP'); //loga via servidor de dominio
@@ -33,7 +29,7 @@
     define('AUTHTYPE', 'DATABASE');
 
     /*
-     * TEMPO PARA EXPIRAR COOKIE DE SESS�O
+     * TEMPO PARA EXPIRAR COOKIE DE SESSÃO
      * Tempo em segundos
      * Ex.: 1800 segundos. Que equivale a 30 minutos.
     */
@@ -42,13 +38,13 @@
     /*
      * IMAGEM FAVICON
      * Internet explorer na sua versão atual(IE8) não suporta icones animados, portanto caso deseje usar ícones
-     * animados deve-se ter um estático para uso no IE.
+     * animados deve-se ter um estado para uso no IE.
     */
     define('FAVICON', 'favicon.ico');
     define('ANIMATEDFAVICON', 'favicon_animated.ico');
 
     /*
-     * E-MAIL PADRÃO PARA ENVIO DE EMAILS ATRAVES DO SISTEMA
+     * E-MAIL PADRdz?O PARA ENVIO DE EMAILS ATRAVES DO SISTEMA
      */
     define('DEFAULTEMAILHOST', 'ssl://smtp.itech10.com');
     define('DEFAULTEMAILPORT', 465);
@@ -57,7 +53,7 @@
 
     /*
      * E-MAILS PADRÕES PARA RECEBIMENTO DE SOLICITAÇÕES
-     * Caso venha a ter mais emails basta adicionar seguindo o padrão 'EMAILALGUMACOISA'.
+     * Caso venha a ter mais emails basta adicionar seguindo o padrdão 'EMAILALGUMACOISA'.
     */
     define('EMAILCONTATO', 'contato@itech10.com');
 
@@ -68,9 +64,9 @@
     #define('DOMAIN', 'itech10.com');
 
     /*
-     * TÍTULO DO SITE
+     * Tdz?TULO DO SITE
      */
-    define('SITETITLE', 'itech! Gest�o Inteligente de projetos');
+    define('SITETITLE', 'Itech - TurboProject! Gestão Inteligente de projetos');
 
 
 /*
@@ -81,8 +77,7 @@
     define('APPMODELDIR', 'app/models');
     define('APPCONTROLLERDIR', 'app/controllers');
     define('APPVIEWDIR', 'app/views');
-    define('APPTPLDIR', '../common/tpl');
-//    define('APPTPLDIR', '../tpl');
+    define('APPTPLDIR', '../common/tpl'); //../tpl
     define('APPIMAGEDIR', '../common/images');
     define('APPCSSDIR', '../common/css');
     define('APPJSDIR', '../common/js');   
@@ -104,9 +99,8 @@
     define('DBNAME', 'itechcom_turbo');
     define('DBPASS', 'itechuesc123');
     define('DBHOST', 'localhost');
-//    define('DBUSER', 'postgres');
     define('DBUSER', 'itechcom');
-//    define('DBSGBD', 'pgsql');
+    //define('DBSGBD', 'pgsql');
     define('DBSGBD', 'postgres');
 
 
@@ -131,7 +125,7 @@
     define('MIMIMGHEIGHT', 240);
 
     /*
-    * TAMANHO MÁXIMO PARA ENVIO DE UPLOAD
+    * TAMANHO Mdz?XIMO PARA ENVIO DE UPLOAD
     * 2 MBytes = 2048 KBytes
     * 2048 KBytes = 2097152 Bytes
     * Para calcular corretamente favor utilizar http://www.wilkinsonpc.com.co/free/articulos/calculadorabytes.html
@@ -141,18 +135,18 @@
 
 /*
 **********************************************
-***********NOT�CIAS E ENQUETE*****************
+***********NOTÍCIAS E ENQUETE*****************
 **********************************************
 */
 
     /*
-     * QUANTIDADE M�XIMA DE CARACTERES NO T�TULO E SUBT�TULO DAS NOT�CIAS
+     * QUANTIDADE MÁXIMA DE CARACTERES NO TÍTULO E SUBTÍTULO DAS NOTÍCIAS
     */
     define('MAXNOTICIACARACTERESTITULO', 30);
     define('MAXNOTICIACARACTERESSUBTITULO', 40);
 
     /*
-     * QUANTIDADE M�XIMA DE OP��ES EM ENQUETES
+     * QUANTIDADE MÁXIMA DE OPERAÇÕES EM ENQUETES
     */
     define('MAXENQUETEOPCOES', 10);
 

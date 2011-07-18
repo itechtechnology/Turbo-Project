@@ -12,11 +12,13 @@ switch ($acao) {
             $dados['nome_recurso'] = $_POST['nome_recurso'];
             $dados['custo'] = $_POST['custo'];
             $dados['ds_recurso'] = $_POST['ds_recurso'];
-            header("Location: ../views/recursoAdd.php");
+            $dados['fk_cd_statusrecurso'] = 1;
+             header("Location: ../views/recursoAdd.php");
 
             if ($recurso->cadastrarRecurso($dados)) {
 //                $data['fk_cd_usuario'] = $_SESSION['login'];
                 //            $auditoria->salvar($data);
+               	
                 return true;
             }else
                 return false;

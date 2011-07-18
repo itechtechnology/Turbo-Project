@@ -15,7 +15,7 @@
     $tpl->ANIMATEDFAVICON = ANIMATEDFAVICON;
 //
     $tpl->TITULOTOOLTIP = 'Mobilidade e Confiabilidade!';
-    $tpl->CONTEUDOTOOLTIP = 'Desenvolvido utilizando as tecnologias mais avançadas no que se diz Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin ultrices erat vitae sodales. Duis pretium mollis risus, sed pellentesque diam accumsan et. Vivamus sapien lorem, ullamcorper in auctor non, lacinia et arcu. Maecenas condimentum tincidunt massa. Sed nulla ante, consectetur sit amet porta non, adipiscing vitae urna. Quisque malesuada lobortis lacus ut laoreet.';
+    $tpl->CONTEUDOTOOLTIP = 'Desenvolvido utilizando as tecnologias mais avançadas no que se diz aplicativo web.';
      
 
     //$tpl->DATARODAPE = date('Y');
