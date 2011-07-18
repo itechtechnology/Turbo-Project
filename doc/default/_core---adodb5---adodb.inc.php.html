@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page adodb.inc.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/core/adodb5/adodb.inc.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-classes">Classes</a>
+			|							<a href="#sec-includes">Includes</a>
+			|							<a href="#sec-constants">Constants</a>
+			|									<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+		
+			</div>
+</div>
+		
+	<a name="sec-classes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Classes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Classes</span>
+			|							<a href="#sec-includes">Includes</a>
+				|										<a href="#sec-constants">Constants</a>
+				|													<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../default/ADOFieldObject.html">ADOFieldObject</a>
+					</td>
+					<td>
+											Helper class for FetchFields -- holds info on a column
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../default/ADODB_Cache_File.html">ADODB_Cache_File</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../default/ADOConnection.html">ADOConnection</a>
+					</td>
+					<td>
+											Connection object. For connecting to databases, and executing queries.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../default/ADOFetchObj.html">ADOFetchObj</a>
+					</td>
+					<td>
+											Internal placeholder for record objects. Used by ADORecordSet-&gt;FetchObj().
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../default/ADODB_Iterator_empty.html">ADODB_Iterator_empty</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../default/ADORecordSet_empty.html">ADORecordSet_empty</a>
+					</td>
+					<td>
+											Lightweight recordset when there are no records to be returned
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../default/ADODB_Iterator.html">ADODB_Iterator</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../default/ADORecordSet.html">ADORecordSet</a>
+					</td>
+					<td>
+											RecordSet class that represents the dataset returned by the database.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../default/ADORecordSet_array.html">ADORecordSet_array</a>
+					</td>
+					<td>
+											This class encapsulates the concept of a recordset created in memory  as an array. This is useful for the creation of cached recordsets.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	<a name="sec-includes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Includes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|						<span class="disabled">Includes</span>
+			|							<a href="#sec-constants">Constants</a>
+				|													<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="_ADODB_DIR_/adodb-time_inc_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">include</span>
+			(<span class="include-name">ADODB_DIR.'/adodb-time.inc.php'</span>)
+			(line <span class="line-number">2794</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+		</div>
+	</div>
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|										<a href="#sec-includes">Includes</a>
+				|						<span class="disabled">Constants</span>
+			|										<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="defineADODB_BAD_RS"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">ADODB_BAD_RS</span> = '&lt;p&gt;Bad $rs in %s. Connection or SQL invalid. Try using $connection-&gt;debug=true;&lt;/p&gt;'
+			(line <span class="line-number">90</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineADODB_DIR"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">ADODB_DIR</span> = dirname(__FILE__)
+			(line <span class="line-number">47</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set ADODB_DIR to the directory where this file resides...</p>
+<p class="description"><p>This constant was formerly called $ADODB_RootPath</p></p>
+	
+		
+</div>
+<a name="defineADODB_FETCH_ASSOC"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">ADODB_FETCH_ASSOC</span> = 2
+			(line <span class="line-number">110</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineADODB_FETCH_BOTH"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">ADODB_FETCH_BOTH</span> = 3
+			(line <span class="line-number">111</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineADODB_FETCH_DEFAULT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">ADODB_FETCH_DEFAULT</span> = 0
+			(line <span class="line-number">108</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineADODB_FETCH_NUM"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">ADODB_FETCH_NUM</span> = 1
+			(line <span class="line-number">109</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineADODB_FORCE_EMPTY"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">ADODB_FORCE_EMPTY</span> = 2
+			(line <span class="line-number">83</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineADODB_FORCE_IGNORE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">ADODB_FORCE_IGNORE</span> = 0
+			(line <span class="line-number">81</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineADODB_FORCE_NULL"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">ADODB_FORCE_NULL</span> = 1
+			(line <span class="line-number">82</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineADODB_FORCE_VALUE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">ADODB_FORCE_VALUE</span> = 3
+			(line <span class="line-number">84</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineADODB_PHPVER"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">ADODB_PHPVER</span> = 0x5200
+			(line <span class="line-number">118</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineADODB_PREFETCH_ROWS"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">ADODB_PREFETCH_ROWS</span> = 10
+			(line <span class="line-number">96</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineADODB_TABLE_REGEX"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">ADODB_TABLE_REGEX</span> = '([]0-9a-z_\:\&quot;\`\.\@\[-]*)'
+			(line <span class="line-number">93</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineTIMESTAMP_FIRST_YEAR"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">TIMESTAMP_FIRST_YEAR</span> = 100
+			(line <span class="line-number">113</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="define_ADODB_LAYER"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">_ADODB_LAYER</span> = 1
+			(line <span class="line-number">36</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+		</div>
+	</div>
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|										<a href="#sec-includes">Includes</a>
+				|										<a href="#sec-constants">Constants</a>
+				|									<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionadodb_backtrace" id="functionadodb_backtrace"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">adodb_backtrace</span> (line <span class="line-number">4407</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			adodb_backtrace
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$printOrArr</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$levels</span> = <span class="var-default">9999</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$ishtml</span> = <span class="var-default">null</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$printOrArr</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$levels</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$ishtml</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionadodb_pr" id="functionadodb_pr"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">adodb_pr</span> (line <span class="line-number">4385</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			adodb_pr
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$var</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$as_string</span> = <span class="var-default">false</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$var</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$as_string</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionADODB_Setup" id="functionADODB_Setup"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">ADODB_Setup</span> (line <span class="line-number">146</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			ADODB_Setup
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionADODB_str_replace" id="functionADODB_str_replace"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">ADODB_str_replace</span> (line <span class="line-number">132</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			ADODB_str_replace
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$src</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$dest</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$src</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$dest</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionADODB_TransMonitor" id="functionADODB_TransMonitor"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">ADODB_TransMonitor</span> (line <span class="line-number">221</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			ADODB_TransMonitor
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$dbms</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fn</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$errno</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$errmsg</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$p1</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$p2</span>, <span class="var-type"></span>&nbsp;<span class="var-name">&$thisConnection</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$dbms</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$fn</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$errno</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$errmsg</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$p1</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$p2</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$thisConnection</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionADOLoadCode" id="functionADOLoadCode"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">ADOLoadCode</span> (line <span class="line-number">4093</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load the code for a specific database driver. Private function. Do not use.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			ADOLoadCode
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$dbType</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$dbType</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionADOLoadDB" id="functionADOLoadDB"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">ADOLoadDB</span> (line <span class="line-number">4085</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Synonym for ADOLoadCode. Private function. Do not use.</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> </li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			ADOLoadDB
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$dbType</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$dbType</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionADONewConnection" id="functionADONewConnection"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">ADONewConnection</span> (line <span class="line-number">4141</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Instantiate a new Connection class for a specific database driver.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> freshly created instance of the Connection class.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">the</span>
+		<span class="method-name">
+			ADONewConnection
+		</span>
+					([<span class="var-type">[db]</span>&nbsp;<span class="var-name">$db</span> = <span class="var-default">&#039;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[db]</span>
+				<span class="var-name">$db</span><span class="var-description">: is the database Connection object to create. If undefined,      use the last database driver that was loaded by ADOLoadCode().</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionNewADOConnection" id="functionNewADOConnection"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">NewADOConnection</span> (line <span class="line-number">4127</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">synonym for ADONewConnection for people like me who cannot remember the correct name</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			NewADOConnection
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$db</span> = <span class="var-default">&#039;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$db</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionNewDataDictionary" id="functionNewDataDictionary"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">NewDataDictionary</span> (line <span class="line-number">4354</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			NewDataDictionary
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$conn</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$drivername</span> = <span class="var-default">false</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$conn</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$drivername</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionNewPerfMonitor" id="functionNewPerfMonitor"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">NewPerfMonitor</span> (line <span class="line-number">4340</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			NewPerfMonitor
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$conn</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$conn</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="function_adodb_getdriver" id="function_adodb_getdriver"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">_adodb_getdriver</span> (line <span class="line-number">4308</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_adodb_getdriver
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$provider</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$drivername</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$perf</span> = <span class="var-default">false</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$provider</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$drivername</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$perf</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 05 Jul 2011 12:08:57 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class sistTemplate</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class sistTemplate</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Mecanismo de Template para PHP5</p>
+<p class="description"><p>Mecanismos de Template permitem manter o c�digo HTML em arquivos externos  que ficam completamente livres de código PHP. Dessa forma, consegue-se manter  a l�gica de programa��o (PHP) separada da estrutura visual (HTML ou XML, CSS, etc).</p><p>Se voc� j� � familiar ao uso de mecanismos de template PHP, esta classe inclui  algumas melhorias: suporte à objetos, automaticamente detecta blocos, mant�m uma  lista interna das vari�veis que existem, limpa automaticamente blocos &quot;filhos&quot;,  avisando quando tentamos chamar blocos ou vari�veis que s�o existem, avisando quando  criamos blocos &quot;mal formados&quot;, e outras pequenas ajudas.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Rael G.C. (rael.gc@gmail.com)</li>
+				<li><span class="field">version:</span> 1.9</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_app---models---sistTemplate.class.php.html">/app/models/sistTemplate.class.php</a> (line <span class="field">18</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																												
+												<div class="method-definition">
+											<span class="method-result">sistTemplate</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type">booelan</span>&nbsp;<span class="var-name">$accurate</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#addFile" title="details" class="method-name">addFile</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$varname</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#block" title="details" class="method-name">block</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$block</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$append</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#clear" title="details" class="method-name">clear</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$varname</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#exists" title="details" class="method-name">exists</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$varname</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#parse" title="details" class="method-name">parse</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#show" title="details" class="method-name">show</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__get" title="details" class="method-name">__get</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$varname</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__set" title="details" class="method-name">__set</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$varname</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">91</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Cria um novo template, usando $filename como arquivo principal</p>
+<p class="description"><p>Quando o par�metro $accurate � true, a substitui��o dos blocos no arquivo  final ser� perfeitamente fiel ao arquivo original, isto �, todas as tabula��es  ser�o removidas. Isso vai ter um pequeno preju�zo na performance, que pode variar  de acordo com a vers�o do PHP em uso. Mas � �til quando estamos usando tags HTML  como &amp;lt;pre&amp;gt; ou &amp;lt;code&amp;gt;. Em outros casos, ou melhor, quase sempre,  nunca se mexe no valor de $accurate.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">sistTemplate</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type">booelan</span>&nbsp;<span class="var-name">$accurate</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span><span class="var-description">: caminho do arquivo que ser� lido</span>			</li>
+					<li>
+				<span class="var-type">booelan</span>
+				<span class="var-name">$accurate</span><span class="var-description">: true para fazer substitui��o fiel das tabula��es</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddFile" id="addFile"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">addFile</span> (line <span class="line-number">104</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adiciona o conte�do do arquivo identificado por $filename na vari�vel de template  identificada por $varname</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addFile
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$varname</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$varname</span><span class="var-description">: uma vari�vel de template existente</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span><span class="var-description">: arquivo a ser carregado</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodblock" id="block"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">block</span> (line <span class="line-number">405</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Mostra um bloco.</p>
+<p class="description"><p>Esse m�todo deve ser chamado quando um bloco deve ser mostrado.  Sem isso, o bloco n�o ir� aparecer no conte�do final.</p><p>Se o par�metro $append for true, o conte�do do bloco ser�  adicionado ao conte�do que j� existia antes. Ou seja, use true  quando quiser que o bloco seja duplicado.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			block
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$block</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$append</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$block</span><span class="var-description">: nome do bloco que deve ser mostrado</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$append</span><span class="var-description">: true se o conte�do anterior deve ser mantido (ou seja, para duplicar o bloco)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodclear" id="clear"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">clear</span> (line <span class="line-number">317</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Limpa o valor de uma vari�vel</p>
+<p class="description"><p>O mesmo que $this-&gt;setValue($varname, &quot;&quot;);</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			clear
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$varname</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$varname</span><span class="var-description">: nome da vari�vel</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodexists" id="exists"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">exists</span> (line <span class="line-number">147</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Verifica se uma vari�vel de template existe.</p>
+<p class="description"><p>Retorna true se a vari�vel existe. Caso contr�rio, retorna false.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			exists
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$varname</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$varname</span><span class="var-description">: template var name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparse" id="parse"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">parse</span> (line <span class="line-number">418</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retorna o conte�do final, sem mostr�-lo na tela.</p>
+<p class="description"><p>Se voc� quer mostr�-lo na tela, use o m�todo Template::show().</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			parse
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodshow" id="show"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">show</span> (line <span class="line-number">426</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Mostra na tela o conte�do final.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			show
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method__get" id="__get"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">__get</span> (line <span class="line-number">135</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">N�o use este m�todo, ele serve apenas para podemos acessar as vari�veis  de template diretamente.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__get
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$varname</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$varname</span><span class="var-description">: template var name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__set" id="__set"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">__set</span> (line <span class="line-number">116</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">N�o use este m�todo, ele serve apenas para podemos acessar as vari�veis  de template diretamente.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__set
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$varname</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$varname</span><span class="var-description">: template var name</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: template var value</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 05 Jul 2011 12:09:04 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

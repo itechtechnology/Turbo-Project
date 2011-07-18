@@ -1,0 +1,89 @@
+[16-May-2011 22:24:30] PHP Fatal error:  Call to undefined method stdClass::PConnect() in /home/itechcom/public_html/core/app.ado/TConnection.class.php on line 41
+[16-May-2011 22:29:24] PHP Warning:  pg_pconnect() [<a href='function.pg-pconnect'>function.pg-pconnect</a>]: Unable to connect to PostgreSQL server: FATAL:  password authentication failed for user &quot;postgres&quot; in /home/itechcom/public_html/core/adodb5/drivers/adodb-postgres64.inc.php on line 682
+[16-May-2011 22:29:24] PHP Fatal error:  Call to a member function StartTrans() on a non-object in /home/itechcom/public_html/core/app.ado/TTransaction.class.php on line 41
+[25-May-2011 20:20:22] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 183
+[25-May-2011 20:20:22] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 184
+[25-May-2011 20:20:22] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 185
+[25-May-2011 20:20:22] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/itechcom/public_html/core/app.ado/TExpression.class.php:31) in /home/itechcom/public_html/app/controllers/projeto.php on line 56
+[25-May-2011 20:20:22] PHP Fatal error:  Cannot access empty property in /home/itechcom/public_html/app/controllers/projeto.php on line 81
+[26-May-2011 06:06:28] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/itechcom/public_html/core/app.ado/TExpression.class.php:31) in /home/itechcom/public_html/app/controllers/projeto.php on line 56
+[26-May-2011 06:06:28] PHP Fatal error:  Cannot access empty property in /home/itechcom/public_html/app/controllers/projeto.php on line 81
+[26-May-2011 07:39:40] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 183
+[26-May-2011 07:39:40] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 184
+[26-May-2011 07:39:40] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 185
+[26-May-2011 08:43:02] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/itechcom/public_html/core/app.ado/TExpression.class.php:31) in /home/itechcom/public_html/app/controllers/projeto.php on line 56
+[26-May-2011 08:43:02] PHP Fatal error:  Cannot access empty property in /home/itechcom/public_html/app/controllers/projeto.php on line 81
+[26-May-2011 08:57:37] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 183
+[26-May-2011 08:57:37] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 184
+[26-May-2011 08:57:37] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 185
+[26-May-2011 08:57:37] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/itechcom/public_html/core/app.ado/TExpression.class.php:31) in /home/itechcom/public_html/app/controllers/projeto.php on line 56
+[26-May-2011 08:57:37] PHP Fatal error:  Cannot access empty property in /home/itechcom/public_html/app/controllers/projeto.php on line 81
+[26-May-2011 10:48:13] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/itechcom/public_html/app/models/Lib.class.php:1090) in /home/itechcom/public_html/app/controllers/usuario.php on line 60
+[27-May-2011 09:06:04] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 365
+[27-May-2011 09:06:04] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 367
+[27-May-2011 09:06:04] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 369
+[27-May-2011 11:44:49] PHP Fatal error:  Call to undefined method Lib::validaData() in /home/itechcom/public_html/app/controllers/usuario.php on line 103
+[27-May-2011 18:57:02] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 365
+[27-May-2011 18:57:02] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 367
+[27-May-2011 18:57:02] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 369
+[29-May-2011 11:38:00] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 365
+[29-May-2011 11:38:00] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 367
+[29-May-2011 11:38:00] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 369
+[06-Jun-2011 10:27:35] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 365
+[06-Jun-2011 10:27:35] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 367
+[06-Jun-2011 10:27:35] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 369
+[06-Jun-2011 10:27:35] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/itechcom/public_html/core/app.ado/TExpression.class.php:31) in /home/itechcom/public_html/app/controllers/projeto.php on line 57
+[06-Jun-2011 10:27:35] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 365
+[06-Jun-2011 10:27:35] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 367
+[06-Jun-2011 10:27:35] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 369
+[06-Jun-2011 10:27:35] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/itechcom/public_html/core/app.ado/TExpression.class.php:31) in /home/itechcom/public_html/app/controllers/projeto.php on line 117
+[09-Jun-2011 07:53:09] PHP Fatal error:  Call to undefined method UsuarioRecord::verificaLogin() in /home/itechcom/public_html/app/controllers/login.php on line 19
+[09-Jun-2011 07:54:15] PHP Fatal error:  Call to undefined method UsuarioRecord::verificaLogin() in /home/itechcom/public_html/app/controllers/login.php on line 19
+[09-Jun-2011 07:56:31] PHP Fatal error:  Call to undefined method UsuarioRecord::verificaSessao() in /home/itechcom/public_html/app/models/UsuarioRecord.class.php on line 68
+[09-Jun-2011 07:57:26] PHP Warning:  Invalid argument supplied for foreach() in /home/itechcom/public_html/core/app.ado/ManipulaBanco.class.php on line 47
+[09-Jun-2011 07:57:26] PHP Fatal error:  Call to a member function show() on a non-object in /home/itechcom/public_html/app/controllers/login.php on line 36
+[01-Jul-2011 10:56:20] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 365
+[01-Jul-2011 10:56:20] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 367
+[01-Jul-2011 10:56:20] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 369
+[03-Jul-2011 16:04:53] PHP Warning:  Invalid argument supplied for foreach() in /home/itechcom/public_html/core/app.ado/ManipulaBanco.class.php on line 47
+[03-Jul-2011 17:05:59] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/itechcom/public_html/core/app.ado/TExpression.class.php:31) in /home/itechcom/public_html/app/controllers/logout.php on line 20
+[03-Jul-2011 17:11:43] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/itechcom/public_html/core/app.ado/TCriteria.class.php:135) in /home/itechcom/public_html/app/controllers/logout.php on line 20
+[05-Jul-2011 06:24:29] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/itechcom/public_html/core/app.ado/TRecord.class.php:101) in /home/itechcom/public_html/app/controllers/RecursoFisico.php on line 21
+[05-Jul-2011 06:26:16] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/itechcom/public_html/core/app.ado/TRecord.class.php:101) in /home/itechcom/public_html/app/controllers/RecursoFisico.php on line 21
+[05-Jul-2011 06:33:14] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/itechcom/public_html/core/app.ado/TRecord.class.php:101) in /home/itechcom/public_html/app/controllers/RecursoFisico.php on line 21
+[05-Jul-2011 06:33:58] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/itechcom/public_html/core/app.ado/TRecord.class.php:101) in /home/itechcom/public_html/app/controllers/RecursoFisico.php on line 21
+[05-Jul-2011 06:34:46] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/itechcom/public_html/core/app.ado/TRecord.class.php:101) in /home/itechcom/public_html/app/controllers/RecursoFisico.php on line 21
+[05-Jul-2011 06:42:55] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 365
+[05-Jul-2011 06:42:55] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 367
+[05-Jul-2011 06:42:55] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 369
+[15-Jul-2011 06:07:24] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 365
+[15-Jul-2011 06:07:24] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 367
+[15-Jul-2011 06:07:24] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 369
+[15-Jul-2011 06:07:34] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 365
+[15-Jul-2011 06:07:34] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 367
+[15-Jul-2011 06:07:34] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 369
+[15-Jul-2011 06:07:50] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 365
+[15-Jul-2011 06:07:50] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 367
+[15-Jul-2011 06:07:50] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 369
+[15-Jul-2011 06:41:07] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 365
+[15-Jul-2011 06:41:07] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 367
+[15-Jul-2011 06:41:07] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 369
+[15-Jul-2011 06:44:22] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 365
+[15-Jul-2011 06:44:22] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 367
+[15-Jul-2011 06:44:22] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 369
+[15-Jul-2011 06:44:22] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/itechcom/public_html/app/models/ProjetosRecord.class.php:162) in /home/itechcom/public_html/app/controllers/projeto.php on line 57
+[15-Jul-2011 06:44:22] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 365
+[15-Jul-2011 06:44:22] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 367
+[15-Jul-2011 06:44:22] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 369
+[15-Jul-2011 06:44:22] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/itechcom/public_html/app/models/ProjetosRecord.class.php:162) in /home/itechcom/public_html/app/controllers/projeto.php on line 117
+[15-Jul-2011 06:50:39] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 365
+[15-Jul-2011 06:50:39] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 367
+[15-Jul-2011 06:50:39] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 369
+[15-Jul-2011 06:50:39] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/itechcom/public_html/app/models/ProjetosRecord.class.php:162) in /home/itechcom/public_html/app/controllers/projeto.php on line 57
+[15-Jul-2011 06:50:39] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 365
+[15-Jul-2011 06:50:39] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 367
+[15-Jul-2011 06:50:39] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 369
+[15-Jul-2011 06:50:39] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/itechcom/public_html/app/models/ProjetosRecord.class.php:162) in /home/itechcom/public_html/app/controllers/projeto.php on line 117
+[15-Jul-2011 07:06:18] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 365
+[15-Jul-2011 07:06:18] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 367
+[15-Jul-2011 07:06:18] PHP Warning:  substr() expects parameter 1 to be string, object given in /home/itechcom/public_html/app/models/Lib.class.php on line 369

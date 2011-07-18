@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page adodb-xmlschema03.inc.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/core/adodb5/adodb-xmlschema03.inc.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-classes">Classes</a>
+			|							<a href="#sec-includes">Includes</a>
+			|							<a href="#sec-constants">Constants</a>
+			|									<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">xmlschema is a class that allows the user to quickly and easily  build a database on any ADOdb-supported platform using a simple  XML schema.</p>
+<p class="description"><p>Last Editor: $Author: jlim $</p></p>
+	<ul class="tags">
+				<li><span class="field">tutorial:</span> getting_started.pkg</li>
+				<li><span class="field">author:</span> Richard Tango-Lowy &amp; Dan Cech</li>
+				<li><span class="field">version:</span> $Revision: 1.62 $</li>
+			</ul>
+		
+			</div>
+</div>
+		
+	<a name="sec-classes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Classes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Classes</span>
+			|							<a href="#sec-includes">Includes</a>
+				|										<a href="#sec-constants">Constants</a>
+				|													<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../axmls/adoSchema.html">adoSchema</a>
+					</td>
+					<td>
+											Loads and parses an XML file, creating an array of &quot;ready-to-run&quot; SQL statements
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	<a name="sec-includes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Includes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|						<span class="disabled">Includes</span>
+			|							<a href="#sec-constants">Constants</a>
+				|													<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="_adodb-datadict_inc_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">require</span>
+			(<span class="include-name"><a href="../default/_core---adodb5---adodb-datadict.inc.php.html">'adodb-datadict.inc.php'</a></span>)
+			(line <span class="line-number">114</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_adodb_inc_php"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">require</span>
+			(<span class="include-name"><a href="../default/_core---adodb5---adodb.inc.php.html">'adodb.inc.php'</a></span>)
+			(line <span class="line-number">113</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Include the main ADODB library</p>
+	
+</div>
+		</div>
+	</div>
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|										<a href="#sec-includes">Includes</a>
+				|						<span class="disabled">Constants</span>
+			|										<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="defineXMLS_CONTINUE_ON_ERROR"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">XMLS_CONTINUE_ON_ERROR</span> = FALSE
+			(line <span class="line-number">67</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Continue SQL Execution if an error occurs?</p>
+	
+		
+</div>
+<a name="defineXMLS_DEBUG"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">XMLS_DEBUG</span> = FALSE
+			(line <span class="line-number">39</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Debug on or off</p>
+	
+		
+</div>
+<a name="defineXMLS_DEFAULT_SCHEMA_VERSION"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">XMLS_DEFAULT_SCHEMA_VERSION</span> = '0.1'
+			(line <span class="line-number">81</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Default Schema Version.  Used for Schemas without an explicit version set.</p>
+	
+		
+</div>
+<a name="defineXMLS_DEFAULT_UPGRADE_METHOD"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">XMLS_DEFAULT_UPGRADE_METHOD</span> = 'ALTER'
+			(line <span class="line-number">106</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Default Schema Version.  Used for Schemas without an explicit version set.</p>
+	
+		
+</div>
+<a name="defineXMLS_EXECUTE_INLINE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">XMLS_EXECUTE_INLINE</span> = FALSE
+			(line <span class="line-number">60</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Execute SQL inline as it is generated</p>
+	
+		
+</div>
+<a name="defineXMLS_EXISTING_DATA"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">XMLS_EXISTING_DATA</span> = XMLS_MODE_INSERT
+			(line <span class="line-number">99</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineXMLS_MODE_IGNORE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">XMLS_MODE_IGNORE</span> = 2
+			(line <span class="line-number">96</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineXMLS_MODE_INSERT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">XMLS_MODE_INSERT</span> = 0
+			(line <span class="line-number">90</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">How to handle data rows that already exist in a database during and upgrade.</p>
+<p class="description"><p>Options are INSERT (attempts to insert duplicate rows), UPDATE (updates existing  rows) and IGNORE (ignores existing rows).</p></p>
+	
+		
+</div>
+<a name="defineXMLS_MODE_UPDATE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">XMLS_MODE_UPDATE</span> = 1
+			(line <span class="line-number">93</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineXMLS_PREFIX"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">XMLS_PREFIX</span> = '%%P'
+			(line <span class="line-number">46</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Default prefix key</p>
+	
+		
+</div>
+<a name="defineXMLS_PREFIX_MAXLEN"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">XMLS_PREFIX_MAXLEN</span> = 10
+			(line <span class="line-number">53</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Maximum length allowed for object prefix</p>
+	
+		
+</div>
+<a name="defineXMLS_SCHEMA_VERSION"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">XMLS_SCHEMA_VERSION</span> = '0.3'
+			(line <span class="line-number">74</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Current Schema Version</p>
+	
+		
+</div>
+		</div>
+	</div>
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|										<a href="#sec-includes">Includes</a>
+				|										<a href="#sec-constants">Constants</a>
+				|									<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="function_file_get_contents" id="function_file_get_contents"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">_file_get_contents</span> (line <span class="line-number">21</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">xmlschema is a class that allows the user to quickly and easily  build a database on any ADOdb-supported platform using a simple  XML schema.</p>
+<p class="description"><p>Last Editor: $Author: jlim $</p></p>
+	<ul class="tags">
+				<li><span class="field">tutorial:</span> getting_started.pkg</li>
+				<li><span class="field">author:</span> Richard Tango-Lowy &amp; Dan Cech</li>
+				<li><span class="field">version:</span> $Revision: 1.62 $</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_file_get_contents
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$file</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$file</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 05 Jul 2011 12:08:57 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

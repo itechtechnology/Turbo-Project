@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page adodb-errorhandler.inc.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/core/adodb5/adodb-errorhandler.inc.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+											<a href="#sec-constants">Constants</a>
+			|									<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+		
+			</div>
+</div>
+		
+
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+									<span class="disabled">Constants</span>
+			|										<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="defineADODB_ERROR_HANDLER"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">ADODB_ERROR_HANDLER</span> = 'ADODB_Error_Handler'
+			(line <span class="line-number">18</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineADODB_ERROR_HANDLER_TYPE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">ADODB_ERROR_HANDLER_TYPE</span> = E_USER_ERROR
+			(line <span class="line-number">16</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">version:</span> <p>V5.11 5 May 2010   (c) 2000-2010 John Lim (jlim#natsoft.com). All rights reserved.  Released under both BSD license and Lesser GPL library license.  Whenever there is any discrepancy between the two licenses,  the BSD license will take precedence.</p><p>Set tabs to 4 for best viewing.</p><p>Latest version is available at http://php.weblogs.com</p></li>
+			</ul>
+	
+		
+</div>
+		</div>
+	</div>
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+													<a href="#sec-constants">Constants</a>
+				|									<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionADODB_Error_Handler" id="functionADODB_Error_Handler"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">ADODB_Error_Handler</span> (line <span class="line-number">31</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Default Error Handler. This will be called with the following params</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			ADODB_Error_Handler
+		</span>
+					(<span class="var-type">$dbms</span>&nbsp;<span class="var-name">$dbms</span>, <span class="var-type">$fn</span>&nbsp;<span class="var-name">$fn</span>, <span class="var-type">$errno</span>&nbsp;<span class="var-name">$errno</span>, <span class="var-type">$errmsg</span>&nbsp;<span class="var-name">$errmsg</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$p1</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$p2</span>, <span class="var-type"></span>&nbsp;<span class="var-name">&$thisConnection</span>, <span class="var-type">$thisConn</span>&nbsp;<span class="var-name">$current</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$fn</span>
+				<span class="var-name">$fn</span><span class="var-description">: the name of the calling function (in uppercase)</span>			</li>
+					<li>
+				<span class="var-type">$thisConn</span>
+				<span class="var-name">$current</span><span class="var-description">: connection object - can be false if no connection object created</span>			</li>
+					<li>
+				<span class="var-type">$dbms</span>
+				<span class="var-name">$dbms</span><span class="var-description">: the RDBMS you are connecting to</span>			</li>
+					<li>
+				<span class="var-type">$errno</span>
+				<span class="var-name">$errno</span><span class="var-description">: the native error number from the database</span>			</li>
+					<li>
+				<span class="var-type">$errmsg</span>
+				<span class="var-name">$errmsg</span><span class="var-description">: the native error msg from the database</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$p1</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$p2</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$thisConnection</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 05 Jul 2011 12:08:15 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,33 @@
+[12-May-2011 20:56:21] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  value too long for type character varying(8) in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[14-May-2011 14:43:55] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  value too long for type character varying(9) in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[14-May-2011 14:49:46] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  value too long for type character varying(9) in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[14-May-2011 14:51:38] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  date/time field value out of range: &quot;25/09/1987&quot;
+HINT:  Perhaps you need a different &quot;datestyle&quot; setting. in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[14-May-2011 14:55:11] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  date/time field value out of range: &quot;25/09/1987&quot;
+HINT:  Perhaps you need a different &quot;datestyle&quot; setting. in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[14-May-2011 14:56:45] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  date/time field value out of range: &quot;25/09/1987&quot;
+HINT:  Perhaps you need a different &quot;datestyle&quot; setting. in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[15-May-2011 17:04:08] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  invalid input syntax for integer: &quot;&quot; in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[15-May-2011 18:01:35] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  invalid input syntax for integer: &quot;&quot; in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[15-May-2011 18:09:24] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  invalid input syntax for integer: &quot;&quot; in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[15-May-2011 18:16:59] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  invalid input syntax for integer: &quot;&quot; in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[15-May-2011 18:19:35] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  invalid input syntax for integer: &quot;&quot; in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[15-May-2011 18:22:44] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  invalid input syntax for integer: &quot;&quot; in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[15-May-2011 18:23:02] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  invalid input syntax for integer: &quot;&quot; in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[15-May-2011 18:24:07] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  invalid input syntax for integer: &quot;&quot; in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[15-May-2011 18:24:25] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  invalid input syntax for integer: &quot;&quot; in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[15-May-2011 18:29:19] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  invalid input syntax for integer: &quot;&quot; in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[15-May-2011 18:30:15] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  invalid input syntax for integer: &quot;&quot; in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[15-May-2011 18:36:22] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  invalid input syntax for integer: &quot;&quot; in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[15-May-2011 18:38:22] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  invalid input syntax for integer: &quot;&quot; in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[15-May-2011 18:38:27] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  invalid input syntax for integer: &quot;&quot; in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[15-May-2011 18:39:46] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  invalid input syntax for integer: &quot;&quot; in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[15-May-2011 18:42:01] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  invalid input syntax for integer: &quot;&quot; in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[15-May-2011 18:42:42] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  invalid input syntax for integer: &quot;&quot; in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[15-May-2011 18:42:43] PHP Warning:  pg_query() [<a href='function.pg-query'>function.pg-query</a>]: Query failed: ERROR:  invalid input syntax for integer: &quot;&quot; in /home/itechcom/public_html/app/models/usuario/Conexao.class.php on line 56
+[17-May-2011 21:31:16] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'bloco BLOCK_15 não existe' in /home/itechcom/public_html/app/models/Template.class.php:413
+Stack trace:
+#0 /home/itechcom/public_html/app/controllers/usuario/valida_cadastro.php(103): Template->block('BLOCK_15')
+#1 {main}
+  thrown in /home/itechcom/public_html/app/models/Template.class.php on line 413
+[03-Jul-2011 16:54:01] PHP Fatal error:  Class 'UsuarioRecord' not found in /home/itechcom/public_html/app/controllers/usuario/deslogar.php on line 14

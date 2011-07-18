@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class ADORecordSet_mysqlt</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class ADORecordSet_mysqlt</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">RecordSet class that represents the dataset returned by the database.</p>
+<p class="description"><p>To keep memory overhead low, this class holds only the current row in memory.  No prefetching of data is done, so the RecordCount() can return -1 ( which  means recordcount not known).</p></p>
+		<p class="notes">
+			Located in <a class="field" href="_core---adodb5---drivers---adodb-mysqlt.inc.php.html">/core/adodb5/drivers/adodb-mysqlt.inc.php</a> (line <span class="field">89</span>)
+		</p>
+		
+				
+		<pre><a href="../default/ADORecordSet.html">ADORecordSet</a>
+   |
+   --<a href="../default/ADORecordSet_mysql.html">ADORecordSet_mysql</a>
+      |
+      --ADORecordSet_mysqlt</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../default/ADORecordSet_ext_mysqlt.html">ADORecordSet_ext_mysqlt</a></td>
+					<td>
+											RecordSet class that represents the dataset returned by the database.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$databaseType" title="details" class="var-name">$databaseType</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																				
+												<div class="method-definition">
+											<span class="method-result">ADORecordSet_mysqlt</span>
+										<a href="#ADORecordSet_mysqlt" title="details" class="method-name">ADORecordSet_mysqlt</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$queryID</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$mode</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#MoveNext" title="details" class="method-name">MoveNext</a>
+										()
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$databaseType" id="$databaseType"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$databaseType</span>
+			 = <span class="var-default"> &quot;mysqlt&quot;</span>			(line <span class="line-number">90</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADORecordSet_mysql.html#var$databaseType">ADORecordSet_mysql::$databaseType</a></dt>
+					</dl>
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../default/ADORecordSet_mysql.html">ADORecordSet_mysql</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet_mysql.html#var$canSeek">ADORecordSet_mysql::$canSeek</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../default/ADORecordSet.html">ADORecordSet</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$bind">ADORecordSet::$bind</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$blobSize">ADORecordSet::$blobSize</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$connection">ADORecordSet::$connection</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$dataProvider">ADORecordSet::$dataProvider</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$datetime">ADORecordSet::$datetime</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$debug">ADORecordSet::$debug</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$emptyDate">ADORecordSet::$emptyDate</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$emptyTimeStamp">ADORecordSet::$emptyTimeStamp</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$EOF">ADORecordSet::$EOF</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$fetchMode">ADORecordSet::$fetchMode</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$fields">ADORecordSet::$fields</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$sql">ADORecordSet::$sql</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$timeCreated">ADORecordSet::$timeCreated</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$_atFirstPage">ADORecordSet::$_atFirstPage</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$_atLastPage">ADORecordSet::$_atLastPage</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$_closed">ADORecordSet::$_closed</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$_currentPage">ADORecordSet::$_currentPage</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$_currentRow">ADORecordSet::$_currentRow</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$_inited">ADORecordSet::$_inited</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$_lastPageNo">ADORecordSet::$_lastPageNo</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$_maxRecordCount">ADORecordSet::$_maxRecordCount</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$_names">ADORecordSet::$_names</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$_numOfFields">ADORecordSet::$_numOfFields</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$_numOfRows">ADORecordSet::$_numOfRows</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$_obj">ADORecordSet::$_obj</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADORecordSet.html#var$_queryID">ADORecordSet::$_queryID</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodADORecordSet_mysqlt" id="ADORecordSet_mysqlt"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor ADORecordSet_mysqlt</span> (line <span class="line-number">92</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">ADORecordSet_mysqlt</span>
+		<span class="method-name">
+			ADORecordSet_mysqlt
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$queryID</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$mode</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$queryID</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$mode</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodMoveNext" id="MoveNext"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">MoveNext</span> (line <span class="line-number">113</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			MoveNext
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADORecordSet_mysql.html#methodMoveNext">ADORecordSet_mysql::MoveNext()</a></dt>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../default/ADORecordSet_ext_mysqlt.html#methodMoveNext">ADORecordSet_ext_mysqlt::MoveNext()</a>
+							</li>
+				</ul>
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../default/ADORecordSet_mysql.html">ADORecordSet_mysql</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../default/ADORecordSet_mysql.html#methodADORecordSet_mysql">ADORecordSet_mysql::ADORecordSet_mysql()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet_mysql.html#methodFetchField">ADORecordSet_mysql::FetchField()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet_mysql.html#methodFields">ADORecordSet_mysql::Fields()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet_mysql.html#methodGetRowAssoc">ADORecordSet_mysql::GetRowAssoc()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet_mysql.html#methodMetaType">ADORecordSet_mysql::MetaType()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet_mysql.html#methodMoveNext">ADORecordSet_mysql::MoveNext()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet_mysql.html#method_close">ADORecordSet_mysql::_close()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet_mysql.html#method_fetch">ADORecordSet_mysql::_fetch()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet_mysql.html#method_initrs">ADORecordSet_mysql::_initrs()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet_mysql.html#method_seek">ADORecordSet_mysql::_seek()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../default/ADORecordSet.html">ADORecordSet</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodADORecordSet">ADORecordSet::ADORecordSet()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodAbsolutePage">ADORecordSet::AbsolutePage()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodAbsolutePosition">ADORecordSet::AbsolutePosition()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodAtFirstPage">ADORecordSet::AtFirstPage()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodAtLastPage">ADORecordSet::AtLastPage()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodClose">ADORecordSet::Close()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodCurrentRow">ADORecordSet::CurrentRow()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodFetchField">ADORecordSet::FetchField()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodFetchInto">ADORecordSet::FetchInto()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodFetchNextObj">ADORecordSet::FetchNextObj()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodFetchNextObject">ADORecordSet::FetchNextObject()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodFetchObj">ADORecordSet::FetchObj()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodFetchObject">ADORecordSet::FetchObject()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodFetchRow">ADORecordSet::FetchRow()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodFieldCount">ADORecordSet::FieldCount()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodFields">ADORecordSet::Fields()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodFieldTypesArray">ADORecordSet::FieldTypesArray()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodFree">ADORecordSet::Free()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodGetAll">ADORecordSet::GetAll()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodGetArray">ADORecordSet::GetArray()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodGetArrayLimit">ADORecordSet::GetArrayLimit()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodGetAssoc">ADORecordSet::GetAssoc()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodGetAssocKeys">ADORecordSet::GetAssocKeys()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodgetIterator">ADORecordSet::getIterator()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodGetMenu">ADORecordSet::GetMenu()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodGetMenu2">ADORecordSet::GetMenu2()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodGetMenu3">ADORecordSet::GetMenu3()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodGetRowAssoc">ADORecordSet::GetRowAssoc()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodGetRows">ADORecordSet::GetRows()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodInit">ADORecordSet::Init()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodLastPageNo">ADORecordSet::LastPageNo()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodMaxRecordCount">ADORecordSet::MaxRecordCount()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodMetaType">ADORecordSet::MetaType()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodMove">ADORecordSet::Move()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodMoveFirst">ADORecordSet::MoveFirst()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodMoveLast">ADORecordSet::MoveLast()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodMoveNext">ADORecordSet::MoveNext()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodNextRecordSet">ADORecordSet::NextRecordSet()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodNumCols">ADORecordSet::NumCols()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodNumRows">ADORecordSet::NumRows()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodPO_RecordCount">ADORecordSet::PO_RecordCount()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodRecordCount">ADORecordSet::RecordCount()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodRowCount">ADORecordSet::RowCount()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodUnixDate">ADORecordSet::UnixDate()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodUnixTimeStamp">ADORecordSet::UnixTimeStamp()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodUserDate">ADORecordSet::UserDate()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#methodUserTimeStamp">ADORecordSet::UserTimeStamp()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#method_close">ADORecordSet::_close()</a></span><br>
+													<span class="method-name"><a href="../default/ADORecordSet.html#method__toString">ADORecordSet::__toString()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 05 Jul 2011 12:08:31 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

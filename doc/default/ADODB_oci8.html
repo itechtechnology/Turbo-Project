@@ -1,0 +1,2888 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class ADODB_oci8</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class ADODB_oci8</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Connection object. For connecting to databases, and executing queries.</p>
+		<p class="notes">
+			Located in <a class="field" href="_core---adodb5---drivers---adodb-oci8.inc.php.html">/core/adodb5/drivers/adodb-oci8.inc.php</a> (line <span class="field">55</span>)
+		</p>
+		
+				
+		<pre><a href="../default/ADOConnection.html">ADOConnection</a>
+   |
+   --ADODB_oci8</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../default/ADODB_oci805.html">ADODB_oci805</a></td>
+					<td>
+											Connection object. For connecting to databases, and executing queries.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../default/ADODB_oci8po.html">ADODB_oci8po</a></td>
+					<td>
+											Connection object. For connecting to databases, and executing queries.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																																																																																																																																																																																																																								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$concat_operator" title="details" class="var-name">$concat_operator</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$connectSID" title="details" class="var-name">$connectSID</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$databaseType" title="details" class="var-name">$databaseType</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$dataProvider" title="details" class="var-name">$dataProvider</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$dateformat" title="details" class="var-name">$dateformat</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$datetime" title="details" class="var-name">$datetime</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$firstrows" title="details" class="var-name">$firstrows</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$hasAffectedRows" title="details" class="var-name">$hasAffectedRows</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$hasGenID" title="details" class="var-name">$hasGenID</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$leftOuter" title="details" class="var-name">$leftOuter</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$metaColumnsSQL" title="details" class="var-name">$metaColumnsSQL</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$metaColumnsSQL2" title="details" class="var-name">$metaColumnsSQL2</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$metaDatabasesSQL" title="details" class="var-name">$metaDatabasesSQL</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$metaTablesSQL" title="details" class="var-name">$metaTablesSQL</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$NLS_DATE_FORMAT" title="details" class="var-name">$NLS_DATE_FORMAT</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$noNullStrings" title="details" class="var-name">$noNullStrings</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$random" title="details" class="var-name">$random</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$replaceQuote" title="details" class="var-name">$replaceQuote</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$selectOffsetAlg1" title="details" class="var-name">$selectOffsetAlg1</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$session_sharing_force_blob" title="details" class="var-name">$session_sharing_force_blob</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$sysDate" title="details" class="var-name">$sysDate</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$sysTimeStamp" title="details" class="var-name">$sysTimeStamp</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$useDBDateFormatForTextInput" title="details" class="var-name">$useDBDateFormatForTextInput</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_bind" title="details" class="var-name">$_bind</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_bindInputArray" title="details" class="var-name">$_bindInputArray</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_commit" title="details" class="var-name">$_commit</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_dropSeqSQL" title="details" class="var-name">$_dropSeqSQL</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_genIDSQL" title="details" class="var-name">$_genIDSQL</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_genSeqSQL" title="details" class="var-name">$_genSeqSQL</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_getarray" title="details" class="var-name">$_getarray</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_hasOCIFetchStatement" title="details" class="var-name">$_hasOCIFetchStatement</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_initdate" title="details" class="var-name">$_initdate</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_nestedSQL" title="details" class="var-name">$_nestedSQL</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_refLOBs" title="details" class="var-name">$_refLOBs</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_stmt" title="details" class="var-name">$_stmt</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																																																																																																																												
+												<div class="method-definition">
+											<span class="method-result">ADODB_oci8</span>
+										<a href="#ADODB_oci8" title="details" class="method-name">ADODB_oci8</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#BeginTrans" title="details" class="method-name">BeginTrans</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#Bind" title="details" class="method-name">Bind</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$stmt</span>, <span class="var-type"></span>&nbsp;<span class="var-name">&$var</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$size</span> = <span class="var-default">4000</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$isOutput</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#BindDate" title="details" class="method-name">BindDate</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$d</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#BindTimeStamp" title="details" class="method-name">BindTimeStamp</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$ts</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#CharMax" title="details" class="method-name">CharMax</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#CommitTrans" title="details" class="method-name">CommitTrans</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$ok</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#DBDate" title="details" class="method-name">DBDate</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$d</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$isfld</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#DBTimeStamp" title="details" class="method-name">DBTimeStamp</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$ts</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$isfld</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#ErrorMsg" title="details" class="method-name">ErrorMsg</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#ErrorNo" title="details" class="method-name">ErrorNo</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">RecordSet</span>
+										<a href="#Execute" title="details" class="method-name">Execute</a>
+											(<span class="var-type">sql</span>&nbsp;<span class="var-name">$sql</span>, [<span class="var-type">[inputarr]</span>&nbsp;<span class="var-name">$inputarr</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#ExecuteCursor" title="details" class="method-name">ExecuteCursor</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$sql</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$cursorName</span> = <span class="var-default">'rs'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#GetRandRow" title="details" class="method-name">GetRandRow</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$sql</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$arr</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#IfNull" title="details" class="method-name">IfNull</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$field</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$ifNull</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#IsConnectionError" title="details" class="method-name">IsConnectionError</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$err</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#MetaColumns" title="details" class="method-name">MetaColumns</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$table</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$normalize</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#MetaForeignKeys" title="details" class="method-name">MetaForeignKeys</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$table</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$owner</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#MetaIndexes" title="details" class="method-name">MetaIndexes</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$table</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$primary</span> = <span class="var-default">FALSE</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$owner</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#MetaPrimaryKeys" title="details" class="method-name">MetaPrimaryKeys</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$table</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$owner</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$internalKey</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#MetaTables" title="details" class="method-name">MetaTables</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$ttype</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$showSchema</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$mask</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#Param" title="details" class="method-name">Param</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#Parameter" title="details" class="method-name">Parameter</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$stmt</span>, <span class="var-type"></span>&nbsp;<span class="var-name">&$var</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$isOutput</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$maxLen</span> = <span class="var-default">4000</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#Prepare" title="details" class="method-name">Prepare</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$sql</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$cursor</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">quoted</span>
+										<a href="#qstr" title="details" class="method-name">qstr</a>
+											(<span class="var-type">s</span>&nbsp;<span class="var-name">$s</span>, [<span class="var-type">[magic_quotes]</span>&nbsp;<span class="var-name">$magic_quotes</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#RollbackTrans" title="details" class="method-name">RollbackTrans</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#RowLock" title="details" class="method-name">RowLock</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$tables</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$where</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$col</span> = <span class="var-default">'1 as adodbignore'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#SelectDB" title="details" class="method-name">SelectDB</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$dbName</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#SelectLimit" title="details" class="method-name">SelectLimit</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$sql</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$nrows</span> = <span class="var-default">-1</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$offset</span> = <span class="var-default">-1</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$inputarr</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$secs2cache</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#ServerInfo" title="details" class="method-name">ServerInfo</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#SQLDate" title="details" class="method-name">SQLDate</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$fmt</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$col</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#TextMax" title="details" class="method-name">TextMax</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#Time" title="details" class="method-name">Time</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#UpdateBlob" title="details" class="method-name">UpdateBlob</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$table</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$column</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$val</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$where</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$blobtype</span> = <span class="var-default">'BLOB'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#UpdateBlobFile" title="details" class="method-name">UpdateBlobFile</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$table</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$column</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$val</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$where</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$blobtype</span> = <span class="var-default">'BLOB'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_affectedrows" title="details" class="method-name">_affectedrows</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_close" title="details" class="method-name">_close</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_connect" title="details" class="method-name">_connect</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$argHostname</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$argUsername</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$argPassword</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$argDatabasename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$mode</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_nconnect" title="details" class="method-name">_nconnect</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$argHostname</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$argUsername</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$argPassword</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$argDatabasename</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_pconnect" title="details" class="method-name">_pconnect</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$argHostname</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$argUsername</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$argPassword</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$argDatabasename</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_query" title="details" class="method-name">_query</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$sql</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$inputarr</span> = <span class="var-default">false</span>])
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$concat_operator" id="$concat_operator"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$concat_operator</span>
+			 = <span class="var-default">'||'</span>			(line <span class="line-number">59</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#var$concat_operator">ADOConnection::$concat_operator</a></dt>
+					</dl>
+		
+		
+
+</div>
+<a name="var$connectSID" id="$connectSID"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$connectSID</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">81</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../default/ADODB_oci805.html#var$connectSID">ADODB_oci805::$connectSID</a>
+							</li>
+				</ul>
+		
+
+</div>
+<a name="var$databaseType" id="$databaseType"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$databaseType</span>
+			 = <span class="var-default"> 'oci8'</span>			(line <span class="line-number">56</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#var$databaseType">ADOConnection::$databaseType</a></dt>
+					</dl>
+		
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../default/ADODB_oci805.html#var$databaseType">ADODB_oci805::$databaseType</a>
+							</li>
+					<li>
+				<a href="../default/ADODB_oci8po.html#var$databaseType">ADODB_oci8po::$databaseType</a>
+							</li>
+				</ul>
+		
+
+</div>
+<a name="var$dataProvider" id="$dataProvider"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$dataProvider</span>
+			 = <span class="var-default"> 'oci8'</span>			(line <span class="line-number">57</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#var$dataProvider">ADOConnection::$dataProvider</a></dt>
+					</dl>
+		
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../default/ADODB_oci8po.html#var$dataProvider">ADODB_oci8po::$dataProvider</a>
+							</li>
+				</ul>
+		
+
+</div>
+<a name="var$dateformat" id="$dateformat"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$dateformat</span>
+			 = <span class="var-default"> 'YYYY-MM-DD'</span>			(line <span class="line-number">91</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$datetime" id="$datetime"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$datetime</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">93</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$firstrows" id="$firstrows"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$firstrows</span>
+			 = <span class="var-default"> true</span>			(line <span class="line-number">88</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$hasAffectedRows" id="$hasAffectedRows"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$hasAffectedRows</span>
+			 = <span class="var-default"> true</span>			(line <span class="line-number">78</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#var$hasAffectedRows">ADOConnection::$hasAffectedRows</a></dt>
+					</dl>
+		
+		
+
+</div>
+<a name="var$hasGenID" id="$hasGenID"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$hasGenID</span>
+			 = <span class="var-default"> true</span>			(line <span class="line-number">74</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#var$hasGenID">ADOConnection::$hasGenID</a></dt>
+					</dl>
+		
+		
+
+</div>
+<a name="var$leftOuter" id="$leftOuter"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$leftOuter</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number">86</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#var$leftOuter">ADOConnection::$leftOuter</a></dt>
+					</dl>
+		
+		
+
+</div>
+<a name="var$metaColumnsSQL" id="$metaColumnsSQL"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$metaColumnsSQL</span>
+			 = <span class="var-default"> &quot;select cname,coltype,width, SCALE, PRECISION, NULLS, DEFAULTVAL from col where tname='%s' order by colno&quot;</span>			(line <span class="line-number">67</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../default/ADODB_oci8po.html#var$metaColumnsSQL">ADODB_oci8po::$metaColumnsSQL</a>
+							</li>
+				</ul>
+		
+
+</div>
+<a name="var$metaColumnsSQL2" id="$metaColumnsSQL2"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$metaColumnsSQL2</span>
+			 = <span class="var-default"> &quot;select column_name,data_type,data_length, data_scale, data_precision, <br />    case when nullable = 'Y' then 'NULL'<br />    else 'NOT NULL' end as nulls,<br />    data_default from all_tab_cols <br />  where owner='%s' and table_name='%s' order by column_id&quot;</span>			(line <span class="line-number">68</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$metaDatabasesSQL" id="$metaDatabasesSQL"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$metaDatabasesSQL</span>
+			 = <span class="var-default"> &quot;SELECT USERNAME FROM ALL_USERS WHERE USERNAME NOT IN ('SYS','SYSTEM','DBSNMP','OUTLN') ORDER BY 1&quot;</span>			(line <span class="line-number">62</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#var$metaDatabasesSQL">ADOConnection::$metaDatabasesSQL</a></dt>
+					</dl>
+		
+		
+
+</div>
+<a name="var$metaTablesSQL" id="$metaTablesSQL"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$metaTablesSQL</span>
+			 = <span class="var-default"> &quot;select table_name,table_type from cat where table_type in ('TABLE','VIEW') and table_name not like 'BIN\$%'&quot;</span>			(line <span class="line-number">66</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#var$metaTablesSQL">ADOConnection::$metaTablesSQL</a></dt>
+					</dl>
+		
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../default/ADODB_oci8po.html#var$metaTablesSQL">ADODB_oci8po::$metaTablesSQL</a>
+							</li>
+				</ul>
+		
+
+</div>
+<a name="var$NLS_DATE_FORMAT" id="$NLS_DATE_FORMAT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$NLS_DATE_FORMAT</span>
+			 = <span class="var-default"> 'YYYY-MM-DD'</span>			(line <span class="line-number">90</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$noNullStrings" id="$noNullStrings"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$noNullStrings</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">80</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#var$noNullStrings">ADOConnection::$noNullStrings</a></dt>
+					</dl>
+		
+		
+
+</div>
+<a name="var$random" id="$random"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$random</span>
+			 = <span class="var-default"> &quot;abs(mod(DBMS_RANDOM.RANDOM,10000001)/10000000)&quot;</span>			(line <span class="line-number">79</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#var$random">ADOConnection::$random</a></dt>
+					</dl>
+		
+		
+
+</div>
+<a name="var$replaceQuote" id="$replaceQuote"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$replaceQuote</span>
+			 = <span class="var-default"> &quot;''&quot;</span>			(line <span class="line-number">58</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#var$replaceQuote">ADOConnection::$replaceQuote</a></dt>
+					</dl>
+		
+		
+
+</div>
+<a name="var$selectOffsetAlg1" id="$selectOffsetAlg1"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$selectOffsetAlg1</span>
+			 = <span class="var-default"> 1000</span>			(line <span class="line-number">89</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$session_sharing_force_blob" id="$session_sharing_force_blob"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$session_sharing_force_blob</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">87</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$sysDate" id="$sysDate"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$sysDate</span>
+			 = <span class="var-default"> &quot;TRUNC(SYSDATE)&quot;</span>			(line <span class="line-number">60</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#var$sysDate">ADOConnection::$sysDate</a></dt>
+					</dl>
+		
+		
+
+</div>
+<a name="var$sysTimeStamp" id="$sysTimeStamp"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$sysTimeStamp</span>
+			 = <span class="var-default"> 'SYSDATE'</span>			(line <span class="line-number">61</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#var$sysTimeStamp">ADOConnection::$sysTimeStamp</a></dt>
+					</dl>
+		
+		
+
+</div>
+<a name="var$useDBDateFormatForTextInput" id="$useDBDateFormatForTextInput"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$useDBDateFormatForTextInput</span>
+			 = <span class="var-default">false</span>			(line <span class="line-number">92</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_bind" id="$_bind"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_bind</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">82</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_bindInputArray" id="$_bindInputArray"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_bindInputArray</span>
+			 = <span class="var-default"> true</span>			(line <span class="line-number">73</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#var$_bindInputArray">ADOConnection::$_bindInputArray</a></dt>
+					</dl>
+		
+		
+
+</div>
+<a name="var$_commit" id="$_commit"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_commit</span>
+			 = <span class="var-default"> OCI_COMMIT_ON_SUCCESS</span>			(line <span class="line-number">64</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_dropSeqSQL" id="$_dropSeqSQL"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_dropSeqSQL</span>
+			 = <span class="var-default"> &quot;DROP SEQUENCE %s&quot;</span>			(line <span class="line-number">77</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_genIDSQL" id="$_genIDSQL"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_genIDSQL</span>
+			 = <span class="var-default"> &quot;SELECT (%s.nextval) FROM DUAL&quot;</span>			(line <span class="line-number">75</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_genSeqSQL" id="$_genSeqSQL"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_genSeqSQL</span>
+			 = <span class="var-default"> &quot;CREATE SEQUENCE %s START WITH %s&quot;</span>			(line <span class="line-number">76</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_getarray" id="$_getarray"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_getarray</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">85</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_hasOCIFetchStatement" id="$_hasOCIFetchStatement"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_hasOCIFetchStatement</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">84</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_initdate" id="$_initdate"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_initdate</span>
+			 = <span class="var-default"> true</span>			(line <span class="line-number">65</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_nestedSQL" id="$_nestedSQL"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_nestedSQL</span>
+			 = <span class="var-default"> true</span>			(line <span class="line-number">83</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_refLOBs" id="$_refLOBs"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_refLOBs</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">94</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_stmt" id="$_stmt"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_stmt</span>
+						(line <span class="line-number">63</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../default/ADOConnection.html">ADOConnection</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$ansiOuter">ADOConnection::$ansiOuter</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$arrayClass">ADOConnection::$arrayClass</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$autoCommit">ADOConnection::$autoCommit</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$autoRollback">ADOConnection::$autoRollback</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$blobEncodeType">ADOConnection::$blobEncodeType</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$bulkBind">ADOConnection::$bulkBind</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$cacheSecs">ADOConnection::$cacheSecs</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$charSet">ADOConnection::$charSet</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$database">ADOConnection::$database</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$debug">ADOConnection::$debug</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$emptyDate">ADOConnection::$emptyDate</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$emptyTimeStamp">ADOConnection::$emptyTimeStamp</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$false">ADOConnection::$false</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$fetchMode">ADOConnection::$fetchMode</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$fmtDate">ADOConnection::$fmtDate</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$fmtTimeStamp">ADOConnection::$fmtTimeStamp</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$fnCacheExecute">ADOConnection::$fnCacheExecute</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$fnExecute">ADOConnection::$fnExecute</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$genID">ADOConnection::$genID</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$hasInsertID">ADOConnection::$hasInsertID</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$hasLimit">ADOConnection::$hasLimit</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$hasMoveFirst">ADOConnection::$hasMoveFirst</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$hasTop">ADOConnection::$hasTop</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$hasTransactions">ADOConnection::$hasTransactions</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$host">ADOConnection::$host</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$isoDates">ADOConnection::$isoDates</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$lastInsID">ADOConnection::$lastInsID</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$length">ADOConnection::$length</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$maxblobsize">ADOConnection::$maxblobsize</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$memCache">ADOConnection::$memCache</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$memCacheCompress">ADOConnection::$memCacheCompress</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$memCacheHost">ADOConnection::$memCacheHost</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$memCachePort">ADOConnection::$memCachePort</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$nameQuote">ADOConnection::$nameQuote</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$null2null">ADOConnection::$null2null</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$numCacheHits">ADOConnection::$numCacheHits</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$numCacheMisses">ADOConnection::$numCacheMisses</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$pageExecuteCountRows">ADOConnection::$pageExecuteCountRows</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$password">ADOConnection::$password</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$poorAffectedRows">ADOConnection::$poorAffectedRows</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$raiseErrorFn">ADOConnection::$raiseErrorFn</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$readOnly">ADOConnection::$readOnly</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$rightOuter">ADOConnection::$rightOuter</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$rsPrefix">ADOConnection::$rsPrefix</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$substr">ADOConnection::$substr</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$sysUTimeStamp">ADOConnection::$sysUTimeStamp</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$transCnt">ADOConnection::$transCnt</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$transOff">ADOConnection::$transOff</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$true">ADOConnection::$true</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$uniqueOrderBy">ADOConnection::$uniqueOrderBy</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$uniqueSort">ADOConnection::$uniqueSort</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$upperCase">ADOConnection::$upperCase</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$user">ADOConnection::$user</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$_affected">ADOConnection::$_affected</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$_connectionID">ADOConnection::$_connectionID</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$_errorCode">ADOConnection::$_errorCode</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$_errorMsg">ADOConnection::$_errorMsg</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$_evalAll">ADOConnection::$_evalAll</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$_isPersistentConnection">ADOConnection::$_isPersistentConnection</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$_logsql">ADOConnection::$_logsql</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$_oldRaiseFn">ADOConnection::$_oldRaiseFn</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$_queryID">ADOConnection::$_queryID</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$_transmode">ADOConnection::$_transmode</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADOConnection.html#var$_transOK">ADOConnection::$_transOK</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodADODB_oci8" id="ADODB_oci8"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor ADODB_oci8</span> (line <span class="line-number">98</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">ADODB_oci8</span>
+		<span class="method-name">
+			ADODB_oci8
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodBeginTrans" id="BeginTrans"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">BeginTrans</span> (line <span class="line-number">424</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			BeginTrans
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodBeginTrans">ADOConnection::BeginTrans()</a></dt>
+						<dd>Begin a Transaction. Must be followed by CommitTrans() or RollbackTrans().</dd>
+					</dl>
+			
+	</div>
+<a name="methodBind" id="Bind"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Bind</span> (line <span class="line-number">949</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Bind
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$stmt</span>, <span class="var-type"></span>&nbsp;<span class="var-name">&$var</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$size</span> = <span class="var-default">4000</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$isOutput</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$stmt</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$var</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$size</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$isOutput</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodBindDate" id="BindDate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">BindDate</span> (line <span class="line-number">304</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			BindDate
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$d</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$d</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodBindDate">ADOConnection::BindDate()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodBindTimeStamp" id="BindTimeStamp"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">BindTimeStamp</span> (line <span class="line-number">312</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			BindTimeStamp
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$ts</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$ts</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodBindTimeStamp">ADOConnection::BindTimeStamp()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodCharMax" id="CharMax"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">CharMax</span> (line <span class="line-number">1277</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			CharMax
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodCommitTrans" id="CommitTrans"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">CommitTrans</span> (line <span class="line-number">437</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			CommitTrans
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$ok</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$ok</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodCommitTrans">ADOConnection::CommitTrans()</a></dt>
+						<dd>If database does not support transactions, always return true as data always commited</dd>
+					</dl>
+			
+	</div>
+<a name="methodDBDate" id="DBDate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">DBDate</span> (line <span class="line-number">291</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			DBDate
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$d</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$isfld</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$d</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$isfld</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodDBDate">ADOConnection::DBDate()</a></dt>
+						<dd>Converts a date &quot;d&quot; to a string that the database can understand.</dd>
+					</dl>
+			
+	</div>
+<a name="methodDBTimeStamp" id="DBTimeStamp"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">DBTimeStamp</span> (line <span class="line-number">324</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			DBTimeStamp
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$ts</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$isfld</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$ts</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$isfld</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodDBTimeStamp">ADOConnection::DBTimeStamp()</a></dt>
+						<dd>Converts a timestamp &quot;ts&quot; to a string that the database can understand.</dd>
+					</dl>
+			
+	</div>
+<a name="methodErrorMsg" id="ErrorMsg"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">ErrorMsg</span> (line <span class="line-number">465</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			ErrorMsg
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodErrorMsg">ADOConnection::ErrorMsg()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodErrorNo" id="ErrorNo"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">ErrorNo</span> (line <span class="line-number">480</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			ErrorNo
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodErrorNo">ADOConnection::ErrorNo()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodExecute" id="Execute"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Execute</span> (line <span class="line-number">781</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Execute SQL</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> or false</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">RecordSet</span>
+		<span class="method-name">
+			Execute
+		</span>
+					(<span class="var-type">sql</span>&nbsp;<span class="var-name">$sql</span>, [<span class="var-type">[inputarr]</span>&nbsp;<span class="var-name">$inputarr</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">sql</span>
+				<span class="var-name">$sql</span><span class="var-description">: SQL statement to execute, or possibly an array holding prepared statement ($sql[0] will hold sql text)</span>			</li>
+					<li>
+				<span class="var-type">[inputarr]</span>
+				<span class="var-name">$inputarr</span><span class="var-description">: holds the input data to bind to. Null elements will be set to null.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodExecute">ADOConnection::Execute()</a></dt>
+						<dd>Execute SQL</dd>
+					</dl>
+			
+	</div>
+<a name="methodExecuteCursor" id="ExecuteCursor"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">ExecuteCursor</span> (line <span class="line-number">894</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			ExecuteCursor
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$sql</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$cursorName</span> = <span class="var-default">'rs'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$sql</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$cursorName</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$params</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodGetRandRow" id="GetRandRow"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">GetRandRow</span> (line <span class="line-number">575</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			GetRandRow
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$sql</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$arr</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$sql</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$arr</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodGetRandRow">ADOConnection::GetRandRow()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodIfNull" id="IfNull"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">IfNull</span> (line <span class="line-number">285</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			IfNull
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$field</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$ifNull</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$field</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$ifNull</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodIfNull">ADOConnection::IfNull()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodIsConnectionError" id="IsConnectionError"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">IsConnectionError</span> (line <span class="line-number">1159</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			IsConnectionError
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$err</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$err</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodMetaColumns" id="MetaColumns"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">MetaColumns</span> (line <span class="line-number">105</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			MetaColumns
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$table</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$normalize</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$table</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$normalize</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodMetaColumns">ADOConnection::MetaColumns()</a></dt>
+						<dd>List columns in a database as an array of ADOFieldObjects.</dd>
+					</dl>
+			
+	</div>
+<a name="methodMetaForeignKeys" id="MetaForeignKeys"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">MetaForeignKeys</span> (line <span class="line-number">1237</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			MetaForeignKeys
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$table</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$owner</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$table</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$owner</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodMetaForeignKeys">ADOConnection::MetaForeignKeys()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodMetaIndexes" id="MetaIndexes"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">MetaIndexes</span> (line <span class="line-number">358</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			MetaIndexes
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$table</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$primary</span> = <span class="var-default">FALSE</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$owner</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$table</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$primary</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$owner</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodMetaIndexes">ADOConnection::MetaIndexes()</a></dt>
+						<dd>List indexes on a table as an array.</dd>
+					</dl>
+			
+	</div>
+<a name="methodMetaPrimaryKeys" id="MetaPrimaryKeys"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">MetaPrimaryKeys</span> (line <span class="line-number">1202</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			MetaPrimaryKeys
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$table</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$owner</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$internalKey</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$table</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$owner</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$internalKey</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodMetaPrimaryKeys">ADOConnection::MetaPrimaryKeys()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodMetaTables" id="MetaTables"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">MetaTables</span> (line <span class="line-number">342</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			MetaTables
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$ttype</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$showSchema</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$mask</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$ttype</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$showSchema</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$mask</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodMetaTables">ADOConnection::MetaTables()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodParam" id="Param"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Param</span> (line <span class="line-number">1000</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Param
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodParam">ADOConnection::Param()</a></dt>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../default/ADODB_oci8po.html#methodParam">ADODB_oci8po::Param()</a>
+							</li>
+				</ul>
+	</div>
+<a name="methodParameter" id="Parameter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Parameter</span> (line <span class="line-number">1021</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Parameter
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$stmt</span>, <span class="var-type"></span>&nbsp;<span class="var-name">&$var</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$isOutput</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$maxLen</span> = <span class="var-default">4000</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$stmt</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$var</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$isOutput</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$maxLen</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodParameter">ADOConnection::Parameter()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodPrepare" id="Prepare"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Prepare</span> (line <span class="line-number">854</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Prepare
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$sql</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$cursor</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$sql</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$cursor</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodPrepare">ADOConnection::Prepare()</a></dt>
+						<dd>Should prepare the sql statement and return the stmt resource.</dd>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../default/ADODB_oci8po.html#methodPrepare">ADODB_oci8po::Prepare()</a>
+							</li>
+				</ul>
+	</div>
+<a name="methodqstr" id="qstr"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">qstr</span> (line <span class="line-number">1297</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Quotes a string.</p>
+<p class="description"><p>An example is  $db-&gt;qstr(&quot;Don't bother&quot;,magic_quotes_runtime());</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> string to be sent back to database</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">quoted</span>
+		<span class="method-name">
+			qstr
+		</span>
+					(<span class="var-type">s</span>&nbsp;<span class="var-name">$s</span>, [<span class="var-type">[magic_quotes]</span>&nbsp;<span class="var-name">$magic_quotes</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">s</span>
+				<span class="var-name">$s</span><span class="var-description">: the string to quote</span>			</li>
+					<li>
+				<span class="var-type">[magic_quotes]</span>
+				<span class="var-name">$magic_quotes</span><span class="var-description">: if $s is GET/POST var, set to get_magic_quotes_gpc().                 This undoes the stupidity of magic quotes for GPC.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodqstr">ADOConnection::qstr()</a></dt>
+						<dd>Correctly quotes a string so that all strings are escaped. We prefix and append  to the string single-quotes.</dd>
+					</dl>
+			
+	</div>
+<a name="methodRollbackTrans" id="RollbackTrans"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">RollbackTrans</span> (line <span class="line-number">449</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			RollbackTrans
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodRollbackTrans">ADOConnection::RollbackTrans()</a></dt>
+						<dd>If database does not support transactions, rollbacks always fail, so return false</dd>
+					</dl>
+			
+	</div>
+<a name="methodRowLock" id="RowLock"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">RowLock</span> (line <span class="line-number">336</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			RowLock
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tables</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$where</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$col</span> = <span class="var-default">'1 as adodbignore'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tables</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$where</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$col</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodRowLock">ADOConnection::RowLock()</a></dt>
+						<dd>Lock a row, will escalate and lock the table if row locking not supported 	will normally free the lock at the end of the transaction</dd>
+					</dl>
+			
+	</div>
+<a name="methodSelectDB" id="SelectDB"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">SelectDB</span> (line <span class="line-number">460</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			SelectDB
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$dbName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$dbName</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodSelectDB">ADOConnection::SelectDB()</a></dt>
+						<dd>Choose a database to connect to. Many databases do not support this.</dd>
+					</dl>
+			
+	</div>
+<a name="methodSelectLimit" id="SelectLimit"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">SelectLimit</span> (line <span class="line-number">597</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			SelectLimit
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$sql</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$nrows</span> = <span class="var-default">-1</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$offset</span> = <span class="var-default">-1</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$inputarr</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$secs2cache</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$sql</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$nrows</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$offset</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$inputarr</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$secs2cache</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodSelectLimit">ADOConnection::SelectLimit()</a></dt>
+						<dd>Will select, getting rows from $offset (1-based), for $nrows.</dd>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../default/ADODB_oci805.html#methodSelectLimit">ADODB_oci805::SelectLimit()</a>
+							</li>
+				</ul>
+	</div>
+<a name="methodServerInfo" id="ServerInfo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">ServerInfo</span> (line <span class="line-number">260</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			ServerInfo
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodServerInfo">ADOConnection::ServerInfo()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodSQLDate" id="SQLDate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">SQLDate</span> (line <span class="line-number">498</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			SQLDate
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$fmt</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$col</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$fmt</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$col</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodSQLDate">ADOConnection::SQLDate()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodTextMax" id="TextMax"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">TextMax</span> (line <span class="line-number">1282</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			TextMax
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodTime" id="Time"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Time</span> (line <span class="line-number">153</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Time
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodTime">ADOConnection::Time()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodUpdateBlob" id="UpdateBlob"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">UpdateBlob</span> (line <span class="line-number">714</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Usage:  Store BLOBs and CLOBs</p>
+<p class="description"><p>Example: to store $var in a blob</p><p>$conn-&gt;Execute('insert into TABLE (id,ablob) values(12,empty_blob())'); 	$conn-&gt;UpdateBlob('TABLE', 'ablob', $varHoldingBlob, 'ID=12', 'BLOB');</p><p>$blobtype supports 'BLOB' and 'CLOB', but you need to change to 'empty_clob()'.</p><p>to get length of LOB:   	select DBMS_LOB.GETLENGTH(ablob) from TABLE</p><p>If you are using CURSOR_SHARING = force, it appears this will case a segfault  under oracle 8.1.7.0. Run: 	 $db-&gt;Execute('ALTER SESSION SET CURSOR_SHARING=EXACT');  before UpdateBlob() then...</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			UpdateBlob
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$table</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$column</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$val</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$where</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$blobtype</span> = <span class="var-default">'BLOB'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$table</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$column</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$val</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$where</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$blobtype</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodUpdateBlob">ADOConnection::UpdateBlob()</a></dt>
+						<dd>Update a blob column, given a where clause. There are more sophisticated  blob handling functions that we could have implemented, but all require  a very complex API. Instead we have chosen something that is extremely  simple to understand and use.</dd>
+					</dl>
+			
+	</div>
+<a name="methodUpdateBlobFile" id="UpdateBlobFile"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">UpdateBlobFile</span> (line <span class="line-number">748</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Usage:  store file pointed to by $val in a blob</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			UpdateBlobFile
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$table</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$column</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$val</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$where</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$blobtype</span> = <span class="var-default">'BLOB'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$table</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$column</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$val</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$where</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$blobtype</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#methodUpdateBlobFile">ADOConnection::UpdateBlobFile()</a></dt>
+						<dd>Usage: 	UpdateBlob('TABLE', 'COLUMN', '/path/to/file', 'ID=1');</dd>
+					</dl>
+			
+	</div>
+<a name="method_affectedrows" id="_affectedrows"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_affectedrows</span> (line <span class="line-number">279</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_affectedrows
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_close" id="_close"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_close</span> (line <span class="line-number">1185</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_close
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_connect" id="_connect"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_connect</span> (line <span class="line-number">195</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_connect
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$argHostname</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$argUsername</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$argPassword</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$argDatabasename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$mode</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$argHostname</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$argUsername</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$argPassword</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$argDatabasename</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$mode</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_nconnect" id="_nconnect"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_nconnect</span> (line <span class="line-number">274</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_nconnect
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$argHostname</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$argUsername</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$argPassword</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$argDatabasename</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$argHostname</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$argUsername</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$argPassword</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$argDatabasename</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADOConnection.html#method_nconnect">ADOConnection::_nconnect()</a></dt>
+					</dl>
+			
+	</div>
+<a name="method_pconnect" id="_pconnect"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_pconnect</span> (line <span class="line-number">268</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_pconnect
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$argHostname</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$argUsername</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$argPassword</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$argDatabasename</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$argHostname</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$argUsername</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$argPassword</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$argDatabasename</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_query" id="_query"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_query</span> (line <span class="line-number">1046</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_query
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$sql</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$inputarr</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$sql</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$inputarr</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../default/ADODB_oci8po.html#method_query">ADODB_oci8po::_query()</a>
+							</li>
+				</ul>
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../default/ADOConnection.html">ADOConnection</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodADOConnection">ADOConnection::ADOConnection()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodaddq">ADOConnection::addq()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodAffected_Rows">ADOConnection::Affected_Rows()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodAutoExecute">ADOConnection::AutoExecute()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodBeginTrans">ADOConnection::BeginTrans()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodBindDate">ADOConnection::BindDate()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodBindTimeStamp">ADOConnection::BindTimeStamp()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodBlobDecode">ADOConnection::BlobDecode()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodBlobEncode">ADOConnection::BlobEncode()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodCacheExecute">ADOConnection::CacheExecute()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodCacheFlush">ADOConnection::CacheFlush()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodCacheGetAll">ADOConnection::CacheGetAll()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodCacheGetArray">ADOConnection::CacheGetArray()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodCacheGetAssoc">ADOConnection::CacheGetAssoc()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodCacheGetCol">ADOConnection::CacheGetCol()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodCacheGetOne">ADOConnection::CacheGetOne()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodCacheGetRow">ADOConnection::CacheGetRow()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodCachePageExecute">ADOConnection::CachePageExecute()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodCacheSelectLimit">ADOConnection::CacheSelectLimit()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodClose">ADOConnection::Close()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodCommitLock">ADOConnection::CommitLock()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodCommitTrans">ADOConnection::CommitTrans()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodCompleteTrans">ADOConnection::CompleteTrans()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodConcat">ADOConnection::Concat()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodConnect">ADOConnection::Connect()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodCreateSequence">ADOConnection::CreateSequence()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodDBDate">ADOConnection::DBDate()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodDBTimeStamp">ADOConnection::DBTimeStamp()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodDisconnect">ADOConnection::Disconnect()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodDropSequence">ADOConnection::DropSequence()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodErrorMsg">ADOConnection::ErrorMsg()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodErrorNative">ADOConnection::ErrorNative()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodErrorNo">ADOConnection::ErrorNo()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodescape">ADOConnection::escape()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodExecute">ADOConnection::Execute()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodFailTrans">ADOConnection::FailTrans()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodGenID">ADOConnection::GenID()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodGetActiveRecords">ADOConnection::GetActiveRecords()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodGetActiveRecordsClass">ADOConnection::GetActiveRecordsClass()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodGetAll">ADOConnection::GetAll()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodGetArray">ADOConnection::GetArray()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodGetAssoc">ADOConnection::GetAssoc()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodGetCharSet">ADOConnection::GetCharSet()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodGetCol">ADOConnection::GetCol()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodGetInsertSQL">ADOConnection::GetInsertSQL()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodGetMedian">ADOConnection::GetMedian()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodGetOne">ADOConnection::GetOne()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodGetRandRow">ADOConnection::GetRandRow()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodGetRow">ADOConnection::GetRow()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodGetUpdateSQL">ADOConnection::GetUpdateSQL()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodHasFailedTrans">ADOConnection::HasFailedTrans()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodIfNull">ADOConnection::IfNull()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodIgnoreErrors">ADOConnection::IgnoreErrors()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodInParameter">ADOConnection::InParameter()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodInsert_ID">ADOConnection::Insert_ID()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodIsConnected">ADOConnection::IsConnected()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodLimitQuery">ADOConnection::LimitQuery()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodLogSQL">ADOConnection::LogSQL()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodMetaColumnNames">ADOConnection::MetaColumnNames()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodMetaColumns">ADOConnection::MetaColumns()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodMetaDatabases">ADOConnection::MetaDatabases()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodMetaError">ADOConnection::MetaError()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodMetaErrorMsg">ADOConnection::MetaErrorMsg()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodMetaForeignKeys">ADOConnection::MetaForeignKeys()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodMetaIndexes">ADOConnection::MetaIndexes()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodMetaPrimaryKeys">ADOConnection::MetaPrimaryKeys()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodMetaTables">ADOConnection::MetaTables()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodMetaTransaction">ADOConnection::MetaTransaction()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodMetaType">ADOConnection::MetaType()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodNConnect">ADOConnection::NConnect()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodnextId">ADOConnection::nextId()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodOffsetDate">ADOConnection::OffsetDate()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodoutp">ADOConnection::outp()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodOutParameter">ADOConnection::OutParameter()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodoutp_throw">ADOConnection::outp_throw()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodPageExecute">ADOConnection::PageExecute()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodParam">ADOConnection::Param()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodParameter">ADOConnection::Parameter()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodPConnect">ADOConnection::PConnect()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodPO_Insert_ID">ADOConnection::PO_Insert_ID()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodPrepare">ADOConnection::Prepare()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodPrepareSP">ADOConnection::PrepareSP()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodq">ADOConnection::q()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodQMagic">ADOConnection::QMagic()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodqstr">ADOConnection::qstr()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodQuery">ADOConnection::Query()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodQuote">ADOConnection::Quote()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodReplace">ADOConnection::Replace()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodRollbackLock">ADOConnection::RollbackLock()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodRollbackTrans">ADOConnection::RollbackTrans()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodRowLock">ADOConnection::RowLock()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodSelectDB">ADOConnection::SelectDB()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodSelectLimit">ADOConnection::SelectLimit()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodSerializableRS">ADOConnection::SerializableRS()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodServerInfo">ADOConnection::ServerInfo()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodSetCharSet">ADOConnection::SetCharSet()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodSetDateLocale">ADOConnection::SetDateLocale()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodSetFetchMode">ADOConnection::SetFetchMode()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodSetTransactionMode">ADOConnection::SetTransactionMode()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodSQLDate">ADOConnection::SQLDate()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodStartTrans">ADOConnection::StartTrans()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodTime">ADOConnection::Time()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodTranspose">ADOConnection::Transpose()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodUnixDate">ADOConnection::UnixDate()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodUnixTimeStamp">ADOConnection::UnixTimeStamp()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodUpdateBlob">ADOConnection::UpdateBlob()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodUpdateBlobFile">ADOConnection::UpdateBlobFile()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodUpdateClob">ADOConnection::UpdateClob()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodUserDate">ADOConnection::UserDate()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodUserTimeStamp">ADOConnection::UserTimeStamp()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#methodVersion">ADOConnection::Version()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#method_CreateCache">ADOConnection::_CreateCache()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#method_Execute">ADOConnection::_Execute()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#method_findschema">ADOConnection::_findschema()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#method_findvers">ADOConnection::_findvers()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#method_gencachename">ADOConnection::_gencachename()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#method_nconnect">ADOConnection::_nconnect()</a></span><br>
+													<span class="method-name"><a href="../default/ADOConnection.html#method_rs2rs">ADOConnection::_rs2rs()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 05 Jul 2011 12:08:33 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

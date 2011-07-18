@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Lib</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Lib</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+		<p class="notes">
+			Located in <a class="field" href="_app---models---Lib.class.php.html">/app/models/Lib.class.php</a> (line <span class="field">9</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#charset" title="details" class="method-name">charset</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#convert" title="details" class="method-name">convert</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">'UTF-8'</span>])
+									</div>
+																																																																																								<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#generate_password" title="details" class="method-name">generate_password</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">15</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$uppercase</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$lowercase</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$numbers</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$codes</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#isDate" title="details" class="method-name">isDate</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$date</span>)
+									</div>
+																<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#isDateDB" title="details" class="method-name">isDateDB</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$date</span>)
+									</div>
+																<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#keyActivation" title="details" class="method-name">keyActivation</a>
+										()
+									</div>
+																								<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#remove_accents" title="details" class="method-name">remove_accents</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																																																<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#toIso" title="details" class="method-name">toIso</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																																																
+												<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#antiInjection" title="details" class="method-name">antiInjection</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$string</span>)
+									</div>
+																																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#converteData" title="details" class="method-name">converteData</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#converteData2" title="details" class="method-name">converteData2</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#converterDataToBr" title="details" class="method-name">converterDataToBr</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#converterDataToUs" title="details" class="method-name">converterDataToUs</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#conveterDataToBrInvertido" title="details" class="method-name">conveterDataToBrInvertido</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#crossUrlDecode" title="details" class="method-name">crossUrlDecode</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$source</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#forcarDownload" title="details" class="method-name">forcarDownload</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$arquivo</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$descricao</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#formatarNome" title="details" class="method-name">formatarNome</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$nome</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#formatarString" title="details" class="method-name">formatarString</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$palavra</span>)
+									</div>
+																																																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#numeroMeses" title="details" class="method-name">numeroMeses</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$dias</span>)
+									</div>
+																								<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#retornarMes" title="details" class="method-name">retornarMes</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$mes</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#somarDiasDataAtual" title="details" class="method-name">somarDiasDataAtual</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$dias</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#somarMesDataAtual" title="details" class="method-name">somarMesDataAtual</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$meses</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#subtrairDatas" title="details" class="method-name">subtrairDatas</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$dataInicial</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$dataFinal</span>)
+									</div>
+																								<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#validaAcessoPagina" title="details" class="method-name">validaAcessoPagina</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$acessos</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$pagina</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#validaEmail" title="details" class="method-name">validaEmail</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$email</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#validarCpfCnpj" title="details" class="method-name">validarCpfCnpj</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$numero</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$tipo</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#valida_data" title="details" class="method-name">valida_data</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#verificar" title="details" class="method-name">verificar</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$variavel</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcharset" id="charset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method charset</span> (line <span class="line-number">91</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			charset
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodconvert" id="convert"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method convert</span> (line <span class="line-number">103</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			convert
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">'UTF-8'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$str</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$default</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgenerate_password" id="generate_password"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method generate_password</span> (line <span class="line-number">21</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gera senha</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			generate_password
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">15</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$uppercase</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$lowercase</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$numbers</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$codes</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$length</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$uppercase</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$lowercase</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$numbers</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$codes</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisDate" id="isDate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method isDate</span> (line <span class="line-number">299</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			isDate
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$date</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$date</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisDateDB" id="isDateDB"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method isDateDB</span> (line <span class="line-number">311</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			isDateDB
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$date</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$date</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodkeyActivation" id="keyActivation"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method keyActivation</span> (line <span class="line-number">63</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gera chave de ativação</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			keyActivation
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodremove_accents" id="remove_accents"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method remove_accents</span> (line <span class="line-number">161</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			remove_accents
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoIso" id="toIso"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method toIso</span> (line <span class="line-number">143</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			toIso
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+
+<a name="methodantiInjection" id="antiInjection"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">antiInjection</span> (line <span class="line-number">213</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			antiInjection
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$string</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodconverteData" id="converteData"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">converteData</span> (line <span class="line-number">942</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			converteData
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodconverteData2" id="converteData2"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">converteData2</span> (line <span class="line-number">982</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			converteData2
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodconverterDataToBr" id="converterDataToBr"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">converterDataToBr</span> (line <span class="line-number">343</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			converterDataToBr
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodconverterDataToUs" id="converterDataToUs"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">converterDataToUs</span> (line <span class="line-number">323</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			converterDataToUs
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodconveterDataToBrInvertido" id="conveterDataToBrInvertido"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">conveterDataToBrInvertido</span> (line <span class="line-number">361</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			conveterDataToBrInvertido
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcrossUrlDecode" id="crossUrlDecode"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">crossUrlDecode</span> (line <span class="line-number">587</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			crossUrlDecode
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$source</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$source</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodforcarDownload" id="forcarDownload"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">forcarDownload</span> (line <span class="line-number">895</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			forcarDownload
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$arquivo</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$descricao</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$arquivo</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$descricao</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodformatarNome" id="formatarNome"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">formatarNome</span> (line <span class="line-number">259</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			formatarNome
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$nome</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$nome</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodformatarString" id="formatarString"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">formatarString</span> (line <span class="line-number">233</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			formatarString
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$palavra</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$palavra</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodnumeroMeses" id="numeroMeses"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">numeroMeses</span> (line <span class="line-number">805</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			numeroMeses
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$dias</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$dias</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodretornarMes" id="retornarMes"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">retornarMes</span> (line <span class="line-number">669</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			retornarMes
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$mes</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$mes</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsomarDiasDataAtual" id="somarDiasDataAtual"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">somarDiasDataAtual</span> (line <span class="line-number">875</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			somarDiasDataAtual
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$dias</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$dias</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsomarMesDataAtual" id="somarMesDataAtual"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">somarMesDataAtual</span> (line <span class="line-number">885</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			somarMesDataAtual
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$meses</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$meses</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsubtrairDatas" id="subtrairDatas"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">subtrairDatas</span> (line <span class="line-number">833</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			subtrairDatas
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$dataInicial</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$dataFinal</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$dataInicial</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$dataFinal</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidaAcessoPagina" id="validaAcessoPagina"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">validaAcessoPagina</span> (line <span class="line-number">911</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			validaAcessoPagina
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$acessos</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$pagina</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$acessos</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$pagina</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidaEmail" id="validaEmail"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">validaEmail</span> (line <span class="line-number">1021</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			validaEmail
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$email</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$email</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidarCpfCnpj" id="validarCpfCnpj"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">validarCpfCnpj</span> (line <span class="line-number">379</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			validarCpfCnpj
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$numero</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$tipo</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$numero</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tipo</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalida_data" id="valida_data"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">valida_data</span> (line <span class="line-number">1047</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			valida_data
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodverificar" id="verificar"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">verificar</span> (line <span class="line-number">191</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			verificar
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$variavel</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$variavel</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 05 Jul 2011 12:09:04 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

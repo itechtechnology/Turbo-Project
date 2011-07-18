@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class ADODB2_sybase</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class ADODB2_sybase</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+		<p class="notes">
+			Located in <a class="field" href="_core---adodb5---datadict---datadict-sybase.inc.php.html">/core/adodb5/datadict/datadict-sybase.inc.php</a> (line <span class="field">16</span>)
+		</p>
+		
+				
+		<pre><a href="../default/ADODB_DataDict.html">ADODB_DataDict</a>
+   |
+   --ADODB2_sybase</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$databaseType" title="details" class="var-name">$databaseType</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$dropIndex" title="details" class="var-name">$dropIndex</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																												
+												<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#ActualType" title="details" class="method-name">ActualType</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$meta</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#AddColumnSQL" title="details" class="method-name">AddColumnSQL</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$tabname</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$flds</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#AlterColumnSQL" title="details" class="method-name">AlterColumnSQL</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$tabname</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$flds</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#DropColumnSQL" title="details" class="method-name">DropColumnSQL</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$tabname</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$flds</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#MetaType" title="details" class="method-name">MetaType</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$t</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$len</span> = <span class="var-default">-1</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$fieldobj</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_CreateSuffix" title="details" class="method-name">_CreateSuffix</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$fname</span>, <span class="var-type"></span>&nbsp;<span class="var-name">&$ftype</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fnotnull</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fdefault</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fautoinc</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fconstraint</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$funsigned</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_IndexSQL" title="details" class="method-name">_IndexSQL</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$idxname</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$tabname</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$flds</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$idxoptions</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$databaseType" id="$databaseType"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$databaseType</span>
+			 = <span class="var-default"> 'sybase'</span>			(line <span class="line-number">17</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$dropIndex" id="$dropIndex"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$dropIndex</span>
+			 = <span class="var-default"> 'DROP INDEX %2$s.%1$s'</span>			(line <span class="line-number">19</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADODB_DataDict.html#var$dropIndex">ADODB_DataDict::$dropIndex</a></dt>
+					</dl>
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../default/ADODB_DataDict.html">ADODB_DataDict</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADODB_DataDict.html#var$addCol">ADODB_DataDict::$addCol</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADODB_DataDict.html#var$alterCol">ADODB_DataDict::$alterCol</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADODB_DataDict.html#var$autoIncrement">ADODB_DataDict::$autoIncrement</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADODB_DataDict.html#var$blobSize">ADODB_DataDict::$blobSize</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADODB_DataDict.html#var$connection">ADODB_DataDict::$connection</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADODB_DataDict.html#var$dataProvider">ADODB_DataDict::$dataProvider</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADODB_DataDict.html#var$debug">ADODB_DataDict::$debug</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADODB_DataDict.html#var$dropCol">ADODB_DataDict::$dropCol</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADODB_DataDict.html#var$dropTable">ADODB_DataDict::$dropTable</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADODB_DataDict.html#var$invalidResizeTypes4">ADODB_DataDict::$invalidResizeTypes4</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADODB_DataDict.html#var$nameRegex">ADODB_DataDict::$nameRegex</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADODB_DataDict.html#var$nameRegexBrackets">ADODB_DataDict::$nameRegexBrackets</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADODB_DataDict.html#var$renameColumn">ADODB_DataDict::$renameColumn</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADODB_DataDict.html#var$renameTable">ADODB_DataDict::$renameTable</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADODB_DataDict.html#var$schema">ADODB_DataDict::$schema</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/ADODB_DataDict.html#var$serverInfo">ADODB_DataDict::$serverInfo</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodActualType" id="ActualType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">ActualType</span> (line <span class="line-number">45</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			ActualType
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$meta</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$meta</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADODB_DataDict.html#methodActualType">ADODB_DataDict::ActualType()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodAddColumnSQL" id="AddColumnSQL"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">AddColumnSQL</span> (line <span class="line-number">76</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			AddColumnSQL
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tabname</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$flds</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tabname</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$flds</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADODB_DataDict.html#methodAddColumnSQL">ADODB_DataDict::AddColumnSQL()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodAlterColumnSQL" id="AlterColumnSQL"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">AlterColumnSQL</span> (line <span class="line-number">90</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			AlterColumnSQL
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tabname</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$flds</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tabname</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$flds</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADODB_DataDict.html#methodAlterColumnSQL">ADODB_DataDict::AlterColumnSQL()</a></dt>
+						<dd>Change the definition of one column</dd>
+					</dl>
+			
+	</div>
+<a name="methodDropColumnSQL" id="DropColumnSQL"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">DropColumnSQL</span> (line <span class="line-number">102</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			DropColumnSQL
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tabname</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$flds</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tabname</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$flds</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADODB_DataDict.html#methodDropColumnSQL">ADODB_DataDict::DropColumnSQL()</a></dt>
+						<dd>Drop one column</dd>
+					</dl>
+			
+	</div>
+<a name="methodMetaType" id="MetaType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">MetaType</span> (line <span class="line-number">21</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			MetaType
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$t</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$len</span> = <span class="var-default">-1</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$fieldobj</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$t</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$len</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$fieldobj</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADODB_DataDict.html#methodMetaType">ADODB_DataDict::MetaType()</a></dt>
+					</dl>
+			
+	</div>
+<a name="method_CreateSuffix" id="_CreateSuffix"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_CreateSuffix</span> (line <span class="line-number">117</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_CreateSuffix
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$fname</span>, <span class="var-type"></span>&nbsp;<span class="var-name">&$ftype</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fnotnull</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fdefault</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fautoinc</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fconstraint</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$funsigned</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$fname</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$ftype</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$fnotnull</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$fdefault</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$fautoinc</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$fconstraint</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$funsigned</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADODB_DataDict.html#method_CreateSuffix">ADODB_DataDict::_CreateSuffix()</a></dt>
+					</dl>
+			
+	</div>
+<a name="method_IndexSQL" id="_IndexSQL"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_IndexSQL</span> (line <span class="line-number">200</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_IndexSQL
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$idxname</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$tabname</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$flds</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$idxoptions</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$idxname</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tabname</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$flds</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$idxoptions</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../default/ADODB_DataDict.html#method_IndexSQL">ADODB_DataDict::_IndexSQL()</a></dt>
+					</dl>
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../default/ADODB_DataDict.html">ADODB_DataDict</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodActualType">ADODB_DataDict::ActualType()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodAddColumnSQL">ADODB_DataDict::AddColumnSQL()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodAlterColumnSQL">ADODB_DataDict::AlterColumnSQL()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodChangeTableSQL">ADODB_DataDict::ChangeTableSQL()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodCreateDatabase">ADODB_DataDict::CreateDatabase()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodCreateIndexSQL">ADODB_DataDict::CreateIndexSQL()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodCreateTableSQL">ADODB_DataDict::CreateTableSQL()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodDropColumnSQL">ADODB_DataDict::DropColumnSQL()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodDropIndexSQL">ADODB_DataDict::DropIndexSQL()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodDropTableSQL">ADODB_DataDict::DropTableSQL()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodExecuteSQLArray">ADODB_DataDict::ExecuteSQLArray()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodGetCommentSQL">ADODB_DataDict::GetCommentSQL()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodMetaColumns">ADODB_DataDict::MetaColumns()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodMetaIndexes">ADODB_DataDict::MetaIndexes()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodMetaPrimaryKeys">ADODB_DataDict::MetaPrimaryKeys()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodMetaTables">ADODB_DataDict::MetaTables()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodMetaType">ADODB_DataDict::MetaType()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodNameQuote">ADODB_DataDict::NameQuote()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodRenameColumnSQL">ADODB_DataDict::RenameColumnSQL()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodRenameTableSQL">ADODB_DataDict::RenameTableSQL()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodSetCommentSQL">ADODB_DataDict::SetCommentSQL()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodSetSchema">ADODB_DataDict::SetSchema()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#methodTableName">ADODB_DataDict::TableName()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#method_CreateSuffix">ADODB_DataDict::_CreateSuffix()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#method_DropAutoIncrement">ADODB_DataDict::_DropAutoIncrement()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#method_GenFields">ADODB_DataDict::_GenFields()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#method_GetSize">ADODB_DataDict::_GetSize()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#method_getSizePrec">ADODB_DataDict::_getSizePrec()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#method_IndexSQL">ADODB_DataDict::_IndexSQL()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#method_Options">ADODB_DataDict::_Options()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#method_TableSQL">ADODB_DataDict::_TableSQL()</a></span><br>
+													<span class="method-name"><a href="../default/ADODB_DataDict.html#method_Triggers">ADODB_DataDict::_Triggers()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 05 Jul 2011 12:09:03 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>
