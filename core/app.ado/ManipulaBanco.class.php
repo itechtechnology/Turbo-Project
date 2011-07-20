@@ -237,7 +237,7 @@
                     $result->moveNext();
                 }
 				
-				$rs = $this->geraArray($results,'2');
+				$rs = $this->geraArray($results,2);
 				 
 				return $rs;
             }

@@ -39,9 +39,30 @@ class RecursoFisicosRecord extends ManipulaBanco {
         return $this->selecionarColecao($criteria);
     }
 
+    public function getRecursos($texto="", $ordCampo="", $SORT="") {
+        $sql = "SELECT * FROM vrecursostatus";
+        
+        if (!empty($texto)) {
+            $sql .= " WHERE nome_recurso LIKE '%" . $texto . "%' ";
+        }
+
+        if (!empty($ordCampo)) {
+            $sql .= " ORDER BY " . $ordCampo . " " . $SORT;
+        }
+
+        return $this->executarPesquisa($sql);
+
+    }
+
     public function dadosRecurso($idRecurso) {
         $criteria = new TCriteria();
         $criteria->add(new TFilter('cd_recurso', '=', $idRecurso));
+        return $this->selecionar($criteria);
+    }
+
+    public function getRecursosFisicosDisponiveis() {
+        $criteria = new TCriteria();
+        $criteria->add(new TFilter('fk_cd_statusrecurso', '=', '1'));
         return $this->selecionar($criteria);
     }
 

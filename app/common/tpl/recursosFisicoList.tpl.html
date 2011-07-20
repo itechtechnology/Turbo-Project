@@ -26,8 +26,14 @@
                              {DICA}
                              </p>" />
                     </a>
+                    <div id="errors">
+
+                        <h2>{ERROS}</h2>
+
+                    </div>
                     <div id="tituloGeral">
                         <h2>{TITULOLISTAGEM}</h2>
+
                     </div>
                     <div id="busca">
                         <h3>{TITULOPROCURAR}</h3>
@@ -59,6 +65,11 @@
                                         Custo {IMGORDEM4}
                                     </a>
                                 </td>
+                                <td>
+                                    <a href="?orderBy=nome_statusrecurso&sort={SORT}">
+                                        Status {IMGORDEM5}
+                                    </a>
+                                </td>
                                 <td class="acao">
                                     <a href="#">
                                         Editar
@@ -72,6 +83,7 @@
                             <td>{NOME_RECURSO}</td>
                             <td>{DS_RECURSO}</td>
                             <td>{CUSTO}</td>
+                            <td>{STATUS}</td>
                             <td>
                                 <a href="{EDITAR}">
                                     <img src="{IMAGEDIR}/ic_editar.png" alt="Editar" />
@@ -97,9 +109,14 @@
                     </div>
 
                     <script type="text/javascript" src="{JSDIR}/configuracoesJS.js"></script>
-
+                    <!-- BEGIN BLOCK_SCRIPT -->
+                    <script type="text/javascript">
+                        document.getElementById('errors').style.display="block";
+                    </script>
+                    <!-- END BLOCK_SCRIPT -->
                 </div>
             </div>
         </div>
+        {RODAPE}
     </body>
 </html>

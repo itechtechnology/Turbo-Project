@@ -2,32 +2,211 @@
 
     require '../../conf/lock.php';
 
+	
+	$usuario = new UsuarioRecord();
+	$habilidade = new HabilidadeRecord();
 
-
-    //$projeto = new ProjetosRecord();
 
     //$status = new StatusProjeto();
 
-
-
-
 	//$lib = new Lib();
+	
+	
+	session_start(); //Inicio a sessão			
+	if (isset($_SESSION["cadastro_usuario"])){// Verifico se a sessão já foi criada 
+		$dados = unserialize($_SESSION["cadastro_usuario"]);
+		$status = $dados["status"]; //Status atual do cadastro
+		$login = $dados["login"];
+ 		$email = $dados["email"];
+		$senha = $dados["senha"];
+		$nome = $dados["nome"];
+		$cpf = $dados["cpf"];
+		$sexo = $dados["sexo"];
+		$data_nascimento = $dados["data_nascimento"];
+		$telefone_fixo = $dados["telefone_fixo"];
+		$telefone_celular = $dados["telefone_celular"];
+		$rua = $dados["rua"];
+		$numero = $dados["numero"];
+		$complemento = $dados["complemento"];
+		$bairro = $dados["bairro"];
+		$cidade = $dados["cidade"];
+		$cep = $dados["cep"];
+		$estado = $dados["estado"];
+		$pais = $dados["pais"];
+		$pergunta = $dados["pergunta"];
+		$resposta = $dados["resposta"];
+		$habilidade = $dados["habilidade"];
+		$erros = $dados["erros"]; 	
+	}
+	else{
+		$status = $dados["status"] = 1;  //Variável sessão iniciada
+ 		$login = $dados["login"] = NULL;
+		$email = $dados["email"] = NULL;
+		$senha = $dados["senha"] = NULL;
+		$nome = $dados["nome"] = NULL;
+		$cpf = $dados["cpf"] = NULL;
+		$sexo = $dados["sexo"] = 'M';
+		$data_nascimento = $dados["data_nascimento"] = NULL;
+		$telefone_fixo = $dados["telefone_fixo"] = NULL;
+		$telefone_celular = $dados["telefone_celular"] = NULL;
+		$rua = $dados["rua"] = NULL;
+		$numero = $dados["numero"] = NULL;
+		$complemento = $dados["complemento"] = "nenhum";
+		$bairro = $dados["bairro"] = NULL;
+		$cidade = $dados["cidade"] = NULL;
+		$cep = $dados["cep"] = NULL;
+		$estado = $dados["estado"] = NULL;
+		$pais = $dados["pais"] = NULL;
+		$pergunta = $dados["pergunta"]= NULL;
+		$resposta = $dados["resposta"]= NULL;
+		$habilidade = $dados["habilidade"]= NULL;
+		$erros = $dados["erros"] = NULL;
+ 		//gravo a sessao por padrao o php hj ja passa o serialize automaticamente nao precisa mais passar ela
+ 		$_SESSION["cadastro_usuario"] = serialize($dados);
+	}
 
 	
-
+	
 	$tpl = new sistTemplate(APPTPLDIR.'/usuario.tpl.html');
 
-    //$tpl->addFile('TOPO', APPTPLDIR.'/topo.tpl.html');
+    $tpl->addFile('TOPO', APPTPLDIR.'/topo.tpl.html');
+//$tpl->MENULATERAL = 'NOME';
+//    $tpl->addFile('MENULATERAL', APPTPLDIR.'/menuLateral.tpl.html');
 
-    //tpl->addFile('MENULATERAL', APPTPLDIR.'/menuLateral.tpl.html');
+    $tpl->addFile('RODAPE', APPTPLDIR.'/rodape.tpl.html');
+	
+	$tpl->IMAGEDIR = APPIMAGEDIR;
+	$tpl->JSDIR = APPJSDIR;
+	$tpl->CSSDIR = APPCSSDIR;
+	
+	
+	
+	switch ($status){
+		
+		case 1:
+			$tpl->TITULO_1 = "Cadastro Usuário - Passo I";
+			$tpl->TITULO_2 = "Cadastro de Usuário - Passo 1/4";
+			$tpl->LOGIN = $login;
+			$tpl->EMAIL = $email;
+			$tpl->ERROS = $erros;
+			$tpl->block("BLOCK_ADD1");
+		
+		break;
+		
+		case 2:
+			$tpl->TITULO_1 = "Cadastro Usuario - Passo II";
+			$tpl->TITULO_2 = "Cadastro de Usuario - Passo 2/4";
+			$tpl->NOME = $nome;
+			$tpl->CPF = $cpf;
+			$tpl->DATA_NASCIMENTO = $data_nascimento;
+			$tpl->TELEFONE_FIXO = $telefone_fixo;
+			$tpl->TELEFONE_CELULAR = $telefone_celular;
+			if($sexo == 'M') $tpl->SEL_M = "selected";
+			else $tpl->SEL_F = "selected";	
+		
+			
+			$tpl->ERROS = $erros;
+			$tpl->block("BLOCK_ADD2");
+		
+		break;
+		
+		case 3:
+			$tpl->TITULO_1 = "Cadastro Usuario - Passo III";
+			$tpl->TITULO_2 = "Cadastro de Usuario - Passo 3/4";
+			$tpl->RUA = $rua;
+			$tpl->NUMERO = $numero;
+			$tpl->COMPLEMENTO = $complemento;
+			$tpl->BAIRRO = $bairro;
+			$tpl->CIDADE = $cidade;
+			$tpl->CEP = $cep;
+			$tpl->PAIS = $pais;
+			
+		
+			
+			$tpl->ERROS = $erros;
+			$tpl->block("BLOCK_ADD3");
+		
+		break;
+		
+		case 4:
+		
+			
+			
+			$tpl->TITULO_1 = "Cadastro Usuario - Passo IV";
+			$tpl->TITULO_2 = "Cadastro de Usuario - Passo 4/4";
+			
+			
+			$result = $usuario->listaPerguntas();
+			
+			$i = 1;
+			while($result['CD_PERGUNTAS'][$i]){
+					
+				$tpl->V_REP = $result['CD_PERGUNTAS'][$i]; //id da habilidade 
+				$tpl->N_REP = $result['PERGUNTA'][$i]; //nome da habilidadae
+				$tpl->block("BLOCK_REP");
+				$i++;					
+			}
+			
+			$resu = $habilidade->listaHabilidades();
+			
+			$i = 1;
+			while($result['CD_HABILIDADE'][$i]){
+					
+				$tpl->V_REP2 = $result['CD_HABILIDADE'][$i]; //id da habilidade 
+				$tpl->N_REP2 = $result['NOME'][$i]; //nome da habilidadae
+				$tpl->block("BLOCK_REP2");
+				$i++;					
+			}
+			
+			
+		
+			
+			$tpl->ERROS = $erros;
+			$tpl->block("BLOCK_ADD4");
+		
+		break;
+		
+		case 5:
+			
+			$tpl->TITULO_1 = "Cadastro Usuario";
+			$tpl->TITULO_2 = "Cadastro de Usuario - Confirmação";
+			
+			
+			$tpl->LOGIN = $login;
+			$tpl->EMAIL = $email;
+			
+			$tpl->NOME = $nome;
+			$tpl->CPF = $cpf;
+			$tpl->DATA_NASCIMENTO = $data_nascimento;
+			$tpl->TELEFONE_FIXO =  $telefone_fixo;
+			$tpl->TELEFONE_CELULAR = $telefone_celular;
+			
+			$tpl->RUA = $rua;
+			$tpl->NUMERO = $numero;
+			$tpl->COMPLEMENTO = $complemento;
+			$tpl->BAIRRO = $bairro;
+			$tpl->CIDADE = $cidade;
+			$tpl->CEP = $cep;
+			$tpl->ESTADO = $estado;
+			$tpl->PAIS = $pais;
+			
+			$tpl->PERGUNTA = $usuario->getPergunta($pergunta);
+			$tpl->RESPOSTA = $resposta;
+			//$tpl->HABILIDADE = $pais;
 
-    //$tpl->addFile('RODAPE', APPTPLDIR.'/rodape.tpl.html');
+			$tpl->block("BLOCK_VALIDA");
+		
+		break;
+		
+		
+	
+	
+	}
+    
+	
+	
 
-    $tpl->IMAGEDIR = APPIMAGEDIR;
-
-    $tpl->CSSDIR = APPCSSDIR;
-
-    //$tpl->JSDIR = APPJSDIR;
+    
 
     //$tpl->WEBROOT = APPWEBROOT;
 
@@ -41,7 +220,7 @@
 
     //$tpl->MEMORYPICK = number_format(intval(memory_get_peak_usage()/1000),0,',','.');
 
-	$tpl->CONTROLLER = '../controllers/usuario.php?acao=add1'; 
+	//$tpl->CONTROLLER = '../controllers/usuario.php?acao=add1'; 
 
         //$projeto = new ProjetosRecord();
 

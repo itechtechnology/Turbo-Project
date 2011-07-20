@@ -33,6 +33,9 @@
 		$cep = $dados["cep"];
 		$estado = $dados["estado"];
 		$pais = $dados["pais"];
+		$pergunta = $dados["pergunta"];
+		$resposta = $dados["resposta"];
+		$habilidade1 = $dados["habilidade1"];
 		$erros = $dados["erros"]; 	
 	}
 	else{
@@ -54,6 +57,9 @@
 		$cep = $dados["cep"] = NULL;
 		$estado = $dados["estado"] = NULL;
 		$pais = $dados["pais"] = NULL;
+		$pergunta = $dados["pergunta"]= NULL;
+		$resposta = $dados["resposta"]= NULL;
+		$habilidade1 = $dados["habilidade1"]= NULL;
 		$erros = $dados["erros"] = NULL;
  		//gravo a sessao por padrao o php hj ja passa o serialize automaticamente nao precisa mais passar ela
  		$_SESSION["cadastro_usuario"] = serialize($dados);
@@ -113,6 +119,7 @@
 			$tpl->BAIRRO = $bairro;
 			$tpl->CIDADE = $cidade;
 			$tpl->CEP = $cep;
+			$tpl->PAIS = $pais;
 			
 		
 			
@@ -134,8 +141,8 @@
 			$i = 1;
 			while($result['CD_PERGUNTAS'][$i]){
 					
-				$tpl->V_REP = $result['CD_PERGUNTAS'][$i]; //id da habilidade 
-				$tpl->N_REP = $result['PERGUNTA'][$i]; //nome da habilidadae
+				$tpl->V_REP = $result['CD_PERGUNTAS'][$i]; //id da pergunta
+				$tpl->N_REP = $result['PERGUNTA'][$i]; //nome da pergunta
 				$tpl->block("BLOCK_REP");
 				$i++;					
 			}
@@ -158,6 +165,39 @@
 			$tpl->block("BLOCK_ADD4");
 		
 		break;
+		
+		case 5:
+			
+			$tpl->TITULO_1 = "Cadastro Usuario";
+			$tpl->TITULO_2 = "Cadastro de Usuario - Confirmação";
+			
+			
+			$tpl->LOGIN = $login;
+			$tpl->EMAIL = $email;
+			
+			$tpl->NOME = $nome;
+			$tpl->CPF = $cpf;
+			$tpl->DATA_NASCIMENTO = $data_nascimento;
+			$tpl->TELEFONE_FIXO =  $telefone_fixo;
+			$tpl->TELEFONE_CELULAR = $telefone_celular;
+			
+			$tpl->RUA = $rua;
+			$tpl->NUMERO = $numero;
+			$tpl->COMPLEMENTO = $complemento;
+			$tpl->BAIRRO = $bairro;
+			$tpl->CIDADE = $cidade;
+			$tpl->CEP = $cep;
+			$tpl->ESTADO = $estado;
+			$tpl->PAIS = $pais;
+			
+			$tpl->PERGUNTA = $usuario->getPergunta($pergunta);
+			$tpl->RESPOSTA = $resposta;
+			$tpl->HABILIDADE = $habilidade->getHabilidade($habilidade1);
+
+			$tpl->block("BLOCK_VALIDA");
+		
+		break;
+		
 		
 	
 	

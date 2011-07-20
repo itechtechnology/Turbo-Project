@@ -12,7 +12,7 @@ if (!isset($_SESSION['login'])) {
     $tpl = new sistTemplate(APPTPLDIR . '/recursosFisicoList.tpl.html');
     $tpl->addFile('TOPO', APPTPLDIR . '/topo.tpl.html');
     $tpl->addFile('MENULATERAL', APPTPLDIR . '/menuLateral.tpl.html');
-//$tpl->addFile('RODAPE', APPTPLDIR . '/rodape.tpl.html');
+    $tpl->addFile('RODAPE', APPTPLDIR . '/rodape.tpl.html');
     $tpl->IMAGEDIR = APPIMAGEDIR;
     $tpl->CSSDIR = APPCSSDIR;
     $tpl->JSDIR = APPJSDIR;
@@ -27,7 +27,14 @@ if (!isset($_SESSION['login'])) {
     $tpl->TITULOPROCURAR = 'LOCALIZAR';
     $tpl->DICA = 'DICA';
     $tpl->USUARIO = $_SESSION['login'];
-
+    
+    if (isset($_SESSION['str_erro']))
+        {
+            $tpl->ERROS = $_SESSION['str_erro'];
+            $tpl->block("BLOCK_SCRIPT");
+            session_unregister('str_erro');
+        }
+    
     if (isset($_GET['orderBy']) and isset($_GET['sort'])) {
         $ordCampo = $_GET['orderBy'];
         switch ($ordCampo) {
@@ -37,12 +44,14 @@ if (!isset($_SESSION['login'])) {
                         $tpl->IMGORDEM2 = '';
                         $tpl->IMGORDEM3 = '';
                         $tpl->IMGORDEM4 = '';
+                        $tpl->IMGORDEM5 = '';
                         $tpl->SORT = 'DESC';
                     } else {
                         $tpl->IMGORDEM1 = '<img src="' . APPIMAGEDIR . '/up.gif" />';
                         $tpl->IMGORDEM2 = '';
                         $tpl->IMGORDEM3 = '';
                         $tpl->IMGORDEM4 = '';
+                        $tpl->IMGORDEM5 = '';
                         $tpl->SORT = 'ASC';
                     }
                     break;
@@ -53,12 +62,14 @@ if (!isset($_SESSION['login'])) {
                         $tpl->IMGORDEM2 = '<img src="' . APPIMAGEDIR . '/down.gif" />';
                         $tpl->IMGORDEM3 = '';
                         $tpl->IMGORDEM4 = '';
+                        $tpl->IMGORDEM5 = '';
                         $tpl->SORT = 'DESC';
                     } else {
                         $tpl->IMGORDEM1 = '';
                         $tpl->IMGORDEM2 = '<img src="' . APPIMAGEDIR . '/up.gif" />';
                         $tpl->IMGORDEM3 = '';
                         $tpl->IMGORDEM4 = '';
+                        $tpl->IMGORDEM5 = '';
                         $tpl->SORT = 'ASC';
                     }
                     break;
@@ -69,12 +80,14 @@ if (!isset($_SESSION['login'])) {
                         $tpl->IMGORDEM2 = '';
                         $tpl->IMGORDEM3 = '<img src="' . APPIMAGEDIR . '/down.gif" />';
                         $tpl->IMGORDEM4 = '';
+                        $tpl->IMGORDEM5 = '';
                         $tpl->SORT = 'DESC';
                     } else {
                         $tpl->IMGORDEM1 = '';
                         $tpl->IMGORDEM2 = '';
                         $tpl->IMGORDEM3 = '<img src="' . APPIMAGEDIR . '/up.gif" />';
                         $tpl->IMGORDEM4 = '';
+                        $tpl->IMGORDEM5 = '';
                         $tpl->SORT = 'ASC';
                     }
                     break;
@@ -85,12 +98,32 @@ if (!isset($_SESSION['login'])) {
                         $tpl->IMGORDEM2 = '';
                         $tpl->IMGORDEM3 = '';
                         $tpl->IMGORDEM4 = '<img src="' . APPIMAGEDIR . '/down.gif" />';
+                        $tpl->IMGORDEM5 = '';
                         $tpl->SORT = 'DESC';
                     } else {
                         $tpl->IMGORDEM1 = '';
                         $tpl->IMGORDEM2 = '';
                         $tpl->IMGORDEM3 = '';
                         $tpl->IMGORDEM4 = '<img src="' . APPIMAGEDIR . '/up.gif" />';
+                        $tpl->IMGORDEM5 = '';
+                        $tpl->SORT = 'ASC';
+                    }
+                    break;
+                }
+            case 'nome_statusrecurso': {
+                    if ($_GET['sort'] == 'ASC') {
+                        $tpl->IMGORDEM1 = '';
+                        $tpl->IMGORDEM2 = '';
+                        $tpl->IMGORDEM3 = '';
+                        $tpl->IMGORDEM4 = '';
+                        $tpl->IMGORDEM5 = '<img src="' . APPIMAGEDIR . '/down.gif" />';
+                        $tpl->SORT = 'DESC';
+                    } else {
+                        $tpl->IMGORDEM1 = '';
+                        $tpl->IMGORDEM2 = '';
+                        $tpl->IMGORDEM3 = '';
+                        $tpl->IMGORDEM4 = '';
+                        $tpl->IMGORDEM5 = '<img src="' . APPIMAGEDIR . '/up.gif" />';
                         $tpl->SORT = 'ASC';
                     }
                     break;
@@ -103,14 +136,17 @@ if (!isset($_SESSION['login'])) {
         $tpl->IMGORDEM2 = '<img src="' . APPIMAGEDIR . '/down.gif" />';
         $tpl->IMGORDEM3 = '';
         $tpl->IMGORDEM4 = '';
+        $tpl->IMGORDEM5 = '';
         $tpl->SORT = 'DESC';
     }
 //
     if (empty($_GET['pesquisa'])) {
-        $recursos = $recurso->listarRecurso($ordCampo, $tpl->SORT);
+//        $recursos = $recurso->listarRecurso($ordCampo, $tpl->SORT);
+        $recursos = $recurso->getRecursos('',$ordCampo, $tpl->SORT);
     } else {
         $texto = $lib->formatarString($_GET['pesquisa']);
-        $recursos = $recurso->getRecurso($texto, $ordCampo, $tpl->SORT);
+//        $recursos = $recurso->getRecurso($texto, $ordCampo, $tpl->SORT);
+        $recursos = $recurso->getRecursos($texto, $ordCampo, $tpl->SORT);
     }
 //
     $totalrecursos = count($recursos['CD_RECURSO']);
@@ -136,7 +172,9 @@ if (!isset($_SESSION['login'])) {
         $tpl->NOME_RECURSO = utf8_decode($recursos['NOME_RECURSO'][$i]);
         $tpl->DS_RECURSO = $recursos['DS_RECURSO'][$i];
         $tpl->CUSTO = $recursos['CUSTO'][$i];
-        // $tpl->EDITAR = 'projetoEdit.php?cd_recurso=' . $recursos['CD_RECURSO'][$i];
+        //add status
+        $tpl->STATUS = $recursos['NOME_STATUSRECURSO'][$i];
+        $tpl->EDITAR = 'recursoEdit.php?cd_recurso=' . $recursos['CD_RECURSO'][$i];
         $tpl->block('BLOCK_LISTAGEM');
     }
 //

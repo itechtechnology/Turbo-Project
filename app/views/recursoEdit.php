@@ -7,6 +7,7 @@ if (!isset($_SESSION['login'])) {
         location.href='../../web'</script>";
 //    header("location: ../../web/");
 } else {
+    $recurso = new RecursoFisicosRecord();
     $tpl = new sistTemplate(APPTPLDIR . '/recurso.tpl.html');
     $tpl->addFile('TOPO', APPTPLDIR . '/topo.tpl.html');
     $tpl->addFile('MENULATERAL', APPTPLDIR . '/menuLateral.tpl.html');
@@ -20,10 +21,13 @@ if (!isset($_SESSION['login'])) {
     $tpl->ANIMATEDFAVICON = ANIMATEDFAVICON;
 //$tpl->MEMORYUSAGE = number_format(intval(memory_get_usage() / 1000), 0, ',', '.');
 //$tpl->MEMORYPICK = number_format(intval(memory_get_peak_usage() / 1000), 0, ',', '.');
-    $tpl->CONTROLLER = '../controllers/RecursoFisico.class.php?acao=salvar';
-    $tpl->NOME_RECURSO = '';
-    $tpl->CUSTO = '0';
-    $tpl->DS_RECURSO = '';
+    $tpl->CONTROLLER = '../controllers/RecursoFisico.class.php?acao=edit';
+    $recursos = $recurso->dadosRecurso($_GET['cd_recurso']);
+    $tpl->CD_RECURSO = $recursos['CD_RECURSO']['0'];
+    $tpl->NOME_RECURSO = $recursos['NOME_RECURSO']['0'];
+    $tpl->CUSTO = $recursos['CUSTO']['0'];
+    $tpl->DS_RECURSO = $recursos['DS_RECURSO']['0'];;
     $tpl->show();
 }
+?>
 ?>
