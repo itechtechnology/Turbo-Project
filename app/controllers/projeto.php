@@ -1,4 +1,6 @@
 <?php
+/** Controlador - Projeto
+@Author: Anderson Rodrigues*/
 	include_once '../../conf/lock.php';
 	
 	$lib = new Lib(); 
