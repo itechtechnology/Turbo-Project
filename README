@@ -1,1 +1,29 @@
 resetando repositorio
+
+jqgrid
+
+como funciona
+
+adicione as seguintes linhas ao <head> do template
+
+<script src="../../jqgrid/js/jquery.js" type="text/javascript"></script>
+        <script src="../../jqgrid/js/i18n/grid.locale-pt-br.js" type="text/javascript"></script>
+
+        <script src="../../jqgrid/js/jquery.jqGrid.min.js" type="text/javascript"></script>
+        <script src="../../jqgrid/js/jquery-ui-custom.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $.jgrid.no_legacy_api = true;
+            $.jgrid.useJSON = true;
+        </script>
+        <script type="text/javascript" src="{JSDIR}/{GRID}"></script>
+
+na view adicione as seguintes linhas
+
+require_once '../../jqgrid/tabs.php';
+$tpl->GRID = 'grid.js'; aqui voce passa o javascript do grid em questao
+
+crie o arquivo que vai fazer a configuracao do grid, tem exemplos no projeto
+
+/app/common/js/recursosgrid.js
+
+nesse arquivo estao as configuracoes necessarias para montar o grid
