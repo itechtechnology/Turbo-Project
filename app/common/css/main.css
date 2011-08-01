@@ -4,9 +4,13 @@
 
 * {
 
-	margin: 0;
+    margin: 0;
 
-	padding: 0;
+
+/*    overflow: hidden;     Remove scroll bars on browser window  */
+/*    font-size: 75%; */
+
+    padding: 0;
 
 }
 
@@ -14,9 +18,9 @@
 
 a {
 
-	/*color: #333;*/
+    /*color: #333;*/
 
-	text-decoration: none;
+    text-decoration: none;
 
 }
 
@@ -24,7 +28,7 @@ a {
 
 img{
 
-	border:0px;
+    border:0px;
 
 }
 
@@ -32,9 +36,9 @@ img{
 
 a:hover {
 
-	text-decoration: underline;
+    text-decoration: underline;
 
-	color: #999;
+    color: #999;
 
 }
 
@@ -42,11 +46,11 @@ a:hover {
 
 body {
 
-	font-family:Arial, Helvetica, sans-serif;	
+    font-family:Arial, Helvetica, sans-serif;	
 
-	background-image: url(../../common/images/background.jpg);
+    background-image: url(../../common/images/background.jpg);
 
-	background-repeat: repeat;
+    background-repeat: repeat;
 
 }
 
@@ -56,11 +60,11 @@ body {
 
 div#sessao{
 
-	width:980px;
+    width:980px;
 
-	height:55px;
+    height:55px;
 
-	margin:0 auto;
+    margin:0 auto;
 
 }
 
@@ -68,21 +72,21 @@ div#sessao{
 
 div#sessao div#dados_sessao{
 
-	float:right;
+    float:right;
 
-	width:230px;
+    width:230px;
 
-	height:50px;
+    height:50px;
 
-	text-align:right;
+    text-align:right;
 
-	margin-top:2px;
+    margin-top:2px;
 
-	margin-right:5px;
+    margin-right:5px;
 
-	color:#939598;
+    color:#939598;
 
-	font-size:14px;
+    font-size:14px;
 
 }
 
@@ -90,11 +94,11 @@ div#sessao div#dados_sessao{
 
 div#dados_sessao a{
 
-	text-decoration:underline;
+    text-decoration:underline;
 
-	color:#939598;
+    color:#939598;
 
-	margin-left:10px;
+    margin-left:10px;
 
 }
 
@@ -102,7 +106,7 @@ div#dados_sessao a{
 
 div#dados_sessao a:hover{
 
-	text-decoration:overline;
+    text-decoration:overline;
 
 }
 
@@ -114,11 +118,11 @@ div#dados_sessao a:hover{
 
 #corpoMenu{
 
-	width:100%;
+    width:100%;
 
-	height:110px;
+    height:110px;
 
-	background: url(../../common/images/bg_menu.jpg) repeat-x;
+    background: url(../../common/images/bg_menu.jpg) repeat-x;
 
 }
 
@@ -126,11 +130,11 @@ div#dados_sessao a:hover{
 
 #corpoMenu .menu{
 
-	width:980px;
+    width:980px;
 
-	height:110px;
+    height:110px;
 
-	margin:auto;
+    margin:auto;
 
 }
 
@@ -138,11 +142,11 @@ div#dados_sessao a:hover{
 
 #corpoMenu .menu .logomarca{
 
-	width:310px;
+    width:310px;
 
-	height:110px;
+    height:110px;
 
-	float:left;
+    float:left;
 
 }
 
@@ -150,7 +154,7 @@ div#dados_sessao a:hover{
 
 #corpoMenu .menu .logomarca img{
 
-	border:none;
+    border:none;
 
 }
 
@@ -158,11 +162,11 @@ div#dados_sessao a:hover{
 
 #corpoMenu .menu .botoesMenu{
 
-	width:670px;
+    width:670px;
 
-	height:110px;
+    height:110px;
 
-	float:left;
+    float:left;
 
 }
 
@@ -170,13 +174,13 @@ div#dados_sessao a:hover{
 
 .botoesMenu li.home{
 
-	width:96px;
+    width:96px;
 
-	height:105px;
+    height:105px;
 
-	display:block;
+    display:block;
 
-	float:left;
+    float:left;
 
 }
 
@@ -184,15 +188,15 @@ div#dados_sessao a:hover{
 
 .botoesMenu li.home a{
 
-	width:96px;
+    width:96px;
 
-	height:105px;
+    height:105px;
 
-	display:block;
+    display:block;
 
-	float:left;
+    float:left;
 
-	background:transparent url(../../common/images/bt_home.jpg) no-repeat scroll center top;
+    background:transparent url(../../common/images/bt_home.jpg) no-repeat scroll center top;
 
 }
 
@@ -200,7 +204,7 @@ div#dados_sessao a:hover{
 
 .botoesMenu li.home a:hover{
 
-	background-position:center -105px !important;
+    background-position:center -105px !important;
 
 }
 
@@ -210,13 +214,13 @@ div#dados_sessao a:hover{
 
 .botoesMenu li.agenda{
 
-	width:95px;
+    width:95px;
 
-	height:105px;
+    height:105px;
 
-	display:block;
+    display:block;
 
-	float:left;
+    float:left;
 
 }
 
@@ -224,15 +228,15 @@ div#dados_sessao a:hover{
 
 .botoesMenu li.agenda a{
 
-	width:95px;
+    width:95px;
 
-	height:105px;
+    height:105px;
 
-	display:block;
+    display:block;
 
-	float:left;
+    float:left;
 
-	background:transparent url(../../common/images/bt_agenda.jpg) no-repeat scroll center top;
+    background:transparent url(../../common/images/bt_agenda.jpg) no-repeat scroll center top;
 
 }
 
@@ -240,7 +244,7 @@ div#dados_sessao a:hover{
 
 .botoesMenu li.agenda a:hover{
 
-	background-position:center -108px !important;
+    background-position:center -108px !important;
 
 }
 
@@ -250,13 +254,13 @@ div#dados_sessao a:hover{
 
 .botoesMenu li.relatorios{
 
-	width:130px;
+    width:130px;
 
-	height:105px;
+    height:105px;
 
-	display:block;
+    display:block;
 
-	float:left;
+    float:left;
 
 }
 
@@ -264,15 +268,15 @@ div#dados_sessao a:hover{
 
 .botoesMenu li.relatorios a{
 
-	width:138px;
+    width:138px;
 
-	height:105px;
+    height:105px;
 
-	display:block;
+    display:block;
 
-	float:left;
+    float:left;
 
-	background:transparent url(../../common/images/bt_relatorios.jpg) no-repeat scroll center top;
+    background:transparent url(../../common/images/bt_relatorios.jpg) no-repeat scroll center top;
 
 }
 
@@ -280,7 +284,7 @@ div#dados_sessao a:hover{
 
 .botoesMenu li.relatorios a:hover{
 
-	background-position:center -108px !important;	
+    background-position:center -108px !important;	
 
 }
 
@@ -288,13 +292,13 @@ div#dados_sessao a:hover{
 
 .botoesMenu li.gestor{
 
-	width:123px;
+    width:123px;
 
-	height:105px;
+    height:105px;
 
-	display:block;
+    display:block;
 
-	float:left;
+    float:left;
 
 }
 
@@ -302,15 +306,15 @@ div#dados_sessao a:hover{
 
 .menu li.gestor a{
 
-	width:91px;
+    width:91px;
 
-	height:105px;
+    height:105px;
 
-	display:block;
+    display:block;
 
-	float:left;
+    float:left;
 
-	background:transparent url(../../common/images/bt_gestor.jpg) no-repeat scroll center top;
+    background:transparent url(../../common/images/bt_gestor.jpg) no-repeat scroll center top;
 
 }
 
@@ -318,7 +322,7 @@ div#dados_sessao a:hover{
 
 .menu li.gestor a:hover{
 
-	background-position:center -108px !important;
+    background-position:center -108px !important;
 
 }
 
@@ -330,13 +334,13 @@ div#dados_sessao a:hover{
 
 div#conteudo{
 
-	width:980px;
+    width:980px;
 
-	height:100%;
+    height:100%;
 
-	overflow:auto;
+    overflow:auto;
 
-	margin:58px auto;
+    margin:58px auto;
 
 }
 
@@ -352,22 +356,22 @@ div#conteudo{
 
 div#conteudo div#nav{
 
-	float:left;
+    float:left;
 
-	width:200px;
+    width:200px;
 
-	height:100%;
+    height:100%;
 
-	margin-right:17px;
+    margin-right:17px;
 
-	/*background: url(../../common/images/bg_topmenu.png) repeat;*/
+    /*background: url(../../common/images/bg_topmenu.png) repeat;*/
 
-	background: #FFF;	
-	
-	/* editado por anderson*/
-	position:relative; 
-	
-	height:auto;
+    background: #FFF;	
+
+    /* editado por anderson*/
+    position:relative; 
+
+    height:auto;
 
 }
 
@@ -377,7 +381,7 @@ div#conteudo div#nav{
 
 div#conteudo ul.menu  {
 
-	list-style-type: none;
+    list-style-type: none;
 
 }
 
@@ -389,19 +393,19 @@ div#conteudo ul.menu  {
 
 div#conteudo ul.menu li h2 {
 
-	background: url(../../common/images/bt_menu_lateral.png);
+    background: url(../../common/images/bt_menu_lateral.png);
 
-	height: 36px;
+    height: 36px;
 
-	color: #023E88;
+    color: #023E88;
 
-	padding-top: 10px;		
+    padding-top: 10px;		
 
-	padding-left: 25px;
+    padding-left: 25px;
 
-	font-size: 20px;
+    font-size: 20px;
 
-	
+
 
 }
 
@@ -409,11 +413,11 @@ div#conteudo ul.menu li h2 {
 
 div#conteudo ul.menu li h2:hover {
 
-	color: #FFF;
+    color: #FFF;
 
-	background: url(../../common/images/bt_menu_lateral_hover.png);
+    background: url(../../common/images/bt_menu_lateral_hover.png);
 
-	/*
+    /*
 
 	height: 36px;	
 
@@ -435,7 +439,7 @@ div#conteudo ul.menu li h2:hover {
 
 div#conteudo ul.menu li .submenu {
 
-	display: none;
+    display: none;
 
 }
 
@@ -443,7 +447,7 @@ div#conteudo ul.menu li .submenu {
 
 div#conteudo ul.menu li{
 
-	list-style-type:none;
+    list-style-type:none;
 
 }
 
@@ -451,7 +455,7 @@ div#conteudo ul.menu li{
 
 div#conteudo ul.menu{
 
-	cursor:pointer;
+    cursor:pointer;
 
 }
 
@@ -459,7 +463,7 @@ div#conteudo ul.menu{
 
 div#conteudo ul.menu h2{
 
-	margin-top:4px;
+    margin-top:4px;
 
 }
 
@@ -467,7 +471,7 @@ div#conteudo ul.menu h2{
 
 div#conteudo ul.menu p{
 
-	margin-left:26px;
+    margin-left:26px;
 
 }
 
@@ -475,7 +479,7 @@ div#conteudo ul.menu p{
 
 div#conteudo ul.menu a{
 
-	color:#023e88;
+    color:#023e88;
 
 }
 
@@ -483,9 +487,9 @@ div#conteudo ul.menu a{
 
 div#nav ul li .submenu li a{
 
-	display:block;
+    display:block;
 
-	color:#325e94;
+    color:#325e94;
 
 }
 
@@ -493,9 +497,9 @@ div#nav ul li .submenu li a{
 
 div#nav ul li h2 img{
 
-	width:224px;
+    width:224px;
 
-	height:46px;
+    height:46px;
 
 }
 
@@ -505,15 +509,15 @@ div#nav ul li h2 img{
 
 div#nav ul li#top_menu{
 
-	width:100%;
+    width:100%;
 
-	height:67px;
+    height:67px;
 
-	/*background: url(../../common/images/bg_topmenu.png) repeat-x;*/
+    /*background: url(../../common/images/bg_topmenu.png) repeat-x;*/
 
-	background: #FFF;
+    background: #FFF;
 
-	margin-bottom:0px;
+    margin-bottom:0px;
 
 }
 
@@ -521,13 +525,13 @@ div#nav ul li#top_menu{
 
 div#nav ul li#top_menu div#dados{	
 
-	margin:10px 0px 0px 10px;
+    margin:10px 0px 0px 10px;
 
-	background: url(../../common/images/titulo_geral3.png);
+    background: url(../../common/images/titulo_geral3.png);
 
-	min-height: 58px;
+    min-height: 58px;
 
-	width: 214px;
+    width: 214px;
 
 }
 
@@ -535,13 +539,13 @@ div#nav ul li#top_menu div#dados{
 
 div#nav ul li#top_menu div#dados h1{
 
-        padding-top: 13px;
+    padding-top: 13px;
 
-	padding-left: 20px;
+    padding-left: 20px;
 
-	color: #023E88;
+    color: #023E88;
 
-	font-size: 13px;
+    font-size: 13px;
 
 }
 
@@ -549,11 +553,11 @@ div#nav ul li#top_menu div#dados h1{
 
 div#nav ul li#top_menu div#dados p{
 
-	padding-left: 20px;
+    padding-left: 20px;
 
-	color: #023E88;
+    color: #023E88;
 
-	font-size: 12px;
+    font-size: 12px;
 
 }
 
@@ -561,13 +565,13 @@ div#nav ul li#top_menu div#dados p{
 
 div#nav ul li#top_menu div#dados a{
 
-        float: left;
+    float: left;
 
-	margin-left: 20px;
+    margin-left: 20px;
 
-	color: #023E88;
+    color: #023E88;
 
-	font-size: 12px;
+    font-size: 12px;
 
 }
 
@@ -589,15 +593,15 @@ div#nav ul li#top_menu div#dados a{
 
 div#conteudo div#box_conteudo{
 
-	float:left;
+    float:left;
 
-	width:738px;
+    width:738px;
 
-	height:100%;
+    height:100%;
 
-	background:#fff;
+    background:#fff;
 
-	padding-bottom:40px;	
+    padding-bottom:40px;	
 
 }
 
@@ -613,7 +617,7 @@ div#conteudo div#box_conteudo{
 
 a.tooltip span {
 
-	display:none; padding:2px 3px; margin-left:8px; width:130px;
+    display:none; padding:2px 3px; margin-left:8px; width:130px;
 
 }
 
@@ -621,7 +625,7 @@ a.tooltip span {
 
 a.tooltip:hover span{
 
-	display:inline; position:absolute; background:#ffffff; border:1px solid #cccccc; color:#6c6c6c;
+    display:inline; position:absolute; background:#ffffff; border:1px solid #cccccc; color:#6c6c6c;
 
 }
 
@@ -633,15 +637,15 @@ a.tooltip:hover span{
 
 div#box_conteudo div#tituloGeral{
 
-	float:left;	
+    float:left;	
 
-	width:615px;
+    width:615px;
 
-	min-height:58px;
+    min-height:58px;
 
-	margin:10px 0px 30px 10px;
+    margin:10px 0px 30px 10px;
 
-	background: url(../../common/images/titulo_geral3.png);
+    background: url(../../common/images/titulo_geral3.png);
 
 }
 
@@ -649,13 +653,13 @@ div#box_conteudo div#tituloGeral{
 
 div#box_conteudo div#tituloGeral h2{
 
-	color: #023E88;
+    color: #023E88;
 
-	padding-top: 23px;		
+    padding-top: 23px;		
 
-	padding-left: 30px;
+    padding-left: 30px;
 
-	font-size: 23px;
+    font-size: 23px;
 
 }
 
@@ -667,13 +671,13 @@ div#box_conteudo div#tituloGeral h2{
 
 div#box_conteudo img.titulo{
 
-	float:right;
+    float:right;
 
-	width:728px;
+    width:728px;
 
-	height:58px;
+    height:58px;
 
-	margin:10px 0px 30px 10px;
+    margin:10px 0px 30px 10px;
 
 }
 
@@ -681,7 +685,7 @@ div#box_conteudo img.titulo{
 
 div#box_conteudo img#relatorios{
 
-	width:615px;
+    width:615px;
 
 }
 
@@ -689,7 +693,7 @@ div#box_conteudo img#relatorios{
 
 div#box_conteudo img#cadastro{
 
-	width:615px;
+    width:615px;
 
 }
 
@@ -697,7 +701,7 @@ div#box_conteudo img#cadastro{
 
 div#box_conteudo img#agenda{
 
-	width:615px;
+    width:615px;
 
 }
 
@@ -705,7 +709,7 @@ div#box_conteudo img#agenda{
 
 div#box_conteudo img#list_alunos{
 
-	width:615px;
+    width:615px;
 
 }
 
@@ -713,13 +717,13 @@ div#box_conteudo img#list_alunos{
 
 div#box_conteudo a img#dicas{
 
-	float:right;
+    float:right;
 
-	width:113px;
+    width:113px;
 
-	border:0px;
+    border:0px;
 
-	margin:10px 0px;
+    margin:10px 0px;
 
 }
 
@@ -727,31 +731,31 @@ div#box_conteudo a img#dicas{
 
 div#desenpenho{	
 
-	padding:1px 20px;
+    padding:1px 20px;
 
-        margin:0;
+    margin:0;
 
-        position:fixed;
+    position:fixed;
 
-        top: 0;
+    top: 0;
 
-        /*bottom: 0;*/
+    /*bottom: 0;*/
 
-        right: 0;
+    right: 0;
 
-        color: #FFF;
+    color: #FFF;
 
-        font-size: 8px;
+    font-size: 8px;
 
-        font-family: Verdana,Tahoma;
+    font-family: Verdana,Tahoma;
 
-        z-index: 9999;
+    z-index: 9999;
 
-        background: url(../../common/images/transp.png);
+    background: url(../../common/images/transp.png);
 
-        -moz-border-radius: 10px;
+    -moz-border-radius: 10px;
 
-        -webkit-border-radius: 10px;
+    -webkit-border-radius: 10px;
 
 }
 
@@ -765,11 +769,11 @@ div#desenpenho{
 
 div#envolve_rodape{
 
-	width:100%;
+    width:100%;
 
-	height:181px;
+    height:181px;
 
-	background:url(../../common/images/bg_rodape.png) repeat-x;
+    background:url(../../common/images/bg_rodape.png) repeat-x;
 
 }
 
@@ -777,15 +781,15 @@ div#envolve_rodape{
 
 div#envolve_rodape div#box_rodape{
 
-	width:980px;
+    width:980px;
 
-	height:150px;
+    height:150px;
 
-	background:	none;
+    background:	none;
 
-	padding-top:28px;
+    padding-top:28px;
 
-	margin:0 auto;
+    margin:0 auto;
 
 }
 
@@ -793,17 +797,17 @@ div#envolve_rodape div#box_rodape{
 
 div#box_rodape div#assinatura{
 
-	width:372px;
+    width:372px;
 
-	height:100%;
+    height:100%;
 
-	background:	none;
+    background:	none;
 
-	float:left;
+    float:left;
 
-	font-style:italic;
+    font-style:italic;
 
-	font-size:15px;
+    font-size:15px;
 
 }
 
@@ -811,13 +815,13 @@ div#box_rodape div#assinatura{
 
 div#assinatura ul{
 
-	width:100%;
+    width:100%;
 
-	list-style:none;
+    list-style:none;
 
-	margin-top:15px;
+    margin-top:15px;
 
-	color:#6d6e71;
+    color:#6d6e71;
 
 }
 
@@ -825,11 +829,11 @@ div#assinatura ul{
 
 div#assinatura ul li{
 
-	display:block;
+    display:block;
 
-	float:left;
+    float:left;
 
-	margin-right:5px;
+    margin-right:5px;
 
 }
 
@@ -837,11 +841,11 @@ div#assinatura ul li{
 
 div#assinatura ul li a{
 
-	float:left;
+    float:left;
 
-	color:#6d6e71;
+    color:#6d6e71;
 
-	text-decoration:none;
+    text-decoration:none;
 
 }
 
@@ -849,7 +853,7 @@ div#assinatura ul li a{
 
 div#assinatura ul li a:hover{
 
-	text-decoration:underline;
+    text-decoration:underline;
 
 }
 
@@ -857,13 +861,13 @@ div#assinatura ul li a:hover{
 
 div#assinatura p{
 
-	float:left;
+    float:left;
 
-	color:#a7a9ac;
+    color:#a7a9ac;
 
-	font-size:13px;
+    font-size:13px;
 
-	margin-top:5px;
+    margin-top:5px;
 
 }
 
@@ -871,13 +875,13 @@ div#assinatura p{
 
 img#separador_rodape{
 
-	float:left;
+    float:left;
 
-	width:2px;
+    width:2px;
 
-	height:157px;
+    height:157px;
 
-	margin-left:240px;
+    margin-left:240px;
 
 }
 
@@ -885,29 +889,29 @@ img#separador_rodape{
 
 div#endereco{
 
-	float:right;
+    float:right;
 
-	color:#7e7c7c;
+    color:#7e7c7c;
 
-	font-size:13px;
+    font-size:13px;
 
-	background:none;
+    background:none;
 
-	width:268px;
+    width:268px;
 
-	height:73px;
+    height:73px;
 
-	margin-top:85px;
+    margin-top:85px;
 
-	text-align:right;
+    text-align:right;
 
 }
 
 div#endereco p#telefone{
 
-	margin-top:10px;
+    margin-top:10px;
 
-	font-size:16px;
+    font-size:16px;
 
 }
 

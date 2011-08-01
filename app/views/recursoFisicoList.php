@@ -13,6 +13,7 @@ if (!isset($_SESSION['login'])) {
     $tpl->addFile('TOPO', APPTPLDIR . '/topo.tpl.html');
     $tpl->addFile('MENULATERAL', APPTPLDIR . '/menuLateral.tpl.html');
     $tpl->addFile('RODAPE', APPTPLDIR . '/rodape.tpl.html');
+//    include 'grid.php';
     $tpl->IMAGEDIR = APPIMAGEDIR;
     $tpl->CSSDIR = APPCSSDIR;
     $tpl->JSDIR = APPJSDIR;
@@ -27,14 +28,14 @@ if (!isset($_SESSION['login'])) {
     $tpl->TITULOPROCURAR = 'LOCALIZAR';
     $tpl->DICA = 'DICA';
     $tpl->USUARIO = $_SESSION['login'];
-    
-    if (isset($_SESSION['str_erro']))
-        {
-            $tpl->ERROS = $_SESSION['str_erro'];
-            $tpl->block("BLOCK_SCRIPT");
-            session_unregister('str_erro');
-        }
-    
+//    require_once '../../jqgrid/tabs.php';
+//    include 'grid.php';
+    if (isset($_SESSION['str_erro'])) {
+        $tpl->ERROS = $_SESSION['str_erro'];
+        $tpl->block("BLOCK_SCRIPT");
+        session_unregister('str_erro');
+    }
+
     if (isset($_GET['orderBy']) and isset($_GET['sort'])) {
         $ordCampo = $_GET['orderBy'];
         switch ($ordCampo) {
@@ -142,7 +143,7 @@ if (!isset($_SESSION['login'])) {
 //
     if (empty($_GET['pesquisa'])) {
 //        $recursos = $recurso->listarRecurso($ordCampo, $tpl->SORT);
-        $recursos = $recurso->getRecursos('',$ordCampo, $tpl->SORT);
+        $recursos = $recurso->getRecursos('', $ordCampo, $tpl->SORT);
     } else {
         $texto = $lib->formatarString($_GET['pesquisa']);
 //        $recursos = $recurso->getRecurso($texto, $ordCampo, $tpl->SORT);

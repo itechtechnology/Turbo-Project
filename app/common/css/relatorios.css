@@ -14,3 +14,12 @@ div#envolve_relatorios div.box_relatorios{
 	margin-bottom:18px;
 	padding:15px 5px;
 }
+#jqgrid{
+    padding: 5px;
+    text-align: center;
+}
+
+#titulo_relatorio{
+    text-align: center;
+    color: #023E88;
+}
