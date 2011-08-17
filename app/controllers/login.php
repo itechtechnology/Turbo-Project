@@ -8,14 +8,14 @@
   Descrição: Recebe um e-mail e uma senha e faz o login do usuário no sistema
  */
 
-require '../../conf/lock.php';
+@ require '../../conf/lock.php';
 
 
 //Recebo email e senha pelo método post
 $login = $_POST['login'];
 $senha = $_POST['senha'];
 
-$usuario = new UsuarioRecord();
+$usuario = new UsuariosRecord();
 
 
 if (!$usuario->verificaLogin()) {//Se a sessão não existir

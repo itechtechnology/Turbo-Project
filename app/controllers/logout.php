@@ -11,13 +11,13 @@ require '../../conf/lock.php';
 
 
 
-	$usuario = new UsuarioRecord();
+	$usuario = new UsuariosRecord();
 
 	
 	if($usuario->verificaLogin()){//Se a sessão existir
 		 
-		$usuario->logout($login, md5($senha));//Passo o login e a senha criptografada
-		Header("Location: ../../web/"); //Redireciona para index 
+		$usuario->logout();//Passo o login e a senha criptografada
+		Header("Location: ../../index.php"); //Redireciona para index 
 		exit;
 	
 	}

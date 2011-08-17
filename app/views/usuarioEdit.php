@@ -13,17 +13,11 @@
 	//$lib = new Lib();
 	
 	
-	//session_start(); //Inicio a sessão			
-	if (isset($_SESSION["cadastro_usuario"])){// Verifico se a sessão já foi criada 
-		$dados = unserialize($_SESSION["cadastro_usuario"]);
+	session_start(); //Inicio a sessão			
+	if (isset($_SESSION["edita_usuario"])){// Verifico se a sessão já foi criada 
+		$dados = unserialize($_SESSION["edita_usuario"]);
 		$status = $dados["status"]; //Status atual do cadastro
-		$login = $dados["login"];
- 		$email = $dados["email"];
 		$senha = $dados["senha"];
-		$nome = $dados["nome"];
-		$cpf = $dados["cpf"];
-		$sexo = $dados["sexo"];
-		$data_nascimento = $dados["data_nascimento"];
 		$telefone_fixo = $dados["telefone_fixo"];
 		$telefone_celular = $dados["telefone_celular"];
 		$rua = $dados["rua"];
@@ -36,18 +30,15 @@
 		$pais = $dados["pais"];
 		$pergunta = $dados["pergunta"];
 		$resposta = $dados["resposta"];
-		$habilidade1 = $dados["habilidade1"];
 		$erros = $dados["erros"]; 	
 	}
 	else{
+		
+		$sql = "select * FROM projeto WHERE cd_projeto=".$_REQUEST['cd_projeto'];
+        $projeto1 = $projeto->executarPesquisa($sql);
+		
 		$status = $dados["status"] = 1;  //Variável sessão iniciada
- 		$login = $dados["login"] = NULL;
-		$email = $dados["email"] = NULL;
-		$senha = $dados["senha"] = NULL;
-		$nome = $dados["nome"] = NULL;
-		$cpf = $dados["cpf"] = NULL;
-		$sexo = $dados["sexo"] = 'M';
-		$data_nascimento = $dados["data_nascimento"] = NULL;
+ 		$senha = $dados["senha"] = NULL;
 		$telefone_fixo = $dados["telefone_fixo"] = NULL;
 		$telefone_celular = $dados["telefone_celular"] = NULL;
 		$rua = $dados["rua"] = NULL;
@@ -60,15 +51,13 @@
 		$pais = $dados["pais"] = NULL;
 		$pergunta = $dados["pergunta"]= NULL;
 		$resposta = $dados["resposta"]= NULL;
-		$habilidade1 = $dados["habilidade1"]= NULL;
-		$erros = $dados["erros"] = NULL;
- 		//gravo a sessao por padrao o php hj ja passa o serialize automaticamente nao precisa mais passar ela
- 		$_SESSION["cadastro_usuario"] = serialize($dados);
+		$erros = $dados["erros"] = NULL; 		
+ 		$_SESSION["edita_usuario"] = serialize($dados);
 	}
 
 	
 	
-	$tpl = new sistTemplate(APPTPLDIR.'/usuario.tpl.html');
+	$tpl = new sistTemplate(APPTPLDIR.'/usuarioEdit.tpl.html');
 
     $tpl->addFile('TOPO', APPTPLDIR.'/topo.tpl.html');
 
@@ -85,12 +74,27 @@
 	switch ($status){
 		
 		case 1:
-			$tpl->TITULO_1 = "Cadastro Usuário - Passo I";
-			$tpl->TITULO_2 = "Cadastro de Usuário";
-			$tpl->LOGIN = $login;
-			$tpl->EMAIL = $email;
-			$tpl->ERROS = $erros;
-			$tpl->block("BLOCK_ADD1");
+			$tpl->TITULO_1 = "Edita Dados";
+			$tpl->TITULO_2 = "Escolha a opção que deseja editar";
+			
+			
+			$tpl->TELEFONE_FIXO =  $telefone_fixo;
+			$tpl->TELEFONE_CELULAR = $telefone_celular;
+			
+			$tpl->RUA = $rua;
+			$tpl->NUMERO = $numero;
+			$tpl->COMPLEMENTO = $complemento;
+			$tpl->BAIRRO = $bairro;
+			$tpl->CIDADE = $cidade;
+			$tpl->CEP = $cep;
+			$tpl->ESTADO = $estado;
+			$tpl->PAIS = $pais;
+			
+			$tpl->PERGUNTA = $usuario->getPergunta($pergunta);
+			$tpl->RESPOSTA = $resposta;
+			$tpl->HABILIDADE = $habilidade->getHabilidade($habilidade1);
+
+			$tpl->block("BLOCK_VALIDA");
 		
 		break;
 		
@@ -140,7 +144,7 @@
 			$result = $usuario->listaPerguntas();
 			
 			$i = 1;
-			while(@ $result['CD_PERGUNTAS'][$i]){
+			while($result['CD_PERGUNTAS'][$i]){
 					
 				$tpl->V_REP = $result['CD_PERGUNTAS'][$i]; //id da pergunta
 				$tpl->N_REP = $result['PERGUNTA'][$i]; //nome da pergunta
@@ -151,7 +155,7 @@
 			$result = $habilidade->listaHabilidades();
 			
 			$i = 1;
-			while(@ $result['CD_HABILIDADE'][$i]){
+			while($result['CD_HABILIDADE'][$i]){
 					
 				$tpl->V_REP2 = $result['CD_HABILIDADE'][$i]; //id da habilidade 
 				$tpl->N_REP2 = $result['NOME'][$i]; //nome da habilidadae

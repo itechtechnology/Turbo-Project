@@ -4,7 +4,7 @@ Autor: Anderson Rodrigues
 Data de modificação: 07-07-2011
 
 */
-session_start();
+@ session_start();
 
 /* seto a codificação como utf-8*/
 header('Content-Type: text/html; charset=utf-8');

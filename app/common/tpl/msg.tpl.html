@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{TITULO_1}</title>
+	<link href="http://www.itech10.com/app/common/css/usuario/msg.css" type="text/css" rel="stylesheet"> 
+	<link href="{CSSDIR}/main.css" rel="stylesheet" type="text/css" />
+	<link href="{CSSDIR}/cadastro.css" rel="stylesheet" type="text/css" />    
+	<link href="{CSSDIR}/dateinput.css" rel="stylesheet" type="text/css" />
+	<link href="{CSSDIR}/tooltip.css" rel="stylesheet" type="text/css" />  
+    
+	<script type="text/javascript" src="{JSDIR}/jquery-1.6.1.min.js"></script>
+
+    <script type="text/javascript" src="{JSDIR}/jquery.tools.min.js?select=full&debug=true"></script>
+
+    <script src="http://imasters.com.br/crossbrowser/fonte.js" type="text/javascript"></script>
+
+
+        <link rel="shortcut icon" type="image/x-icon" href="{IMAGEDIR}/{FAVICON}" />
+
+        <link rel="icon" type="image/x-icon" href="{IMAGEDIR}/{ANIMATEDFAVICON}" />
+
+
+    
+<style type="text/css">
+#apDiv1 {	
+	width:400px;
+	height: auto;
+	color: #900;
+	margin-top:50px;
+	margin-left: 30px;
+	font-size: 14px;
+}
+#msg2 {	
+	width:400px;
+	height: auto;
+	color: #900;
+	margin-top:10px;
+	margin-left: 30px;
+	font-size: 14px;
+}
+
+#msgT {	
+	width:400px;
+	height: auto;
+	color: #006;
+	margin-top:10px;
+	margin-left: 30px;
+	font-size: 16px;
+}
+
+#fim {	
+	
+	font-size: 14px;
+}
+
+#principal {	
+	
+	margin-top:40px;
+	margin-left: 50px;
+	
+}
+
+
+#tituloGeral h2 a strong {
+	font-weight: bold;
+	font-size: 36px;
+}
+#envolve_formularios a strong {
+	font-size: 36px;
+}
+</style>
+
+</head>
+
+
+
+<body>
+
+{TOPO} <!--- Add o tpl topo --->
+
+<div id="conteudo">
+{MENULATERAL}
+  <div id="box_conteudo">
+  		
+		<div id="tituloGeral">
+			<h2> {TITULO_2}  
+		</div>
+        
+        <div id="msgT">{TITULO_MSG}</div>
+        <div id="msg2">{MSG}</div>
+                
+        
+        <!-- BEGIN BLOCK_ADD --> 
+    <div id="envolve_formularios">
+<form name="form1" class="form" method="post" enctype="multipart/form-data" action="../controllers/msg.php?acao=add" >
+				<div class="panes">
+					<div class="subpanes">
+						<fieldset>
+                        	<label> 
+								Título* 								  		
+                                <input type="text" name="titulo" maxlength="50" size="25" value="{TITULO_M}">	
+						    </label>
+							<label> 
+								Destinatário* 								  		
+                                <input type="text" name="destinatario" maxlength="15" size="25" value="{DESTINATARIO}">	
+						    </label>
+                            <label> 
+								Mensagem* 								  		
+                                  <textarea name="msg" cols="31" rows="10" maxlength="300">{MENSAGEM}</textarea>	
+						    </label>  
+                                                              
+						</fieldset>
+                        
+                    	<div class="barraForm">
+                    		<button type="reset" class="button negative">
+                       				<img src="{IMAGEDIR}/icons/cross.png" alt=""/> Limpar
+                        	</button>
+                        	<button type="submit" class="button positive">
+                        		<img src="{IMAGEDIR}/icons/tick.png" alt=""/> Salvar
+                        	</button>
+                        </div>  
+					</div>                                    
+				</div>							 
+			</form>
+<div id="apDiv1">
+            	{ERROS} <!--- Apresenta possíveis erros de envio --->
+			</div>
+	  </div>
+      <!-- END BLOCK_ADD-->
+      
+      <!-- BEGIN BLOCK_LISTA --> <!--- Tamplate responsável por toda a página lista_msg.php --->
+	<div id="principal">
+   		<div id="titulo"> {TITULO_2} </div> <!--- Título da lista de mensagens --->     
+		<!-- BEGIN BLOCK_LIST --> <!---  Bloco responsável para repetição das mensagens --->
+			<div id="list">            
+        		<div id="msg_del"> <!--- Exibe uma imagem botão e guarda em ID_MSG o id da mensagem --->
+            		<form action="../controllers/msg.php?acao=del" method="post">				
+						<input type=image src="../common/images/usuario/msg_del.jpg" width="30" height="30" title="Deletatar Mensagem" alt="Deletatar Mensagem">
+                        <input type="hidden" name="MSG" value="{ID_MSG}">
+					</form>
+            	</div>            
+            	<div id="msg">
+            		<form action="../controllers/msg.php?acao=ler" method="post">				
+						<input type=image src="../common/images/usuario/{STATUS}.jpg" width="30" height="30" title="Ler Mensagem" alt="Ler Mensagem">
+                        <input type="hidden" name="MSG" value="{ID_MSG}">
+					</form>
+            	</div>                
+            	<div id="data"> 
+            		{DATA} <!--- Data do envio da mensagem --->         
+            	</div>            
+				<div id="titulo_3"> 
+            		{TITULO_3} <!--- Título da mensagem --->       
+            	</div>            
+      			<div id="remetente"> 
+            		De: {REMETENTE} <!--- usuário que enviou a mensagem --->     
+      			</div>                
+			</div>            
+		<!-- END BLOCK_LIST -->        
+		<div id="fim"> 
+      		Mensagens não lidas: {N_LIDAS}/{TOTAL} <!--- mensagem não lidas / total de mensagens de um usuário --->                       
+        	<div id="escrever"> 
+        		<a href="mensagemAdd.php" class="escrever">NOVA MENSAGEM </a> 
+			</div>
+		</div> 
+	</div>
+<!-- END BLOCK_LISTA -->
+        <script type="text/javascript" src="{JSDIR}/configuracoesJS.js"></script>
+    
+	</div>    
+</div>       
+
+{RODAPE} <!--- Add o tpl rodapé --->
+</body>
+</html>
