@@ -201,14 +201,9 @@
 		
 		case 6:
 			
-			$tpl->TITULO_1 = "Cadastro Usuario";
-			$tpl->TITULO_2 = "Parabéns $nome, seu cadastro foi realizado com sucesso!";
-			
-		
-		
-			
-
-			$tpl->block("BLOCK_MSG");
+			echo "<script type='text/javascript'>alert('Parabéns $nome, seu cadastro foi realizado com sucesso!');
+        	location.href='index.php'</script>";
+						
 		
 		break;
 		

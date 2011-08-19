@@ -6,7 +6,12 @@
 	
 	$usuario = new UsuariosRecord();
 	
-	session_start(); //Inicio a sessALo			
+	
+	
+	
+	
+	
+			
 	if (isset($_SESSION["cadastro_usuario"])){// Verifico se a sessão existe
 		$dados = unserialize($_SESSION["cadastro_usuario"]);
 		
@@ -185,6 +190,8 @@
 		break;
 		
 		
+		
+		
 		case "v1": //Volta para etapa 1 do cadastro
 			$status = 1;			
 		break;
@@ -224,7 +231,7 @@
 			$user['email'] = $email;
 			$user['sexo'] = $sexo;
 			$user['cpf'] = $cpf;
-			$user['dt_nascimento'] = $lib->converteData2($data_nascimento);
+			$user['dt_nascimento'] = ($data_nascimento);
 			
 			 		
 			

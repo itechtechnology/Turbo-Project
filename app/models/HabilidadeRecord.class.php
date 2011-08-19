@@ -82,6 +82,14 @@ class HabilidadeRecord extends ManipulaBanco{
 	
 	function setDescricao ($Descricao){
 		$this->Descricao = $Descricao;		
+	}
+	
+	function getHabilidade ($id){ //Recebe um id e retorna a habilidade correspondente
+		
+		$sql = "SELECT nome FROM habilidade WHERE cd_habilidade = '$id';"; 
+		$result = $this->executarPesquisa($sql);
+			
+		return $result['NOME'][1];
 	}	
 }
 ?>

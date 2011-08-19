@@ -8,11 +8,11 @@ margin: 0;
 	height: auto;
 	width: auto;
 	float: left;
-	background-color: #099;
+	background-color: #036;
 }
 
 #titulo {
-	background-color: #066;
+	background-color: #009;
 	text-align: center;
 	color: #FFF;
 	font-weight: bold;
@@ -43,7 +43,7 @@ margin: 0;
 #data {
 	margin-left: 5px;	
 	height: 30px;
-	width: 55px;
+	width: 100px;
 	float: left;
 	background-color: #E9E9E9;
 	font-size: 12px;
@@ -54,7 +54,7 @@ margin: 0;
 #titulo_3 {
 	margin-left: 5px;	
 	height: 30px;
-	width: 162px;
+	width: 200px;
 	float: left;
 	background-color: #E9E9E9;
 	font-size: 12px;
@@ -65,7 +65,7 @@ margin: 0;
 #remetente {
 	margin-left: 5px;	
 	height: 30px;
-	width: 100px;
+	width: 150px;
 	float: left;
 	background-color: #E9E9E9;
 	font-size: 12px;
@@ -88,11 +88,13 @@ margin: 0;
 	margin-right: 15px;	
 }
 a.escrever:link, a.escrever:visited {
-	text-decoration: underline overline
+	text-decoration: underline overline;
+	color: #666;
+	 
 }
 a.escrever:hover {
 	text-decoration: underline;
-	color: #FF0;
+	color: #FFF;
 }
 a.escrever:active {
 	text-decoration: underline overline;
