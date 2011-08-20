@@ -16,7 +16,8 @@ $(document).ready(function(){
             "index":"nome_recurso",
             "label":"RECURSO",
             "width":180, 
-            editable: true
+            editable: true,
+            searchoptions:{sopt:['cn']}
         },
 
         {
@@ -72,13 +73,15 @@ $(document).ready(function(){
         del:false
     //        pdf:true
     })
-//    .jqGrid('navButtonAdd','#pager',{
-//        caption:"pdf", 
-//        onClickButton : function () { 
-//                        $("#grid").excelExport();;
-////            alert('pdf');
-//        } 
-//    })
+    .jqGrid('filterToolbar')
+    .jqGrid('navButtonAdd','#pager',{
+        caption:"Visualizar", 
+        onClickButton : function () { 
+                        alert("tarefa.php?tarefa=5");
+//            alert('pdf');
+        } 
+    })
+    
     ;
 
 });

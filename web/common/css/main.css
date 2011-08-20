@@ -25,6 +25,7 @@ a {
 img{
 
 	border:0px;
+	position: center;
 
 }
 
@@ -491,7 +492,8 @@ div#nav ul li .submenu li a{
 
 
 
-div#nav ul li h2 img{
+div#nav ul li h2 
+{
 
 	width:224px;
 

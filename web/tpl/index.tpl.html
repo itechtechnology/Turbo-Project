@@ -3,17 +3,18 @@
     
   <head>    
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
     <link href="{CSSDIR}/main.css" rel="stylesheet" type="text/css" />
     <link href="{CSSDIR}/tooltip.css" rel="stylesheet" type="text/css" />
     <link href="{CSSDIR}/ie.css" rel="stylesheet" type="text/css" />
-
-    <script type="text/javascript" src="{JSDIR}/jquery-1.6.5.min.js"></script>
+    <link href="www.itech10.com/web/common/acessibilidade/nivo-slider.css" rel="stylesheet" type="text/css" />
+    <!--<script type="text/javascript" src="www.itech10.com/web/common/acessibilidade/jquery-1.6.5.min.js"></script>!-->
     <script type="text/javascript" src="{JSDIR}/jquery.tools.min.js?select=full&amp;debug=true"></script>
 
     <link rel="shortcut icon" type="image/x-icon" href="{IMAGEDIR}/{FAVICON}" />
-    <link rel="icon" type="image/x-icon" href="{IMAGEDIR}/{ANIMATEDFAVICON}" />
-
+    <script type="text/javascript" src="www.itech10.com/web/common/acessibilidade/AC_RunActiveContent.js"></script>
+    <script type="text/javascript" src="www.itech10.com/web/common/acessibilidade/jquery.min.jss"></script>
+    <script type="text/javascript" src="www.itech10.com/web/common/acessibilidade/jquery.nivo.slider.pack.js"></script>    
+    <link rel="icon" type="image/x-icon" href="{IMAGEDIR}/{ANIMATEDFAVICON}"/>
     <title>{SITETITLE}</title>
   </head>
 
@@ -25,7 +26,7 @@
 
                     <a href="#" id="box_tooltip">
 
-                        <img src="{IMAGEDIR}/logo_home.png" alt="" title="
+                       <img src="{IMAGEDIR}/logo_home.png" alt="" title=">
                         <h1>{TITULOTOOLTIP}</h1>
                         <p>{CONTEUDOTOOLTIP}</p>" />
                     </a>
@@ -33,7 +34,7 @@
                     <script type="text/javascript">
                             // inicia a tooltip
                             $("#box_tooltip img[title]").tooltip({
-                       // definie a posição da imagem de dicas
+                       // define a posição da imagem de dicas
                        offset: [150, 500],
                        effect: 'slide'
                             }).dynamic({ bottom: { direction: 'down', bounce: true } });
@@ -59,7 +60,7 @@
 
                 <div id="mensagem">
 
-                    <p>Para acessar o sistema é necessário efetuar Login.</p>
+                    <p>Para acessar o sistema é necessário efetuar login.</p>
 
                     <a href="contato.php">Esqueci a senha!</a>
 

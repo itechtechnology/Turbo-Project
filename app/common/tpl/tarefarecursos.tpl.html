@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='pt-br' xml:lang='pt-br' xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="{CSSDIR}/main.css" rel="stylesheet" type="text/css" />
+
+        <link href="{CSSDIR}/cadastro.css" rel="stylesheet" type="text/css" />    
+        <link href="{CSSDIR}/dateinput.css" rel="stylesheet" type="text/css" />
+        <link href="{CSSDIR}/tooltip.css" rel="stylesheet" type="text/css" />   
+        <link href="{CSSDIR}/tarefaslist.css" rel="stylesheet" type="text/css" /> 
+        <script type="text/javascript" src="{JSDIR}/jquery-1.6.1.min.js"></script>
+        <script type="text/javascript" src="{JSDIR}/jquery.tools.min.js"></script>
+        <script src="http://imasters.com.br/crossbrowser/fonte.js" type="text/javascript"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="{IMAGEDIR}/{FAVICON}" />
+        <link rel="icon" type="image/x-icon" href="{IMAGEDIR}/{ANIMATEDFAVICON}" />
+        <title>{SITETITLE}</title>
+    </head>
+    <body>
+        {TOPO}
+        <div id="conteudo">
+            {MENULATERAL}
+            <div id="box_conteudo">
+                <a href="#" id="box_tooltip">
+                    <img src="{IMAGEDIR}/dicas.jpg" id="dicas" alt="" title="<p>
+                         {DICA}
+                         </p>" />
+                </a>
+                <script type="text/javascript">
+
+                </script>
+                <div id="tituloGeral">
+                    <h2>{NOME_TAREFA}</h2>
+                </div>
+                <div id="envolve_formularios">
+                    <div id="errors">
+                        <h2>{ERROS}</h2>
+                    </div>
+                    <ul class="tabs">
+                        <li><a href="#dados">Colaboradores</a></li>
+                        <li><a href="#dados">Recursos Fisicos</a></li>
+                    </ul>
+                    {TOTAL}
+                    <div class="panes">
+                        <div class="subpanes">
+                            <form name="form1" class="form" method="post" action="{CONTROLLERCOLABORADOR}" enctype="multipart/form-data">
+                                <!--                                {TAM}-->
+                                <div id="tarefas">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Colaborador</th>
+                                                <th>Cargo</th>
+                                                <th>Valor Hora</th>
+                                            </tr>
+                                        </thead>
+                                        <!-- BEGIN BLOCK_LISTAGEM -->
+                                        <tr {CLASS}>
+                                            <td>{COLABORADOR}</td>
+                                            <td>{CARGO}</td>
+                                            <td>{VALOR_HORA}</td>
+                                        </tr>  
+                                        <!-- END BLOCK_LISTAGEM -->
+                                    </table>
+                                </div>
+                                <div id="formulario">
+                                    <fieldset>
+                                        <label> Colaborador *
+                                            <select name="cd_usuario" required="required">
+                                                <!-- BEGIN BLOCK_COLABORADOR -->
+                                                <option value="{CD_USUARIO}" {USUARIOATUAL}>{USUARIO}></option>
+                                                <!-- END BLOCK_COLABORADOR -->
+                                            </select>
+                                        </label>
+                                    </fieldset>
+                                </div>
+                                <!--                                {NOME_TAREFA}-->
+                                <div class="barraForm">
+                                    <button type="submit" class="button positive">
+                                        <img src="{IMAGEDIR}/icons/tick.png" alt=""/> Salvar
+                                    </button>
+                                    <button type="reset" class="button negative">
+                                        <img src="{IMAGEDIR}/icons/cross.png" alt=""/> Limpar
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="subpanes">
+                            <form name="form2" class="form" method="post" action="{CONTROLLERRECURSO}" enctype="multipart/form-data">
+                                <fieldset>
+                                    {NOME_TAREFA}
+                                </fieldset>
+                                <div class="barraForm">
+                                    <button type="submit" class="button positive">
+                                        <img src="{IMAGEDIR}/icons/tick.png" alt=""/> Salvar
+                                    </button>
+                                    <button type="reset" class="button negative">
+                                        <img src="{IMAGEDIR}/icons/cross.png" alt=""/> Limpar
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="{JSDIR}/configuracoesJS.js"></script>
+                </div>
+                <!-- FIM CADASTRO -->
+            </div>
+        </div>
+        {RODAPE}
+    </body>
+
+</html>

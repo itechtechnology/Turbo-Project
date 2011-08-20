@@ -53,12 +53,11 @@ class UsuariosRecord extends ManipulaBanco{
 			 exit;
 		 }
 		
-	
-	}
-	
-	public function atualizarUsuario($dados, $cd_usuario){
 		
-			return $this->atualizar($dados,$cd_usuario);
+		
+				
+		//echo $cd_endereco;
+		exit;
 	}
 	
 	
@@ -166,13 +165,6 @@ class UsuariosRecord extends ManipulaBanco{
 		
 		
 		return $result; // retorno o resultado da SQL
-	}
-	
-	function retornaDados($cd_usuario){
-		
-		$sql = "SELECT * FROM usuario WHERE cd_usuario = '$cd_usuario'";
-		$result = $this->executarPesquisa($sql);
-		return $result;
 	}
 	
 	

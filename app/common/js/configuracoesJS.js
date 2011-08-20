@@ -68,7 +68,7 @@ $(function() {
         selectors   : true,
         offset      : [5, 0],
         speed       : 'fast',
-        yearRange  	: [-25, 25]
+        yearRange  	: [-100, 25]
     });
 
  /*
@@ -138,12 +138,12 @@ $(".form").validator({
 var api = $(".form").data("validator");
 
 // use API to assign an event listener
-api.onSuccess(function(e, els) {
-        showEvent("onSuccess", els);
-
-        // form submitted.
-        return true;
-});
+//api.onSuccess(function(e, els) {
+//        showEvent("onSuccess", els);
+//
+//        // form submitted.
+//        return true;
+//});
 
 // event handler just for a single field
 $(":email").oninvalid(function(e, message) {

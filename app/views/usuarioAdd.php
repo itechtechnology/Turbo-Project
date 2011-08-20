@@ -1,353 +1,335 @@
 <?php
 
-    require '../../conf/lock.php';
-
-	
-	$usuario = new UsuariosRecord();
-	$habilidade = new HabilidadeRecord();
-	
-	
-
-    //$status = new StatusProjeto();
-
-	//$lib = new Lib();
-	
-	
-	//session_start(); //Inicio a sessão			
-	if (isset($_SESSION["cadastro_usuario"])){// Verifico se a sessão já foi criada 
-		$dados = unserialize($_SESSION["cadastro_usuario"]);
-		$status = $dados["status"]; //Status atual do cadastro
-		$login = $dados["login"];
- 		$email = $dados["email"];
-		$senha = $dados["senha"];
-		$nome = $dados["nome"];
-		$cpf = $dados["cpf"];
-		$sexo = $dados["sexo"];
-		$data_nascimento = $dados["data_nascimento"];
-		$telefone_fixo = $dados["telefone_fixo"];
-		$telefone_celular = $dados["telefone_celular"];
-		$rua = $dados["rua"];
-		$numero = $dados["numero"];
-		$complemento = $dados["complemento"];
-		$bairro = $dados["bairro"];
-		$cidade = $dados["cidade"];
-		$cep = $dados["cep"];
-		$estado = $dados["estado"];
-		$pais = $dados["pais"];
-		$pergunta = $dados["pergunta"];
-		$resposta = $dados["resposta"];
-		$habilidade1 = $dados["habilidade1"];
-		$erros = $dados["erros"]; 	
-	}
-	else{
-		$status = $dados["status"] = 1;  //Variável sessão iniciada
- 		$login = $dados["login"] = NULL;
-		$email = $dados["email"] = NULL;
-		$senha = $dados["senha"] = NULL;
-		$nome = $dados["nome"] = NULL;
-		$cpf = $dados["cpf"] = NULL;
-		$sexo = $dados["sexo"] = 'M';
-		$data_nascimento = $dados["data_nascimento"] = NULL;
-		$telefone_fixo = $dados["telefone_fixo"] = NULL;
-		$telefone_celular = $dados["telefone_celular"] = NULL;
-		$rua = $dados["rua"] = NULL;
-		$numero = $dados["numero"] = NULL;
-		$complemento = $dados["complemento"] = "nenhum";
-		$bairro = $dados["bairro"] = NULL;
-		$cidade = $dados["cidade"] = NULL;
-		$cep = $dados["cep"] = NULL;
-		$estado = $dados["estado"] = NULL;
-		$pais = $dados["pais"] = NULL;
-		$pergunta = $dados["pergunta"]= NULL;
-		$resposta = $dados["resposta"]= NULL;
-		$habilidade1 = $dados["habilidade1"]= NULL;
-		$erros = $dados["erros"] = NULL;
- 		//gravo a sessao por padrao o php hj ja passa o serialize automaticamente nao precisa mais passar ela
- 		$_SESSION["cadastro_usuario"] = serialize($dados);
-	}
-
-	
-	
-	$tpl = new sistTemplate(APPTPLDIR.'/usuario.tpl.html');
-
-    $tpl->addFile('TOPO', APPTPLDIR.'/topo.tpl.html');
-
-    //tpl->addFile('MENULATERAL', APPTPLDIR.'/menuLateral.tpl.html');
-
-    $tpl->addFile('RODAPE', APPTPLDIR.'/rodape.tpl.html');
-	
-	$tpl->IMAGEDIR = APPIMAGEDIR;
-	$tpl->JSDIR = APPJSDIR;
-	$tpl->CSSDIR = APPCSSDIR;
-	
-	
-	
-	switch ($status){
-		
-		case 1:
-			$tpl->TITULO_1 = "Cadastro Usuário - Passo I";
-			$tpl->TITULO_2 = "Cadastro de Usuário";
-			$tpl->LOGIN = $login;
-			$tpl->EMAIL = $email;
-			$tpl->ERROS = $erros;
-			$tpl->block("BLOCK_ADD1");
-		
-		break;
-		
-		case 2:
-			$tpl->TITULO_1 = "Cadastro Usuário - Passo II";
-			$tpl->TITULO_2 = "Cadastro de Usuário";
-			$tpl->NOME = $nome;
-			$tpl->CPF = $cpf;
-			$tpl->DATA_NASCIMENTO = $data_nascimento;
-			$tpl->TELEFONE_FIXO = $telefone_fixo;
-			$tpl->TELEFONE_CELULAR = $telefone_celular;
-			if($sexo == 'M') $tpl->SEL_M = "selected";
-			else $tpl->SEL_F = "selected";	
-		
-			
-			$tpl->ERROS = $erros;
-			$tpl->block("BLOCK_ADD2");
-		
-		break;
-		
-		case 3:
-			$tpl->TITULO_1 = "Cadastro Usuário - Passo III";
-			$tpl->TITULO_2 = "Cadastro de Usuário";
-			$tpl->RUA = $rua;
-			$tpl->NUMERO = $numero;
-			$tpl->COMPLEMENTO = $complemento;
-			$tpl->BAIRRO = $bairro;
-			$tpl->CIDADE = $cidade;
-			$tpl->CEP = $cep;
-			$tpl->PAIS = $pais;
-			
-		
-			
-			$tpl->ERROS = $erros;
-			$tpl->block("BLOCK_ADD3");
-		
-		break;
-		
-		case 4:
-		
-			
-			
-			$tpl->TITULO_1 = "Cadastro Usuário - Passo IV";
-			$tpl->TITULO_2 = "Cadastro de Usuário";
-			
-			
-			$result = $usuario->listaPerguntas();
-			
-			$i = 1;
-			while(@ $result['CD_PERGUNTAS'][$i]){
-					
-				$tpl->V_REP = $result['CD_PERGUNTAS'][$i]; //id da pergunta
-				$tpl->N_REP = $result['PERGUNTA'][$i]; //nome da pergunta
-				$tpl->block("BLOCK_REP");
-				$i++;					
-			}
-			
-			$result = $habilidade->listaHabilidades();
-			
-			$i = 1;
-			while(@ $result['CD_HABILIDADE'][$i]){
-					
-				$tpl->V_REP2 = $result['CD_HABILIDADE'][$i]; //id da habilidade 
-				$tpl->N_REP2 = $result['NOME'][$i]; //nome da habilidadae
-				$tpl->block("BLOCK_REP2");
-				$i++;					
-			}
-			
-			
-		
-			
-			$tpl->ERROS = $erros;
-			$tpl->block("BLOCK_ADD4");
-		
-		break;
-		
-		case 5:
-			
-			$tpl->TITULO_1 = "Cadastro Usuario";
-			$tpl->TITULO_2 = "Cadastro de Usuario - Confirmação";
-			
-			
-			$tpl->LOGIN = $login;
-			$tpl->EMAIL = $email;
-			
-			$tpl->NOME = $nome;
-			$tpl->CPF = $cpf;
-			$tpl->DATA_NASCIMENTO = $data_nascimento;
-			$tpl->TELEFONE_FIXO =  $telefone_fixo;
-			$tpl->TELEFONE_CELULAR = $telefone_celular;
-			
-			$tpl->RUA = $rua;
-			$tpl->NUMERO = $numero;
-			$tpl->COMPLEMENTO = $complemento;
-			$tpl->BAIRRO = $bairro;
-			$tpl->CIDADE = $cidade;
-			$tpl->CEP = $cep;
-			$tpl->ESTADO = $estado;
-			$tpl->PAIS = $pais;
-			
-			$tpl->PERGUNTA = $usuario->getPergunta($pergunta);
-			$tpl->RESPOSTA = $resposta;
-			$tpl->HABILIDADE = $habilidade->getHabilidade($habilidade1);
-
-			$tpl->block("BLOCK_VALIDA");
-		
-		break;
-		
-		case 6:
-			
-			echo "<script type='text/javascript'>alert('Parabéns $nome, seu cadastro foi realizado com sucesso!');
-        	location.href='index.php'</script>";
-						
-		
-		break;
-		
-		
-	
-	
-	}
-    
-	
-	
+require '../../conf/lock.php';
+
+$usuario = new UsuariosRecord();
+$habilidade = new HabilidadeRecord();
+
+//$status = new StatusProjeto();
+//$lib = new Lib();
+//session_start(); //Inicio a sessão			
+if (isset($_SESSION["cadastro_usuario"])) {// Verifico se a sessão já foi criada 
+    $dados = unserialize($_SESSION["cadastro_usuario"]);
+    $status = $dados["status"]; //Status atual do cadastro
+    $login = $dados["login"];
+    $email = $dados["email"];
+    $senha = $dados["senha"];
+    $nome = $dados["nome"];
+    $cpf = $dados["cpf"];
+    $sexo = $dados["sexo"];
+    $data_nascimento = $dados["data_nascimento"];
+    $telefone_fixo = $dados["telefone_fixo"];
+    $telefone_celular = $dados["telefone_celular"];
+    $rua = $dados["rua"];
+    $numero = $dados["numero"];
+    $complemento = $dados["complemento"];
+    $bairro = $dados["bairro"];
+    $cidade = $dados["cidade"];
+    $cep = $dados["cep"];
+    $estado = $dados["estado"];
+    $pais = $dados["pais"];
+    $pergunta = $dados["pergunta"];
+    $resposta = $dados["resposta"];
+    $habilidade1 = $dados["habilidade1"];
+    $erros = $dados["erros"];
+} else {
+    $status = $dados["status"] = 1;  //Variável sessão iniciada
+    $login = $dados["login"] = NULL;
+    $email = $dados["email"] = NULL;
+    $senha = $dados["senha"] = NULL;
+    $nome = $dados["nome"] = NULL;
+    $cpf = $dados["cpf"] = NULL;
+    $sexo = $dados["sexo"] = 'M';
+    $data_nascimento = $dados["data_nascimento"] = NULL;
+    $telefone_fixo = $dados["telefone_fixo"] = NULL;
+    $telefone_celular = $dados["telefone_celular"] = NULL;
+    $rua = $dados["rua"] = NULL;
+    $numero = $dados["numero"] = NULL;
+    $complemento = $dados["complemento"] = "nenhum";
+    $bairro = $dados["bairro"] = NULL;
+    $cidade = $dados["cidade"] = NULL;
+    $cep = $dados["cep"] = NULL;
+    $estado = $dados["estado"] = NULL;
+    $pais = $dados["pais"] = NULL;
+    $pergunta = $dados["pergunta"] = NULL;
+    $resposta = $dados["resposta"] = NULL;
+    $habilidade1 = $dados["habilidade1"] = NULL;
+    $erros = $dados["erros"] = NULL;
+    //gravo a sessao por padrao o php hj ja passa o serialize automaticamente nao precisa mais passar ela
+    $_SESSION["cadastro_usuario"] = serialize($dados);
+}
+
+
+
+$tpl = new sistTemplate(APPTPLDIR . '/usuario.tpl.html');
+
+$tpl->addFile('TOPO', APPTPLDIR . '/topo.tpl.html');
 
-    
+//tpl->addFile('MENULATERAL', APPTPLDIR.'/menuLateral.tpl.html');
+
+$tpl->addFile('RODAPE', APPTPLDIR . '/rodape.tpl.html');
 
-    //$tpl->WEBROOT = APPWEBROOT;
+$tpl->IMAGEDIR = APPIMAGEDIR;
+$tpl->JSDIR = APPJSDIR;
+$tpl->CSSDIR = APPCSSDIR;
 
-    //$tpl->SITETITLE = SITETITLE;
 
-    //$tpl->FAVICON = FAVICON;
 
-    //$tpl->ANIMATEDFAVICON = ANIMATEDFAVICON;
+switch ($status) {
 
-    //$tpl->MEMORYUSAGE = number_format(intval(memory_get_usage()/1000), 0, ',', '.');
+    case 1:
+        $tpl->TITULO_1 = "Cadastro Usuário - Passo I";
+        $tpl->TITULO_2 = "Cadastro de Usuário";
+        $tpl->LOGIN = $login;
+        $tpl->EMAIL = $email;
+        $tpl->ERROS = $erros;
+        $tpl->block("BLOCK_ADD1");
+
+        break;
+
+    case 2:
+        $tpl->TITULO_1 = "Cadastro Usuário - Passo II";
+        $tpl->TITULO_2 = "Cadastro de Usuário";
+        $tpl->NOME = $nome;
+        $tpl->CPF = $cpf;
+        $tpl->DATA_NASCIMENTO = $data_nascimento;
+        $tpl->TELEFONE_FIXO = $telefone_fixo;
+        $tpl->TELEFONE_CELULAR = $telefone_celular;
+        if ($sexo == 'M')
+            $tpl->SEL_M = "selected";
+        else
+            $tpl->SEL_F = "selected";
 
-    //$tpl->MEMORYPICK = number_format(intval(memory_get_peak_usage()/1000),0,',','.');
 
-	//$tpl->CONTROLLER = '../controllers/usuario.php?acao=add1'; 
+        $tpl->ERROS = $erros;
+        $tpl->block("BLOCK_ADD2");
 
-        //$projeto = new ProjetosRecord();
+        break;
 
+    case 3:
+        $tpl->TITULO_1 = "Cadastro Usuário - Passo III";
+        $tpl->TITULO_2 = "Cadastro de Usuário";
+        $tpl->RUA = $rua;
+        $tpl->NUMERO = $numero;
+        $tpl->COMPLEMENTO = $complemento;
+        $tpl->BAIRRO = $bairro;
+        $tpl->CIDADE = $cidade;
+        $tpl->CEP = $cep;
+        $tpl->PAIS = $pais;
 
 
-        /*
 
-         * PREENCHE COMBO GERENTE PROJETO
+        $tpl->ERROS = $erros;
+        $tpl->block("BLOCK_ADD3");
 
-         * estou esperando o metodo de marcos rosa do modulo usuario
+        break;
 
-         
+    case 4:
 
-        $sql = "SELECT cd_usuario, nome FROM usuario ORDER BY nome";
 
-	$gerentes = $projeto->executarPesquisa($sql);
 
+        $tpl->TITULO_1 = "Cadastro Usuário - Passo IV";
+        $tpl->TITULO_2 = "Cadastro de Usuário";
 
 
-        $totalGerentes = count($gerentes['NOME']);
+        $result = $usuario->listaPerguntas();
 
+        $i = 1;
+        while (@ $result['CD_PERGUNTAS'][$i]) {
 
+            $tpl->V_REP = $result['CD_PERGUNTAS'][$i]; //id da pergunta
+            $tpl->N_REP = $result['PERGUNTA'][$i]; //nome da pergunta
+            $tpl->block("BLOCK_REP");
+            $i++;
+        }
 
-	for($x = 1;$x <= $totalGerentes;$x++)
+        $result = $habilidade->listaHabilidades();
 
-	{
+        $i = 1;
+        while (@ $result['CD_HABILIDADE'][$i]) {
 
-		$tpl->CODGER = $gerentes['CD_USUARIO'][$x];
+            $tpl->V_REP2 = $result['CD_HABILIDADE'][$i]; //id da habilidade 
+            $tpl->N_REP2 = $result['NOME'][$i]; //nome da habilidadae
+            $tpl->block("BLOCK_REP2");
+            $i++;
+        }
 
-		$tpl->GERENTE = $gerentes['NOME'][$x];
 
-		$tpl->GERENTEATUAL = '';
 
-		$tpl->block("BLOCK_GERENTE_PROJETO");
 
-	}
+        $tpl->ERROS = $erros;
+        $tpl->block("BLOCK_ADD4");
 
-        */
+        break;
 
-        /*
+    case 5:
 
-         * PREENCHE COMBO STATUS
+        $tpl->TITULO_1 = "Cadastro Usuario";
+        $tpl->TITULO_2 = "Cadastro de Usuario - Confirmação";
 
-         */
 
-        //$sql = "SELECT cd_status, nome_status FROM status ORDER BY nome_status";
+        $tpl->LOGIN = $login;
+        $tpl->EMAIL = $email;
 
-	//$status = $projeto->executarPesquisa($sql);
+        $tpl->NOME = $nome;
+        $tpl->CPF = $cpf;
+        $tpl->DATA_NASCIMENTO = $data_nascimento;
+        $tpl->TELEFONE_FIXO = $telefone_fixo;
+        $tpl->TELEFONE_CELULAR = $telefone_celular;
 
-        //$status = $status->listarStatus();
+        $tpl->RUA = $rua;
+        $tpl->NUMERO = $numero;
+        $tpl->COMPLEMENTO = $complemento;
+        $tpl->BAIRRO = $bairro;
+        $tpl->CIDADE = $cidade;
+        $tpl->CEP = $cep;
+        $tpl->ESTADO = $estado;
+        $tpl->PAIS = $pais;
 
-        //$totalStatus = count($status['NOME_STATUS']);
+        $tpl->PERGUNTA = $usuario->getPergunta($pergunta);
+        $tpl->RESPOSTA = $resposta;
+        $tpl->HABILIDADE = $habilidade->getHabilidade($habilidade1);
 
+        $tpl->block("BLOCK_VALIDA");
 
-	/*
-	for($x = 1;$x <= $totalStatus;$x++)
+        break;
 
-	{
+    case 6:
 
-		$tpl->CODSTA = $status['CD_STATUS'][$x];
+        $tpl->TITULO_1 = "Cadastro Usuario";
+        $tpl->TITULO_2 = "Parabéns $nome, seu cadastro foi realizado com sucesso!";
 
-		$tpl->STATUS = $status['NOME_STATUS'][$x];
 
-		$tpl->STATUSATUAL = '';
 
-		$tpl->block("BLOCK_STATUS");
 
-	}
-	*/
 
+        $tpl->block("BLOCK_MSG");
 
+        break;
+}
 
-		
 
-	/*
 
-         * FORMA DE LISTAR EM UM COMBOBOX
 
-         * lembre-se subistituir o nome objeto pelo nome da entidade
 
 
+//$tpl->WEBROOT = APPWEBROOT;
+//$tpl->SITETITLE = SITETITLE;
+//$tpl->FAVICON = FAVICON;
+//$tpl->ANIMATEDFAVICON = ANIMATEDFAVICON;
+//$tpl->MEMORYUSAGE = number_format(intval(memory_get_usage()/1000), 0, ',', '.');
+//$tpl->MEMORYPICK = number_format(intval(memory_get_peak_usage()/1000),0,',','.');
+//$tpl->CONTROLLER = '../controllers/usuario.php?acao=add1'; 
+//$projeto = new ProjetosRecord();
 
 
 
-        $totalObjeto = count($Objetos['NOME']);
+/*
 
-				
+ * PREENCHE COMBO GERENTE PROJETO
 
-	for($x = 1;$x <= $totalObjeto;$x++)
+ * estou esperando o metodo de marcos rosa do modulo usuario
 
-	{
 
-		$tpl->CODOBJ = $objetos['COD'][$x];
 
-		$tpl->OBJETO = $objetos['NOME'][$x];
+  $sql = "SELECT cd_usuario, nome FROM usuario ORDER BY nome";
 
-		$tpl->OBJETOATUAL = '';
+  $gerentes = $projeto->executarPesquisa($sql);
 
-		$tpl->block("BLOCK_OBJETOS");
 
-	}
 
+  $totalGerentes = count($gerentes['NOME']);
 
 
 
+  for($x = 1;$x <= $totalGerentes;$x++)
 
-         */
+  {
 
-	
+  $tpl->CODGER = $gerentes['CD_USUARIO'][$x];
 
+  $tpl->GERENTE = $gerentes['NOME'][$x];
 
+  $tpl->GERENTEATUAL = '';
 
-    //$tpl->DICA = 'SEM DICA';
+  $tpl->block("BLOCK_GERENTE_PROJETO");
 
+  }
 
+ */
 
-    //$tpl->TIME = number_format((microtime() - $time),3,',','.');
+/*
 
-    $tpl->show();
+ * PREENCHE COMBO STATUS
 
+ */
+
+//$sql = "SELECT cd_status, nome_status FROM status ORDER BY nome_status";
+//$status = $projeto->executarPesquisa($sql);
+//$status = $status->listarStatus();
+//$totalStatus = count($status['NOME_STATUS']);
+
+
+/*
+  for($x = 1;$x <= $totalStatus;$x++)
+
+  {
+
+  $tpl->CODSTA = $status['CD_STATUS'][$x];
+
+  $tpl->STATUS = $status['NOME_STATUS'][$x];
+
+  $tpl->STATUSATUAL = '';
+
+  $tpl->block("BLOCK_STATUS");
+
+  }
+ */
+
+
+
+
+
+/*
+
+ * FORMA DE LISTAR EM UM COMBOBOX
+
+ * lembre-se subistituir o nome objeto pelo nome da entidade
+
+
+
+
+
+  $totalObjeto = count($Objetos['NOME']);
+
+
+
+  for($x = 1;$x <= $totalObjeto;$x++)
+
+  {
+
+  $tpl->CODOBJ = $objetos['COD'][$x];
+
+  $tpl->OBJETO = $objetos['NOME'][$x];
+
+  $tpl->OBJETOATUAL = '';
+
+  $tpl->block("BLOCK_OBJETOS");
+
+  }
+
+
+
+
+
+ */
+
+
+
+
+
+//$tpl->DICA = 'SEM DICA';
+//$tpl->TIME = number_format((microtime() - $time),3,',','.');
+
+$tpl->show();
 ?>

@@ -1,7 +1,7 @@
 <?php
 
 /*
-  Nome: PÃ¡gina login
+  Nome: Página login
   Autor: Marcos Rosa
   Criado em: 12/05/11
   Modificado por: 03/06/11

@@ -6,6 +6,7 @@
 	height:270px;
 	width:264px;
 	padding:120px 0px 0px 35px;
+	position: absolute;
 }
 
 /* ELEMENTO P (PARAGRAFO)É ONDE O TEXTO DE DICAS DEVERÁ SER ESCRITO  */
@@ -21,4 +22,6 @@
 	border:0;
 	cursor:pointer;
 	margin:0px 8px;
+	left: 50%;
+	position: center;
 }
