@@ -11,7 +11,7 @@ if (!isset($_SESSION['login'])) {
     $tpl = new sistTemplate(APPTPLDIR . '/index.tpl.html');
     $tpl->addFile('TOPO', APPTPLDIR . '/topo.tpl.html');
     $tpl->addFile('MENULATERAL', APPTPLDIR . '/menuLateral.tpl.html');
-    $tpl->USUARIO = 'user';
+//    $tpl->USUARIO = 'user';
     $tpl->IMAGEDIR = APPIMAGEDIR;
     $tpl->CSSDIR = APPCSSDIR;
     $tpl->JSDIR = APPJSDIR;
@@ -20,6 +20,9 @@ if (!isset($_SESSION['login'])) {
     $tpl->FAVICON = FAVICON;
     $tpl->ANIMATEDFAVICON = ANIMATEDFAVICON;
     $tpl->DICA = 'DICA';
+    $u = new UsuariosRecord();
+    $uNome = $u->getNome($_SESSION['login']);
+    $tpl->USUARIO_LOGADO = $uNome;
     $tpl->show();
 }
 ?>

@@ -17,19 +17,37 @@
     </head>
     <body>
         {TOPO}
+
         <div id="conteudo">
             {MENULATERAL}
-            <div id="box_conteudo">
-                <a href="#" id="box_tooltip">
-                    <img src="{IMAGEDIR}/dicas.jpg" id="dicas" alt="" title="<p>
-                         {DICA}
-                         </p>" />
-                </a>
-                <script type="text/javascript">
 
+            <div id="box_conteudo">
+                <!--                <a href="#" id="box_tooltip">
+                                    <img src="{IMAGEDIR}/dicas.jpg" id="dicas" alt="" title="<p>
+                                         {DICA}
+                                         </p>" />
+                                </a>-->
+                <script type="text/javascript">
+                    $(function(){
+                        $(".linharow").click(function(){
+                            //                            alert(''+$("td:first"));$tar['NOME'][$i]
+                            alert(""+$(this).attr("id"));
+                        })
+                    });
                 </script>
-                <div id="tituloGeral">
-                    <h2>{NOME_TAREFA}</h2>
+                <div class="titulo_tarefa">
+                    <div class="esquerda">
+                        <p>{NOME_TAREFA}</p>
+                        <p>Status: {STATUS}</p>
+                        <p>Responsavel: {RESPONSAVEL}</p>
+                        <p>Inicio: {DT_INCIO}</p>
+                        <p>Previsao Fim: {DT_PREVISAO}</p>
+                        <p>Conclusao: {DT_CONCLUSAO} <a href="../controllers/Tarefa.class.php?acao=concluir&tarefa={CD_TAREFA}">Concluir</a> | <a href="#">Mudar Percentual</a></p>
+                        <p>{DESCRICAO}</p>
+                    </div>
+                    <div class="direita">
+                        <img class="percentual" src= "{GRAFICO}" alt="" title=""/>
+                    </div>
                 </div>
                 <div id="envolve_formularios">
                     <div id="errors">
@@ -39,68 +57,152 @@
                         <li><a href="#dados">Colaboradores</a></li>
                         <li><a href="#dados">Recursos Fisicos</a></li>
                     </ul>
-                    {TOTAL}
+                    <!--                    <h3> {NOME_TAREFA}</h3>-->
                     <div class="panes">
                         <div class="subpanes">
-                            <form name="form1" class="form" method="post" action="{CONTROLLERCOLABORADOR}" enctype="multipart/form-data">
-                                <!--                                {TAM}-->
-                                <div id="tarefas">
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th>Colaborador</th>
-                                                <th>Cargo</th>
-                                                <th>Valor Hora</th>
-                                            </tr>
-                                        </thead>
-                                        <!-- BEGIN BLOCK_LISTAGEM -->
-                                        <tr {CLASS}>
-                                            <td>{COLABORADOR}</td>
-                                            <td>{CARGO}</td>
-                                            <td>{VALOR_HORA}</td>
-                                        </tr>  
-                                        <!-- END BLOCK_LISTAGEM -->
-                                    </table>
+                            <form name="form1" class="formr" method="post" action="{CONTROLLERCOLABORADOR}">
+                                <!--                                                                {TAM}-->
+                                <div class="tarefas">
+                                    <div class="table">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Colaborador</th>
+                                                    <th>Cargo</th>
+                                                    <th>Valor Hora</th>
+                                                </tr>
+                                            </thead>
+                                            <!-- BEGIN BLOCK_LISTAGEM -->
+                                            <tr {CLASS}{ID}>
+                                                <td>{COLABORADOR}</td>
+                                                <td>{CARGO}</td>
+                                                <td>{VALOR_HORA}</td>
+                                            </tr>  
+                                            <!-- END BLOCK_LISTAGEM -->
+                                        </table>
+                                    </div>
                                 </div>
+
                                 <div id="formulario">
+
                                     <fieldset>
-                                        <label> Colaborador *
-                                            <select name="cd_usuario" required="required">
+                                        <label for="cd_usuario"> Colaborador * </label>
+                                        <div class="div_texbox">
+                                            <select name="cd_usuario" required="required" class="textbox">
                                                 <!-- BEGIN BLOCK_COLABORADOR -->
-                                                <option value="{CD_USUARIO}" {USUARIOATUAL}>{USUARIO}></option>
+                                                <option value="{CD_USUARIO}" {USUARIOATUAL}>{USUARIO}</option>
                                                 <!-- END BLOCK_COLABORADOR -->
                                             </select>
-                                        </label>
+                                        </div>
+
+                                        <label for="cd_tipo_cargo"> Cargo *</label>
+                                        <div class="div_texbox">
+                                            <select name="cd_tipo_cargo" required="required" class="textbox">
+                                                <!-- BEGIN BLOCK_CARGO -->
+                                                <option value="{CD_TIPO_CARGO}" {CARGOATUAL}>{CARGO}</option>
+                                                <!-- END BLOCK_CARGO -->
+                                            </select>
+                                        </div>
+                                        <label for="valor_hora02"> Valor Hora * </label>
+                                        <div class="div_texbox">
+                                            <input class="textbox" type="text" name="valor_hora02" required="required" minlength="1" size="20" value="{VALOR_HORA02}">
+                                        </div>
+                                        <label for="dt_alocacao"> Data Alocacao (Reserva) * </label>
+                                        <div class="div_texbox">
+                                            <input class="textbox" type="date" name="dt_alocacao" required="required" minlength="10" maxlength="10" value="{DT_ALOCACAO}">
+                                        </div>
+                                        <label> Data Alocacao (Inicio) * </label>
+                                        <div class="div_texbox">
+                                            <input class="textbox" type="date" name="dt_inicio_alocacao" required="required" minlength="10" maxlength="10" value="{DT_INICIO_ALOCACAO}">
+                                        </div>
+
+                                        <label> Data Fim Alocacao  </label>
+                                        <div class="div_texbox">
+                                            <input class="textbox" type="date" name="dt_fim_alocacao" minlength="10" maxlength="10" value="{DT_FIM_ALOCACAO}">
+                                        </div>
+                                        <div class="button_div">
+                                            <button type="submit" class="buttons">
+                                                <img src="{IMAGEDIR}/icons/tick.png" alt=""/> Salvar
+                                            </button>
+                                            <button type="reset" class="buttons">
+                                                <img src="{IMAGEDIR}/icons/cross.png" alt=""/> Limpar
+                                            </button>
+                                        </div>
+                                        <input type="hidden" name="cd_tarefa" value="{CD_TAREFA}">
                                     </fieldset>
                                 </div>
                                 <!--                                {NOME_TAREFA}-->
-                                <div class="barraForm">
-                                    <button type="submit" class="button positive">
-                                        <img src="{IMAGEDIR}/icons/tick.png" alt=""/> Salvar
-                                    </button>
-                                    <button type="reset" class="button negative">
-                                        <img src="{IMAGEDIR}/icons/cross.png" alt=""/> Limpar
-                                    </button>
-                                </div>
+
                             </form>
                         </div>
                         <div class="subpanes">
-                            <form name="form2" class="form" method="post" action="{CONTROLLERRECURSO}" enctype="multipart/form-data">
-                                <fieldset>
-                                    {NOME_TAREFA}
-                                </fieldset>
-                                <div class="barraForm">
-                                    <button type="submit" class="button positive">
-                                        <img src="{IMAGEDIR}/icons/tick.png" alt=""/> Salvar
-                                    </button>
-                                    <button type="reset" class="button negative">
-                                        <img src="{IMAGEDIR}/icons/cross.png" alt=""/> Limpar
-                                    </button>
+                            <form name="form2" class="formr" method="post" action="{CONTROLLERRECURSO}">
+                                {TOTAL}
+                                <div class="tarefas">
+                                    <div class="table">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Recurso</th>
+                                                    <th>Custo</th>
+                                                    <th>Data Alocacao</th>
+                                                    <th>Data Devolucao</th>
+                                                </tr>
+                                            </thead>
+                                            <!-- BEGIN BLOCK_LISTAGEM_RECURSO -->
+                                            <tr {CLASS_RECURSO}{ID_RECURSO}>
+                                                <td>{RECURSO}</td>
+                                                <td>{CUSTO}</td>
+                                                <td>{DT_ALOCACAO_RECURSO_GRID}</td>
+                                                <td>{DT_DEVOLUCAO_RECURSO}</td>
+                                            </tr>  
+                                            <!-- END BLOCK_LISTAGEM_RECURSO -->
+                                        </table>
+                                    </div>
                                 </div>
+
+                                <div id="formulario">
+
+                                    <fieldset>
+                                        <label for="cd_recurso"> Recurso * </label>
+                                        <div class="div_texbox">
+                                            <select name="cd_recurso" required="required" class="textbox">
+                                                <!-- BEGIN BLOCK_RECURSO -->
+                                                <option value="{CD_RECURSO}" {RECURSOATUAL}>{RECURSO}</option>
+                                                <!-- END BLOCK_RECURSO -->
+                                            </select>
+                                        </div>
+                                        <label for="dt_alocacao_recurso"> Data Alocacao * </label>
+                                        <div class="div_texbox">
+                                            <input class="textbox" type="date" name="dt_alocacao_recurso" required="required" minlength="10" maxlength="10" value="{DT_ALOCACAO_RECURSO}">
+                                        </div>
+                                        <label> Data Devolucao * </label>
+                                        <div class="div_texbox">
+                                            <input class="textbox" type="date" name="dt_devolucao_recurso" required="required" minlength="10" maxlength="10" value="{DT_DEVOLUCAO}">
+                                        </div>
+                                        <div class="button_div">
+                                            <button type="submit" class="buttons">
+                                                <img src="{IMAGEDIR}/icons/tick.png" alt=""/> Salvar
+                                            </button>
+                                            <button type="reset" class="buttons">
+                                                <img src="{IMAGEDIR}/icons/cross.png" alt=""/> Limpar
+                                            </button>
+                                        </div>
+                                        <!--                                        <input type="hidden" name="cd_recurso" value="{CD_RECURSO}">-->
+                                        <input type="hidden" name="cd_tarefa" value="{CD_TAREFA}">
+                                    </fieldset>
+                                </div>
+                                <!--                                {NOME_TAREFA}-->
+
                             </form>
                         </div>
                     </div>
                     <script type="text/javascript" src="{JSDIR}/configuracoesJS.js"></script>
+                    <!-- BEGIN BLOCK_SCRIPT -->
+                    <script type="text/javascript">
+                        document.getElementById('errors').style.display="block";
+                    </script>
+                    <!-- END BLOCK_SCRIPT -->
                 </div>
                 <!-- FIM CADASTRO -->
             </div>

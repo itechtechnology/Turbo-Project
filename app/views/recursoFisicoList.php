@@ -27,7 +27,9 @@ if (!isset($_SESSION['login'])) {
     $tpl->TITULOLISTAGEM = 'Recursos';
     $tpl->TITULOPROCURAR = 'LOCALIZAR';
     $tpl->DICA = 'DICA';
-    $tpl->USUARIO = $_SESSION['login'];
+    $u = new UsuariosRecord();
+    $uNome = $u->getNome($_SESSION['login']);
+    $tpl->USUARIO_LOGADO = $uNome;
 //    require_once '../../jqgrid/tabs.php';
 //    include 'grid.php';
     if (isset($_SESSION['str_erro'])) {
@@ -143,14 +145,14 @@ if (!isset($_SESSION['login'])) {
 //
     if (empty($_GET['pesquisa'])) {
 //        $recursos = $recurso->listarRecurso($ordCampo, $tpl->SORT);
-        $tarefas = $recurso->getRecursos('', $ordCampo, $tpl->SORT);
+        $recursos = $recurso->getRecursos('', $ordCampo, $tpl->SORT);
     } else {
         $texto = $lib->formatarString($_GET['pesquisa']);
 //        $recursos = $recurso->getRecurso($texto, $ordCampo, $tpl->SORT);
-        $tarefas = $recurso->getRecursos($texto, $ordCampo, $tpl->SORT);
+        $recursos = $recurso->getRecursos($texto, $ordCampo, $tpl->SORT);
     }
 //
-    $totalrecursos = count($tarefas['CD_RECURSO']);
+    $totalrecursos = count($recursos['CD_RECURSO']);
     if ($totalrecursos == 0)
         $tpl->TOTAL = 0;
     $tpl->TOTAL = $totalrecursos;
@@ -169,13 +171,13 @@ if (!isset($_SESSION['login'])) {
             $tpl->CLASS = 'class="odd"';
         }
 //
-        $tpl->CD_RECURSO = $tarefas['CD_RECURSO'][$i];
-        $tpl->NOME_RECURSO = utf8_decode($tarefas['NOME_RECURSO'][$i]);
-        $tpl->DS_RECURSO = $tarefas['DS_RECURSO'][$i];
-        $tpl->CUSTO = $tarefas['CUSTO'][$i];
+        $tpl->CD_RECURSO = $recursos['CD_RECURSO'][$i];
+        $tpl->NOME_RECURSO = utf8_decode($recursos['NOME_RECURSO'][$i]);
+        $tpl->DS_RECURSO = $recursos['DS_RECURSO'][$i];
+        $tpl->CUSTO = $recursos['CUSTO'][$i];
         //add status
-        $tpl->STATUS = $tarefas['NOME_STATUSRECURSO'][$i];
-        $tpl->EDITAR = 'recursoEdit.php?cd_recurso=' . $tarefas['CD_RECURSO'][$i];
+        $tpl->STATUS = $recursos['NOME_STATUSRECURSO'][$i];
+        $tpl->EDITAR = 'recursoEdit.php?cd_recurso=' . $recursos['CD_RECURSO'][$i];
         $tpl->block('BLOCK_LISTAGEM');
     }
 //

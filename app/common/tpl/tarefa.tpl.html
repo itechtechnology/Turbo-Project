@@ -1,87 +1,100 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang='pt-br' xml:lang='pt-br' xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="{CSSDIR}/main.css" rel="stylesheet" type="text/css" />
         <link href="{CSSDIR}/cadastro.css" rel="stylesheet" type="text/css" />    
         <link href="{CSSDIR}/dateinput.css" rel="stylesheet" type="text/css" />
-        <link href="{CSSDIR}/tooltip.css" rel="stylesheet" type="text/css" />    
+        <link href="{CSSDIR}/tooltip.css" rel="stylesheet" type="text/css" />  
+
         <script type="text/javascript" src="{JSDIR}/jquery-1.6.1.min.js"></script>
         <script type="text/javascript" src="{JSDIR}/jquery.tools.min.js"></script>
-        <script src="http://imasters.com.br/crossbrowser/fonte.js" type="text/javascript"></script>
+
+        <!--        <script src="http://imasters.com.br/crossbrowser/fonte.js" type="text/javascript"></script>-->
         <link rel="shortcut icon" type="image/x-icon" href="{IMAGEDIR}/{FAVICON}" />
         <link rel="icon" type="image/x-icon" href="{IMAGEDIR}/{ANIMATEDFAVICON}" />
         <title>{SITETITLE}</title>
     </head>
     <body>
         {TOPO}
-        <div id="conteudo">
-            {MENULATERAL}
-            <div id="box_conteudo">
-                <a href="#" id="box_tooltip">
-                    <img src="{IMAGEDIR}/dicas.jpg" id="dicas" alt="" title="<p>
-                         {DICA}
-                         </p>" />
-                </a>
-                <script type="text/javascript">
-
-                </script>
-                <div id="tituloGeral">
-                    <h2>Nova Tarefa</h2>
-                </div>
-                <div id="envolve_formularios">
-                    <div id="errors">
-                        <h2>{ERROS}</h2>
+        <div>
+            <div id="conteudo">
+                {MENULATERAL}
+                <div id="box_conteudo">
+                    <div id="tituloGeral">
+                        <h2>Nova Tarefa</h2>
                     </div>
-                    <ul class="tabs">
-                        <li><a href="#dados">Dados Gerais</a></li>
-                    </ul>
-                    {TOTAL}
-                    <div class="panes">
-                        <div class="subpanes">
-                            <form name="form1" class="form" method="post" action="{CONTROLLER}">
-                                <fieldset>
-
-                                    <label> Nome Tarefa *
-                                        <input type="text" name="nome_tarefa" required="required" minlength="1" size="50" value="{NOME_TAREFA}">
-                                    </label>
-                                    <label> Projeto *
-                                        <select name="cd_projeto" required="required">
-                                            <!-- BEGIN BLOCK_PROJETO -->
-                                            <option value="{CD_PROJETO}" {PROJETOATUAL}>{PROJETO}</option>
-                                            <!-- END BLOCK_PROJETO -->
-                                        </select>
-                                    </label>
-                                    <label for="ds_tarefa"> DescriÃÂ§ÃÂ£o *
-                                        <textarea name="ds_tarefa">{DS_TAREFA}</textarea>
-                                    </label>
-                                    <label> Data Inicio *
-                                        <input type="date" name="dt_incio" required="required" minlength="10" maxlength="10" value="{DT_INCIO}">
-                                    </label>
-                                    <label> Data Previsao Fim *
-                                        <input type="date" name="dt_previsao" required="required" minlength="10" maxlength="10" value="{DT_PREVISAO}">
-                                    </label>
-
-                                    <input type="hidden" name="cd_tarefa" value="{CD_TAREFA}">
-
-                                </fieldset>
-                                <div class="barraForm">
-                                    <button type="submit" class="button positive">
-                                        <img src="{IMAGEDIR}/icons/tick.png" alt=""/> Salvar
-                                    </button>
-                                    <button type="reset" class="button negative">
-                                        <img src="{IMAGEDIR}/icons/cross.png" alt=""/> Limpar
-                                    </button>
-                                </div>
-                            </form>
+                    <div id="envolve_formularios">
+                        <div id="errors">
+                            <h2>{ERROS}</h2>
+                        </div>
+                        <ul class="tabs">
+                            <li><a href="#dados">Dados Gerais</a></li>
+                        </ul>
+                        {TOTAL}
+                        <div class="panes">
+                            <div class="subpanes">
+                                <form name="form1" class="form" method="post" action="{CONTROLLER}">
+                                    <fieldset>
+                                        <label> Nome Tarefa *
+                                            <input type="text" name="nome_tarefa" required="required" minlength="1" size="50" value="{NOME_TAREFA}">
+                                        </label>
+                                        <label> Projeto *
+                                            <select name="cd_projeto" required="required">
+                                                <!-- BEGIN BLOCK_PROJETO -->
+                                                <option value="{CD_PROJETO}" {PROJETOATUAL}>{PROJETO}</option>
+                                                <!-- END BLOCK_PROJETO -->
+                                            </select>
+                                        </label>
+                                        <label for="ds_tarefa"> Descrição *
+                                            <textarea name="ds_tarefa">{DS_TAREFA}</textarea>
+                                        </label>
+                                        <label> Data Inicio *
+                                            <input type="date" name="dt_incio" required="required" minlength="10" maxlength="10" value="{DT_INCIO}">
+                                        </label>
+                                        <label> Data Previsao Fim *
+                                            <input type="date" name="dt_previsao" required="required" minlength="10" maxlength="10" value="{DT_PREVISAO}">
+                                        </label>
+                                        <input type="hidden" name="cd_tarefa" value="{CD_TAREFA}">
+                                        <!-- carregar tarefas -->
+                                        <label> Subtarefa de  
+                                            <select name="cd_tarefa_sub">
+                                                <!-- BEGIN BLOCK_TAREFA -->
+                                                <option value="{CD_TAREFA_SUB}" {TAREFAATUAL}>{TAREFA}</option>
+                                                <!-- END BLOCK_TAREFA -->
+                                            </select>
+                                        </label>
+                                        <label> Responsavel 
+                                            <select name="cd_usuario">
+                                                <!-- BEGIN BLOCK_USUARIO -->
+                                                <option value="{CD_USUARIO}" {USUARIOATUAL}>{USUARIO}</option>
+                                                <!-- END BLOCK_USUARIO -->
+                                            </select>
+                                        </label>
+                                    </fieldset>
+                                    <div class="barraForm">
+                                        <button type="submit" class="button positive">
+                                            <img src="{IMAGEDIR}/icons/tick.png" alt=""/> Salvar
+                                        </button>
+                                        <button type="reset" class="button negative">
+                                            <img src="{IMAGEDIR}/icons/cross.png" alt=""/> Limpar
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                     <script type="text/javascript" src="{JSDIR}/configuracoesJS.js"></script>
+                    <!-- BEGIN BLOCK_SCRIPT -->
+                    <script type="text/javascript">
+                        document.getElementById('errors').style.display="block";
+                    </script>
+                    <!-- END BLOCK_SCRIPT -->
+                    <!-- FIM CADASTRO -->
                 </div>
-                <!-- FIM CADASTRO -->
             </div>
         </div>
         {RODAPE}
-    </body>
 
+    </body>
 </html>

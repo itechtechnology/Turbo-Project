@@ -1,352 +1,349 @@
-<style type="text/css">
-<!--
+
 * {
-padding: 0;
-margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 #todo{
-	height: 700px;
-	width: 660px;
-	float: left;
-	background-color: #BBD1DB;
+    height: 700px;
+    width: 660px;
+    float: left;
+    background-color: #BBD1DB;
 }
 #nome_form{
-	height: 30px;
-	width: 600px;
-	float: left;
-	margin-top:10px;
-	margin-left: 30px;
+    height: 30px;
+    width: 600px;
+    float: left;
+    margin-top:10px;
+    margin-left: 30px;
 }
 
 .style1 {
-	font-size: 24px;
-	font-weight: bold;
-	color: #990000;
+    font-size: 24px;
+    font-weight: bold;
+    color: #990000;
 }
 .style2 {
-	font-size: 16px;
-	font-weight: bold;
-	color: #006666;
+    font-size: 16px;
+    font-weight: bold;
+    color: #006666;
 }
 
 #t_nome{
-	height: 16px;
-	width: 180px;
-	float: left;
-	margin-top: 40px;
-	margin-left: 10px;
+    height: 16px;
+    width: 180px;
+    float: left;
+    margin-top: 40px;
+    margin-left: 10px;
 }
 
 #nome{
-	height: 16px;
-	width: 400px;
-	float: left;
-	margin-top: 40px;
-	margin-left: 10px;
+    height: 16px;
+    width: 400px;
+    float: left;
+    margin-top: 40px;
+    margin-left: 10px;
 }
 
 #t_email{
-	height: 16px;
-	width: 180px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 180px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #email{
-	height: 16px;
-	width: 400px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 400px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #t_login{
-	height: 16px;
-	width: 180px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 180px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #login{
-	height: 16px;
-	width: 400px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 400px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #t_senha1{
-	height: 16px;
-	width: 180px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 180px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #senha1{
-	height: 16px;
-	width: 400px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 400px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #t_senha2{
-	height: 16px;
-	width: 180px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 180px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #senha2{
-	height: 16px;
-	width: 400px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 400px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #t_sexo{
-	height: 16px;
-	width: 180px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 180px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 #masculino{
-	height: 16px;
-	width: 100px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 100px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #feminino{
-	height: 16px;
-	width: 300px;
-	float: left;
-	margin-top: 10px;
+    height: 16px;
+    width: 300px;
+    float: left;
+    margin-top: 10px;
 }
 
 #t_data{
-	height: 16px;
-	width: 180px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 180px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #data{
-	height: 16px;
-	width: 400px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 400px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #t_estado{
-	height: 16px;
-	width: 180px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 180px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #estado{
-	height: 20px;
-	width: 150px;
-	float: left;
-	margin-top: 6px;
-	margin-left: 5px;
+    height: 20px;
+    width: 150px;
+    float: left;
+    margin-top: 6px;
+    margin-left: 5px;
 }
 
 #t_pais{
-	height: 16px;
-	width: 180px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 180px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #pais{
-	height: 16px;
-	width: 400px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 400px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #t_complemento{
-	height: 16px;
-	width: 180px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 180px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #complemento{
-	height: 16px;
-	width: 400px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 400px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 #aux{
-	height: 25px;
-	width: 240px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 25px;
+    width: 240px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #t_rua{
-	height: 16px;
-	width: 180px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 180px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #rua{
-	height: 16px;
-	width: 400px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 400px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #t_numero{
-	height: 16px;
-	width: 180px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 180px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #numero{
-	height: 16px;
-	width: 400px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 400px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #t_bairro{
-	height: 16px;
-	width: 180px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 180px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #bairro{
-	height: 16px;
-	width: 400px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 400px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #t_cidade{
-	height: 16px;
-	width: 180px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 180px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #cidade{
-	height: 16px;
-	width: 400px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 400px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #t_cep{
-	height: 16px;
-	width: 180px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 180px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #cep{
-	height: 16px;
-	width: 400px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 400px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #t_cpf{
-	height: 16px;
-	width: 180px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 180px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #cpf{
-	height: 16px;
-	width: 400px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 400px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #t_telefone_fixo{
-	height: 16px;
-	width: 180px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 180px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #telefone_fixo{
-	height: 16px;
-	width: 400px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 400px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #t_telefone_celular{
-	height: 16px;
-	width: 180px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 180px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #telefone_celular{
-	height: 16px;
-	width: 400px;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
+    height: 16px;
+    width: 400px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #enviar{
-	height: 16px;
-	width: 60px;
-	float: left;
-	margin-top: 20px;
-	margin-left: 10px;
+    height: 16px;
+    width: 60px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
 }
 
 #limpar{
-	height: 16px;
-	width: 20px;
-	float: left;
-	margin-top: 20px;
-	margin-left: 10px;
+    height: 16px;
+    width: 20px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
 }
 .style4 {font-size: 14px}
 .style6 {color: #95BFFF}
--->
-</style>

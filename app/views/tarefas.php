@@ -28,7 +28,9 @@ if (!isset($_SESSION['login'])) {
     $tpl->TITULOLISTAGEM = 'Tarefas';
     $tpl->TITULOPROCURAR = 'LOCALIZAR';
     $tpl->DICA = 'DICA';
-    $tpl->USUARIO = $_SESSION['login'];
+    $u = new UsuariosRecord();
+    $uNome = $u->getNome($_SESSION['login']);
+    $tpl->USUARIO_LOGADO = $uNome;
 ////    require_once '../../jqgrid/tabs.php';
 ////    include 'grid.php';
     if (isset($_SESSION['str_erro'])) {

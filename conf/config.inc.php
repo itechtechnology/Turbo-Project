@@ -98,6 +98,7 @@
 */    
     define('DBNAME', 'itechcom_turbo');
     define('DBPASS', 'itechuesc123');
+//    define('DBHOST', 'pclocal.no-ip.org');
     define('DBHOST', 'localhost');
     define('DBUSER', 'itechcom');
     //define('DBSGBD', 'pgsql');

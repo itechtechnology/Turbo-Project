@@ -24,5 +24,18 @@ class EnderecosRecord extends ManipulaBanco{
 			 exit;
 		 }
 	}
+	
+	public function atualizarEndereco($dados, $cd_endereco){
+		
+			return $this->atualizar($dados,$cd_endereco);
+	}
+	
+	public function retornaDados($cd_endereco){
+		
+		$sql = "SELECT * FROM endereco WHERE cd_endereco = '$cd_endereco'";
+		$result = $this->executarPesquisa($sql);
+		return $result;
+	
+	}
 }
 ?>

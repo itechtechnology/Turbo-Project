@@ -2,6 +2,9 @@ $(document).ready(function(){
 
     // Craeate the grid manually
     $("#grid").jqGrid({
+        "defaults" : {
+            "height" : '10'
+        },
         "colModel":[
         {
             "name":"cd_recurso",
@@ -17,7 +20,9 @@ $(document).ready(function(){
             "label":"RECURSO",
             "width":180, 
             editable: true,
-            searchoptions:{sopt:['cn']}
+            searchoptions:{
+                sopt:['cn']
+                }
         },
 
         {
@@ -74,14 +79,21 @@ $(document).ready(function(){
     //        pdf:true
     })
     .jqGrid('filterToolbar')
-    .jqGrid('navButtonAdd','#pager',{
-        caption:"Visualizar", 
-        onClickButton : function () { 
-                        alert("tarefa.php?tarefa=5");
-//            alert('pdf');
-        } 
-    })
+//    .jqGrid('navButtonAdd','#pager',{
+//        caption:"Visualizar", 
+//        onClickButton : function () { 
+//            
+////                e.stopPropagation();
+////                var domEl = $(this).get(0);
+////                alert(""+$("#grid td tr").text()+" ");
+//           
+//                
+//            
+//            
+//        //            alert('pdf');
+//        } 
+//    })
     
-    ;
+;
 
 });

@@ -46,3 +46,20 @@ jqgrid
     themes/
     jq-config
     tabs
+
+grafico de gantt
+    projeto
+        tarefas
+
+adicionar colunas ao banco
+    tempo estimado tarefa
+    percentual completo
+    subtarefas
+    responsavel
+
+fk_cd_tarefa em tarefas
+ALTER TABLE tarefa ADD CONSTRAINT subtarefa FOREIGN KEY (fk_cd_tarefa) REFERENCES tarefa (cd_tarefa) ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+script da tarefa agendada
+* * * * * liviacorreia /usr/bin/wget -q /var/www/Turbo-Project/app/views/cron.php
+0 0 * *	* liviacorreia /usr/bin/wget -q /var/www/Turbo-Project/core/tarefaAgendada.php

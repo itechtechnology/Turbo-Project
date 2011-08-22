@@ -39,13 +39,15 @@ class ProjetosRecord extends ManipulaBanco {
     /**
      * METODO QUE RETORNO DOS DADOS DE UM DETERMINADO PROJETO
      * @param <int> $cd_projeto codigo do projeto a ser pesquisado
-     * @return <array> array contendo os dados da tabela projeot
+     * @return <array> array contendo os dados da tabela projeto
      */
     public function dadosProjeto($cd_projeto) {
-        $criteria = new TCriteria();
-        $criteria->add(new TFilter('cd_projeto', '=', $cd_projeto));
-
-        return $this->selecionar($criteria);
+//        $criteria = new TCriteria();
+//        $criteria->add(new TFilter('cd_projeto', '=', $cd_projeto));
+//
+//        return $this->selecionar($criteria);
+        $sql = "SELECT * FROM projeto where cd_projeto = " . $cd_projeto;
+        return $this->executarPesquisa($sql);
     }
 
     /** METÓDO QUE IRÁ RETORNAR UM PROJETO PELO ID

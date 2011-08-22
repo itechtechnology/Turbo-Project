@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{SITETITLE}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="../../core/gantt/codebase/dhtmlxgantt.css">
+        <link href="{CSSDIR}/main.css" rel="stylesheet" type="text/css" />
+        <link href="{CSSDIR}/relatorios.css" rel="stylesheet" type="text/css" />
+
+        <script type="text/javascript" src="{JSDIR}/jquery-1.6.1.min.js"></script>
+        <script type="text/javascript" src="{JSDIR}/jquery.tools.min.js?select=full&debug=true"></script>
+        <script type="text/javascript" src="{JSDIR}/fonte.js" ></script> 
+        <script type="text/javascript" src="{JSDIR}/configuracoesJS.js"></script>
+        <script type="text/javascript" src="../common/js/jquery-1.6.1.min.js"></script>
+
+        <link rel="shortcut icon" type="image/x-icon" href="{IMAGEDIR}/{FAVICON}" />
+        <link rel="icon" type="image/x-icon" href="{IMAGEDIR}/{ANIMATEDFAVICON}" />
+
+        <script type="text/javascript" language="JavaScript" src="../../core/gantt/codebase/dhtmlxcommon.js"></script>
+        <script type="text/javascript" language="JavaScript" src="../../core/gantt/codebase/dhtmlxgantt.js"></script>
+        <script type="text/javascript" language="JavaScript">
+            /*<![CDATA[*/
+            function createChartControl(htmlDiv1, xml)
+            {
+                
+                // Create Gantt control
+                var ganttChartControl = new GanttChart();
+                // Setup paths and behavior
+                ganttChartControl.setImagePath("../../core/gantt/codebase/imgs/");
+                ganttChartControl.setEditable(false);
+                ganttChartControl.showTreePanel(false);
+                ganttChartControl.showContextMenu(false);
+                ganttChartControl.showDescTask(true, 'n,s-f');
+                ganttChartControl.showDescProject(true, 'n,d');
+
+                // Load data structure		
+                //                ganttChartControl.addProject(project1);
+                ganttChartControl.create(htmlDiv1);
+                //                ganttChartControl.loadData("../../core/gantt/gantt.xml",true,true);
+                ganttChartControl.loadData(xml,true,true);
+                // Build control on the page
+                //                ganttChartControl.create(htmlDiv1);
+            }
+            /* ]]> */
+        </script>
+    </head>
+
+    <!--    <body onload="createChartControl('GanttDiv')">-->
+    <body>
+        {TOPO}
+        <div>
+            <div id="conteudo">
+                {MENULATERAL}
+                <div id="box_conteudo">
+                    <div id="titulo_relatorio">
+                        <h2>Grafico de Gantt - {NOME_PROJETO}</h2>
+                    </div>
+                    <!--                    <br/>-->
+                    {GANTT}
+                    <div style="width:650px; height:500px; position:relative" id="GanttDiv"></div>
+                </div>
+            </div>
+        </div>
+
+        {RODAPE}
+    </body>
+</html>

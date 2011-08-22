@@ -1,3 +1,6 @@
 nbproject/
 testes/
 jqgrid_02/
+/app/views/gantt.html
+/app/views/gantt.php
+/app/views/cron.php

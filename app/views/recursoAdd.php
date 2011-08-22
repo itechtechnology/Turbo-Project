@@ -11,6 +11,9 @@ if (!isset($_SESSION['login'])) {
     $tpl->addFile('TOPO', APPTPLDIR . '/topo.tpl.html');
     $tpl->addFile('MENULATERAL', APPTPLDIR . '/menuLateral.tpl.html');
     $tpl->addFile('RODAPE', APPTPLDIR . '/rodape.tpl.html');
+    $u = new UsuariosRecord();
+    $uNome = $u->getNome($_SESSION['login']);
+    $tpl->USUARIO_LOGADO = $uNome;
     $tpl->IMAGEDIR = APPIMAGEDIR;
     $tpl->CSSDIR = APPCSSDIR;
     $tpl->JSDIR = APPJSDIR;

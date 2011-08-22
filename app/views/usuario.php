@@ -30,9 +30,18 @@ if (isset($_SESSION["cadastro_usuario"])) {// Verifico se a sessão existe
     exit;
 }
 
+
+
+
 $lib = new Lib();
 
+
+
+
+
 $acao = $_GET['acao'];
+
+
 
 $erros = NULL;
 
@@ -69,6 +78,9 @@ switch ($acao) {
             $status = 2; //Passo para o próximo passo do cadastro
 
         break;
+
+
+
 
     case "add2":
 
@@ -138,19 +150,24 @@ switch ($acao) {
             $status = 4; //Passo para o próximo passo do cadastro
         break;
 
+
     case "add4":
 
         $pqegunta = $_REQUEST['pergunta'];
         $resposta = $_REQUEST['resposta'];
         $complemento = $_REQUEST['habilidade'];
 
+
+
         if ($resposta == '') {
             $erros .= "ERRO! - Você não respondeu a pergunta secreta <br>";
         }
 
+
         if ($erros == NULL)
             $status = 5; //Validação final
         break;
+
 
     case "valida1":
         $status = 1;

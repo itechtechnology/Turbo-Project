@@ -25,7 +25,6 @@ a {
 img{
 
 	border:0px;
-	position: center;
 
 }
 
@@ -492,8 +491,7 @@ div#nav ul li .submenu li a{
 
 
 
-div#nav ul li h2 
-{
+div#nav ul li h2 img{
 
 	width:224px;
 
@@ -523,9 +521,9 @@ div#nav ul li#top_menu{
 
 div#nav ul li#top_menu div#dados{	
 
-	margin:10px 0px 0px 10px;
+	margin:0;
 
-	background: url(../../common/images/titulo_geral3.png);
+	background: #fff;
 
 	min-height: 58px;
 

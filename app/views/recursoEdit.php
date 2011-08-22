@@ -22,11 +22,11 @@ if (!isset($_SESSION['login'])) {
 //$tpl->MEMORYUSAGE = number_format(intval(memory_get_usage() / 1000), 0, ',', '.');
 //$tpl->MEMORYPICK = number_format(intval(memory_get_peak_usage() / 1000), 0, ',', '.');
     $tpl->CONTROLLER = '../controllers/RecursoFisico.class.php?acao=edit';
-    $tarefas = $recurso->dadosRecurso($_GET['cd_recurso']);
-    $tpl->CD_RECURSO = $tarefas['CD_RECURSO']['0'];
-    $tpl->NOME_RECURSO = $tarefas['NOME_RECURSO']['0'];
-    $tpl->CUSTO = $tarefas['CUSTO']['0'];
-    $tpl->DS_RECURSO = $tarefas['DS_RECURSO']['0'];;
+    $recursos = $recurso->dadosRecurso($_GET['cd_recurso']);
+    $tpl->CD_RECURSO = $recursos['CD_RECURSO']['0'];
+    $tpl->NOME_RECURSO = $recursos['NOME_RECURSO']['0'];
+    $tpl->CUSTO = $recursos['CUSTO']['0'];
+    $tpl->DS_RECURSO = $recursos['DS_RECURSO']['0'];;
     $tpl->show();
 }
 ?>
