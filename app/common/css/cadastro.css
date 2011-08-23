@@ -123,7 +123,7 @@ ul.css-tabs li a img{
 .form input:active {    background-color:#888;
                         font-family: 'Times New Roman',Times,serif;
 }/* textarea field */
-.form textarea {        width: 290px;	border:1px solid #444;        
+.form textarea {        width: 610px;	border:1px solid #444;        
                         background-color: #ccc;	padding:5px;	/*color:#ddd;*/        
                         color:#FFF;	font-size:12px;	/* CSS3 spicing */	
                         -moz-border-radius:4px;	
@@ -133,6 +133,16 @@ ul.css-tabs li a img{
                           background-color: #5B7580;    border: 1px #023E87 solid;    
                           text-shadow:1px 1px 1px #000;    font-weight: bold;    /*text-shadow: none;*/}
 .form textarea:active {    background-color:#888;}
+.form select { width: 290px; border:1px solid #444;
+                        background-color: #ccc; padding:5px; /*color:#ddd;*/
+                        color:#FFF; font-size:12px; /* CSS3 spicing */
+                        -moz-border-radius:4px;
+                        -webkit-border-radius:4px;
+                        text-shadow:1px 1px 1px #000;}
+.form select:focus { color: #fff;
+                          background-color: #5B7580; border: 1px #023E87 solid;
+                          text-shadow:1px 1px 1px #000; font-weight: bold; /*text-shadow: none;*/}
+.form select:active { background-color:#888;}
 .form div.barraForm {    margin-top: 10px;    float: left;}/* button *//*
                                                                        .form button {   
                                                                        margin-right: 15px; 

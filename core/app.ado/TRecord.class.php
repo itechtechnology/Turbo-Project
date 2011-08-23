@@ -98,7 +98,7 @@
 
             $conn = TTransaction::get();
 
-            echo $sql->getInstruction()."<br>\n";
+            //echo $sql->getInstruction()."<br>\n";
             $result = $conn->Execute($sql->getInstruction());
 			
             TTransaction::close();
