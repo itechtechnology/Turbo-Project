@@ -5,6 +5,9 @@
   Data de modificação: 07-07-2011
 
  */
+//editado por Anderson Rodrigues evitar erros de warnings 
+error_reporting(0);
+
 @ session_start();
 
 /* seto a codificação como utf-8 */
