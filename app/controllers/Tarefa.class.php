@@ -78,12 +78,15 @@ switch ($acao) {
                 header("location: ../views/tarefa.php?tarefa=" . $cd_tarefa);
             } else {
                 $sql = "UPDATE tarefa SET fk_cd_status = 6, dt_conclusao = '" .
-                date('Y-m-d') . "', pcompleto = 100 WHERE cd_tarefa = " . $cd_tarefa;
+                        date('Y-m-d') . "', pcompleto = 100 WHERE cd_tarefa = " . $cd_tarefa;
                 $_SESSION['str_erro'] = $sql;
                 header("location: ../views/tarefas.php");
             }
             session_unregister($_SESSION['cd_tarefa']);
             break;
+        }
+    case 'percentual': {
+            
         }
 }
 ?>

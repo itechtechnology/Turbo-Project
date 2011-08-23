@@ -17,7 +17,7 @@ class RespostaPerguntasRecord extends ManipulaBanco{
                        
 		 if ($this->salvar($dados)){ 
 	
-			return $this->ultimoId('opcoesperguntas_cd_pergunta_seq', 'pgsql'); //Último id da sequencia
+			return $this->ultimoId('opcoesperguntas_cd_pergunta_seq', 'postgres'); //Último id da sequencia
 		 }
 		 
 		 else {

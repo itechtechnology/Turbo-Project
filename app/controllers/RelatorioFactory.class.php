@@ -55,7 +55,7 @@ class RelatorioFactory {
                     break;
                 }
             case 'usuarios': {
-                    $this->grid->SelectCommand = 'SELECT cd_usuario, nome, login FROM usuario';
+                    $this->grid->SelectCommand = 'SELECT usuario.cd_usuario, usuario.nome, usuario.login FROM usuario';
                     $oper = $_POST['oper'];
                     if ($oper == 'edit') {
                         $this->grid->table = 'usuario';
@@ -65,6 +65,18 @@ class RelatorioFactory {
                     } else {
                         $this->grid->queryGrid();
                     }
+                    break;
+                }
+            case 'projetos': {
+                    $this->grid->SelectCommand = "SELECT projeto.cd_projeto, projeto.nome_projeto, tarefa.nome_tarefa," .
+                            " status.nome_status" .
+                            " FROM public.projeto JOIN" .
+                            " public.tarefa ON tarefa.fk_cd_projeto = projeto.cd_projeto JOIN" .
+                            " public.status ON status.cd_status = tarefa.fk_cd_status" 
+//                            .
+//                            " ORDER BY nome_projeto, nome_tarefa"
+                            ;
+                    $this->grid->queryGrid();
                     break;
                 }
         }

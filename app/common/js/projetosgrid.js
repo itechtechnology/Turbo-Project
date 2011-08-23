@@ -26,37 +26,24 @@ $(document).ready(function(){
         },
 
         {
-            "name":"ds_rprojeto",
-            "index":"ds_recurso",
-            "label":"DESCRICAO",
+            "name":"nome_tarefa",
+            "index":"nome_tarefa",
+            "label":"TAREFA",
             "width":180, 
             editable: true
         },
 
-        {
-            "name":"custo",
-            "index":"custo",
-            "label":"CUSTO",
-            "width":100, 
-            formatter:'currency', 
-            formatoptions:{
-                decimalSeparator:",", 
-                thousandsSeparator: ",", 
-                decimalPlaces: 2, 
-                prefix: "R$ "
-            },
-            editable: true
-        },
+        
 
         {
-            "name":"nome_statusrecurso",
-            "index":"nome_statusrecurso",
+            "name":"nome_status",
+            "index":"nome_status",
             "label":"STATUS",
             "width":120, 
             editable: true
         }
         ],
-        "url":"../controllers/Relatorio.php?relatorio=recurso",
+        "url":"../controllers/Relatorio.php?relatorio=projetos",
         //        "url":"recursosgrid.php?relatorio=recurso",
         "datatype":"json",
         "jsonReader":{
@@ -64,6 +51,12 @@ $(document).ready(function(){
         },
         'rowNum':'10',
         'rowList':[10,20,30], 
+        grouping:true, 
+        groupingView : { 
+            groupField : ['nome_projeto'],
+            groupDataSorted : false 
+        }, 
+        caption: "Projetos", 
         //                    'pager': jQuery('#pager')
         "pager":"#pager"
     // in this case the same url

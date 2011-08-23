@@ -70,40 +70,48 @@ class Xml {
 
     public function carregarSubTarefas($conteudo, $tarefas) {
         $total = count($tarefas['CD_TAREFA']);
+
         for ($i = 1; $i <= $total; $i++) {
-            $conteudo.="<task id=\"";
-            $conteudo.=$tarefas['CD_TAREFA'][$i];
-            $conteudo.="\">";
-            $data = strrev($tarefas['DT_INCIO'][$i]);
-            $data = substr($data, -10);
-            $data = strrev($data);
-            $arr = Xml::converteData($data);
-            $conteudo.= "<name>";
-            $conteudo.= $tarefas['NOME_TAREFA'][$i];
-            $conteudo.= "</name>";
-            $conteudo.= "<est>";
-            $conteudo.=$arr[0] . "," . $arr[1] . "," . $arr[2];
-            $conteudo.= "</est>";
-            $conteudo.="<duration>";
-            $duracao = (Xml::diferencaDatas($tarefas['DT_INCIO'][$i], $tarefas['DT_PREVISAO'][$i])) * 24;
-            $conteudo.= $duracao;
-            $conteudo.="</duration>
+            if ($z == 1) {
+                
+            } else {
+                $conteudo.="<task id=\"";
+                $conteudo.=$tarefas['CD_TAREFA'][$i];
+                $conteudo.="\">";
+                $data = strrev($tarefas['DT_INCIO'][$i]);
+                $data = substr($data, -10);
+                $data = strrev($data);
+                $arr = Xml::converteData($data);
+                $conteudo.= "<name>";
+                $conteudo.= $tarefas['NOME_TAREFA'][$i];
+                $conteudo.= "</name>";
+                $conteudo.= "<est>";
+                $conteudo.=$arr[0] . "," . $arr[1] . "," . $arr[2];
+                $conteudo.= "</est>";
+                $conteudo.="<duration>";
+                $duracao = (Xml::diferencaDatas($tarefas['DT_INCIO'][$i], $tarefas['DT_PREVISAO'][$i])) * 24;
+                $conteudo.= $duracao;
+                $conteudo.="</duration>
             <percentcompleted>";
-            $conteudo.=$tarefas['PCOMPLETO'][$i];
-            $conteudo.="</percentcompleted>
+                $conteudo.=$tarefas['PCOMPLETO'][$i];
+                $conteudo.="</percentcompleted>
             <predecessortasks></predecessortasks>
             <childtasks>";
-            //aqui verifico se possui subtarefas, caso sim chamo o meto
-            //recursivamente
-            $sub = $this->tarefa->getSubTarefas($tarefas['CD_TAREFA'][$i]);
-            $totalsub = count($sub['CD_TAREFA']);
-            if ($totalsub == 0) {
-                $conteudo.="</childtasks>";
-                $conteudo.="</task>";
-            } else {
-                $conteudo = $this->carregarSubTarefas($conteudo, $sub);
-                $conteudo.="</childtasks>";
-                $conteudo.="</task>";
+                //aqui verifico se possui subtarefas, caso sim chamo o meto
+                //recursivamente
+                $sub = $this->tarefa->getSubTarefas($tarefas['CD_TAREFA'][$i]);
+                $totalsub = count($sub['CD_TAREFA']);
+                if ($totalsub == 0) {
+                    $conteudo.="</childtasks>";
+                    $conteudo.="</task>";
+                    $z = 0;
+                } else {
+
+                    $conteudo = $this->carregarSubTarefas($conteudo, $sub);
+                    $conteudo.="</childtasks>";
+                    $conteudo.="</task>";
+                    $z = 1;
+                }
             }
         }
         return $conteudo;

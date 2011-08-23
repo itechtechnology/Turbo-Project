@@ -1,0 +1,10 @@
+[21-Aug-2011 08:14:54] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'var SITETITLE n�o existe' in /home/itechcom/public_html/app/models/sistTemplate.class.php:117
+Stack trace:
+#0 /home/itechcom/public_html/web/index.php(17): sistTemplate->__set('SITETITLE', 'Itech - TurboPr...')
+#1 {main}
+  thrown in /home/itechcom/public_html/app/models/sistTemplate.class.php on line 117
+[21-Aug-2011 08:15:12] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'var SITETITLE n�o existe' in /home/itechcom/public_html/app/models/sistTemplate.class.php:117
+Stack trace:
+#0 /home/itechcom/public_html/web/index.php(17): sistTemplate->__set('SITETITLE', 'Itech - TurboPr...')
+#1 {main}
+  thrown in /home/itechcom/public_html/app/models/sistTemplate.class.php on line 117

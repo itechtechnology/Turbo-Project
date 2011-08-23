@@ -50,9 +50,14 @@ if (!isset($_SESSION['login'])) {
     $tpl->RESPONSAVEL = $task['RESPONSAVEL']['1'];
     $tpl->DT_INCIO = $lib->converterDataToBr($task['DT_INCIO']['1']);
     $tpl->DT_PREVISAO = $lib->converterDataToBr($task['DT_PREVISAO']['1']);
-    $tpl->DT_CONCLUSAO = $lib->converterDataToBr($task['DT_CONCLUSAO']['1']);
     
     $tpl->DESCRICAO = $task['DS_TAREFA']['1'];
+    
+    if(empty ($task['DT_CONCLUSAO']['1'])){
+        $tpl->block('BLOCK_CONCLUIR');
+    }else{
+        $tpl->DT_CONCLUSAO = $lib->converterDataToBr($task['DT_CONCLUSAO']['1']);
+    }
     
 
     for ($i = 1; $i <= count($tar['NOME_TAREFA']); $i++) {

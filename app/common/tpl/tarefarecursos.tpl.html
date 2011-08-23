@@ -42,7 +42,12 @@
                         <p>Responsavel: {RESPONSAVEL}</p>
                         <p>Inicio: {DT_INCIO}</p>
                         <p>Previsao Fim: {DT_PREVISAO}</p>
-                        <p>Conclusao: {DT_CONCLUSAO} <a href="../controllers/Tarefa.class.php?acao=concluir&tarefa={CD_TAREFA}">Concluir</a> | <a href="#">Mudar Percentual</a></p>
+                        <p>Conclusao: {DT_CONCLUSAO} 
+                            <!-- BEGIN BLOCK_CONCLUIR -->
+                            <a href="../controllers/Tarefa.class.php?acao=concluir&tarefa={CD_TAREFA}">Concluir</a> | 
+                            <a href="#">Mudar Percentual</a>
+                            <!-- END BLOCK_CONCLUIR -->
+                        </p>
                         <p>{DESCRICAO}</p>
                     </div>
                     <div class="direita">

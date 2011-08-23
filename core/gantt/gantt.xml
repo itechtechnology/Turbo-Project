@@ -1,37 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><projects><project id = "3" name = "Fichamento Online" startdate = "2011,2,18"><task id="10"><name>Desenvolver Interface Grafica</name><est>2011,8,19</est><duration>240</duration>
+<?xml version="1.0" encoding="UTF-8"?><projects><project id = "3" name = "TurboProject" startdate = "2011,7,22"><task id="7"><name>Arquitetura de Software</name><est>2011,8,22</est><duration>24</duration>
             <percentcompleted>0</percentcompleted>
             <predecessortasks></predecessortasks>
-            <childtasks></childtasks></task><task id="12"><name>Dicionario de dados</name><est>2011,8,20</est><duration>168</duration>
-            <percentcompleted>0</percentcompleted>
+            <childtasks></childtasks></task><task id="4"><name>Documentação de Analise e Requisitos</name><est>2011,8,06</est><duration>408</duration>
+            <percentcompleted>100</percentcompleted>
             <predecessortasks></predecessortasks>
-            <childtasks></childtasks></task><task id="13"><name>nova tarefa</name><est>2011,8,30</est><duration>24</duration>
-            <percentcompleted>0</percentcompleted>
-            <predecessortasks></predecessortasks>
-            <childtasks></childtasks></task><task id="15"><name>afdgsdg</name><est>2011,8,21</est><duration>96</duration>
-            <percentcompleted>0</percentcompleted>
-            <predecessortasks></predecessortasks>
-            <childtasks></childtasks></task><task id="9"><name>Desenvolver Interface Grafica</name><est>2011,8,21</est><duration>720</duration>
-            <percentcompleted>0</percentcompleted>
-            <predecessortasks></predecessortasks>
-            <childtasks></childtasks></task><task id="11"><name>Fotos</name><est>2011,8,10</est><duration>9240</duration>
-            <percentcompleted>70</percentcompleted>
-            <predecessortasks></predecessortasks>
-            <childtasks><task id="9"><name>Desenvolver Interface Grafica</name><est>2011,8,21</est><duration>720</duration>
-            <percentcompleted>0</percentcompleted>
-            <predecessortasks></predecessortasks>
-            <childtasks></childtasks></task><task id="18"><name>fotos de ozzy</name><est>2011,8,25</est><duration>264</duration>
-            <percentcompleted>0</percentcompleted>
-            <predecessortasks></predecessortasks>
-            <childtasks><task id="17"><name>fotos aldeia</name><est>2011,8,28</est><duration>96</duration>
-            <percentcompleted>0</percentcompleted>
-            <predecessortasks></predecessortasks>
-            <childtasks></childtasks></task></childtasks></task></childtasks></task><task id="17"><name>fotos aldeia</name><est>2011,8,28</est><duration>96</duration>
-            <percentcompleted>0</percentcompleted>
-            <predecessortasks></predecessortasks>
-            <childtasks></childtasks></task><task id="18"><name>fotos de ozzy</name><est>2011,8,25</est><duration>264</duration>
-            <percentcompleted>0</percentcompleted>
-            <predecessortasks></predecessortasks>
-            <childtasks><task id="17"><name>fotos aldeia</name><est>2011,8,28</est><duration>96</duration>
-            <percentcompleted>0</percentcompleted>
-            <predecessortasks></predecessortasks>
-            <childtasks></childtasks></task></childtasks></task></project></projects>
+            <childtasks></childtasks></task></project></projects>

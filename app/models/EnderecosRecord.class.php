@@ -16,7 +16,7 @@ class EnderecosRecord extends ManipulaBanco{
                        
 		 if ($this->salvar($endereco)){ 
 	
-			return $this->ultimoId('endereco_cd_endereco_seq', 'pgsql'); //Último id da sequencia
+			return $this->ultimoId('endereco_cd_endereco_seq', 'postgres'); //Último id da sequencia
 		 }
 		 
 		 else {

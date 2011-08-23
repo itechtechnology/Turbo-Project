@@ -6,7 +6,12 @@ $lib = new Lib();
 
 $usuario = new UsuariosRecord();
 
-//session_start(); //Inicio a sessALo			
+
+
+
+
+
+
 if (isset($_SESSION["cadastro_usuario"])) {// Verifico se a sessão existe
     $dados = unserialize($_SESSION["cadastro_usuario"]);
 
@@ -37,17 +42,30 @@ if (isset($_SESSION["cadastro_usuario"])) {// Verifico se a sessão existe
     exit;
 }
 
+
+
+
 $lib = new Lib();
+
+
+
+
+
 $acao = $_GET['acao'];
+
+
+
 $erros = NULL;
 
 switch ($acao) {
 
     case "add1":
+
         $email = $_REQUEST['email'];
         $login = $_REQUEST['login'];
         $senha1 = $_REQUEST['senha1'];
         $senha2 = $_REQUEST['senha2'];
+
 
         if ($login == '') {
             $erros .= "ERRO! - Você não preencheu o campo login <br>";
@@ -155,13 +173,19 @@ switch ($acao) {
         $resposta = $_REQUEST['resposta'];
         $habilidade1 = $_REQUEST['habilidade1'];
 
+
+
         if ($resposta == '') {
             $erros .= "ERRO! - Você não respondeu a pergunta secreta <br>";
         }
 
+
         if ($erros == NULL)
             $status = 5; //Validação final
         break;
+
+
+
 
     case "v1": //Volta para etapa 1 do cadastro
         $status = 1;
@@ -258,5 +282,5 @@ $dados["erros"] = $erros;
 
 $_SESSION["cadastro_usuario"] = serialize($dados);
 
-Header("Location: ../views/usuarioAdd.php");
+header("Location: ../views/usuarioAdd.php");
 ?>

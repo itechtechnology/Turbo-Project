@@ -16,6 +16,74 @@
     <script type="text/javascript" src="www.itech10.com/web/common/acessibilidade/jquery.nivo.slider.pack.js"></script>    
     <link rel="icon" type="image/x-icon" href="{IMAGEDIR}/{ANIMATEDFAVICON}"/>
     <title>{SITETITLE}</title>
+    
+    <!-- Script responsável por aumentar/diminuir fonte EDITADO POR TÁRSIO-->	
+		<script language=Javascript>
+			var tam=15;
+			var tamFontMenu=100;
+			var ctr=0;
+			function fonte(x) {
+				tam+=x;
+				tamFontMenu+=x;
+				if(tam>21){ tam=21; ctr=1;}
+				if(tam<9) tam=9;
+				if(tamFontMenu>210) tamFontMenu=210;
+				if(tamFontMenu<90) tamFontMenu=90;
+				document.getElementById("envolve_login").style.fontSize = tam+'px';
+				for(var i=1;i<=3;i++){
+					var submenu=$('#submenu'+i).css('width');
+					submenu=submenu.split("%")
+					submenu=submenu[0];
+					submenu=Number(submenu)+Number(5);
+					document.getElementById("submenu"+i).style.fontSize = tamFontMenu+'%';
+					if(ctr==0) document.getElementById("submenu"+i).style.width = submenu+'%';
+				}
+			}
+		</script>
+		
+		<!-- Script responsável pelo efeito de contraste (EDITADO POR TÁRSIO)-->	
+		<script language="javascript">
+			$(document).ready(function() {
+				var flag=0; //essa variável indica o estado do efeito, se está ativado (1) ou não (0).  
+				$('#navegacaoContraste').click(function () {
+					if(flag==0){
+						$('html').css({"background-color":"#000"});
+						$('a').css({"color":"white","font-weight": "bold","background-color":"black"});
+						$('#envolve_login').css({"border-color":"#000","background":"#000"});
+						$('MENU').css({"border-color":"#000","background":"#1C5072"});
+						$('#campoSenha').css({"color": "white", "font-weight": "bold"});
+						$('#campoLogin').css({"color": "white", "font-weight": "bold"});
+						$('body').css({"background": "black"});
+						$('#mensagem').css({"color": "white","font-weight": "bold"});
+						flag=1;
+					}
+					else{
+						$('html').css({"background-color":"#DCDCDC"});
+						$('a').css({"color":"white","font-weight": "bold","background-color":"#999","text-decoration": "underline"});
+						$('#envolve_login').css({"border-color":"white", "background-color":"#DCDCDC"});
+						$('MENU').css({"border-color":"white","background":"white"});
+						$('#campoSenha').css({"color": "black"});
+						$('#campoLogin').css({"color": "black"});
+						$('#mensagem').css({"color": "black"});
+						$('body').css({"background": "#DCDCDC"});
+						flag=0;
+					}
+				});
+				//Um tratamento diferenciado para os links substituindo a pseudoclasse :hover
+				$('a').mouseover(function () {
+					if(flag==1){
+						$(this).css({"color":"black","font-weight":"bold","background-color":"white"});
+					}else{ $(this).css({"font-weight":"bold","color":"black","background-color":"white"}); }
+				});
+				$('a').mouseout(function () {
+					if(flag==1){
+						$(this).css({"text-decoration":"underline","background-color":"#999","font-weight":"bold","color":"white"});
+					}else{ $(this).css({"text-decoration":"none","color":"white","background-color":"#999","font-weight":"bold"}); }
+				});
+			});
+		</script>
+		
+		<!--FIM DA EDIÇÃO-->
   </head>
 
   <body>
@@ -41,16 +109,32 @@
                     </script>
 
                 </div>
+              
+		<div id="faixaSup"> </div>
+		
+		  <div id="navegacao">
+		    <ul>
+			<li><a id="navegacaoAumentaFonte" value="+" onclick="fonte(1)" title="Aumentar fonte">Aumentar fonte</a></li>
+			<li><a id="navegacaoDiminuiFonte" value="-" onclick="fonte(-1)" title="Diminuir fonte">Diminuir fonte</a></li>
+			<li><a id="navegacaoContraste" title="Alto contraste">Alto contraste</a></li>
+			<li><a id="navegacaoHome" href="http://www.itech10.com/web" title="Ir para a página principal da ITECH">HOME</a></li>
+		    </ul>
+		  </div>
 
                 <div id="form_login">
 
                     <form action="../app/controllers/login.php" method="POST">
+			
+			<div id="campoLogin">
+                        <p><label for="login">Login:</label> <input type="text" name="login" id="login" /></p></div>
+                        
+                        <div id="campoSenha">
 
-                        <p><label for="login">Login:</label> <input type="text" name="login" id="login" /></p>
+                        <p><label for="senha">Senha:</label> <input type="password" name="senha" id="senha" /></p></div>
+                        
+                        <div id= "botaoEntrar">
 
-                        <p><label for="senha">Senha:</label> <input type="password" name="senha" id="senha" /></p>
-
-                        <p><input type="image" src="{IMAGEDIR}/btn_entrar.png" name="btn_entrar" id="btn_entrar" /></p>
+                        <p><input type="image" src="{IMAGEDIR}/btn_entrar.png" name="btn_entrar" id="btn_entrar" /></p></div>
 
                     </form>
 
@@ -63,10 +147,11 @@
                     <p>Para acessar o sistema é necessário efetuar login.</p>
 
                     <a href="contato.php">Esqueci a senha!</a>
+                    
+                     </div>
+             </div>
 
-                </div>
-
-            </div>
+             <div id="faixaInf"></div>
 
     </div>
     

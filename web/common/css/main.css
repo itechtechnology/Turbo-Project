@@ -14,10 +14,11 @@
 
 a {
 
-	/*color: #333;*/
-
 	text-decoration: none;
-
+	font-weight: bold;
+	text-decoration: underline;
+	background-color: #999;
+	color: white;
 }
 
 
@@ -47,6 +48,8 @@ body {
 	background-image: url(../../common/images/background.jpg);
 
 	background-repeat: repeat;
+	height: 600px;
+	width: 800px;
 
 }
 
@@ -134,8 +137,136 @@ div#dados_sessao a:hover{
 
 }
 
+/*EDITADO POR TÁRSIO*/
+#navegacaoAumentaFonte, #navegacaoDiminuiFonte, #navegacaoContraste, #navegacaoHome{
+	text-indent: -999px;
+	height: 16px;
+	width: 16px;
+	display: block;
+	float: left;
+	margin-right: 4px;
+	margin-left: 4px;
+	margin-top: 2px;
+}
+#navegacao ul {
+	margin: 0px;
+	padding: 0px;
+}
+#navegacao li {
+	display: inline;
+	list-style-type: none;
+}
+#navegacaoHome{
+	background-image:url("http://www.itech10.com/web/common/acessibilidade/imagens/home.png");
+}
+#navegacao{
+	display: block;
+	width: 120px;
+	height: 22px;
+	margin-top:0px;
+	position:relative;
+	background: #1C5072;
+	border-bottom: 2px solid white;
+	float: left;
+}
 
 
+#navegacaoAumentaFonte{
+	background-image:url("http://www.itech10.com/web/common/acessibilidade/imagens/zoom_in.png");
+	cursor:pointer;
+	cursor:hand;
+}
+
+#navegacaoDiminuiFonte{
+	background-image:url("http://www.itech10.com/web/common/acessibilidade/imagens/zoom_out.png");
+	cursor:pointer;
+	cursor:hand;
+}
+#navegacaoContraste{
+	background-image:url("http://www.itech10.com/web/common/acessibilidade/imagens/monitor.png");
+	cursor:pointer;
+	cursor:hand;
+}
+
+li ul {
+	display: none;
+	left: -70px;
+	position: absolute;
+	top: 18px;
+	/*color: #3D6272;*/
+}
+
+li:hover ul { 
+	li:hover ul { 
+	display: block;}
+}
+#faixaSup{
+	position: relative;
+	margin-top: 0px;
+	width:1000;
+	height:40px;
+	background: #3D6272;
+	float: center;
+	right: 0%;
+}
+#faixaInf{
+	position: absolute;
+	margin-top: 255px;
+	width:1000;
+	height:40px;
+	background: #3D6272;
+	left: 11%;
+}
+#centraliza_login{
+	position:relative;
+	width: auto;
+	height: auto;
+	left: 15%;
+	float: center;
+}
+
+#mensagem{
+	position: relative;
+	margin-top: 70px;
+	left:5%;
+	color: black;
+	font-weight: bold;
+}
+
+img{
+
+	border:0px;
+	position: center;
+
+}
+
+
+
+a:hover {
+
+	text-decoration: underline;
+
+	color: #999;
+
+}
+#botaoEntrar{
+	left: 125px;
+	position: relative;
+	padding-top: 8px;
+	background-color: none;
+}
+
+#campoSenha{
+	top: 4px;
+	position: relative;
+	color: black;
+}
+#campoLogin{
+	right: 115px;
+	position: relative;
+	color: black;
+}
+/*FIM DA EDIÇÃO POR TÁRSIO*/
 #corpoMenu .menu .logomarca{
 
 	width:310px;
@@ -509,8 +640,6 @@ div#nav ul li#top_menu{
 
 	height:67px;
 
-	/*background: url(../../common/images/bg_topmenu.png) repeat-x;*/
-
 	background: #FFF;
 
 	margin-bottom:0px;
@@ -521,9 +650,9 @@ div#nav ul li#top_menu{
 
 div#nav ul li#top_menu div#dados{	
 
-	margin:0;
+	margin:10px 0px 0px 10px;
 
-	background: #fff;
+	background: url(../../common/images/titulo_geral3.png);
 
 	min-height: 58px;
 
@@ -563,7 +692,7 @@ div#nav ul li#top_menu div#dados a{
 
         float: left;
 
-	margin-left: 20px;
+	margin-left: 200px;
 
 	color: #023E88;
 
@@ -762,26 +891,13 @@ div#desenpenho{
 /* RODAP */
 
 
-
-div#envolve_rodape{
-
-	width:100%;
-
-	height:181px;
-
-	background:url(../../common/images/bg_rodape.png) repeat-x;
-
-}
-
-
-
 div#envolve_rodape div#box_rodape{
 
 	width:980px;
 
 	height:150px;
 
-	background:	none;
+	background:none;
 
 	padding-top:28px;
 
@@ -797,14 +913,14 @@ div#box_rodape div#assinatura{
 
 	height:100%;
 
-	background:	none;
+	background:none;
 
 	float:left;
 
 	font-style:italic;
 
 	font-size:15px;
-
+	padding-top: 175px;
 }
 
 
@@ -815,7 +931,7 @@ div#assinatura ul{
 
 	list-style:none;
 
-	margin-top:15px;
+	margin-top:13px;
 
 	color:#6d6e71;
 
@@ -859,11 +975,15 @@ div#assinatura p{
 
 	float:left;
 
-	color:#a7a9ac;
+	/*color:#a7a9ac;*/
+	color: white;
 
 	font-size:13px;
 
-	margin-top:5px;
+	margin-top:50px;
+	position: relative;
+	font-weight: bold;
+	left: 320px;
 
 }
 
@@ -887,7 +1007,8 @@ div#endereco{
 
 	float:right;
 
-	color:#7e7c7c;
+	/*color:#7e7c7c;*/
+	color: white;
 
 	font-size:13px;
 
@@ -897,15 +1018,16 @@ div#endereco{
 
 	height:73px;
 
-	margin-top:85px;
+	margin-top:226px;
 
 	text-align:right;
+	position: relative;
 
 }
 
 div#endereco p#telefone{
 
-	margin-top:10px;
+	margin-top:5px;
 
 	font-size:16px;
 
