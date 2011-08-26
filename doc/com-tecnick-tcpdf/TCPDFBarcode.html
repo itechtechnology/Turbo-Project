@@ -1,0 +1,1204 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class TCPDFBarcode</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class TCPDFBarcode</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">author:</span> Nicola Asuni</li>
+				<li><span class="field">version:</span> 1.0.015</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_jqgrid---php---tcpdf---barcodes.php.html">/jqgrid/php/tcpdf/barcodes.php</a> (line <span class="field">50</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$barcode_array" title="details" class="var-name">$barcode_array</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																												
+												<div class="method-definition">
+											<span class="method-result">TCPDFBarcode</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, <span class="var-type">$type</span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#barcode_c128" title="details" class="method-name">barcode_c128</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, [<span class="var-type">$type</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#barcode_codabar" title="details" class="method-name">barcode_codabar</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#barcode_code11" title="details" class="method-name">barcode_code11</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#barcode_code39" title="details" class="method-name">barcode_code39</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, [<span class="var-type">$extended</span>&nbsp;<span class="var-name">$extended</span> = <span class="var-default">false</span>], [<span class="var-type">$checksum</span>&nbsp;<span class="var-name">$checksum</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#barcode_code93" title="details" class="method-name">barcode_code93</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#barcode_eanext" title="details" class="method-name">barcode_eanext</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, [<span class="var-type">$len</span>&nbsp;<span class="var-name">$len</span> = <span class="var-default">5</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#barcode_eanupc" title="details" class="method-name">barcode_eanupc</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, [<span class="var-type">$len</span>&nbsp;<span class="var-name">$len</span> = <span class="var-default">13</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#barcode_i25" title="details" class="method-name">barcode_i25</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, [<span class="var-type">$checksum</span>&nbsp;<span class="var-name">$checksum</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#barcode_imb" title="details" class="method-name">barcode_imb</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#barcode_msi" title="details" class="method-name">barcode_msi</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, [<span class="var-type">$checksum</span>&nbsp;<span class="var-name">$checksum</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#barcode_pharmacode" title="details" class="method-name">barcode_pharmacode</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#barcode_pharmacode2t" title="details" class="method-name">barcode_pharmacode2t</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#barcode_postnet" title="details" class="method-name">barcode_postnet</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, [<span class="var-type">$planet</span>&nbsp;<span class="var-name">$planet</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#barcode_rms4cc" title="details" class="method-name">barcode_rms4cc</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, [<span class="var-type">$kix</span>&nbsp;<span class="var-name">$kix</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#barcode_s25" title="details" class="method-name">barcode_s25</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, [<span class="var-type">$checksum</span>&nbsp;<span class="var-name">$checksum</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#binseq_to_array" title="details" class="method-name">binseq_to_array</a>
+											(<span class="var-type">$seq</span>&nbsp;<span class="var-name">$seq</span>, <span class="var-type">$bararray</span>&nbsp;<span class="var-name">$bararray</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">char</span>
+										<a href="#checksum_code39" title="details" class="method-name">checksum_code39</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#checksum_code93" title="details" class="method-name">checksum_code93</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">int</span>
+										<a href="#checksum_s25" title="details" class="method-name">checksum_s25</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#dec_to_hex" title="details" class="method-name">dec_to_hex</a>
+											(<span class="var-type">$number</span>&nbsp;<span class="var-name">$number</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">encoded</span>
+										<a href="#encode_code39_ext" title="details" class="method-name">encode_code39_ext</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#get128ABsequence" title="details" class="method-name">get128ABsequence</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getBarcodeArray" title="details" class="method-name">getBarcodeArray</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#hex_to_dec" title="details" class="method-name">hex_to_dec</a>
+											(<span class="var-type">$hex</span>&nbsp;<span class="var-name">$hex</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">int</span>
+										<a href="#imb_crc11fcs" title="details" class="method-name">imb_crc11fcs</a>
+											(<span class="var-type">$code_arr</span>&nbsp;<span class="var-name">$code_arr</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">int</span>
+										<a href="#imb_reverse_us" title="details" class="method-name">imb_reverse_us</a>
+											(<span class="var-type">$num</span>&nbsp;<span class="var-name">$num</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#imb_tables" title="details" class="method-name">imb_tables</a>
+											(<span class="var-type">$n</span>&nbsp;<span class="var-name">$n</span>, <span class="var-type">$size</span>&nbsp;<span class="var-name">$size</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#setBarcode" title="details" class="method-name">setBarcode</a>
+											(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, <span class="var-type">$type</span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$barcode_array" id="$barcode_array"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$barcode_array</span>
+						(line <span class="line-number">56</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array representation of barcode.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">72</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This is the class constructor.</p>
+<p class="description"><p>Return an array representations for common 1D barcodes:<ul><li>$arrcode['code'] code to be printed on text label</li><li>$arrcode['maxh'] max bar height</li><li>$arrcode['maxw'] max bar width</li><li>$arrcode['bcode'][$k] single bar or space in $k position</li><li>$arrcode['bcode'][$k]['t'] bar type: true = bar, false = space.</li><li>$arrcode['bcode'][$k]['w'] bar width in units.</li><li>$arrcode['bcode'][$k]['h'] bar height in units.</li><li>$arrcode['bcode'][$k]['p'] bar top position (0 = top, 1 = middle)</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">TCPDFBarcode</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, <span class="var-type">$type</span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) code to print</span>			</li>
+					<li>
+				<span class="var-type">$type</span>
+				<span class="var-name">$type</span><span class="var-description">: (string) type of barcode: <ul><li>C39 : CODE 39 - ANSI MH10.8M-1983 - USD-3 - 3 of 9.</li><li>C39+ : CODE 39 with checksum</li><li>C39E : CODE 39 EXTENDED</li><li>C39E+ : CODE 39 EXTENDED + CHECKSUM</li><li>C93 : CODE 93 - USS-93</li><li>S25 : Standard 2 of 5</li><li>S25+ : Standard 2 of 5 + CHECKSUM</li><li>I25 : Interleaved 2 of 5</li><li>I25+ : Interleaved 2 of 5 + CHECKSUM</li><li>C128 : CODE 128</li><li>C128A : CODE 128 A</li><li>C128B : CODE 128 B</li><li>C128C : CODE 128 C</li><li>EAN2 : 2-Digits UPC-Based Extention</li><li>EAN5 : 5-Digits UPC-Based Extention</li><li>EAN8 : EAN 8</li><li>EAN13 : EAN 13</li><li>UPCA : UPC-A</li><li>UPCE : UPC-E</li><li>MSI : MSI (Variation of Plessey code)</li><li>MSI+ : MSI + CHECKSUM (modulo 11)</li><li>POSTNET : POSTNET</li><li>PLANET : PLANET</li><li>RMS4CC : RMS4CC (Royal Mail 4-state Customer Code) - CBC (Customer Bar Code)</li><li>KIX : KIX (Klant index - Customer index)</li><li>IMB: Intelligent Mail Barcode - Onecode - USPS-B-3200</li><li>CODABAR : CODABAR</li><li>CODE11 : CODE 11</li><li>PHARMA : PHARMACODE</li><li>PHARMA2T : PHARMACODE TWO-TRACKS</li></ul></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbarcode_c128" id="barcode_c128"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">barcode_c128</span> (line <span class="line-number">794</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">C128 barcodes.</p>
+<p class="description"><p>Very capable code, excellent density, high reliability; in very wide use world-wide</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> barcode representation.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			barcode_c128
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, [<span class="var-type">$type</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) code to represent.</span>			</li>
+					<li>
+				<span class="var-type">$type</span>
+				<span class="var-name">$type</span><span class="var-description">: (string) barcode type: A, B, C or empty for automatic switch (AUTO mode)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbarcode_codabar" id="barcode_codabar"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">barcode_codabar</span> (line <span class="line-number">1655</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CODABAR barcodes.</p>
+<p class="description"><p>Older code often used in library systems, sometimes in blood banks</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> barcode representation.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			barcode_codabar
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) code to represent.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbarcode_code11" id="barcode_code11"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">barcode_code11</span> (line <span class="line-number">1711</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CODE11 barcodes.</p>
+<p class="description"><p>Used primarily for labeling telecommunications equipment</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> barcode representation.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			barcode_code11
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) code to represent.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbarcode_code39" id="barcode_code39"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">barcode_code39</span> (line <span class="line-number">230</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CODE 39 - ANSI MH10.8M-1983 - USD-3 - 3 of 9.</p>
+<p class="description"><p>General-purpose code in very wide use world-wide</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> barcode representation.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			barcode_code39
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, [<span class="var-type">$extended</span>&nbsp;<span class="var-name">$extended</span> = <span class="var-default">false</span>], [<span class="var-type">$checksum</span>&nbsp;<span class="var-name">$checksum</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) code to represent.</span>			</li>
+					<li>
+				<span class="var-type">$extended</span>
+				<span class="var-name">$extended</span><span class="var-description">: (boolean) if true uses the extended mode.</span>			</li>
+					<li>
+				<span class="var-type">$checksum</span>
+				<span class="var-name">$checksum</span><span class="var-description">: (boolean) if true add a checksum to the code.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbarcode_code93" id="barcode_code93"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">barcode_code93</span> (line <span class="line-number">396</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CODE 93 - USS-93</p>
+<p class="description"><p>Compact code similar to Code 39</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> barcode representation.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			barcode_code93
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) code to represent.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbarcode_eanext" id="barcode_eanext"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">barcode_eanext</span> (line <span class="line-number">1356</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UPC-Based Extentions</p>
+<p class="description"><p>2-Digit Ext.: Used to indicate magazines and newspaper issue numbers  5-Digit Ext.: Used to mark suggested retail price of books</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> barcode representation.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			barcode_eanext
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, [<span class="var-type">$len</span>&nbsp;<span class="var-name">$len</span> = <span class="var-default">5</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) code to represent.</span>			</li>
+					<li>
+				<span class="var-type">$len</span>
+				<span class="var-name">$len</span><span class="var-description">: (string) barcode type: 2 = 2-Digit, 5 = 5-Digit</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbarcode_eanupc" id="barcode_eanupc"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">barcode_eanupc</span> (line <span class="line-number">1163</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">EAN13 and UPC-A barcodes.</p>
+<p class="description"><p>EAN13: European Article Numbering international retail product code  UPC-A: Universal product code seen on almost all retail products in the USA and Canada  UPC-E: Short version of UPC symbol</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> barcode representation.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			barcode_eanupc
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, [<span class="var-type">$len</span>&nbsp;<span class="var-name">$len</span> = <span class="var-default">13</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) code to represent.</span>			</li>
+					<li>
+				<span class="var-type">$len</span>
+				<span class="var-name">$len</span><span class="var-description">: (string) barcode type: 6 = UPC-E, 8 = EAN8, 13 = EAN13, 12 = UPC-A</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbarcode_i25" id="barcode_i25"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">barcode_i25</span> (line <span class="line-number">730</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Interleaved 2 of 5 barcodes.</p>
+<p class="description"><p>Compact numeric code, widely used in industry, air cargo  Contains digits (0 to 9) and encodes the data in the width of both bars and spaces.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> barcode representation.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			barcode_i25
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, [<span class="var-type">$checksum</span>&nbsp;<span class="var-name">$checksum</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) code to represent.</span>			</li>
+					<li>
+				<span class="var-type">$checksum</span>
+				<span class="var-name">$checksum</span><span class="var-description">: (boolean) if true add a checksum to the code</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbarcode_imb" id="barcode_imb"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">barcode_imb</span> (line <span class="line-number">1891</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">IMB - Intelligent Mail Barcode - Onecode - USPS-B-3200  (requires PHP bcmath extension)  Intelligent Mail barcode is a 65-bar code for use on mail in the United States.</p>
+<p class="description"><p>The fields are described as follows:<ul><li>The Barcode Identifier shall be assigned by USPS to encode the presort identification that is currently printed in human readable form on the optional endorsement line (OEL) as well as for future USPS use. This shall be two digits, with the second digit in the range of 0–4. The allowable encoding ranges shall be 00–04, 10–14, 20–24, 30–34, 40–44, 50–54, 60–64, 70–74, 80–84, and 90–94.</li><li>The Service Type Identifier shall be assigned by USPS for any combination of services requested on the mailpiece. The allowable encoding range shall be 000http://it2.php.net/manual/en/function.dechex.php–999. Each 3-digit value shall correspond to a particular mail class with a particular combination of service(s). Each service program, such as OneCode Confirm and OneCode ACS, shall provide the list of Service Type Identifier values.</li><li>The Mailer or Customer Identifier shall be assigned by USPS as a unique, 6 or 9 digit number that identifies a business entity. The allowable encoding range for the 6 digit Mailer ID shall be 000000- 899999, while the allowable encoding range for the 9 digit Mailer ID shall be 900000000-999999999.</li><li>The Serial or Sequence Number shall be assigned by the mailer for uniquely identifying and tracking mailpieces. The allowable encoding range shall be 000000000–999999999 when used with a 6 digit Mailer ID and 000000-999999 when used with a 9 digit Mailer ID. e. The Delivery Point ZIP Code shall be assigned by the mailer for routing the mailpiece. This shall replace POSTNET for routing the mailpiece to its final delivery point. The length may be 0, 5, 9, or 11 digits. The allowable encoding ranges shall be no ZIP Code, 00000–99999,  000000000–999999999, and 00000000000–99999999999.</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> barcode representation.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			barcode_imb
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) code to print, separate the ZIP (routing code) from the rest using a minus char '-' (BarcodeID_ServiceTypeID_MailerID_SerialNumber-RoutingCode)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbarcode_msi" id="barcode_msi"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">barcode_msi</span> (line <span class="line-number">599</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">MSI.</p>
+<p class="description"><p>Variation of Plessey code, with similar applications  Contains digits (0 to 9) and encodes the data only in the width of bars.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> barcode representation.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			barcode_msi
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, [<span class="var-type">$checksum</span>&nbsp;<span class="var-name">$checksum</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) code to represent.</span>			</li>
+					<li>
+				<span class="var-type">$checksum</span>
+				<span class="var-name">$checksum</span><span class="var-description">: (boolean) if true add a checksum to the code (modulo 11)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbarcode_pharmacode" id="barcode_pharmacode"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">barcode_pharmacode</span> (line <span class="line-number">1802</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Pharmacode</p>
+<p class="description"><p>Contains digits (0 to 9)</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> barcode representation.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			barcode_pharmacode
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) code to represent.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbarcode_pharmacode2t" id="barcode_pharmacode2t"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">barcode_pharmacode2t</span> (line <span class="line-number">1828</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Pharmacode two-track</p>
+<p class="description"><p>Contains digits (0 to 9)</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> barcode representation.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			barcode_pharmacode2t
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) code to represent.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbarcode_postnet" id="barcode_postnet"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">barcode_postnet</span> (line <span class="line-number">1431</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">POSTNET and PLANET barcodes.</p>
+<p class="description"><p>Used by U.S. Postal Service for automated mail sorting</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> barcode representation.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			barcode_postnet
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, [<span class="var-type">$planet</span>&nbsp;<span class="var-name">$planet</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) zip code to represent. Must be a string containing a zip code of the form DDDDD or DDDDD-DDDD.</span>			</li>
+					<li>
+				<span class="var-type">$planet</span>
+				<span class="var-name">$planet</span><span class="var-description">: (boolean) if true print the PLANET barcode, otherwise print POSTNET</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbarcode_rms4cc" id="barcode_rms4cc"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">barcode_rms4cc</span> (line <span class="line-number">1504</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">RMS4CC - CBC - KIX  RMS4CC (Royal Mail 4-state Customer Code) - CBC (Customer Bar Code) - KIX (Klant index - Customer index)  RM4SCC is the name of the barcode symbology used by the Royal Mail for its Cleanmail service.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> barcode representation.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			barcode_rms4cc
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, [<span class="var-type">$kix</span>&nbsp;<span class="var-name">$kix</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) code to print</span>			</li>
+					<li>
+				<span class="var-type">$kix</span>
+				<span class="var-name">$kix</span><span class="var-description">: (boolean) if true prints the KIX variation (doesn't use the start and end symbols, and the checksum) - in this case the house number must be sufficed with an X and placed at the end of the code.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbarcode_s25" id="barcode_s25"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">barcode_s25</span> (line <span class="line-number">658</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Standard 2 of 5 barcodes.</p>
+<p class="description"><p>Used in airline ticket marking, photofinishing  Contains digits (0 to 9) and encodes the data only in the width of bars.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> barcode representation.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			barcode_s25
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, [<span class="var-type">$checksum</span>&nbsp;<span class="var-name">$checksum</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) code to represent.</span>			</li>
+					<li>
+				<span class="var-type">$checksum</span>
+				<span class="var-name">$checksum</span><span class="var-description">: (boolean) if true add a checksum to the code</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbinseq_to_array" id="binseq_to_array"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">binseq_to_array</span> (line <span class="line-number">700</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert binary barcode sequence to TCPDF barcode array.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> barcode representation.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			binseq_to_array
+		</span>
+					(<span class="var-type">$seq</span>&nbsp;<span class="var-name">$seq</span>, <span class="var-type">$bararray</span>&nbsp;<span class="var-name">$bararray</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$seq</span>
+				<span class="var-name">$seq</span><span class="var-description">: (string) barcode as binary sequence.</span>			</li>
+					<li>
+				<span class="var-type">$bararray</span>
+				<span class="var-name">$bararray</span><span class="var-description">: (array) barcode array.  òparam array $bararray TCPDF barcode array to fill up</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodchecksum_code39" id="checksum_code39"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">checksum_code39</span> (line <span class="line-number">373</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Calculate CODE 39 checksum (modulo 43).</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> checksum.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">char</span>
+		<span class="method-name">
+			checksum_code39
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) code to represent.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodchecksum_code93" id="checksum_code93"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">checksum_code93</span> (line <span class="line-number">524</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Calculate CODE 93 checksum (modulo 47).</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> checksum code.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			checksum_code93
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) code to represent.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodchecksum_s25" id="checksum_s25"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">checksum_s25</span> (line <span class="line-number">573</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checksum for standard 2 of 5 barcodes.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> checksum.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			checksum_s25
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) code to process.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddec_to_hex" id="dec_to_hex"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">dec_to_hex</span> (line <span class="line-number">2015</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert large integer number to hexadecimal representation.</p>
+<p class="description"><p>(requires PHP bcmath extension)</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> hexadecimal representation</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			dec_to_hex
+		</span>
+					(<span class="var-type">$number</span>&nbsp;<span class="var-name">$number</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$number</span>
+				<span class="var-name">$number</span><span class="var-description">: (string) number to convert specified as a string</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodencode_code39_ext" id="encode_code39_ext"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">encode_code39_ext</span> (line <span class="line-number">322</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encode a string to be used for CODE 39 Extended mode.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> string.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">encoded</span>
+		<span class="method-name">
+			encode_code39_ext
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) code to represent.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget128ABsequence" id="get128ABsequence"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get128ABsequence</span> (line <span class="line-number">1124</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Split text code in A/B sequence for 128 code</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> sequence</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get128ABsequence
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) code to split.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetBarcodeArray" id="getBarcodeArray"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getBarcodeArray</span> (line <span class="line-number">80</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return an array representations of barcode.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getBarcodeArray
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodhex_to_dec" id="hex_to_dec"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">hex_to_dec</span> (line <span class="line-number">2039</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert large hexadecimal number to decimal representation (string).</p>
+<p class="description"><p>(requires PHP bcmath extension)</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> hexadecimal representation</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			hex_to_dec
+		</span>
+					(<span class="var-type">$hex</span>&nbsp;<span class="var-name">$hex</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$hex</span>
+				<span class="var-name">$hex</span><span class="var-description">: (string) hexadecimal number to convert specified as a string</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodimb_crc11fcs" id="imb_crc11fcs"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">imb_crc11fcs</span> (line <span class="line-number">2056</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Intelligent Mail Barcode calculation of Frame Check Sequence</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 11 bit Frame Check Sequence as integer (decimal base)</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			imb_crc11fcs
+		</span>
+					(<span class="var-type">$code_arr</span>&nbsp;<span class="var-name">$code_arr</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code_arr</span>
+				<span class="var-name">$code_arr</span><span class="var-description">: (string) array of hexadecimal values (13 bytes holding 102 bits right justified).</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodimb_reverse_us" id="imb_reverse_us"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">imb_reverse_us</span> (line <span class="line-number">2092</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Reverse unsigned short value</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> reversed value</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			imb_reverse_us
+		</span>
+					(<span class="var-type">$num</span>&nbsp;<span class="var-name">$num</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$num</span>
+				<span class="var-name">$num</span><span class="var-description">: (int) value to reversr</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodimb_tables" id="imb_tables"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">imb_tables</span> (line <span class="line-number">2109</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">generate Nof13 tables used for Intelligent Mail Barcode</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> requested table</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			imb_tables
+		</span>
+					(<span class="var-type">$n</span>&nbsp;<span class="var-name">$n</span>, <span class="var-type">$size</span>&nbsp;<span class="var-name">$size</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$n</span>
+				<span class="var-name">$n</span><span class="var-description">: (int) is the type of table: 2 for 2of13 table, 5 for 5of13table</span>			</li>
+					<li>
+				<span class="var-type">$size</span>
+				<span class="var-name">$size</span><span class="var-description">: (int) size of table (78 for n=2 and 1287 for n=5)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetBarcode" id="setBarcode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setBarcode</span> (line <span class="line-number">90</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the barcode.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			setBarcode
+		</span>
+					(<span class="var-type">$code</span>&nbsp;<span class="var-name">$code</span>, <span class="var-type">$type</span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$code</span>
+				<span class="var-name">$code</span><span class="var-description">: (string) code to print</span>			</li>
+					<li>
+				<span class="var-type">$type</span>
+				<span class="var-name">$type</span><span class="var-description">: (string) type of barcode: <ul><li>C39 : CODE 39 - ANSI MH10.8M-1983 - USD-3 - 3 of 9.</li><li>C39+ : CODE 39 with checksum</li><li>C39E : CODE 39 EXTENDED</li><li>C39E+ : CODE 39 EXTENDED + CHECKSUM</li><li>C93 : CODE 93 - USS-93</li><li>S25 : Standard 2 of 5</li><li>S25+ : Standard 2 of 5 + CHECKSUM</li><li>I25 : Interleaved 2 of 5</li><li>I25+ : Interleaved 2 of 5 + CHECKSUM</li><li>C128 : CODE 128</li><li>C128A : CODE 128 A</li><li>C128B : CODE 128 B</li><li>C128C : CODE 128 C</li><li>EAN2 : 2-Digits UPC-Based Extention</li><li>EAN5 : 5-Digits UPC-Based Extention</li><li>EAN8 : EAN 8</li><li>EAN13 : EAN 13</li><li>UPCA : UPC-A</li><li>UPCE : UPC-E</li><li>MSI : MSI (Variation of Plessey code)</li><li>MSI+ : MSI + CHECKSUM (modulo 11)</li><li>POSTNET : POSTNET</li><li>PLANET : PLANET</li><li>RMS4CC : RMS4CC (Royal Mail 4-state Customer Code) - CBC (Customer Bar Code)</li><li>KIX : KIX (Klant index - Customer index)</li><li>IMB: Intelligent Mail Barcode - Onecode - USPS-B-3200</li><li>CODABAR : CODABAR</li><li>CODE11 : CODE 11</li><li>PHARMA : PHARMACODE</li><li>PHARMA2T : PHARMACODE TWO-TRACKS</li></ul></span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Fri, 26 Aug 2011 03:26:54 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

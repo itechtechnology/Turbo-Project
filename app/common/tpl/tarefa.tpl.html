@@ -9,10 +9,27 @@
 
         <script type="text/javascript" src="{JSDIR}/jquery-1.6.1.min.js"></script>
         <script type="text/javascript" src="{JSDIR}/jquery.tools.min.js"></script>
-
+        <script type="text/javascript" src="{JSDIR}/date.js"></script>
+        <!--        <script type="text/javascript" src="{JSDIR}/jquery.validate.min.js"></script>-->
+        <script src="http://imasters.com.br/crossbrowser/fonte.js" type="text/javascript"></script>
         <!--        <script src="http://imasters.com.br/crossbrowser/fonte.js" type="text/javascript"></script>-->
         <link rel="shortcut icon" type="image/x-icon" href="{IMAGEDIR}/{FAVICON}" />
         <link rel="icon" type="image/x-icon" href="{IMAGEDIR}/{ANIMATEDFAVICON}" />
+        <script type="text/javascript">
+            $(document).ready( function() {
+                $(".buttons").click(function() {
+                    var date = Date.parseExact($('input[name="dt_incio"]').val(), "dd/MM/yyyy");
+                    var dateFim = Date.parseExact($('input[name="dt_previsao"]').val(), "dd/MM/yyyy");
+                    if($('input[name="nome_tarefa"]').val() == ""){
+                        $("#erros").append("<p>Nome da Tarefa nao pode ser nulo</p>");
+                    }if(Date.today().compareTo(date)==1){
+                        $("#erros").append("<p>Data Inicio nao pode ser menor que data atual</p>");
+                    }if(date.compareTo(dateFim)==1){
+                        $("#erros").append("<p>Data previsao fim nao pode ser menor que data inicio</p>");
+                    }
+                });
+            });
+        </script>
         <title>{SITETITLE}</title>
     </head>
     <body>
@@ -25,7 +42,7 @@
                         <h2>Nova Tarefa</h2>
                     </div>
                     <div id="envolve_formularios">
-                        <div id="errors">
+                        <div id="erros">
                             <h2>{ERROS}</h2>
                         </div>
                         <ul class="tabs">
@@ -36,7 +53,7 @@
                             <div class="subpanes">
                                 <form name="form1" class="form" method="post" action="{CONTROLLER}">
                                     <fieldset>
-                                        <label> Nome Tarefa *
+                                        <label for="nome_tarefa"> Nome Tarefa *
                                             <input type="text" name="nome_tarefa" required="required" minlength="1" size="50" value="{NOME_TAREFA}">
                                         </label>
                                         <label> Projeto *
@@ -73,7 +90,7 @@
                                         </label>
                                     </fieldset>
                                     <div class="barraForm">
-                                        <button type="submit" class="button positive">
+                                        <button type="submit" class="buttons">
                                             <img src="{IMAGEDIR}/icons/tick.png" alt=""/> Salvar
                                         </button>
                                         <button type="reset" class="button negative">

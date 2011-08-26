@@ -165,3 +165,7 @@
 /*    border: solid 0.5px black;*/
     /*    width: 320px;*/
 }
+
+.botao{
+    float: none;
+}

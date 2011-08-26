@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page qrcode.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/jqgrid/php/tcpdf/qrcode.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-classes">Classes</a>
+			|									<a href="#sec-constants">Constants</a>
+			|									<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">author:</span> Nicola Asuni</li>
+				<li><span class="field">version:</span> 1.0.009</li>
+			</ul>
+		
+			</div>
+</div>
+		
+	<a name="sec-classes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Classes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Classes</span>
+			|										<a href="#sec-constants">Constants</a>
+				|													<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../com-tecnick-tcpdf/QRcode.html">QRcode</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|									<span class="disabled">Constants</span>
+			|										<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="defineMAX_STRUCTURED_SYMBOLS"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">MAX_STRUCTURED_SYMBOLS</span> = 16
+			(line <span class="line-number">201</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Max number of symbols for structured mode</p>
+	
+		
+</div>
+<a name="defineN1"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">N1</span> = 3
+			(line <span class="line-number">210</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Down point base value for case 1 mask pattern (concatenation of same color in a line or a column)</p>
+	
+		
+</div>
+<a name="defineN2"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">N2</span> = 3
+			(line <span class="line-number">215</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Down point base value for case 2 mask pattern (module block of same color)</p>
+	
+		
+</div>
+<a name="defineN3"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">N3</span> = 40
+			(line <span class="line-number">220</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Down point base value for case 3 mask pattern (1:1:3:1:1(dark:bright:dark:bright:dark)pattern in a line or a column)</p>
+	
+		
+</div>
+<a name="defineN4"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">N4</span> = 10
+			(line <span class="line-number">225</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Down point base value for case 4 mask pattern (ration of dark modules in whole)</p>
+	
+		
+</div>
+<a name="defineQRCAP_EC"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">QRCAP_EC</span> = 3
+			(line <span class="line-number">187</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Matrix index to get error correction level from $capacity array.</p>
+	
+		
+</div>
+<a name="defineQRCAP_REMINDER"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">QRCAP_REMINDER</span> = 2
+			(line <span class="line-number">182</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Matrix index to get remainder from $capacity array.</p>
+	
+		
+</div>
+<a name="defineQRCAP_WIDTH"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">QRCAP_WIDTH</span> = 0
+			(line <span class="line-number">172</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Matrix index to get width from $capacity array.</p>
+	
+		
+</div>
+<a name="defineQRCAP_WORDS"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">QRCAP_WORDS</span> = 1
+			(line <span class="line-number">177</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Matrix index to get number of words from $capacity array.</p>
+	
+		
+</div>
+<a name="defineQRCODEDEFS"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">QRCODEDEFS</span> = true
+			(line <span class="line-number">88</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Indicate that definitions for this class are set</p>
+	
+		
+</div>
+<a name="defineQRSPEC_VERSION_MAX"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">QRSPEC_VERSION_MAX</span> = 40
+			(line <span class="line-number">160</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Maximum QR Code version.</p>
+	
+		
+</div>
+<a name="defineQRSPEC_WIDTH_MAX"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">QRSPEC_WIDTH_MAX</span> = 177
+			(line <span class="line-number">165</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Maximum matrix size for maximum version (version 40 is 177*177 matrix).</p>
+	
+		
+</div>
+<a name="defineQR_DEFAULT_MASK"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">QR_DEFAULT_MASK</span> = 2
+			(line <span class="line-number">244</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">when QR_FIND_BEST_MASK === false</p>
+	
+		
+</div>
+<a name="defineQR_ECLEVEL_H"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">QR_ECLEVEL_H</span> = 3
+			(line <span class="line-number">148</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Error correction level H : About 30% or less errors can be corrected.</p>
+	
+		
+</div>
+<a name="defineQR_ECLEVEL_L"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">QR_ECLEVEL_L</span> = 0
+			(line <span class="line-number">133</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Error correction level L : About 7% or less errors can be corrected.</p>
+	
+		
+</div>
+<a name="defineQR_ECLEVEL_M"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">QR_ECLEVEL_M</span> = 1
+			(line <span class="line-number">138</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Error correction level M : About 15% or less errors can be corrected.</p>
+	
+		
+</div>
+<a name="defineQR_ECLEVEL_Q"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">QR_ECLEVEL_Q</span> = 2
+			(line <span class="line-number">143</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Error correction level Q : About 25% or less errors can be corrected.</p>
+	
+		
+</div>
+<a name="defineQR_FIND_BEST_MASK"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">QR_FIND_BEST_MASK</span> = true
+			(line <span class="line-number">234</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">if true, estimates best mask (spec. default, but extremally slow; set to false to significant performance boost but (propably) worst quality code</p>
+	
+		
+</div>
+<a name="defineQR_FIND_FROM_RANDOM"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">QR_FIND_FROM_RANDOM</span> = 2
+			(line <span class="line-number">239</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">if false, checks all masks available, otherwise value tells count of masks need to be checked, mask id are got randomly</p>
+	
+		
+</div>
+<a name="defineQR_MODE_8B"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">QR_MODE_8B</span> = 2
+			(line <span class="line-number">112</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encoding mode 8bit byte data. In theory, 2953 characters or less can be stored in a QRcode.</p>
+	
+		
+</div>
+<a name="defineQR_MODE_AN"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">QR_MODE_AN</span> = 1
+			(line <span class="line-number">107</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encoding mode alphanumeric (0-9A-Z $%*+-./:) 45characters. 2 characters are encoded to 11bit length. In theory, 4296 characters or less can be stored in a QRcode.</p>
+	
+		
+</div>
+<a name="defineQR_MODE_KJ"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">QR_MODE_KJ</span> = 3
+			(line <span class="line-number">117</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encoding mode KANJI. A KANJI character (multibyte character) is encoded to 13bit length. In theory, 1817 characters or less can be stored in a QRcode.</p>
+	
+		
+</div>
+<a name="defineQR_MODE_NL"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">QR_MODE_NL</span> = -1
+			(line <span class="line-number">97</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encoding mode</p>
+	
+		
+</div>
+<a name="defineQR_MODE_NM"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">QR_MODE_NM</span> = 0
+			(line <span class="line-number">102</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encoding mode numeric (0-9). 3 characters are encoded to 10bit length. In theory, 7089 characters or less can be stored in a QRcode.</p>
+	
+		
+</div>
+<a name="defineQR_MODE_ST"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">QR_MODE_ST</span> = 4
+			(line <span class="line-number">122</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encoding mode STRUCTURED (currently unsupported)</p>
+	
+		
+</div>
+<a name="defineSTRUCTURE_HEADER_BITS"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">STRUCTURE_HEADER_BITS</span> = 20
+			(line <span class="line-number">196</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Number of header bits for structured mode</p>
+	
+		
+</div>
+		</div>
+	</div>
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|													<a href="#sec-constants">Constants</a>
+				|									<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionstr_split" id="functionstr_split"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">str_split</span> (line <span class="line-number">260</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert a string to an array (needed for PHP4 compatibility)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the optional split_length  parameter is specified, the returned array will be broken down into chunks with each being split_length  in length, otherwise each chunk will be one character in length. FALSE is returned if split_length is less than 1. If the split_length length exceeds the length of string , the entire string is returned as the first (and only) array element.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">If</span>
+		<span class="method-name">
+			str_split
+		</span>
+					(<span class="var-type">$string</span>&nbsp;<span class="var-name">$string</span>, [<span class="var-type">$split_length</span>&nbsp;<span class="var-name">$split_length</span> = <span class="var-default">1</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$string</span>
+				<span class="var-name">$string</span><span class="var-description">: (string) The input string.</span>			</li>
+					<li>
+				<span class="var-type">$split_length</span>
+				<span class="var-name">$split_length</span><span class="var-description">: (int) Maximum length of the chunk.</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Fri, 26 Aug 2011 03:27:15 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

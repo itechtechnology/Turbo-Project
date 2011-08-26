@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @author Marcos Rosa
+ */
 	include_once '../../conf/lock.php';
 	
 	$lib = new Lib();

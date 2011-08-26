@@ -1,8 +1,9 @@
 <?php
 
 /**
- * Description of Tarefa
- *
+ * 
+ * @package app
+ * @subpackage controllers
  * @author Paavo Soeiro
  */
 /*
@@ -23,6 +24,7 @@ $tarefa = new TarefasRecord();
 $tarref = new TarefaAlocaRecursoHumanosRecord();
 $lib = new Lib();
 
+
 $acao = $_GET['acao'];
 
 switch ($acao) {
@@ -35,10 +37,7 @@ switch ($acao) {
             $dados["nome_tarefa"] = $_POST["nome_tarefa"];
             $dados["fk_cd_status"] = 1;
             $dados["responsavel"] = $_POST["cd_usuario"];
-            if (empty($_POST["nome_tarefa"])) {
-                $_SESSION['str_erro'] = "<p>Nome nao pode ser nulo</p>";
-                header("location: ../views/tarefaAdd.php");
-            }
+
             if ($_POST["cd_tarefa_sub"] == "") {
                 
             } else {
@@ -65,8 +64,7 @@ switch ($acao) {
                 header("location: http://www.gmail.com");
                 return false;
             }
-//            $_SESSION['str_erro'] = "<p>Nome nao pode ser nulo</p>";
-//            header("location: http://www.gmail.com");
+
             break;
         }
     case 'concluir': {
@@ -77,16 +75,29 @@ switch ($acao) {
             if ($tarefa->concluirTarefa($cd_tarefa)) {
                 header("location: ../views/tarefa.php?tarefa=" . $cd_tarefa);
             } else {
-                $sql = "UPDATE tarefa SET fk_cd_status = 6, dt_conclusao = '" .
-                        date('Y-m-d') . "', pcompleto = 100 WHERE cd_tarefa = " . $cd_tarefa;
-                $_SESSION['str_erro'] = $sql;
                 header("location: ../views/tarefas.php");
             }
             session_unregister($_SESSION['cd_tarefa']);
             break;
         }
     case 'percentual': {
-            
+            $cd_tarefa = $_POST['cd_tarefa'];
+            $dados['pcompleto'] = $_POST['porcento'];
+            if($tarefa->atualizarTarefa($dados, $cd_tarefa)){
+                header("location: ../views/tarefa.php?tarefa=" . $cd_tarefa);
+            } else {
+                header("location: ../views/tarefas.php");
+            }
+            break;
         }
 }
+
+class Tarefa {
+
+    public static function validarTarefa() {
+        return false;
+    }
+
+}
+
 ?>

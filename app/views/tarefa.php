@@ -95,6 +95,7 @@ if (!isset($_SESSION['login'])) {
     //gerar grafico percentual completo
 
     $completo = $task['PCOMPLETO']['1'];
+    $tpl->PORCENTAGEM = $task['PCOMPLETO']['1'];
     $piChart = new gPieChart();
     $piChart->addDataSet(array($completo, 100 - $completo));
     $piChart->setLegend(array("Completo", "Incompleto"));
@@ -110,8 +111,8 @@ if (!isset($_SESSION['login'])) {
         $tpl->ID_RECURSO = $recursos['CD_RECURSO'][$i];
         $tpl->RECURSO = $recursos['NOME_RECURSO'][$i];
         $tpl->CUSTO = $recursos['CUSTO'][$i];
-        $tpl->DT_ALOCACAO_RECURSO_GRID = $lib->converterDataToUs($recursos['DT_ALOCA_RECURSO'][$i]);
-        $tpl->DT_DEVOLUCAO_RECURSO = $lib->converterDataToUs($recursos['DT_DEVOLUCAO_RECURSO'][$i]);
+        $tpl->DT_ALOCACAO_RECURSO_GRID = $lib->converterDataToBr($recursos['DT_ALOCA_RECURSO'][$i]);
+        $tpl->DT_DEVOLUCAO_RECURSO = $lib->converterDataToBr($recursos['DT_DEVOLUCAO_RECURSO'][$i]);
         $tpl->block("BLOCK_LISTAGEM_RECURSO");
     }
 

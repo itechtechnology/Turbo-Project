@@ -108,8 +108,8 @@ class ProjetosRecord extends ManipulaBanco {
      * @return <array de dados> array contendo o resultado
      */
     public function getProjetos($texto="", $ordCampo="", $SORT="") {
-        $sql = "SELECT cd_projeto, nome_projeto, nome_status as status, nome as gerente " .
-                " FROM vprojetocompleto ";
+        $sql = "SELECT DISTINCT  nome_projeto, cd_projeto, nome_status as status, nome as gerente " .
+                " FROM vprojetos ";
 
         if (!empty($texto)) {
             $sql .= " WHERE nome_projeto LIKE '%" . $texto . "%' ";

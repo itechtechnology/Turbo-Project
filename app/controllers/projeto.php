@@ -52,6 +52,7 @@
 			/*
                          * se existem erros aviso ao usuario e solicito correção
                          */
+                        $dados['gerente_geral'] = $_SESSION['login'];
                         session_unregister('str_erro');
                         if (!empty($str_erro))
                         {

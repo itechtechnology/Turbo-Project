@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><projects><project id = "3" name = "TurboProject" startdate = "2011,7,22"><task id="7"><name>Arquitetura de Software</name><est>2011,8,22</est><duration>24</duration>
-            <percentcompleted>0</percentcompleted>
-            <predecessortasks></predecessortasks>
-            <childtasks></childtasks></task><task id="4"><name>Documentação de Analise e Requisitos</name><est>2011,8,06</est><duration>408</duration>
+<?xml version="1.0" encoding="UTF-8"?><projects><project id = "5" name = "Caminhos" startdate = "2011,8,22"><task id="5"><name>Fotos</name><est>2011,8,22</est><duration>144</duration>
             <percentcompleted>100</percentcompleted>
             <predecessortasks></predecessortasks>
-            <childtasks></childtasks></task></project></projects>
+            <childtasks><task id="6"><name>visita a aldeia</name><est>2011,8,23</est><duration>48</duration>
+            <percentcompleted>100</percentcompleted>
+            <predecessortasks></predecessortasks>
+            <childtasks></childtasks></task></childtasks></task></project></projects>

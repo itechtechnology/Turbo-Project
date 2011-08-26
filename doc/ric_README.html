@@ -12,9 +12,72 @@
 <pre>
 resetando repositorio
 
+jqgrid
+
+como funciona
+
+adicione as seguintes linhas ao &lt;head&gt; do template
+
+&lt;script src=&quot;../../jqgrid/js/jquery.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;../../jqgrid/js/i18n/grid.locale-pt-br.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+        &lt;script src=&quot;../../jqgrid/js/jquery.jqGrid.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;../../jqgrid/js/jquery-ui-custom.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;
+            $.jgrid.no_legacy_api = true;
+            $.jgrid.useJSON = true;
+        &lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;{JSDIR}/{GRID}&quot;&gt;&lt;/script&gt;
+
+na view adicione as seguintes linhas
+
+require_once '../../jqgrid/tabs.php';
+$tpl-&gt;GRID = 'grid.js'; aqui voce passa o javascript do grid em questao
+
+crie o arquivo que vai fazer a configuracao do grid, tem exemplos no projeto
+
+/app/common/js/recursosgrid.js
+
+nesse arquivo estao as configuracoes necessarias para montar o grid
+
+
+modulo tarefas
+    add recurso fisico
+    add recurdo humando
+    tarefas finalizadas
+    tarefas em atraso
+    tarefas - projetos
+    tarefas - usuario
+    tela tarefas
+        projeto a qual pertence
+        recursos (fisicos e humanos)      
+
+jqgrid
+    js/
+    php/
+    themes/
+    jq-config
+    tabs
+
+grafico de gantt
+    projeto
+        tarefas
+
+adicionar colunas ao banco
+    tempo estimado tarefa
+    percentual completo
+    subtarefas
+    responsavel
+
+fk_cd_tarefa em tarefas
+ALTER TABLE tarefa ADD CONSTRAINT subtarefa FOREIGN KEY (fk_cd_tarefa) REFERENCES tarefa (cd_tarefa) ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+script da tarefa agendada
+* * * * * liviacorreia /usr/bin/wget -q /var/www/Turbo-Project/app/views/cron.php
+0 0 * *	* liviacorreia /usr/bin/wget -q /var/www/Turbo-Project/core/tarefaAgendada.php
 </pre>
 	<p class="notes" id="credit">
-		Documentation generated on Tue, 05 Jul 2011 12:08:04 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+		Documentation generated on Fri, 26 Aug 2011 03:24:49 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</p>
 	</body>
 </html>

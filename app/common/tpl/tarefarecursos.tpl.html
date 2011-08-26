@@ -29,10 +29,23 @@
                                 </a>-->
                 <script type="text/javascript">
                     $(function(){
-                        $(".linharow").click(function(){
+                        $(".botao").click(function(){
                             //                            alert(''+$("td:first"));$tar['NOME'][$i]
-                            alert(""+$(this).attr("id"));
-                        })
+                            var p = parseInt($('input[name="porcento"]').val());
+                            var atualP = parseInt($('input[name="atual_per"]').val());
+                            // alert(atualP);
+                            if(p< atualP || p >= 100){
+                                $("#erros").empty();
+                                $("#erros").append("<p>Valor precisa ser maior que atual e menor que 100 </p>");
+                                return false;
+                            }else{
+                                $("#erros").empty();
+                                return true;
+                            }
+                            return false;
+                        
+                        });
+                        return true;
                     });
                 </script>
                 <div class="titulo_tarefa">
@@ -40,12 +53,20 @@
                         <p>{NOME_TAREFA}</p>
                         <p>Status: {STATUS}</p>
                         <p>Responsavel: {RESPONSAVEL}</p>
-                        <p>Inicio: {DT_INCIO}</p>
-                        <p>Previsao Fim: {DT_PREVISAO}</p>
+                        <p>Inicio: {DT_INCIO}  Previsao Fim: {DT_PREVISAO}</p>
                         <p>Conclusao: {DT_CONCLUSAO} 
                             <!-- BEGIN BLOCK_CONCLUIR -->
-                            <a href="../controllers/Tarefa.class.php?acao=concluir&tarefa={CD_TAREFA}">Concluir</a> | 
-                            <a href="#">Mudar Percentual</a>
+                            <a href="../controllers/Tarefa.class.php?acao=concluir&tarefa={CD_TAREFA}">Concluir</a>
+                            <form action="../controllers/Tarefa.class.php?acao=percentual" name="" method="post">
+                                <label for="porcento">Percentual Atual: {PORCENTAGEM}%</label>
+                                <input class="perc" type="text" name="porcento" value=""></input>
+                                <input type="hidden" name="cd_tarefa" value="{CD_TAREFA}"></input>
+                                <input type="hidden" name="atual_per" value="{PORCENTAGEM}"></input>
+                                <button class="botao" type="submit">
+                                    Salvar
+                                </button> 
+                            </form>
+                            <!--                            <a href="#">Mudar Percentual</a>-->
                             <!-- END BLOCK_CONCLUIR -->
                         </p>
                         <p>{DESCRICAO}</p>
@@ -55,7 +76,7 @@
                     </div>
                 </div>
                 <div id="envolve_formularios">
-                    <div id="errors">
+                    <div id="erros">
                         <h2>{ERROS}</h2>
                     </div>
                     <ul class="tabs">

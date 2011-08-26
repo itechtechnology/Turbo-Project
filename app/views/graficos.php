@@ -7,8 +7,7 @@ if (!isset($_SESSION['login'])) {
         location.href='../../web'</script>";
 } else {
     $projeto = new ProjetosRecord();
-
-    $lib = new Lib();
+    
     $tpl = new sistTemplate(APPTPLDIR . '/graficos.tpl.html');
     $tpl->addFile('TOPO', APPTPLDIR . '/topo.tpl.html');
     $tpl->addFile('MENULATERAL', APPTPLDIR . '/menuLateral.tpl.html');
@@ -22,7 +21,10 @@ if (!isset($_SESSION['login'])) {
     $tpl->FAVICON = FAVICON;
     $tpl->ANIMATEDFAVICON = ANIMATEDFAVICON;
     $tpl->CONTROLLER = "graficogantt.php";
-    
+    $u = new UsuariosRecord();
+    $uNome = $u->getNome($_SESSION['login']);
+    $tpl->USUARIO_LOGADO = $uNome;
+    $lib = new Lib();
     $projetos = $projeto->listarProjetos();
     $totalprojetos = count($projetos['CD_PROJETO']);
     for ($i = 1; $i <= $totalprojetos; $i++) {
