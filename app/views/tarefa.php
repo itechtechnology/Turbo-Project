@@ -1,5 +1,15 @@
 <?php
-
+/**
+ * Esta pagina renderiza uma tela para visualizar uma tarefa,
+ * adicionar recursos (fisicos e humanos), alem de concluir, e mudar o
+ * percentual de completo da tarefa.
+ * 
+ * @package app
+ * @subpackage views
+ * @author Paavo Soeiro
+ * 
+ * 
+ */
 session_start();
 require '../../conf/lock.php';
 include_once '../../core/GoogChart.class.php';

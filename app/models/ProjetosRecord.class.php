@@ -1,11 +1,13 @@
 <?php
 
-/*
- * Autor: Anderson Rodrigues
- * Data: 13/05/2011
- * Descrição: Classe genericá para manipulação de registros de projetos no banco.
+/**
+ * Classe genericá para manipulação de registros de projetos no banco.
+ * 
+ * @package app
+ * @subpackage models
+ * @author Anderson Rodrigues
+ * @since 13/05/2011
  */
-
 class ProjetosRecord extends ManipulaBanco {
 
     public function cadastrarProjetos($dados) {
@@ -38,8 +40,9 @@ class ProjetosRecord extends ManipulaBanco {
 
     /**
      * METODO QUE RETORNO DOS DADOS DE UM DETERMINADO PROJETO
-     * @param <int> $cd_projeto codigo do projeto a ser pesquisado
-     * @return <array> array contendo os dados da tabela projeto
+     * 
+     * @param int $cd_projeto codigo do projeto a ser pesquisado
+     * @return array array contendo os dados da tabela projeto
      */
     public function dadosProjeto($cd_projeto) {
 //        $criteria = new TCriteria();
@@ -52,7 +55,7 @@ class ProjetosRecord extends ManipulaBanco {
 
     /** METÓDO QUE IRÁ RETORNAR UM PROJETO PELO ID
      *
-     * @param <type> $id = id do projeto a ser pesquisado
+     * @param int $id  id do projeto a ser pesquisado
      * @return objeto projeto
      */
     public function getProjetoByID($id) {
@@ -61,8 +64,8 @@ class ProjetosRecord extends ManipulaBanco {
 
     /** METÓDO QUE IRÁ RETORNAR DADOS COMPLETO DE UM PROJETO PELO ID
      *
-     * @param <type> $id = id do projeto a ser pesquisado
-     * @return <array> dados completos do projeto incluindo status gerente...
+     * @param int $id = id do projeto a ser pesquisado
+     * @return array dados completos do projeto incluindo status gerente...
      */
     public function getProjetoCompletoByID($id) {
         $lib = new Lib();

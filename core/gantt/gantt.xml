@@ -1,7 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><projects><project id = "5" name = "Caminhos" startdate = "2011,8,22"><task id="5"><name>Fotos</name><est>2011,8,22</est><duration>144</duration>
-            <percentcompleted>100</percentcompleted>
+<?xml version="1.0" encoding="UTF-8"?><projects><project id = "5" name = "Caminhos" startdate = "2011,8,22"><task id="10"><name>WebSite</name><est>2011,8,29</est><duration>408</duration>
+            <percentcompleted>0</percentcompleted>
             <predecessortasks></predecessortasks>
-            <childtasks><task id="6"><name>visita a aldeia</name><est>2011,8,23</est><duration>48</duration>
-            <percentcompleted>100</percentcompleted>
+            <childtasks><task id="11"><name>Layout</name><est>2011,8,30</est><duration>144</duration>
+            <percentcompleted>0</percentcompleted>
+            <predecessortasks></predecessortasks>
+            <childtasks></childtasks></task><task id="12"><name>Logica</name><est>2011,8,31</est><duration>240</duration>
+            <percentcompleted>0</percentcompleted>
             <predecessortasks></predecessortasks>
             <childtasks></childtasks></task></childtasks></task></project></projects>

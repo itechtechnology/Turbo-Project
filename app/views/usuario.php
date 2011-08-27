@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * Esta pagina renderiza uma tela para adicionar um usuario
+ * 
+ * @package app
+ * @subpackage views
+ * @author Marcos Rosa
+ */
+
 include_once '../../conf/lock.php';
 
 session_start(); //Inicio a sessALo			

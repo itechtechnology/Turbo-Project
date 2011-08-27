@@ -1,8 +1,20 @@
 <?php
 
-//CLASSE PARA MANIPULAR E VALIDAR STRINGS, DATAS, ETC...
+/**
+ * CLASSE PARA MANIPULAR E VALIDAR STRINGS, DATAS, ETC...
+ * 
+ * @package app
+ * @subpackage models
+ * 
+ */
 
-
+/**
+ * CLASSE PARA MANIPULAR E VALIDAR STRINGS, DATAS, ETC...
+ * 
+ * @package app
+ * @subpackage models
+ * 
+ */
 
 class Lib {
 

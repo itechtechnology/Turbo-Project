@@ -1,24 +1,21 @@
 <?php
 
 /**
- * @package pagepackage
- */
-/**
- * Controlador RecursoFisico
+ * Recebi uma acao via GET e redireciona para o Controlador
+ * 
+ * @package app
+ * @subpackage controllers
+ * @author Paavo Soeiro
  */
 include_once '../../conf/lock.php';
 
 $rec = new RecursoFisico();
 
-//$auditoria = new AuditoriasRecord();
-
 $acao = $_GET['acao'];
 
 switch ($acao) {
     case "salvar": {
-
             $rec->salvar();
-
             break;
         }
     case "edit": {
@@ -31,18 +28,50 @@ switch ($acao) {
         break;
 }
 
+/**
+ * Controlador RecursoFisico
+ * 
+ * @package app
+ * @subpackage controllers
+ * @author Paavo Soeiro
+ */
 class RecursoFisico {
 
+    /**
+     * Variavel de recurso
+     *
+     * @var recurso 
+     */
     var $recurso;
+
+    /**
+     * Variavel responsavel por alocar um recurso fisico
+     *
+     * @var tarefaAlocaRecursoFisico 
+     */
     var $tarefaAlocaRecurso;
+
+    /**
+     * Utilizada para fazer conversoes...
+     *
+     * @var lib 
+     */
     var $lib;
 
+    /**
+     * Contrutor da classe
+     */
     function __construct() {
         $this->recurso = new RecursoFisicosRecord();
         $this->tarefaAlocaRecurso = new TarefaAlocaRecursoFisicosRecord();
         $this->lib = new Lib();
     }
 
+    /**
+     * Metodo utilizado para salvar um recurso no Banco de Dados
+     *
+     * @return boolean 
+     */
     public function salvar() {
 
         $dados['nome_recurso'] = $_POST['nome_recurso'];
@@ -59,6 +88,11 @@ class RecursoFisico {
         return false;
     }
 
+    /**
+     * Metodo para alocar um recurso fisico numa tarefa
+     * 
+     * @return boolean 
+     */
     public function alocar() {
         $dados['fk_cd_tarefa'] = $_POST['cd_tarefa'];
         $dados['fk_cd_recurso'] = $_POST['cd_recurso'];

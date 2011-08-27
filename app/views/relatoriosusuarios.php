@@ -1,17 +1,36 @@
 <?php
 
+/**
+ * Esta pagina renderiza uma tela para visualizar o relatorio de usuarios
+ * 
+ * @package app
+ * @subpackage views
+ * @author Paavo Soeiro
+ * 
+ * 
+ */
+session_start();
 require_once '../../jqgrid/tabs.php';
 require '../../conf/lock.php';
-$tpl = new sistTemplate(APPTPLDIR . '/relatorios.tpl.html');
-$tpl->addFile('TOPO', APPTPLDIR . '/topo.tpl.html');
-$tpl->addFile('MENULATERAL', APPTPLDIR . '/menuLateral.tpl.html');
-////$tpl->addFile('RODAPE', APPTPLDIR . '/rodape.tpl.html');
-$tpl->IMAGEDIR = APPIMAGEDIR;
-$tpl->CSSDIR = APPCSSDIR;
-$tpl->JSDIR = APPJSDIR;
-$tpl->TITULO = SITETITLE;
-$tpl->GRID = 'usuariosgrid.js';
-$tpl->show();
-//require_once dirname(__FILE__).'/tabs.php';
+if (!isset($_SESSION['login'])) {
+    echo "<script type='text/javascript'>alert('Voce precisa estar logado');
+        location.href='../../web'</script>";
+} else {
+    $tpl = new sistTemplate(APPTPLDIR . '/relatorios.tpl.html');
+    $tpl->addFile('TOPO', APPTPLDIR . '/topo.tpl.html');
+    $tpl->addFile('MENULATERAL', APPTPLDIR . '/menuLateral.tpl.html');
+    $tpl->addFile('RODAPE', APPTPLDIR . '/rodape.tpl.html');
+    $tpl->IMAGEDIR = APPIMAGEDIR;
+    $tpl->CSSDIR = APPCSSDIR;
+    $tpl->JSDIR = APPJSDIR;
+    $tpl->SITETITLE = SITETITLE;
+    $tpl->FAVICON = FAVICON;
+    $tpl->ANIMATEDFAVICON = ANIMATEDFAVICON;
+    $u = new UsuariosRecord();
+    $uNome = $u->getNome($_SESSION['login']);
+    $tpl->USUARIO_LOGADO = $uNome;
+    $tpl->GRID = 'usuariosgrid.js';
+    $tpl->show();
+}
 ?>
 

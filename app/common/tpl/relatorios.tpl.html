@@ -1,7 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
     <head>
-        <title>{TITULO}</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" media="screen" href="../../jqgrid/themes/redmond/jquery-ui-1.8.2.custom.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="../../jqgrid/themes/ui.jqgrid.css" />
@@ -25,6 +24,9 @@
             $.jgrid.useJSON = true;
         </script>
         <script type="text/javascript" src="{JSDIR}/{GRID}"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="{IMAGEDIR}/{FAVICON}" />
+        <link rel="icon" type="image/x-icon" href="{IMAGEDIR}/{ANIMATEDFAVICON}" />
+        <title>{SITETITLE}</title>
 
     </head>
     <body>
@@ -44,6 +46,7 @@
                 </div>
             </div>
         </div>
+        {RODAPE}
     </body>
 </html>
 

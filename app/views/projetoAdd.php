@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * Esta pagina renderiza uma tela para adicionar um projeto
+ * 
+ * @package app
+ * @subpackage views
+ * @author Anderson Rodrigues
+ */
+
 $time = microtime();
 
 require '../../conf/lock.php';

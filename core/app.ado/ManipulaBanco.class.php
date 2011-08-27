@@ -181,7 +181,7 @@
 				break;
 			}
 			
-			case "pgsql":
+			case "postgres":
 			{
 				$sql = "SELECT CURRVAL('".$sequencia."') AS ultimoId";
 				$result = $this->executarPesquisa($sql);

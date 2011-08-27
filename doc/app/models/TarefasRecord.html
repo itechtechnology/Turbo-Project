@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class TarefasRecord</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class TarefasRecord</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-consts">Constants</a>
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Classe que representa um objeto tarefa  Utilizada para manipular objetos do banco de dados</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Paavo Soeiro</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_app---models---TarefasRecord.class.php.html">/app/models/TarefasRecord.class.php</a> (line <span class="field">12</span>)
+		</p>
+		
+				
+		<pre><a href="../../default/TExpression.html">TExpression</a>
+   |
+   --<a href="../../default/TCriteria.html">TCriteria</a>
+      |
+      --<a href="../../default/TRecord.html">TRecord</a>
+         |
+         --<a href="../../default/ManipulaBanco.html">ManipulaBanco</a>
+            |
+            --TarefasRecord</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-consts">Constants</a>
+							
+															<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#atualizarTarefas" title="details" class="method-name">atualizarTarefas</a>
+										()
+									</div>
+																																																																																																
+												<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#atualizarTarefa" title="details" class="method-name">atualizarTarefa</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$dados</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$codTarefa</span>)
+									</div>
+																								<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#cadastrarTarefa" title="details" class="method-name">cadastrarTarefa</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$dados</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#concluirTarefa" title="details" class="method-name">concluirTarefa</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$codTarefa</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">colecao</span>
+										<a href="#getSubTarefas" title="details" class="method-name">getSubTarefas</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$cd_tarefa</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getTarefa" title="details" class="method-name">getTarefa</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$cd_tarefa</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">colecao</span>
+										<a href="#getTarefaColaboradores" title="details" class="method-name">getTarefaColaboradores</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$cd_tarefa</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">colecao</span>
+										<a href="#getTarefaResponsavel" title="details" class="method-name">getTarefaResponsavel</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$cd_tarefa</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">colecao</span>
+										<a href="#getTarefas" title="details" class="method-name">getTarefas</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$texto</span> = <span class="var-default">&quot;&quot;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ordCampo</span> = <span class="var-default">&quot;&quot;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$SORT</span> = <span class="var-default">&quot;&quot;</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">colecao</span>
+										<a href="#getTarefasEmAtraso" title="details" class="method-name">getTarefasEmAtraso</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">colecao</span>
+										<a href="#getTarefasIniciadas" title="details" class="method-name">getTarefasIniciadas</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">colecao</span>
+										<a href="#getTarefasProjeto" title="details" class="method-name">getTarefasProjeto</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$cd_projeto</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setStatusAtrasada" title="details" class="method-name">setStatusAtrasada</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$cd_tarefa</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-consts">Constants</a>
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+										<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../default/TRecord.html">TRecord</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../../default/TRecord.html#var$data">TRecord::$data</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																			<a href="#sec-consts">Constants</a>
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodatualizarTarefas" id="atualizarTarefas"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method atualizarTarefas</span> (line <span class="line-number">146</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Este metodo talvez seja um dos mais importantes do sistema  ele é responsavel por atualizar o status de tarefas atrasadas e enviar  uma mensagem ao responsavel pela tarefa, avisando sobre o atraso.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			atualizarTarefas
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+
+<a name="methodatualizarTarefa" id="atualizarTarefa"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">atualizarTarefa</span> (line <span class="line-number">31</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Metodo para atualizar uma tarefa</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			atualizarTarefa
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$dados</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$codTarefa</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$dados</span><span class="var-description">: os dados a serem atualizados</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$codTarefa</span><span class="var-description">: o id da tarfa</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcadastrarTarefa" id="cadastrarTarefa"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">cadastrarTarefa</span> (line <span class="line-number">20</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Metodo para inserir uma nova tarefa</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			cadastrarTarefa
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$dados</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$dados</span><span class="var-description">: os dados da tarefa</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodconcluirTarefa" id="concluirTarefa"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">concluirTarefa</span> (line <span class="line-number">41</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Metodo para concluir uma tarefa, ou seja, atualiza o status para 6 (concluida)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			concluirTarefa
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$codTarefa</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$codTarefa</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetSubTarefas" id="getSubTarefas"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getSubTarefas</span> (line <span class="line-number">169</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Metodo que seleciona todas as subtarefas de uma tarefa especifica</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> subtarefas</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">colecao</span>
+		<span class="method-name">
+			getSubTarefas
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$cd_tarefa</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$cd_tarefa</span><span class="var-description">: id da tarefa</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTarefa" id="getTarefa"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getTarefa</span> (line <span class="line-number">53</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Metodo que seleciona uma tarefa</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> com os dados da tarefa</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getTarefa
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$cd_tarefa</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$cd_tarefa</span><span class="var-description">: o id da tarefa</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTarefaColaboradores" id="getTarefaColaboradores"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getTarefaColaboradores</span> (line <span class="line-number">87</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Metodo que seleciona os colaboradores alocados numa tarefa especifica</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> colaboradores da tarefa</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">colecao</span>
+		<span class="method-name">
+			getTarefaColaboradores
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$cd_tarefa</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$cd_tarefa</span><span class="var-description">: id da tarefa</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTarefaResponsavel" id="getTarefaResponsavel"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getTarefaResponsavel</span> (line <span class="line-number">180</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Metodo que seleciona uma tarefa e seu responsavel</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> tarefa</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">colecao</span>
+		<span class="method-name">
+			getTarefaResponsavel
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$cd_tarefa</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$cd_tarefa</span><span class="var-description">: id da tarefa</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTarefas" id="getTarefas"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getTarefas</span> (line <span class="line-number">67</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Metodo que seleciona tarefas no banco de dados</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> tarefas selecionadas</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">colecao</span>
+		<span class="method-name">
+			getTarefas
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$texto</span> = <span class="var-default">&quot;&quot;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ordCampo</span> = <span class="var-default">&quot;&quot;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$SORT</span> = <span class="var-default">&quot;&quot;</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$texto</span><span class="var-description">: string a ser pesquisada</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ordCampo</span><span class="var-description">: campo de ordenacao</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$SORT</span><span class="var-description">: ordenacao ascendente, ou descendente</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTarefasEmAtraso" id="getTarefasEmAtraso"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getTarefasEmAtraso</span> (line <span class="line-number">124</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Metodo que seleciona tarefas em atraso</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> tarefas em atraso</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">colecao</span>
+		<span class="method-name">
+			getTarefasEmAtraso
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTarefasIniciadas" id="getTarefasIniciadas"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getTarefasIniciadas</span> (line <span class="line-number">112</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Metodo que seleciona tarefas iniciadas</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> tarefas iniciadas</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">colecao</span>
+		<span class="method-name">
+			getTarefasIniciadas
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTarefasProjeto" id="getTarefasProjeto"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getTarefasProjeto</span> (line <span class="line-number">102</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Metodo que seleciona as tarefas de um projeto</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> tarefas de um projeto</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">colecao</span>
+		<span class="method-name">
+			getTarefasProjeto
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$cd_projeto</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$cd_projeto</span><span class="var-description">: id do projeto</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetStatusAtrasada" id="setStatusAtrasada"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setStatusAtrasada</span> (line <span class="line-number">134</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Metodo que atualiza o status de uma tarefa para 5 (atrasada)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setStatusAtrasada
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$cd_tarefa</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$cd_tarefa</span><span class="var-description">: id da tarefa</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../default/ManipulaBanco.html">ManipulaBanco</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../../default/ManipulaBanco.html#methodatualizar">ManipulaBanco::atualizar()</a></span><br>
+													<span class="method-name"><a href="../../default/ManipulaBanco.html#methoddeletar">ManipulaBanco::deletar()</a></span><br>
+													<span class="method-name"><a href="../../default/ManipulaBanco.html#methodexecutar">ManipulaBanco::executar()</a></span><br>
+													<span class="method-name"><a href="../../default/ManipulaBanco.html#methodexecutarPesquisa">ManipulaBanco::executarPesquisa()</a></span><br>
+													<span class="method-name"><a href="../../default/ManipulaBanco.html#methodnumLinhas">ManipulaBanco::numLinhas()</a></span><br>
+													<span class="method-name"><a href="../../default/ManipulaBanco.html#methodsalvar">ManipulaBanco::salvar()</a></span><br>
+													<span class="method-name"><a href="../../default/ManipulaBanco.html#methodselecionar">ManipulaBanco::selecionar()</a></span><br>
+													<span class="method-name"><a href="../../default/ManipulaBanco.html#methodselecionarColecao">ManipulaBanco::selecionarColecao()</a></span><br>
+													<span class="method-name"><a href="../../default/ManipulaBanco.html#methodselecionarDistinto">ManipulaBanco::selecionarDistinto()</a></span><br>
+													<span class="method-name"><a href="../../default/ManipulaBanco.html#methodsomaCampos">ManipulaBanco::somaCampos()</a></span><br>
+													<span class="method-name"><a href="../../default/ManipulaBanco.html#methodultimoId">ManipulaBanco::ultimoId()</a></span><br>
+													<span class="method-name"><a href="../../default/ManipulaBanco.html#methodvalidarConexao">ManipulaBanco::validarConexao()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../default/TRecord.html">TRecord</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../../default/TRecord.html#methoddelete">TRecord::delete()</a></span><br>
+													<span class="method-name"><a href="../../default/TRecord.html#methodgetEntity">TRecord::getEntity()</a></span><br>
+													<span class="method-name"><a href="../../default/TRecord.html#methodlast_id">TRecord::last_id()</a></span><br>
+													<span class="method-name"><a href="../../default/TRecord.html#methodload">TRecord::load()</a></span><br>
+													<span class="method-name"><a href="../../default/TRecord.html#methodsave">TRecord::save()</a></span><br>
+													<span class="method-name"><a href="../../default/TRecord.html#methodupdate">TRecord::update()</a></span><br>
+													<span class="method-name"><a href="../../default/TRecord.html#method__clone">TRecord::__clone()</a></span><br>
+													<span class="method-name"><a href="../../default/TRecord.html#method__get">TRecord::__get()</a></span><br>
+													<span class="method-name"><a href="../../default/TRecord.html#method__set">TRecord::__set()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../default/TCriteria.html">TCriteria</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../../default/TCriteria.html#methodadd">TCriteria::add()</a></span><br>
+													<span class="method-name"><a href="../../default/TCriteria.html#methoddump">TCriteria::dump()</a></span><br>
+													<span class="method-name"><a href="../../default/TCriteria.html#methodgetProperty">TCriteria::getProperty()</a></span><br>
+													<span class="method-name"><a href="../../default/TCriteria.html#methodsetProperty">TCriteria::setProperty()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../default/TExpression.html">TExpression</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../../default/TExpression.html#methoddump">TExpression::dump()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-vars">Vars</a>
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+										<h4>Inherited Constants</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../default/TExpression.html">TExpression</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../../default/TExpression.html#constAND_OPERATOR">TExpression::AND_OPERATOR</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../../default/TExpression.html#constOR_OPERATOR">TExpression::OR_OPERATOR</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+
+	<p class="notes" id="credit">
+		Documentation generated on Sat, 27 Aug 2011 18:49:21 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

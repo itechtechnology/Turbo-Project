@@ -1,5 +1,15 @@
 <?php
 
+/**
+ * Esta pagina renderiza uma tela para visualizar e
+ * pesquisar recursos
+ * 
+ * @package app
+ * @subpackage views
+ * @author Paavo Soeiro
+ * 
+ * 
+ */
 session_start();
 require '../../conf/lock.php';
 if (!isset($_SESSION['login'])) {

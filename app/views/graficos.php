@@ -1,5 +1,16 @@
 <?php
 
+/**
+ * Esta pagina renderiza uma tela para selecionar um projeto
+ * para gerar o grafico de Gantt.
+ * 
+ * @package app
+ * @subpackage views
+ * @author Paavo Soeiro
+ * 
+ * 
+ */
+
 session_start();
 require '../../conf/lock.php';
 if (!isset($_SESSION['login'])) {
@@ -12,11 +23,9 @@ if (!isset($_SESSION['login'])) {
     $tpl->addFile('TOPO', APPTPLDIR . '/topo.tpl.html');
     $tpl->addFile('MENULATERAL', APPTPLDIR . '/menuLateral.tpl.html');
     $tpl->addFile('RODAPE', APPTPLDIR . '/rodape.tpl.html');
-////    include 'grid.php';
     $tpl->IMAGEDIR = APPIMAGEDIR;
     $tpl->CSSDIR = APPCSSDIR;
     $tpl->JSDIR = APPJSDIR;
-////$tpl->WEBROOT = APPWEBROOT;
     $tpl->SITETITLE = SITETITLE;
     $tpl->FAVICON = FAVICON;
     $tpl->ANIMATEDFAVICON = ANIMATEDFAVICON;

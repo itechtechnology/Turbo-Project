@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Esta pagina renderiza uma tela para adicionar uma mensagem
+ * 
+ * @package app
+ * @subpackage views
+ * @author Marcos Rosa
+ * 
+ * 
+ */
 require '../../conf/lock.php';
 
 $usuario = new UsuariosRecord();

@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Esta pagina renderiza uma tela para listar projetos
+ * 
+ * @package app
+ * @subpackage views
+ * @author Anderson Rodrigues
+ */
 $time = microtime();
 
 require '../../conf/lock.php';
@@ -8,11 +15,10 @@ if (!isset($_SESSION['login'])) {
         location.href='../../web'</script>";
 } else {
     $projeto = new ProjetosRecord();
-    /*
-     * @TODO preciso que marcos implemente o metodo listarColaboradoresAtivos
+    /**
+     * @todo preciso que marcos implemente o metodo listarColaboradoresAtivos
      * para que eu possa listar os usuarios a serem selecionados
      */
-
     $lib = new Lib();
 
     $tpl = new sistTemplate(APPTPLDIR . '/projetosList.tpl.html');

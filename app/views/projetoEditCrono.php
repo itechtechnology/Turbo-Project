@@ -1,13 +1,20 @@
 <?php
 
+/**
+ * Esta pagina renderiza uma tela para editar o cronograma de um projeto
+ * 
+ * @package app
+ * @subpackage views
+ * @author Anderson Rodrigues
+ */
 $time = microtime();
 
 require '../../conf/lock.php';
 
 
 $projeto = new ProjetosRecord();
-/*
- * @TODO preciso que marcos implemente o metodo listarColaboradoresAtivos
+/**
+ * @todo preciso que marcos implemente o metodo listarColaboradoresAtivos
  * para que eu possa listar os usuarios a serem selecionados
  */
 

@@ -1,28 +1,50 @@
 <?php
 
-//require '../../conf/lock.php';
+/**
+ * Classe que gera um xml utilizado para criar o grafico de Gantt
+ *
+ * @package app
+ * @subpackage controllers
+ * @author Paavo Soeiro
+ */
+
 
 /**
- * Description of Xml
+ * Classe que gera um xml utilizado para criar o grafico de Gantt
  *
- * @author liviacorreia
+ * @package app
+ * @subpackage controllers
+ * @author Paavo Soeiro
  */
 class Xml {
 
+    /**
+     * Variavel de tarefas
+     * 
+     * @var tarefa 
+     * @access private
+     */
     private $tarefa;
 
+    /**
+     * Metodo contrutor da classe
+     * inicializa a varivel tarefa
+     */
     function __construct() {
         $this->tarefa = new TarefasRecord();
     }
-
+    
+    /**
+     * Metodo que gera o xml
+     * Recebi o codigo do projeto e devolvi uma string com o caminho do xml
+     * 
+     * @param projeto $projeto
+     * @return string 
+     */
     public function gerarXml($projeto) {
         $tarefas = $this->tarefa->getTarefasProjeto($projeto['CD_PROJETO']['1']);
 
         $arquivo = fopen("../../core/gantt/gantt.xml", "w+");
-//        if ($arquivo->exists()) {
-//            unlink($arquivo);
-//            $arquivo = fopen("../../core/gantt/gantt.xml", "x+");
-//        }
         $data = strrev($projeto['DT_INICIO_PROJ']['1']);
         $data = substr($data, -10);
         $data = strrev($data);
@@ -59,6 +81,13 @@ class Xml {
         return "../../core/gantt/gantt.xml";
     }
 
+    /**
+     * Metodo que converte uma data para um array com o formato adequado ao xml
+     * 
+     * @static
+     * @param string $data
+     * @return array
+     */
     public static function converteData($data) {
         list ($ano, $mes, $dia) = split('[/.-]', $data);
         if ($mes < 10) {
@@ -68,6 +97,15 @@ class Xml {
         return $arr;
     }
 
+    /**
+     * Metodo que carrega as tarefa e subtarefas
+     * Um metodo recursivo que devolvi uma string
+     * 
+     *
+     * @param string $conteudo
+     * @param tarefa $tarefas
+     * @return string 
+     */
     public function carregarSubTarefas($conteudo, $tarefas) {
         $total = count($tarefas['CD_TAREFA']);
 
@@ -117,6 +155,15 @@ class Xml {
         return $conteudo;
     }
 
+    
+    /**
+     * Metodo que calcula o numero de dias entre datas
+     *
+     * @static
+     * @param date $dataIni
+     * @param date $dataFim
+     * @return int 
+     */
     public static function diferencaDatas($dataIni, $dataFim) {
         $dataIni = strrev($dataIni);
         $dataIni = substr($dataIni, -10);

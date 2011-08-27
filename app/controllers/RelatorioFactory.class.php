@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Classe responsavel por gerenciar os relatorios
+ * 
+ * @package app
+ * @subpackage controllers
+ * @author Paavo Soeiro
+ */
 require_once '../../jqgrid/jq-config.php';
 // include the jqGrid Class
 require_once ABSPATH . "php/jqGrid.php";
@@ -8,24 +15,45 @@ require_once ABSPATH . "php/jqGridPdo.php";
 require_once ABSPATH . "php/jqAutocomplete.php";
 
 /**
- * Description of RelatorioFactory
+ * Classe responsavel por gerenciar os relatorios
  *
- * @author liviacorreia
+ * @package app
+ * @subpackage controllers
+ * @author Paavo Soeiro
  */
 class RelatorioFactory {
 
+    /**
+     * Variavel de conexao do banco de dados
+     * 
+     *
+     * @var PDO 
+     * @access private
+     */
     private $conn;
+
+    /**
+     * Variavel do renderizador de relatorios
+     *
+     * @var jqGridRender
+     * @access private 
+     */
     private $grid;
 
+    /**
+     * Metodo construtor
+     */
     public function __construct() {
         $this->conn = new PDO('pgsql:host=localhost dbname=itechcom_turbo user=itechcom password=itechuesc123');
-// Create the jqGrid instance
         $this->grid = new jqGridRender($this->conn);
-// Write the SQL Query
-// set the ouput format to json
         $this->grid->dataType = 'json';
     }
 
+    /**
+     * Metodo que gera o relatorio
+     * 
+     * @param GET $relatorio 
+     */
     public function gerarRelatorio($relatorio) {
         switch ($relatorio) {
             case 'recurso': {
@@ -72,10 +100,10 @@ class RelatorioFactory {
                             " status.nome_status" .
                             " FROM public.projeto JOIN" .
                             " public.tarefa ON tarefa.fk_cd_projeto = projeto.cd_projeto JOIN" .
-                            " public.status ON status.cd_status = tarefa.fk_cd_status" 
+                            " public.status ON status.cd_status = tarefa.fk_cd_status"
 //                            .
 //                            " ORDER BY nome_projeto, nome_tarefa"
-                            ;
+                    ;
                     $this->grid->queryGrid();
                     break;
                 }

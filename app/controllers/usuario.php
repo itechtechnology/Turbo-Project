@@ -1,15 +1,18 @@
 <?php
 
+/**
+ * Controlador Usuario
+ * 
+ * @package app
+ * @subpackage controllers
+ * @author Marcos Rosa
+ */
+
 include_once '../../conf/lock.php';
 
 $lib = new Lib();
 
 $usuario = new UsuariosRecord();
-
-
-
-
-
 
 
 if (isset($_SESSION["cadastro_usuario"])) {// Verifico se a sessão existe

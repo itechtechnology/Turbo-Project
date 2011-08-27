@@ -1,11 +1,20 @@
 <?php
 
+/**
+ * Esta pagina renderiza uma tela para visualizar tarefas
+ * 
+ * @package app
+ * @subpackage views
+ * @author Paavo Soeiro
+ * 
+ * 
+ */
+
 session_start();
 require '../../conf/lock.php';
 if (!isset($_SESSION['login'])) {
     echo "<script type='text/javascript'>alert('Voce precisa estar logado');
         location.href='../../web'</script>";
-//    header("location: ../../web/");
 } else {
     $tarefa = new TarefasRecord();
     $lib = new Lib();
@@ -14,16 +23,12 @@ if (!isset($_SESSION['login'])) {
     $tpl->addFile('TOPO', APPTPLDIR . '/topo.tpl.html');
     $tpl->addFile('MENULATERAL', APPTPLDIR . '/menuLateral.tpl.html');
     $tpl->addFile('RODAPE', APPTPLDIR . '/rodape.tpl.html');
-//    include 'grid.php';
     $tpl->IMAGEDIR = APPIMAGEDIR;
     $tpl->CSSDIR = APPCSSDIR;
     $tpl->JSDIR = APPJSDIR;
-//$tpl->WEBROOT = APPWEBROOT;
     $tpl->SITETITLE = SITETITLE;
     $tpl->FAVICON = FAVICON;
     $tpl->ANIMATEDFAVICON = ANIMATEDFAVICON;
-//$tpl->MEMORYUSAGE = number_format(intval(memory_get_usage() / 1000), 0, ',', '.');
-//$tpl->MEMORYPICK = number_format(intval(memory_get_peak_usage() / 1000), 0, ',', '.');
     $tpl->CONTROLLER = $_SERVER["PHP_SELF"];
     $tpl->TITULOLISTAGEM = 'Tarefas';
     $tpl->TITULOPROCURAR = 'LOCALIZAR';
@@ -31,21 +36,12 @@ if (!isset($_SESSION['login'])) {
     $u = new UsuariosRecord();
     $uNome = $u->getNome($_SESSION['login']);
     $tpl->USUARIO_LOGADO = $uNome;
-////    require_once '../../jqgrid/tabs.php';
-////    include 'grid.php';
+
     if (isset($_SESSION['str_erro'])) {
         $tpl->ERROS = $_SESSION['str_erro'];
         $tpl->block("BLOCK_SCRIPT");
         session_unregister('str_erro');
     }
-////projeto.nome_projeto, 
-////tarefa.nome_tarefa, 
-////tarefa.ds_tarefa, 
-////tarefa.dt_incio, 
-////tarefa.dt_previsao, 
-////tarefa.dt_conclusao, 
-////status.nome_status
-//
     if (isset($_GET['orderBy']) and isset($_GET['sort'])) {
         $ordCampo = $_GET['orderBy'];
         switch ($ordCampo) {
@@ -217,35 +213,31 @@ if (!isset($_SESSION['login'])) {
         $tpl->IMGORDEM7 = '';
         $tpl->SORT = 'DESC';
     }
-//
+
     if (empty($_GET['pesquisa'])) {
-//        $recursos = $recurso->listarRecurso($ordCampo, $tpl->SORT);
         $tarefas = $tarefa->getTarefas('', $ordCampo, $tpl->SORT);
     } else {
         $texto = $lib->formatarString($_GET['pesquisa']);
-//        $recursos = $recurso->getRecurso($texto, $ordCampo, $tpl->SORT);
         $tarefas = $tarefa->getTarefas($texto, $ordCampo, $tpl->SORT);
     }
-////
     $totaltarefas = count($tarefas['CD_TAREFA']);
     if ($totaltarefas == 0)
         $tpl->TOTAL = 0;
     $tpl->TOTAL = $totaltarefas;
-//
-//
+
     if ($totaltarefas > 0) {
         $tpl->LEGENDA = ' recursos encontrados.';
     } else {
         $tpl->LEGENDA = ' recurso encontrado.';
     }
-////
+
     for ($i = 1; $i <= $totaltarefas; $i++) {
         if ($i % 2 != 0) {
             $tpl->CLASS = '';
         } else {
             $tpl->CLASS = 'class="odd"';
         }
-//
+
         $tpl->NOME_PROJETO = utf8_decode($tarefas['NOME_PROJETO'][$i]);
         $tpl->NOME_TAREFA = utf8_decode($tarefas['NOME_TAREFA'][$i]);
         $tpl->DS_TAREFA = $tarefas['DS_TAREFA'][$i];
